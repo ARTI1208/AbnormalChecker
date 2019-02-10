@@ -1,0 +1,2 @@
+android.app.Application
+ru.art2000.abnormal

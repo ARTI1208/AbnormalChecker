@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+                  xmlns:app="http://schemas.android.com/apk/res-auto">
+    <SwitchPreferenceCompat
+            app:iconSpaceReserved="false"
+            android:key="auto_unlock_limit"
+            android:title="Monitor unlocks to automize"
+            android:defaultValue="false"/>
+    <SwitchPreferenceCompat
+            app:iconSpaceReserved="false"
+            android:key="auto_unlock_limit_restart"
+            android:dependency="auto_unlock_limit"
+            android:title="Restart monitor unlocks to automize"
+            android:defaultValue="false"/>
+    <android.support.v7.preference.SeekBarPreference
+            app:iconSpaceReserved="false"
+            android:key="auto_unlock_monitor_time"
+            android:title="Days to monitor unlocks"
+            app:min="1"
+            
+            android:dependency="auto_unlock_limit"
+            app:defaultValue="7"
+            android:defaultValue="7"
+            android:max="7"/>
+    <android.support.v7.preference.SeekBarPreference
+            app:iconSpaceReserved="false"
+            android:key="screen_limit"
+            android:title="Screen Unlock Speed Limit"
+            app:min="1"
+            app:defaultValue="5"
+            android:max="20"/>
+
+    <Preference android:title="App info" android:key="app_info" />
+</PreferenceScreen>
