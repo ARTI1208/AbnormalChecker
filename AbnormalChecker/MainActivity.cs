@@ -72,25 +72,10 @@ namespace AbnormalChecker
             CheckAndGrantPermissions();
             b.Click += delegate
             {
+                NotificationSender notificationSender = new NotificationSender(this);
+                notificationSender.Send("Test", "Notif text", 3);
                 
-                if (AbnormalBroadcastReceiver.d != null)
-                {
-                    String s = "";
-                    foreach (var i in AbnormalBroadcastReceiver.d)
-                    {
-                        s += i.ToString();
-                    }
-                
-                    Log.Debug("cheeck", s);
-                    
-                }
                 adapter?.Refresh();
-                AlarmManager manager = AlarmManager.FromContext(this);
-//                PendingIntent intent = new PendingIntent();
-//                manager.Set(AlarmType.Rtc, new Date().Time + TimeSpan.FromSeconds(5).Milliseconds, );
-                
-                Toast.MakeText(mContext, "Unlocked times = " + AbnormalBroadcastReceiver.AutoAdjustmentMonitorUnlockCount, 
-                    ToastLength.Short).Show();
             };
             LinearLayoutManager llm = new LinearLayoutManager(mContext);
             recyclerView.SetLayoutManager(llm);

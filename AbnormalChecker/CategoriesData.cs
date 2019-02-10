@@ -32,6 +32,10 @@ namespace AbnormalChecker
             public string Data;
         }
 
+        public static string RootCategory = "Root";
+        public static string ScreenLocksCategory = "ScreenLocks";
+        public static string LocationCategory = "Location";
+
         enum CheckerCategory
         {
             Root,
@@ -101,7 +105,7 @@ namespace AbnormalChecker
             }
 
             location.Status = status.Length > 0 ? status : "Access denied";
-            locationManager = (LocationManager) mContext.GetSystemService(Context.LocationService);
+            
 
             locationManager.RequestLocationUpdates(LocationManager.GpsProvider,
                 0, 0, this);
@@ -120,11 +124,11 @@ namespace AbnormalChecker
 
         private void checkEnabled()
         {
-            Toast.MakeText(mContext, $"gps {locationManager.IsProviderEnabled(LocationManager.GpsProvider)}",
-                ToastLength.Short).Show();
-
-            Toast.MakeText(mContext, $"net {locationManager.IsProviderEnabled(LocationManager.NetworkProvider)}",
-                ToastLength.Short).Show();
+//            Toast.MakeText(mContext, $"gps {locationManager.IsProviderEnabled(LocationManager.GpsProvider)}",
+//                ToastLength.Short).Show();
+//
+//            Toast.MakeText(mContext, $"net {locationManager.IsProviderEnabled(LocationManager.NetworkProvider)}",
+//                ToastLength.Short).Show();
 //            tvEnabledGPS.setText("Enabled: "
 //                                 + locationManager
 //                                     .isProviderEnabled(LocationManager.GPS_PROVIDER));
@@ -133,6 +137,9 @@ namespace AbnormalChecker
 //                                     .isProviderEnabled(LocationManager.NETWORK_PROVIDER));
         }
 
+        
+        
+        
         bool IsGooglePlayServicesInstalled()
         {
             var queryResult = GoogleApiAvailability.Instance.IsGooglePlayServicesAvailable(mContext);
@@ -177,7 +184,10 @@ namespace AbnormalChecker
                 }
                 else
                 {
-                    Toast.MakeText(mContext, location.DistanceTo(prevLock).ToString(), ToastLength.Short).Show();
+
+                    
+                    
+//                    Toast.MakeText(mContext, location.DistanceTo(prevLock).ToString(), ToastLength.Short).Show();
                     prevLock = location;
                 }
                 
@@ -199,6 +209,14 @@ namespace AbnormalChecker
             mLocationListenerImplementation = this;
             mPreferences = PreferenceManager.GetDefaultSharedPreferences(mContext);
             fusedLocationProviderClient = LocationServices.GetFusedLocationProviderClient(mContext);
+            LocationListener.LocationChangedDelegate changedDelegate = location =>
+            {
+                Toast.MakeText(mContext, "loc changed", ToastLength.Short);
+            }; 
+            locationManager = (LocationManager) mContext.GetSystemService(Context.LocationService);
+            
+            
+            
             Refresh();
         }
 
