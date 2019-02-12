@@ -1,94 +1,90 @@
-﻿using System;
-using System.Collections.Generic;
-using Android;
-using Android.App;
+﻿using Android.App;
 using Android.Content;
 using Android.Content.PM;
-using Android.InputMethodServices;
-using Android.Locations;
 using Android.Widget;
 using Android.OS;
-using Android.Support.V4.Content;
+using Android.Preferences;
+using Android.Support.V17.Leanback.App;
 using Android.Support.V7.App;
 using Android.Support.V7.Widget;
-using Android.Util;
 using Android.Views;
-using Java.Util;
 
 namespace AbnormalChecker
 {
-    [Activity(
+    [Activity
+    (
         Label = "AbnormalChecker",
         Theme = "@style/MainTheme",
         Icon = "@drawable/icon",
-        MainLauncher = true)]
+        MainLauncher = true
+    )]
+    // ReSharper disable once ClassNeverInstantiated.Global
     public class MainActivity : AppCompatActivity
     {
-        public Context mContext;
-        private static AbnormalBroadcastReceiver _abnormalBroadcastReceiver = new AbnormalBroadcastReceiver();
-
-        private static string[] permissions =
+        
+        private OnboardingSupportFragment MyOnboardingSupportFragment;
+        private ISharedPreferences mPreferences;
+        
+        private static MainActivity _activity;
+        public static CategoriesAdapter adapter
         {
-            Manifest.Permission.AccessFineLocation,
-            Manifest.Permission.AccessCoarseLocation
-        };
-
-        private const int permissionRequestCode = 666;
-
+            get;
+            private set;
+        }
+        
+        private const int PermissionRequestCode = 666;
+        
+        public static void GrantPermissions(string[] permissions)
+        {
+            if (permissions != null && permissions.Length > 0)
+            {
+                _activity.RequestPermissions(permissions, PermissionRequestCode);
+            }     
+        }
+        
         private void CheckAndGrantPermissions()
         {
             if (Build.VERSION.SdkInt < BuildVersionCodes.M)
             {
                 return;
             }
-            RequestPermissions(permissions, permissionRequestCode);
+            if (mPreferences.GetBoolean("first_run", true))
+            {    
+                //TODO : OnBoarding Fragment
+                RequestPermissions(CategoriesData.GetAllRequiredPermissions(this), PermissionRequestCode);    
+                mPreferences.Edit().PutBoolean("first_run", false).Apply();   
+            }
         }
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)
         {
-            if (requestCode == permissionRequestCode)
+            if (requestCode == PermissionRequestCode)
             {
-                Log.Debug("Aadpater", (adapter == null).ToString());
-                adapter?.Refresh();
-                
+                adapter?.Refresh();                      
             }
         }
 
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
-//            SetTheme(Resource.Style.MainTheme);
             SetContentView(Resource.Layout.Main);
-            mContext = ApplicationContext;
-            RecyclerView recyclerView = FindViewById<RecyclerView>(Resource.Id.categoriesRecyclerView);
-//            IntentFilter screenStateFilter = new IntentFilter();
-//            screenStateFilter.AddAction(Intent.ActionScreenOn);
-//            RegisterReceiver(_abnormalBroadcastReceiver, screenStateFilter);
+            _activity = this;
+            mPreferences = PreferenceManager.GetDefaultSharedPreferences(this);
+            CheckAndGrantPermissions();
             Intent starter = new Intent();
             starter.SetAction(ServiceStarter.ActionStartAbnormalMonitoring);
             starter.SetClass(this, typeof(ServiceStarter));
             SendBroadcast(starter);
             Button b = FindViewById<Button>(Resource.Id.notif);
-            CheckAndGrantPermissions();
             b.Click += delegate
             {
-                NotificationSender notificationSender = new NotificationSender(this);
-                notificationSender.Send("Test", "Notif text", 3);
-                
                 adapter?.Refresh();
             };
-            LinearLayoutManager llm = new LinearLayoutManager(mContext);
+            RecyclerView recyclerView = FindViewById<RecyclerView>(Resource.Id.categoriesRecyclerView);
+            LinearLayoutManager llm = new LinearLayoutManager(this);
+            adapter = new CategoriesAdapter(this);
             recyclerView.SetLayoutManager(llm);
-            adapter = new CategoriesAdapter(mContext);
-//            recyclerView.AddItemDecoration(new DividerItemDecoration(recyclerView.Context,
-//                DividerItemDecoration.Vertical));
             recyclerView.SetAdapter(adapter);
-        }
-
-        public static CategoriesAdapter adapter
-        {
-            get;
-            private set;
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -101,7 +97,7 @@ namespace AbnormalChecker
         {
             if (item.ItemId == Resource.Id.settings_item)
             {
-                StartActivity(new Intent(mContext, typeof(Settings)));
+                StartActivity(new Intent(this, typeof(Settings)));
             }
             return base.OnOptionsItemSelected(item);
         }

@@ -18,19 +18,19 @@ namespace AbnormalChecker
             return pk.Contains("com.topjohnwu.magisk") || pk.Contains("eu.chainfire.supersu");
         }
 
-        static readonly string[] _suBinaryPlaces =
+        static readonly string[] SuBinaryPlaces =
         {
             "/sbin/", "/system/bin/", "/system/xbin/"
         };
         
         private static bool HasSuBinary()
         {
-            return _suBinaryPlaces.Any(where => new File(where + "su").Exists());
+            return SuBinaryPlaces.Any(where => new File(where + "su").Exists());
         }
 
         public static string GetSuBinaryPath()
         {
-            return Array.Find(_suBinaryPlaces, s => new File(s + "su").Exists());
+            return Array.Find(SuBinaryPlaces, s => new File(s + "su").Exists());
         } 
             
         public static bool IsRooted(Context context)

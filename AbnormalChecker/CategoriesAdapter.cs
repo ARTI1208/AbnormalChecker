@@ -1,4 +1,7 @@
 using Android.Content;
+using Android.Content.Res;
+using Android.Graphics;
+using Android.Support.V4.Content;
 using Android.Support.V7.Widget;
 using Android.Util;
 using Android.Views;
@@ -30,7 +33,8 @@ namespace AbnormalChecker
         {
             ViewHolder myHolder = (ViewHolder) holder;
             
-            CategoriesData.CategoryStruct dataSet = data.categoriesList[position];
+//            CategoriesData.CategoryStruct dataSet = data.categoriesList[position];
+            CategoriesData.CategoryStruct dataSet = CategoriesData.categoriesList[position];
             myHolder.TitleTextView.Text = dataSet.Title;
             myHolder.StatusTextView.Text = dataSet.Status;
             if (dataSet.Data != null)
@@ -43,10 +47,33 @@ namespace AbnormalChecker
                 myHolder.DataTextView.Visibility = ViewStates.Gone;
             }
 
+            switch (dataSet.Level)
+            {
+                case CategoriesData.CheckStatus.Warning:
+                    myHolder.Card.SetCardBackgroundColor(Color.ParseColor("#ff00ff00"));
+                    break;
+                case CategoriesData.CheckStatus.Dangerous:
+                    myHolder.Card.SetCardBackgroundColor(Color.ParseColor("#ffff0000"));
+                    break;
+                default:
+                    myHolder.Card.SetCardBackgroundColor(Color.ParseColor("#ffffff"));
+                    break;
+            }
+            
             Log.Debug("holderLoad", dataSet.Title);
             
             myHolder.Card.Click += delegate
             {
+
+
+
+                if (dataSet.Level == CategoriesData.CheckStatus.PermissionsRequired)
+                {
+                    MainActivity.GrantPermissions(dataSet.RequiredPermissions);
+                }
+                    
+                
+                
                 Toast.MakeText(mContext, myHolder.TitleTextView.Text, ToastLength.Short).Show();
             };
         }
@@ -57,7 +84,7 @@ namespace AbnormalChecker
             return new ViewHolder(view);
         }
 
-        public override int ItemCount => data.categoriesList.Count;
+        public override int ItemCount => CategoriesData.categoriesList.Count;
 
         private class ViewHolder : RecyclerView.ViewHolder
         {

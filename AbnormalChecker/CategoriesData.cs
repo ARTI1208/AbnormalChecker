@@ -30,6 +30,16 @@ namespace AbnormalChecker
             public string Title;
             public string Status;
             public string Data;
+            public CheckStatus Level = CheckStatus.Normal;
+            public string[] RequiredPermissions;
+        }
+
+        public enum CheckStatus
+        {
+            Normal,
+            Warning,
+            Dangerous,
+            PermissionsRequired
         }
 
         public static string RootCategory = "Root";
@@ -42,7 +52,7 @@ namespace AbnormalChecker
             ScreenLocks
         }
 
-        public List<CategoryStruct> categoriesList = new List<CategoryStruct>();
+        public static List<CategoryStruct> categoriesList = new List<CategoryStruct>();
 
         private Context mContext;
         private ISharedPreferences mPreferences;
@@ -57,10 +67,12 @@ namespace AbnormalChecker
             {
                 root.Status = "Device has root access";
                 root.Data = $"Found su binary at {Checker.GetSuBinaryPath()}";
+                root.Level = CheckStatus.Dangerous;
             }
             else
             {
                 root.Status = "Device is not rooted";
+                
             }
 
             CategoryStruct screenLocks = new CategoryStruct {Title = "ScreenLocks"};
@@ -92,6 +104,19 @@ namespace AbnormalChecker
 
             CategoryStruct location = new CategoryStruct {Title = "Location"};
             string status = "";
+            location.RequiredPermissions = new []{
+                Manifest.Permission.AccessFineLocation,
+                Manifest.Permission.AccessCoarseLocation
+            };
+            
+            
+
+
+            location.Level = 
+                location.RequiredPermissions.Any(s => ContextCompat.CheckSelfPermission(mContext, s) == Permission.Denied) 
+                    ? CheckStatus.PermissionsRequired : CheckStatus.Normal;
+            
+            
             if (ContextCompat.CheckSelfPermission(mContext, Manifest.Permission.AccessFineLocation) ==
                 Permission.Granted)
             {
@@ -107,13 +132,13 @@ namespace AbnormalChecker
             location.Status = status.Length > 0 ? status : "Access denied";
             
 
-            locationManager.RequestLocationUpdates(LocationManager.GpsProvider,
-                0, 0, this);
-            locationManager.RequestLocationUpdates(
-                LocationManager.NetworkProvider, 0, 0,
-                this);
-            checkEnabled();
-            Log.Debug("srvices", IsGooglePlayServicesInstalled().ToString());
+//            locationManager.RequestLocationUpdates(LocationManager.GpsProvider,
+//                0, 0, this);
+//            locationManager.RequestLocationUpdates(
+//                LocationManager.NetworkProvider, 0, 0,
+//                this);
+//            checkEnabled();
+//            Log.Debug("srvices", IsGooglePlayServicesInstalled().ToString());
             GetLastLocationFromDevice();
             categoriesList.Add(root);
             categoriesList.Add(screenLocks);
@@ -199,6 +224,25 @@ namespace AbnormalChecker
             }
         }
 
+        public static string[] GetAllRequiredPermissions(Context context)
+        {
+            if (categoriesList.Count == 0)
+            {
+                CategoriesData data = new CategoriesData(context);
+                
+            }
+            
+            List<string> permissions = new List<string>();
+            foreach (var category in categoriesList)
+            {
+                if (category.RequiredPermissions != null)
+                {
+                    permissions.AddRange(category.RequiredPermissions);
+                }
+            }
+            return permissions.ToArray();
+        }
+
         
 
         private Location prevLock;
@@ -227,6 +271,8 @@ namespace AbnormalChecker
             return
                 $"Coordinates: lat = {location.Latitude:F3}, lon = {location.Longitude:F3}, time = {new Date(location.Time)}";
         }
+        
+        
 
         public void OnLocationChanged(Location location)
         {

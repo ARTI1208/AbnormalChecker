@@ -15,9 +15,10 @@ namespace AbnormalChecker
     public class ServiceStarter : BroadcastReceiver
     {
         
-        public const string ActionStartAbnormalMonitoring = "ru.art2000.action.ABNORMAL_MONITORING";
+        private static ISharedPreferences _preferences;
         private static bool _isStarted;
-        private static ISharedPreferences mPreferences;
+        
+        public const string ActionStartAbnormalMonitoring = "ru.art2000.action.ABNORMAL_MONITORING";
         
         public override void OnReceive(Context context, Intent intent)
         {
@@ -27,19 +28,15 @@ namespace AbnormalChecker
                 Log.Debug("AbnormalMonitorService", $"Starting by received {intent.Action}");
                 IntentFilter screenStateFilter = new IntentFilter();
                 screenStateFilter.AddAction(Intent.ActionScreenOn);
-                if (mPreferences == null)
+                if (_preferences == null)
                 {
-                    mPreferences = PreferenceManager.GetDefaultSharedPreferences(context);
+                    _preferences = PreferenceManager.GetDefaultSharedPreferences(context);
                 }
-
-                if (mPreferences.GetBoolean(Settings.ScreenLockAutoAdjustment, false))
+                if (_preferences.GetBoolean(Settings.ScreenLockAutoAdjustment, false))
                 {
                     AbnormalBroadcastReceiver.AutoAdjustmentMonitorUnlockCount = 
-                        mPreferences.GetInt("monitor_unlock_count", 0);
-                    Log.Debug("Couunt",AbnormalBroadcastReceiver.AutoAdjustmentMonitorUnlockCount.ToString());
+                        _preferences.GetInt("monitor_unlock_count", 0);
                 }
-                
-                
                 context.ApplicationContext.RegisterReceiver(new AbnormalBroadcastReceiver(), screenStateFilter);
                 _isStarted = true;
                 return;
