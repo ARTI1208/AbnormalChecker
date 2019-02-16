@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
                   xmlns:app="http://schemas.android.com/apk/res-auto">
+    <MultiSelectListPreference
+            android:defaultValue="@array/categories_values"
+            android:entries="@array/categories"
+            android:entryValues="@array/categories_values"
+            android:key="selected_categories"
+            android:title="Categories to monitor"
+            android:summary="Unselected won't be shown on main screen"
+            app:iconSpaceReserved="false" />
     <SwitchPreferenceCompat
             app:iconSpaceReserved="false"
             android:key="auto_unlock_limit"

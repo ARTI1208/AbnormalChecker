@@ -1,40 +1,53 @@
+using System.Collections.Generic;
+using AbnormalChecker.Activities;
 using Android.Content;
-using Android.Content.Res;
 using Android.Graphics;
-using Android.Support.V4.Content;
 using Android.Support.V7.Widget;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
 
-namespace AbnormalChecker
+namespace AbnormalChecker.OtherUI
 {
     public class CategoriesAdapter : RecyclerView.Adapter
     {
         private readonly LayoutInflater mInflater;
         private readonly Context mContext;
-        private readonly CategoriesData data;
+        private readonly DataHolder mDataHolder;
+        private List<DataHolder.CategoryData> list = new List<DataHolder.CategoryData>();
 
         public CategoriesAdapter(Context context)
         {
             mContext = context;
             mInflater = LayoutInflater.From(context);
-            data = new CategoriesData(mContext);
+            mDataHolder = new DataHolder(mContext);
+            mDataHolder.Refresh();
+            Log.Debug("lisstcp1", DataHolder.CategoriesDataDic.Count.ToString());
+            foreach (var pair in DataHolder.CategoriesDataDic)
+            {
+                list.Add(pair.Value);
+            }
         }
 
 
         public void Refresh()
         {
-            data.Refresh();
+            mDataHolder.Refresh();
+            list.Clear();
+            foreach (var pair in DataHolder.CategoriesDataDic)
+            {
+                if (mDataHolder.GetSelectedCategories().Contains(pair.Key))
+                {
+                    list.Add(pair.Value);    
+                }
+            }
             NotifyDataSetChanged();
         }
         
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
             ViewHolder myHolder = (ViewHolder) holder;
-            
-//            CategoriesData.CategoryStruct dataSet = data.categoriesList[position];
-            CategoriesData.CategoryStruct dataSet = CategoriesData.categoriesList[position];
+            DataHolder.CategoryData dataSet = list[position];
             myHolder.TitleTextView.Text = dataSet.Title;
             myHolder.StatusTextView.Text = dataSet.Status;
             if (dataSet.Data != null)
@@ -49,10 +62,10 @@ namespace AbnormalChecker
 
             switch (dataSet.Level)
             {
-                case CategoriesData.CheckStatus.Warning:
+                case DataHolder.CheckStatus.Warning:
                     myHolder.Card.SetCardBackgroundColor(Color.ParseColor("#ff00ff00"));
                     break;
-                case CategoriesData.CheckStatus.Dangerous:
+                case DataHolder.CheckStatus.Dangerous:
                     myHolder.Card.SetCardBackgroundColor(Color.ParseColor("#ffff0000"));
                     break;
                 default:
@@ -60,14 +73,14 @@ namespace AbnormalChecker
                     break;
             }
             
-            Log.Debug("holderLoad", dataSet.Title);
+            
             
             myHolder.Card.Click += delegate
             {
 
 
 
-                if (dataSet.Level == CategoriesData.CheckStatus.PermissionsRequired)
+                if (dataSet.Level == DataHolder.CheckStatus.PermissionsRequired)
                 {
                     MainActivity.GrantPermissions(dataSet.RequiredPermissions);
                 }
@@ -84,7 +97,7 @@ namespace AbnormalChecker
             return new ViewHolder(view);
         }
 
-        public override int ItemCount => CategoriesData.categoriesList.Count;
+        public override int ItemCount => list.Count;
 
         private class ViewHolder : RecyclerView.ViewHolder
         {

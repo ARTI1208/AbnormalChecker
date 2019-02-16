@@ -1,26 +1,20 @@
 using System;
-using System.Globalization;
+using AbnormalChecker.Activities;
 using Android.App;
 using Android.Content;
-using Android.Graphics;
-using Android.OS;
 using Android.Preferences;
-using Android.Runtime;
-using Android.Support.V4.App;
-using Android.Text.Format;
 using Android.Util;
-using Android.Widget;
 using Java.Util;
 using Java.Util.Concurrent;
 
-namespace AbnormalChecker
+namespace AbnormalChecker.BroadcastReceivers
 {
     [BroadcastReceiver]
     [IntentFilter(new[]
     {
         Intent.ActionScreenOn
     })]
-    public class AbnormalBroadcastReceiver : BroadcastReceiver, IStoppable
+    public class AbnormalBroadcastReceiver : BroadcastReceiver
     {
         
 
@@ -68,11 +62,12 @@ namespace AbnormalChecker
                 {
                     mPreferences.Edit().PutBoolean("auto_unlock_limit", false).Apply();
 //                    sendNotification(context);
-                    notificationSender.Send(CategoriesData.ScreenLocksCategory,
+                    notificationSender.Send(DataHolder.ScreenLocksCategory,
                         $"{mPreferences.GetInt("auto_unlock_monitor_time", 1)}-day monitoring ended. " +
                         $"Detected {mPreferences.GetInt("monitor_unlock_count", AutoAdjustmentMonitorUnlockCount)} " +
                         "unlocks",
                         NotificationSender.InfoNotification);
+                    MainActivity.adapter?.Refresh();
                     return;
                 }
 
@@ -80,6 +75,7 @@ namespace AbnormalChecker
                 Log.Debug("Couunt", AutoAdjustmentMonitorUnlockCount.ToString());
                 AutoAdjustmentMonitorUnlockCount++;
                 mPreferences.Edit().PutInt(ScreenLocksCountKey, AutoAdjustmentMonitorUnlockCount).Apply();
+                MainActivity.adapter?.Refresh();
                 return;
             }
 
@@ -136,7 +132,7 @@ namespace AbnormalChecker
 
             string notificationText;
 
-
+            
             switch (mode)
             {
                 case 1:
@@ -148,24 +144,14 @@ namespace AbnormalChecker
                         $"High speed : {unlockedTimes / TimeSpan.FromMilliseconds(now.Time - firstTime).TotalHours} vs {normalDay * speedUnlock}";
                     break;
                 default:
+                    MainActivity.adapter?.Refresh();
                     return;
             }
 
-            notificationSender.Send(CategoriesData.ScreenLocksCategory, notificationText,
+            notificationSender.Send(DataHolder.ScreenLocksCategory, notificationText,
                 NotificationSender.WarningNotification);
+            
         }
 
-        public void MonitoringStop()
-        {
-            Date now = new Date();
-            if (TimeUnit.Milliseconds.ToDays(now.Time -
-                                             mPreferences.GetLong("auto_start_time", now.Time))
-                >= mPreferences.GetInt(Settings.ScreenLockAutoAdjustmentDayCount, 1))
-            {
-                mPreferences.Edit().PutBoolean("auto_unlock_limit", false).Apply();
-//                sendNotification(context);
-                return;
-            }
-        }
     }
 }

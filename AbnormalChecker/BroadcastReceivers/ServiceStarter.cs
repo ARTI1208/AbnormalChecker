@@ -1,10 +1,13 @@
+using AbnormalChecker.Activities;
+using AbnormalChecker.Services;
 using Android.App;
 using Android.Content;
+using Android.OS;
 using Android.Preferences;
 using Android.Util;
 using Android.Widget;
 
-namespace AbnormalChecker
+namespace AbnormalChecker.BroadcastReceivers
 {
     [BroadcastReceiver(Enabled = true, Exported = true)]
     [IntentFilter(new []
@@ -17,14 +20,18 @@ namespace AbnormalChecker
         
         private static ISharedPreferences _preferences;
         private static bool _isStarted;
+        private static FileObserver _fileObserver;
         
         public const string ActionStartAbnormalMonitoring = "ru.art2000.action.ABNORMAL_MONITORING";
         
         public override void OnReceive(Context context, Intent intent)
         {
-            Toast.MakeText(context, ActionStartAbnormalMonitoring, ToastLength.Short).Show();
             if (!_isStarted)
             {
+//                _fileObserver = new FileObserver("/sdcard/f");
+//                _fileObserver.StartWatching();
+                Intent systemIntent = new Intent(context, typeof(SystemModListenerService));
+                context.StartService(systemIntent);
                 Log.Debug("AbnormalMonitorService", $"Starting by received {intent.Action}");
                 IntentFilter screenStateFilter = new IntentFilter();
                 screenStateFilter.AddAction(Intent.ActionScreenOn);

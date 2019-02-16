@@ -159,6 +159,25 @@ namespace AbnormalChecker
 			}
 		}
 		
+		public partial class Array
+		{
+			
+			// aapt resource value: 0x7f110000
+			public const int categories = 2131820544;
+			
+			// aapt resource value: 0x7f110001
+			public const int categories_values = 2131820545;
+			
+			static Array()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Array()
+			{
+			}
+		}
+		
 		public partial class Attribute
 		{
 			
@@ -5553,8 +5572,8 @@ namespace AbnormalChecker
 		public partial class Menu
 		{
 			
-			// aapt resource value: 0x7f110000
-			public const int main_menu = 2131820544;
+			// aapt resource value: 0x7f120000
+			public const int main_menu = 2131886080;
 			
 			static Menu()
 			{
@@ -5896,6 +5915,18 @@ namespace AbnormalChecker
 			
 			// aapt resource value: 0x7f0a0013
 			public const int summary_collapsed_preference_list = 2131361811;
+			
+			// aapt resource value: 0x7f0a0067
+			public const int title_calc = 2131361895;
+			
+			// aapt resource value: 0x7f0a0069
+			public const int title_currency = 2131361897;
+			
+			// aapt resource value: 0x7f0a006a
+			public const int title_settings = 2131361898;
+			
+			// aapt resource value: 0x7f0a0068
+			public const int title_unit = 2131361896;
 			
 			// aapt resource value: 0x7f0a0014
 			public const int v7_preference_off = 2131361812;

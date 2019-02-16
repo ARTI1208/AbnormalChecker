@@ -1,14 +1,13 @@
 using System;
-using System.Runtime.CompilerServices;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Support.V4.OS;
 using Android.Support.V7.Preferences;
-using Android.Widget;
 using Java.Util;
 
-namespace AbnormalChecker
+namespace AbnormalChecker.Activities
 {
     [Activity(Label = "Settings", 
         Theme = "@style/MainTheme", 
@@ -17,16 +16,27 @@ namespace AbnormalChecker
     {
         public static readonly string ScreenLockAutoAdjustment = "auto_unlock_limit";
         public static readonly string ScreenLockAutoAdjustmentDayCount = "auto_unlock_monitor_time";
-
+        
         public enum SettingsCategory
         {
             Main,
             Developer
         }
+
+        public bool IsSelectedCategory(string category)
+        {
+            ICollection<string> selectedCategories = mPreferences.GetStringSet("selected_categories", null);
+            return selectedCategories.Contains(category);
+        }
+
+        
+
+        private static ISharedPreferences mPreferences;
         
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            mPreferences = PreferenceManager.GetDefaultSharedPreferences(this);
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             SetContentView(Resource.Layout.settings_activity);
 //            FrameLayout container = FindViewById<FrameLayout>(Resource.Id.fragment_container);
