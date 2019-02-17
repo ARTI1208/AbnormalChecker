@@ -47,7 +47,7 @@ namespace AbnormalChecker.BroadcastReceivers
                 return;
             }
 
-            NotificationSender notificationSender = new NotificationSender(context);
+            NotificationSender notificationSender = new NotificationSender(context, DataHolder.ScreenLocksCategory);
             if (mPreferences == null)
             {
                 mPreferences = PreferenceManager.GetDefaultSharedPreferences(context);
@@ -62,11 +62,10 @@ namespace AbnormalChecker.BroadcastReceivers
                 {
                     mPreferences.Edit().PutBoolean("auto_unlock_limit", false).Apply();
 //                    sendNotification(context);
-                    notificationSender.Send(DataHolder.ScreenLocksCategory,
+                    notificationSender.Send(NotificationSender.InfoNotification,
                         $"{mPreferences.GetInt("auto_unlock_monitor_time", 1)}-day monitoring ended. " +
                         $"Detected {mPreferences.GetInt("monitor_unlock_count", AutoAdjustmentMonitorUnlockCount)} " +
-                        "unlocks",
-                        NotificationSender.InfoNotification);
+                        "unlocks");
                     MainActivity.adapter?.Refresh();
                     return;
                 }
@@ -148,8 +147,7 @@ namespace AbnormalChecker.BroadcastReceivers
                     return;
             }
 
-            notificationSender.Send(DataHolder.ScreenLocksCategory, notificationText,
-                NotificationSender.WarningNotification);
+            notificationSender.Send(NotificationSender.WarningNotification, notificationText);
             
         }
 

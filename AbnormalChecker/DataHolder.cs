@@ -11,6 +11,7 @@ using AbnormalChecker.Extensions;
 using AbnormalChecker.Services;
 using Android;
 using Android.Content;
+using Android.Content.PM;
 using Android.Locations;
 using Android.Preferences;
 using Android.Support.V4.Content;
@@ -25,15 +26,14 @@ using String = System.String;
 
 namespace AbnormalChecker
 {
-
     public delegate DataHolder.CategoryData CategoryDataDel(DataHolder.CategoryData data);
-    
+
     [SuppressMessage("ReSharper", "UnusedMember.Global")]
     public class DataHolder
     {
-
         public static Dictionary<string, CategoryDataDel> dictionary = new Dictionary<string, CategoryDataDel>();
         public static Dictionary<string, CategoryData> CategoriesDataDic = new Dictionary<string, CategoryData>();
+        public static Dictionary<string, string[]> Permissions = new Dictionary<string, string[]>();
         public static string RootCategory = "Root";
         public static string ScreenLocksCategory = "ScreenLocks";
         public static string LocationCategory = "Location";
@@ -52,7 +52,7 @@ namespace AbnormalChecker
             {
                 DataUpdater?.Invoke(this);
             }
-            
+
             public string Title;
             public string Status = "OK";
             public string Data;
@@ -81,45 +81,61 @@ namespace AbnormalChecker
             {
                 data.Status = "Device is not rooted";
             }
+
             return data;
         }
 
         public static CategoryData GetLocationData(CategoryData data)
         {
             string status = "Permissions denied";
-            data.RequiredPermissions = new []{
+            data.RequiredPermissions = new[]
+            {
                 Manifest.Permission.AccessFineLocation,
                 Manifest.Permission.AccessCoarseLocation
             };
-            data.Level = 
-                data.RequiredPermissions.Any(s => ContextCompat.CheckSelfPermission(mContext, s) == Permission.Denied) 
-                    ? CheckStatus.PermissionsRequired : CheckStatus.Normal;
+            data.Level =
+                data.RequiredPermissions.Any(s => ContextCompat.CheckSelfPermission(mContext, s) == Permission.Denied)
+                    ? CheckStatus.PermissionsRequired
+                    : CheckStatus.Normal;
             if (ContextCompat.CheckSelfPermission(mContext, Manifest.Permission.AccessFineLocation) ==
                 Permission.Granted)
             {
                 status = "Permissions granted";
+                GetLastLocationFromDevice();
             }
+
             data.Status = status;
-            GetLastLocationFromDevice();
             return data;
         }
 
         public static CategoryData GetSystemData(CategoryData data)
         {
             data.Title = "System Modification";
-            if (SystemModListenerService.Logger.Contains("\n"))
+            if (SystemModListenerService.Logger.Length > 0)
             {
-                data.Data = SystemModListenerService.Logger.Substring(SystemModListenerService.Logger.LastIndexOf("\n", 
-                    StringComparison.CurrentCultureIgnoreCase)).Trim();    
+                if (SystemModListenerService.Logger.Contains("\n"))
+                {
+                    data.Data = SystemModListenerService.Logger.Substring(SystemModListenerService.Logger.LastIndexOf(
+                        "\n",
+                        StringComparison.CurrentCultureIgnoreCase)).Trim();
+                }
+                else
+                {
+                    data.Data = SystemModListenerService.Logger;
+                }
+
+                data.Status = "Modifications detected!";
+                data.Level = CheckStatus.Dangerous;
             }
             else
             {
-                data.Data = SystemModListenerService.Logger.Length > 0 ? SystemModListenerService.Logger :"No mod found";
+                data.Status = "No modifications detected";
+                data.Level = CheckStatus.Normal;
             }
-            
+
             return data;
         }
-        
+
         public ICollection<string> GetSelectedCategories()
         {
             return mPreferences.GetStringSet("selected_categories", _allCategories);
@@ -145,7 +161,7 @@ namespace AbnormalChecker
                 }
 
                 data.Data = $"{monitoringTime}-day " +
-                                   $"monitoring ends at {dateFormat.Format(monitoringStop)}";
+                            $"monitoring ends at {dateFormat.Format(monitoringStop)}";
             }
             else
             {
@@ -174,8 +190,9 @@ namespace AbnormalChecker
             {
                 return;
             }
+
             foreach (var category in sel)
-            {    
+            {
                 CategoryData categoryData = CategoriesDataDic[category];
                 categoryData.Update();
             }
@@ -221,7 +238,7 @@ namespace AbnormalChecker
 
         static FusedLocationProviderClient fusedLocationProviderClient;
 
-        static async Task GetLastLocationFromDevice()
+        static async void GetLastLocationFromDevice()
         {
             Location location = await fusedLocationProviderClient.GetLastLocationAsync();
             if (location == null)
@@ -230,7 +247,6 @@ namespace AbnormalChecker
             }
             else
             {
-                
                 CategoriesDataDic["location"].Data = formatLocation(location);
                 MainActivity.adapter?.NotifyDataSetChanged();
             }
@@ -241,24 +257,39 @@ namespace AbnormalChecker
             if (_allCategories == null)
             {
                 _allCategories = context.Resources.GetStringArray(Resource.Array.categories_values);
-            }            
+            }
+
             foreach (var category in _allCategories)
             {
                 if (!dictionary.ContainsKey(category))
                 {
-                    dictionary.Add(category, CreateCategoryDelegate(category));   
-                }                    
+                    dictionary.Add(category, CreateCategoryDelegate(category));
+                }
             }
+
             return dictionary;
         }
 
-        public static string[] GetAllRequiredPermissions(Context context)
+        public static String[] GetAllRequiredPermissions(Context context)
         {
             mContext = context;
-            mPreferences = PreferenceManager.GetDefaultSharedPreferences(mContext);
-            fusedLocationProviderClient = LocationServices.GetFusedLocationProviderClient(mContext);
-            _allCategories = context.Resources.GetStringArray(Resource.Array.categories_values);
-            UpdateDelegates(context);
+            return context
+                .PackageManager
+                .GetPackageInfo(context.PackageName, PackageInfoFlags.Permissions)
+                .RequestedPermissions.ToArray();
+        }
+
+
+//        public static string[] GetAllRequiredPermissions(Context context)
+//        {
+//
+//            return retrievePermissions(context);
+//            
+//            mContext = context;
+//            mPreferences = PreferenceManager.GetDefaultSharedPreferences(mContext);
+//            fusedLocationProviderClient = LocationServices.GetFusedLocationProviderClient(mContext);
+//            _allCategories = context.Resources.GetStringArray(Resource.Array.categories_values);
+//            UpdateDelegates(context);
 //            foreach (var pair in dictionary)
 //            {
 //                if (!CategoriesDataDic.ContainsKey(pair.Key))
@@ -266,18 +297,23 @@ namespace AbnormalChecker
 //                    CategoriesDataDic.Add(pair.Key, pair.Value?.Invoke());
 //                }
 //            }
-            List<string> permissions = new List<string>();
-            foreach (var category in CategoriesDataDic)
-            {
-                if (category.Value.RequiredPermissions != null)
-                {
-                    permissions.AddRange(category.Value.RequiredPermissions);
-                }
-            }
-            return permissions.ToArray();
-        }
+//            List<string> permissions = new List<string>();
+//            foreach (var category in CategoriesDataDic)
+//            {
+//                if (category.Value.RequiredPermissions != null)
+//                {
+//                    permissions.AddRange(category.Value.RequiredPermissions);
+//                }
+//            }
+//
+//            return permissions.ToArray();
+//        }
 
         private static string[] _allCategories;
+
+        static DataHolder()
+        {
+        }
 
         public DataHolder(Context context)
         {
@@ -285,30 +321,28 @@ namespace AbnormalChecker
             mPreferences = PreferenceManager.GetDefaultSharedPreferences(mContext);
             fusedLocationProviderClient = LocationServices.GetFusedLocationProviderClient(mContext);
             _allCategories = context.Resources.GetStringArray(Resource.Array.categories_values);
-            
+
 //            Refresh();
 
 //            UpdateDelegates(context);
 
             foreach (var category in _allCategories)
             {
-                 CategoriesDataDic[category] = 
-                     new CategoryData(category.MakeFirstUpper(), CreateCategoryDelegate(category));                
+                CategoriesDataDic[category] =
+                    new CategoryData(category.MakeFirstUpper(), CreateCategoryDelegate(category));
             }
-
-            
         }
-        
-        
+
 
         private static CategoryDataDel CreateCategoryDelegate(string category)
         {
             string methodName = $"Get{category.First().ToString().ToUpper()}{category.Substring(1)}Data";
-            MethodInfo methodInfo = typeof(DataHolder).
-                GetMethod(methodName, BindingFlags.Public | BindingFlags.Static, null, 
-                    new [] { typeof(CategoryData) }, null) ?? 
-                    throw new NullPointerException($"Cannot find method {methodName} in class {typeof(DataHolder)}");
-            CategoryDataDel categoryDelegate = Delegate.CreateDelegate(typeof(CategoryDataDel), 
+            MethodInfo methodInfo = typeof(DataHolder).GetMethod(methodName, BindingFlags.Public | BindingFlags.Static,
+                                        null,
+                                        new[] {typeof(CategoryData)}, null) ??
+                                    throw new NullPointerException(
+                                        $"Cannot find method {methodName} in class {typeof(DataHolder)}");
+            CategoryDataDel categoryDelegate = Delegate.CreateDelegate(typeof(CategoryDataDel),
                 methodInfo) as CategoryDataDel;
             return categoryDelegate;
         }
@@ -320,6 +354,5 @@ namespace AbnormalChecker
             return
                 $"Coordinates: lat = {location.Latitude:F3}, lon = {location.Longitude:F3}, time = {new Date(location.Time)}";
         }
-        
     }
 }

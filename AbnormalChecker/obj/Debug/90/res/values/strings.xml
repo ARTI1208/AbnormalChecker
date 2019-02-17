@@ -1,1 +1,1 @@
-<resources><string name="ApplicationName">AbnormalChecker</string></resources>
+<resources><string name="ApplicationName">AbnormalChecker</string><string name="title_calc">Calculator</string><string name="title_unit">Unit Converter</string><string name="title_currency">Currency</string><string name="title_settings">Settings</string></resources>

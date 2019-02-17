@@ -68,6 +68,9 @@ namespace AbnormalChecker.OtherUI
                 case DataHolder.CheckStatus.Dangerous:
                     myHolder.Card.SetCardBackgroundColor(Color.ParseColor("#ffff0000"));
                     break;
+                case DataHolder.CheckStatus.PermissionsRequired:
+                    myHolder.Card.SetCardBackgroundColor(Color.ParseColor("#fffdd835"));
+                    break;
                 default:
                     myHolder.Card.SetCardBackgroundColor(Color.ParseColor("#ffffff"));
                     break;

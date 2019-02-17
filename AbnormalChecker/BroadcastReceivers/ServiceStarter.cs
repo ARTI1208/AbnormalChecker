@@ -20,7 +20,6 @@ namespace AbnormalChecker.BroadcastReceivers
         
         private static ISharedPreferences _preferences;
         private static bool _isStarted;
-        private static FileObserver _fileObserver;
         
         public const string ActionStartAbnormalMonitoring = "ru.art2000.action.ABNORMAL_MONITORING";
         
@@ -28,11 +27,9 @@ namespace AbnormalChecker.BroadcastReceivers
         {
             if (!_isStarted)
             {
-//                _fileObserver = new FileObserver("/sdcard/f");
-//                _fileObserver.StartWatching();
+                Log.Debug("AbnormalMonitorService", $"Starting by received {intent.Action}");
                 Intent systemIntent = new Intent(context, typeof(SystemModListenerService));
                 context.StartService(systemIntent);
-                Log.Debug("AbnormalMonitorService", $"Starting by received {intent.Action}");
                 IntentFilter screenStateFilter = new IntentFilter();
                 screenStateFilter.AddAction(Intent.ActionScreenOn);
                 if (_preferences == null)

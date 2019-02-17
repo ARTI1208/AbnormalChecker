@@ -18,35 +18,34 @@ namespace AbnormalChecker.Services
 
         private RecursiveFileObserver mFileObserver;
 
-        private static Date lastTime;
+        private static Date _lastTime;
 
         public override void OnCreate()
         {
             File system = new File("/system");
-            NotificationSender sender = new NotificationSender(this);
-            OnFileObserverEvent ev = (events, path) =>
+            NotificationSender sender = new NotificationSender(this, "System Modification");
+            void Ev(FileObserverEvents events, string path)
             {
-                if (lastTime == null)
+                if (_lastTime == null)
                 {
-                    lastTime = new Date();
+                    _lastTime = new Date();
                 }
-                else if (TimeSpan.FromMilliseconds(new Date().Time - lastTime.Time).Seconds < 1)
+                else if (TimeSpan.FromMilliseconds(new Date().Time - _lastTime.Time).Seconds < 1)
                 {
-                    lastTime = new Date();
+                    _lastTime = new Date();
                     return;
                 }
-                lastTime = new Date();
+                _lastTime = new Date();
                 string st = "";
                 if (Logger.Length > 0)
                 {
                     st = "\n";
                 }
                 Logger += $"{st}{GetFormattedDateTime()} : Detected {events} event for {path}";
-                sender.Send("System Modification", $"Detected {events} event for {path}",
-                    NotificationSender.WarningNotification);
+                sender.Send(NotificationSender.WarningNotification, $"Detected {events} event for {path}");
                 MainActivity.adapter?.Refresh();
-            };
-            mFileObserver = new RecursiveFileObserver(system.AbsolutePath, ev, RecursiveFileObserver.ChangesOnly);
+            }
+            mFileObserver = new RecursiveFileObserver(system.AbsolutePath, Ev, RecursiveFileObserver.ChangesOnly);
         }
 
         private string GetFormattedDateTime()
@@ -54,7 +53,6 @@ namespace AbnormalChecker.Services
             Date now = new Date();
             SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy, kk:mm:ss");
             return dateFormat.Format(now);
-            ;
         }
 
         public override StartCommandResult OnStartCommand(Intent intent, StartCommandFlags flags, int startId)
