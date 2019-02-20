@@ -230,8 +230,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\MainActivity.cs" />
+    <Compile Include="Activities\MoreInfoActivity.cs" />
     <Compile Include="Activities\Settings.cs" />
     <Compile Include="BroadcastReceivers\AbnormalBroadcastReceiver.cs" />
+    <Compile Include="BroadcastReceivers\MakeNormalReceiver.cs" />
     <Compile Include="BroadcastReceivers\PhoneCallReceiver.cs" />
     <Compile Include="BroadcastReceivers\ServiceStarter.cs" />
     <Compile Include="DataHolder.cs" />

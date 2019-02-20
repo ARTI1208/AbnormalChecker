@@ -86,11 +86,13 @@ namespace AbnormalChecker.OtherUI
                 if (dataSet.Level == DataHolder.CheckStatus.PermissionsRequired)
                 {
                     MainActivity.GrantPermissions(dataSet.RequiredPermissions);
+                    return;
                 }
                     
-                
-                
-                Toast.MakeText(mContext, myHolder.TitleTextView.Text, ToastLength.Short).Show();
+                Intent intent = new Intent(mContext, typeof(MoreInfoActivity));
+                intent.PutExtra("title", dataSet.Title);
+                mContext.StartActivity(intent);                
+//                Toast.MakeText(mContext, myHolder.TitleTextView.Text, ToastLength.Short).Show();
             };
         }
 

@@ -1,5 +1,7 @@
 
 
+using AbnormalChecker.Activities;
+using AbnormalChecker.BroadcastReceivers;
 using Android.App;
 using Android.Content;
 using Android.Graphics;
@@ -51,16 +53,36 @@ namespace AbnormalChecker
                     break;
             }
             
-//            Android.Resource.Drawable.inf            
+            Intent intent = new Intent(mContext, typeof(MoreInfoActivity));
+            intent.PutExtra("title", mCategory);
+            PendingIntent pendingIntent = PendingIntent.GetActivity(mContext, 
+                notificationType, intent, PendingIntentFlags.OneShot);
+                        
             builder.SetContentTitle(title)
                 .SetContentText(text)
                 .SetChannelId(mCategory)
-                .SetDefaults(NotificationCompat.DefaultSound);
-
+                .SetDefaults(NotificationCompat.DefaultSound)
+                .SetContentIntent(pendingIntent)
+                .SetAutoCancel(true);
+               
             switch (notificationType)
             {
                 case WarningNotification:
                     builder.SetSmallIcon(Android.Resource.Drawable.StatSysWarning);
+            
+                    Intent normalIntent = new Intent(mContext, typeof(MakeNormalReceiver));
+                    PendingIntent normalPendingIntent = PendingIntent.GetBroadcast(mContext, 666, normalIntent, 
+                        PendingIntentFlags.CancelCurrent);
+                    NotificationCompat.Action.Builder makeNormalBuilder = new NotificationCompat.Action.Builder(Resource.Drawable.Icon, 
+                        "Make normal", normalPendingIntent);
+                    
+                    
+                    NotificationCompat.Action makeNormal = new NotificationCompat.Action(Resource.Drawable.Icon, 
+                        "Make normal", normalPendingIntent);
+                    
+                    NotificationCompat.Action viewDetails = new NotificationCompat.Action(Resource.Drawable.Icon, 
+                        "View details", pendingIntent);
+                    builder.AddAction(makeNormal).AddAction(viewDetails);
                     break;
                 case InfoNotification:
                     builder.SetSmallIcon(Resource.Drawable.ic_stat_info);

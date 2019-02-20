@@ -20,8 +20,10 @@ using Java.Util;
 using Permission = Android.Content.PM.Permission;
 using Android.Gms.Common;
 using Android.Gms.Location;
+using Android.OS;
 using Android.Util;
 using Java.Lang;
+using Object = Java.Lang.Object;
 using String = System.String;
 
 namespace AbnormalChecker
@@ -39,7 +41,39 @@ namespace AbnormalChecker
         public static string LocationCategory = "Location";
         private static Context mContext;
         private static ISharedPreferences mPreferences;
-
+        
+//        public class CategoryParcel : Java.Lang.Object, IParcelable
+//        {
+//
+//            public CategoryData Data
+//            {
+//                get;
+//                set;    
+//            }
+//            
+//            public int DescribeContents()
+//            {
+//                throw new NotImplementedException();
+//            }
+//
+//            public void WriteToParcel(Parcel dest, ParcelableWriteFlags flags)
+//            {
+//                
+//                dest.WriteString(Data.Title);
+//                dest.WriteString(Data.Status);
+//                dest.WriteString(Data.Data);
+//                dest.WriteStringArray(Data.RequiredPermissions);
+//                
+//                dest.WriteLong(User.Id);
+//                dest.WriteString(User.FirstName);
+//                dest.WriteString(User.LastName);
+//                dest.WriteInt(User.Age);
+//                dest.WriteString(User.Address);
+//                dest.WriteString(User.City);
+//                dest.WriteString(User.Country);
+//            }
+//        }
+        
         public class CategoryData
         {
             public CategoryData(string title, CategoryDataDel updater)
@@ -47,6 +81,8 @@ namespace AbnormalChecker
                 Title = title;
                 DataUpdater = updater;
             }
+            
+            
 
             public void Update()
             {

@@ -81,6 +81,7 @@ namespace AbnormalChecker.Activities
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
             _activity = this;
+            
             mPreferences = PreferenceManager.GetDefaultSharedPreferences(this);
             if (IsFirstRun())
             {
