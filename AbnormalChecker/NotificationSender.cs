@@ -76,7 +76,6 @@ namespace AbnormalChecker
                     NotificationCompat.Action.Builder makeNormalBuilder = new NotificationCompat.Action.Builder(Resource.Drawable.Icon, 
                         "Make normal", normalPendingIntent);
                     
-                    
                     NotificationCompat.Action makeNormal = new NotificationCompat.Action(Resource.Drawable.Icon, 
                         "Make normal", normalPendingIntent);
                     
