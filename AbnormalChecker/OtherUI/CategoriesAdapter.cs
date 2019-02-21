@@ -15,6 +15,7 @@ namespace AbnormalChecker.OtherUI
         private readonly Context mContext;
         private readonly DataHolder mDataHolder;
         private List<DataHolder.CategoryData> list = new List<DataHolder.CategoryData>();
+        private List<string> categories = new List<string>();
 
         public CategoriesAdapter(Context context)
         {
@@ -26,6 +27,7 @@ namespace AbnormalChecker.OtherUI
             foreach (var pair in DataHolder.CategoriesDataDic)
             {
                 list.Add(pair.Value);
+                categories.Add(pair.Key);
             }
         }
 
@@ -34,11 +36,13 @@ namespace AbnormalChecker.OtherUI
         {
             mDataHolder.Refresh();
             list.Clear();
+            categories.Clear();
             foreach (var pair in DataHolder.CategoriesDataDic)
             {
-                if (mDataHolder.GetSelectedCategories().Contains(pair.Key))
+                if (DataHolder.GetSelectedCategories().Contains(pair.Key))
                 {
-                    list.Add(pair.Value);    
+                    list.Add(pair.Value);
+                    categories.Add(pair.Key);
                 }
             }
             NotifyDataSetChanged();
@@ -82,15 +86,18 @@ namespace AbnormalChecker.OtherUI
             {
 
 
-
+                
                 if (dataSet.Level == DataHolder.CheckStatus.PermissionsRequired)
                 {
                     MainActivity.GrantPermissions(dataSet.RequiredPermissions);
                     return;
                 }
-                    
+                
+                
+                
                 Intent intent = new Intent(mContext, typeof(MoreInfoActivity));
                 intent.PutExtra("title", dataSet.Title);
+                intent.PutExtra("category", categories[position]);
                 mContext.StartActivity(intent);                
 //                Toast.MakeText(mContext, myHolder.TitleTextView.Text, ToastLength.Short).Show();
             };

@@ -1,11 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using AbnormalChecker.BroadcastReceivers;
 using Android.App;
 using Android.Content;
 using Android.OS;
+using Android.Support.V14.Preferences;
 using Android.Support.V7.Preferences;
 using Java.Util;
+using Object = Java.Lang.Object;
 
 namespace AbnormalChecker.Activities
 {
@@ -99,6 +102,15 @@ namespace AbnormalChecker.Activities
                 {
                     mPreferences.Edit().PutInt(screenLimit.Key, (int)args.NewValue).Apply();
                 };
+
+                MultiSelectListPreference categoriesPreference = 
+                    (MultiSelectListPreference) FindPreference("selected_categories");
+
+                categoriesPreference.PreferenceChange += (sender, args) =>
+                {
+                    mPreferences.Edit().PutStringSet(categoriesPreference.Key, categoriesPreference.Values).Apply();
+                    ServiceStarter.StartStopMonitoring(Activity);
+                };
                 
                 Preference about =  FindPreference("app_info");
                 about.Summary = 
@@ -127,6 +139,8 @@ namespace AbnormalChecker.Activities
                 };
                 
             }
+
+            
         }
         
     }

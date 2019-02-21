@@ -47,6 +47,9 @@ namespace AbnormalChecker.Activities
             }
 
             //TODO : OnBoarding Fragment
+            StartActivity(new Intent(this, typeof(StartActivity)));
+            
+            
             RequestPermissions(DataHolder.GetAllRequiredPermissions(this), PermissionRequestCode);
             mPreferences.Edit().PutBoolean("first_run", false).Apply();
         }
@@ -72,7 +75,6 @@ namespace AbnormalChecker.Activities
             adapter = new CategoriesAdapter(this);
             recyclerView.SetLayoutManager(llm);
             recyclerView.SetAdapter(adapter);
-            Toast.MakeText(this, "adapter", ToastLength.Short).Show();
             adapter?.Refresh();
         }
 
@@ -81,8 +83,8 @@ namespace AbnormalChecker.Activities
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
             _activity = this;
-            
             mPreferences = PreferenceManager.GetDefaultSharedPreferences(this);
+            DataHolder.Initialize(this);
             if (IsFirstRun())
             {
                 CheckAndGrantPermissions();
@@ -91,8 +93,11 @@ namespace AbnormalChecker.Activities
             {
                 SetAdapter();
             }
+            Intent serv = new Intent(ApplicationContext, typeof(AbnormalChecker.Services.TestService));
+            StartService(serv); 
+            StopService(serv); 
             Intent starter = new Intent();
-            starter.SetAction(ServiceStarter.ActionStartAbnormalMonitoring);
+            starter.SetAction(ServiceStarter.ActionAbnormalMonitoring);
             starter.SetClass(this, typeof(ServiceStarter));
             SendBroadcast(starter);
             Button b = FindViewById<Button>(Resource.Id.notif);

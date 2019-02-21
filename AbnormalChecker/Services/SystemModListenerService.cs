@@ -20,10 +20,13 @@ namespace AbnormalChecker.Services
 
         private static Date _lastTime;
 
+        public static bool IsRunning;
+
         public override void OnCreate()
         {
+            IsRunning = true;
             File system = new File("/system");
-            NotificationSender sender = new NotificationSender(this, "System Modification");
+            NotificationSender sender = new NotificationSender(this, DataHolder.SystemCategory);
             void Ev(FileObserverEvents events, string path)
             {
                 if (_lastTime == null)

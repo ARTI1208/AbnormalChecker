@@ -20,16 +20,23 @@ namespace AbnormalChecker.BroadcastReceivers
         
         private static ISharedPreferences _preferences;
         private static bool _isStarted;
+        private static Intent mSystemIntent;
         
-        public const string ActionStartAbnormalMonitoring = "ru.art2000.action.ABNORMAL_MONITORING";
+        public const string ActionAbnormalMonitoring = "ru.art2000.action.ABNORMAL_MONITORING";
         
         public override void OnReceive(Context context, Intent intent)
         {
-            if (!_isStarted)
-            {
+//            if (!_isStarted)
+//            {
                 Log.Debug("AbnormalMonitorService", $"Starting by received {intent.Action}");
-                Intent systemIntent = new Intent(context, typeof(SystemModListenerService));
-                context.StartService(systemIntent);
+                if (DataHolder.IsSelectedCategory(DataHolder.SystemCategory))
+                {
+                    SetSystemMonitoringOn(context, true);
+                }
+                else if (mSystemIntent != null)
+                {
+                    context.StopService(mSystemIntent);
+                }
                 IntentFilter screenStateFilter = new IntentFilter();
                 screenStateFilter.AddAction(Intent.ActionScreenOn);
                 if (_preferences == null)
@@ -42,10 +49,30 @@ namespace AbnormalChecker.BroadcastReceivers
                         _preferences.GetInt("monitor_unlock_count", 0);
                 }
                 context.ApplicationContext.RegisterReceiver(new AbnormalBroadcastReceiver(), screenStateFilter);
-                _isStarted = true;
-                return;
-            }
-            Log.Debug("AbnormalMonitorService", $"Received {intent.Action}, but monitoring already started!");
+//                _isStarted = true;
+//                return;
+//            }
+//            Log.Debug("AbnormalMonitorService", $"Received {intent.Action}, but monitoring already started!");
         }
+
+        private static void SetSystemMonitoringOn(Context context, bool value)
+        {
+            if (value)
+            {
+                mSystemIntent = new Intent(context, typeof(SystemModListenerService));
+                context.StartService(mSystemIntent);    
+            }
+            else if (mSystemIntent != null)
+            {
+                context.StopService(mSystemIntent);
+            }
+        }
+
+        public static void StartStopMonitoring(Context context)
+        {
+            SetSystemMonitoringOn(context, false);
+        }
+        
+        
     }
 }

@@ -30,33 +30,35 @@ namespace AbnormalChecker
 
         public void Send(int notificationType, string text)
         {
-            string title = mCategory;
+            string categoryTitle = DataHolder.CategoriesDataDic[mCategory].Title;
+            string title = "DummyTitle";
             string description = "BaseDescription";
-            NotificationCompat.Builder builder = new NotificationCompat.Builder(mContext, mCategory);
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(mContext, title);
             builder.SetPriority(NotificationCompat.PriorityHigh);
             NotificationImportance importance = NotificationImportance.Max;
             switch (notificationType)
             {
                 case WarningNotification:
-                    title = mCategory + " Warning";
-                    description = $"This channel is used to send warnings associated with {mCategory}";
+                    title = categoryTitle + " Warning";
+                    description = $"This channel is used to send warnings associated with {categoryTitle}";
                     break;
                 case SummaryNotification:
                     title = "Daily Summary";
                     description = $"This channel is used to send daily summaries";
                     break;
                 case InfoNotification:
-                    title = mCategory + " Info";
-                    description = $"This channel is used to send information associated with {mCategory}";
+                    title = categoryTitle + " Info";
+                    description = $"This channel is used to send information associated with {categoryTitle}";
                     builder.SetPriority(NotificationCompat.PriorityDefault);
                     importance = NotificationImportance.Default;
                     break;
             }
             
             Intent intent = new Intent(mContext, typeof(MoreInfoActivity));
-            intent.PutExtra("title", mCategory);
+            intent.PutExtra("notification_id", mCategory.GetHashCode());
+            intent.PutExtra("category", mCategory);
             PendingIntent pendingIntent = PendingIntent.GetActivity(mContext, 
-                notificationType, intent, PendingIntentFlags.OneShot);
+                notificationType, intent, PendingIntentFlags.CancelCurrent);
                         
             builder.SetContentTitle(title)
                 .SetContentText(text)
@@ -71,8 +73,11 @@ namespace AbnormalChecker
                     builder.SetSmallIcon(Android.Resource.Drawable.StatSysWarning);
             
                     Intent normalIntent = new Intent(mContext, typeof(MakeNormalReceiver));
+                    normalIntent.PutExtra("notification_id", mCategory.GetHashCode());
+                    normalIntent.PutExtra("category", mCategory);
                     PendingIntent normalPendingIntent = PendingIntent.GetBroadcast(mContext, 666, normalIntent, 
                         PendingIntentFlags.CancelCurrent);
+                    
                     NotificationCompat.Action.Builder makeNormalBuilder = new NotificationCompat.Action.Builder(Resource.Drawable.Icon, 
                         "Make normal", normalPendingIntent);
                     

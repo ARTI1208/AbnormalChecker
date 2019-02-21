@@ -16,7 +16,10 @@ namespace AbnormalChecker.BroadcastReceivers
         
         public override void OnReceive(Context context, Intent intent)
         {
-            Toast.MakeText(context, NormalAction, ToastLength.Short).Show();
+            Toast.MakeText(context, intent.GetStringExtra("category"), ToastLength.Short).Show();
+            NotificationManager notificationManager = 
+                (NotificationManager) context.GetSystemService(Context.NotificationService);
+            notificationManager.Cancel(intent.GetIntExtra("notification_id", 0));
         }
     }
 }

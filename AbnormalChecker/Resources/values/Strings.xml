@@ -5,4 +5,7 @@
     <string name="title_unit">Unit Converter</string>
     <string name="title_currency">Currency</string>
     <string name="title_settings">Settings</string>
+    <string name="button.finish">FINISH</string>
+    <string name="button.next">NEXT</string>
+    <string name="button.skip">SKIP</string>
 </resources>

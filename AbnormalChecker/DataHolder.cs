@@ -23,6 +23,7 @@ using Android.Gms.Location;
 using Android.OS;
 using Android.Util;
 using Java.Lang;
+using ICollection = System.Collections.ICollection;
 using Object = Java.Lang.Object;
 using String = System.String;
 
@@ -36,9 +37,10 @@ namespace AbnormalChecker
         public static Dictionary<string, CategoryDataDel> dictionary = new Dictionary<string, CategoryDataDel>();
         public static Dictionary<string, CategoryData> CategoriesDataDic = new Dictionary<string, CategoryData>();
         public static Dictionary<string, string[]> Permissions = new Dictionary<string, string[]>();
-        public static string RootCategory = "Root";
-        public static string ScreenLocksCategory = "ScreenLocks";
-        public static string LocationCategory = "Location";
+        public static string RootCategory = "root";
+        public static string ScreenLocksCategory = "screen";
+        public static string LocationCategory = "location";
+        public static string SystemCategory = "system";
         private static Context mContext;
         private static ISharedPreferences mPreferences;
         
@@ -172,9 +174,14 @@ namespace AbnormalChecker
             return data;
         }
 
-        public ICollection<string> GetSelectedCategories()
+        public static ICollection<string> GetSelectedCategories()
         {
             return mPreferences.GetStringSet("selected_categories", _allCategories);
+        }
+
+        public static bool IsSelectedCategory(string category)
+        {
+            return GetSelectedCategories().Contains(category);
         }
 
         public static CategoryData GetScreenData(CategoryData data)
@@ -349,6 +356,14 @@ namespace AbnormalChecker
 
         static DataHolder()
         {
+        }
+
+        public static void Initialize(Context context)
+        {
+            mContext = context;
+            mPreferences = PreferenceManager.GetDefaultSharedPreferences(mContext);
+            fusedLocationProviderClient = LocationServices.GetFusedLocationProviderClient(mContext);
+            _allCategories = context.Resources.GetStringArray(Resource.Array.categories_values);
         }
 
         public DataHolder(Context context)
