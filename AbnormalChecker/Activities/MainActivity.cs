@@ -23,12 +23,12 @@ namespace AbnormalChecker.Activities
     // ReSharper disable once ClassNeverInstantiated.Global
     public class MainActivity : AppCompatActivity
     {
-        private ISharedPreferences mPreferences;
+        public static ISharedPreferences mPreferences { get; private set; }
 
         private static MainActivity _activity;
         public static CategoriesAdapter adapter { get; private set; }
 
-        private const int PermissionRequestCode = 666;
+        public const int PermissionRequestCode = 666;
         private const int SettingsRequestCode = 777;
 
         public static void GrantPermissions(string[] permissions)
@@ -50,9 +50,10 @@ namespace AbnormalChecker.Activities
             StartActivity(new Intent(this, typeof(StartActivity)));
             
             
-            RequestPermissions(DataHolder.GetAllRequiredPermissions(this), PermissionRequestCode);
-            mPreferences.Edit().PutBoolean("first_run", false).Apply();
+            
         }
+        
+        
 
         private bool IsFirstRun()
         {

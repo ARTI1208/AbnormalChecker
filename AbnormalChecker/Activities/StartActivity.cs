@@ -11,13 +11,15 @@ namespace AbnormalChecker.Activities
         Label = "AbnormalCheckerOn",
         Theme = "@style/MainTheme",
         Icon = "@drawable/icon",
-        MainLauncher = true
+        MainLauncher = false
     )]
     public class StartActivity : OnBoardingActivity
     {
         public override void onFinishButtonPressed()
         {
             Toast.MakeText(this, "Done", ToastLength.Short).Show();
+            RequestPermissions(DataHolder.GetAllRequiredPermissions(this), MainActivity.PermissionRequestCode);
+            MainActivity.mPreferences.Edit().PutBoolean("first_run", false).Apply();
         }
 
         protected override void OnCreate(Bundle savedInstanceState)
