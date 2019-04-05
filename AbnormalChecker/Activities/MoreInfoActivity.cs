@@ -1,21 +1,33 @@
-using System.Collections.Generic;
+using System.IO;
 using Android.App;
-using Android.Content;
 using Android.OS;
 using Android.Support.V7.App;
 using Android.Widget;
+using File = Java.IO.File;
 
 namespace AbnormalChecker.Activities
 {
     [Activity(
         Label = "AbnormalChecker",
         Theme = "@style/MainTheme",
-        Icon = "@drawable/icon"    
+        Icon = "@mipmap/icon"
     )]
     public class MoreInfoActivity : AppCompatActivity
     {
         private DataHolder.CategoryData mCategoryData;
-        
+
+        public override bool OnSupportNavigateUp()
+        {
+            Finish();
+            return true;
+        }
+
+        public override bool OnNavigateUp()
+        {
+            Finish();
+            return true;
+        }
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -25,34 +37,44 @@ namespace AbnormalChecker.Activities
             TextView data = FindViewById<TextView>(Resource.Id.data);
             mCategoryData = DataHolder.CategoriesDataDic[Intent.GetStringExtra("category")];
             SupportActionBar.Title = mCategoryData.Title;
-            Toast.MakeText(this, Intent.GetStringExtra("category"), ToastLength.Short).Show();
+            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             if (Intent.HasExtra("notification_id"))
             {
-                ((NotificationManager) GetSystemService(NotificationService)).
-                    Cancel(Intent.GetIntExtra("notification_id", 0));
+                ((NotificationManager) GetSystemService(NotificationService)).Cancel(
+                    Intent.GetIntExtra("notification_id", 0));
             }
-
-            status.Text = mCategoryData.Status;
 
             if (mCategoryData.RequiredPermissions == null)
             {
-                permissions.Text = "No permissions required";
+                permissions.Text = "Required permissions:\n\tNo";
             }
             else
             {
                 string perms = "";
                 foreach (var p in mCategoryData.RequiredPermissions)
                 {
-                    perms += p + "\n";
+                    perms += "\n\t" + p;
                 }
-                perms = perms.Trim();
-                permissions.Text = perms;
+
+                permissions.Text = $"Required permissions: {perms}";
             }
-            
-            status.Text = mCategoryData.Status;
-            
-            data.Text = mCategoryData.Data;
+
+            status.Text = $"Status:\n\t{mCategoryData.Status}";
+            if (mCategoryData.DataFilePath == null)
+            {
+                data.Text = $"Data message:\n\t{mCategoryData.Data}";
+            }
+            else if (new File(FilesDir, mCategoryData.DataFilePath).Exists())
+            {
+                using (StreamReader reader = new StreamReader(OpenFileInput(mCategoryData.DataFilePath)))
+                {
+                    data.Text = $"Data message:\n\t{reader.ReadToEnd()}";
+                }
+            }
+            else
+            {
+                data.Text = $"No data available";
+            }
         }
-   
     }
 }

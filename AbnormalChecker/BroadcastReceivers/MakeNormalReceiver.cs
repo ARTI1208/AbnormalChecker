@@ -1,3 +1,4 @@
+using AbnormalChecker.Services;
 using Android.App;
 using Android.Content;
 using Android.Widget;
@@ -16,10 +17,19 @@ namespace AbnormalChecker.BroadcastReceivers
         
         public override void OnReceive(Context context, Intent intent)
         {
-            Toast.MakeText(context, intent.GetStringExtra("category"), ToastLength.Short).Show();
             NotificationManager notificationManager = 
                 (NotificationManager) context.GetSystemService(Context.NotificationService);
             notificationManager.Cancel(intent.GetIntExtra("notification_id", 0));
+
+            switch (intent.GetStringExtra("category"))
+            {
+                case DataHolder.SystemCategory:
+                    DataHolder.normalizeSystemData(
+                        intent.GetStringExtra(SystemModListenerService.ExtraFilePath),
+                        intent.GetStringExtra(SystemModListenerService.ExtraFileEvent));
+                    break;
+            }
+            
         }
     }
 }

@@ -10,7 +10,7 @@ namespace AbnormalChecker.Activities
     (
         Label = "AbnormalCheckerOn",
         Theme = "@style/MainTheme",
-        Icon = "@drawable/icon",
+        Icon = "@mipmap/icon",
         MainLauncher = false
     )]
     public class StartActivity : OnBoardingActivity

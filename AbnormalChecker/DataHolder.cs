@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
@@ -23,27 +24,31 @@ using Android.Gms.Location;
 using Android.OS;
 using Android.Util;
 using Java.Lang;
+using File = Java.IO.File;
 using ICollection = System.Collections.ICollection;
 using Object = Java.Lang.Object;
 using String = System.String;
 
 namespace AbnormalChecker
 {
-    public delegate DataHolder.CategoryData CategoryDataDel(DataHolder.CategoryData data);
+    public delegate DataHolder.CategoryData CategoryUpdater(DataHolder.CategoryData data);
+
+    public delegate DataHolder.CategoryData Normalizer(DataHolder.CategoryData data);
 
     [SuppressMessage("ReSharper", "UnusedMember.Global")]
     public class DataHolder
     {
-        public static Dictionary<string, CategoryDataDel> dictionary = new Dictionary<string, CategoryDataDel>();
+        public static Dictionary<string, CategoryUpdater> dictionary = new Dictionary<string, CategoryUpdater>();
+        public static Dictionary<string, CategoryUpdater> normalizer = new Dictionary<string, CategoryUpdater>();
         public static Dictionary<string, CategoryData> CategoriesDataDic = new Dictionary<string, CategoryData>();
         public static Dictionary<string, string[]> Permissions = new Dictionary<string, string[]>();
         public static string RootCategory = "root";
         public static string ScreenLocksCategory = "screen";
         public static string LocationCategory = "location";
-        public static string SystemCategory = "system";
+        public const string SystemCategory = "system";
         private static Context mContext;
         private static ISharedPreferences mPreferences;
-        
+
 //        public class CategoryParcel : Java.Lang.Object, IParcelable
 //        {
 //
@@ -75,28 +80,28 @@ namespace AbnormalChecker
 //                dest.WriteString(User.Country);
 //            }
 //        }
-        
+
         public class CategoryData
         {
-            public CategoryData(string title, CategoryDataDel updater)
+            public CategoryData(string title, CategoryUpdater updater)
             {
                 Title = title;
                 DataUpdater = updater;
             }
-            
-            
 
             public void Update()
             {
                 DataUpdater?.Invoke(this);
             }
 
+
+            public string DataFilePath;
             public string Title;
             public string Status = "OK";
             public string Data;
             public CheckStatus Level = CheckStatus.Normal;
             public string[] RequiredPermissions;
-            public CategoryDataDel DataUpdater;
+            public CategoryUpdater DataUpdater;
         }
 
         public enum CheckStatus
@@ -151,17 +156,7 @@ namespace AbnormalChecker
             data.Title = "System Modification";
             if (SystemModListenerService.Logger.Length > 0)
             {
-                if (SystemModListenerService.Logger.Contains("\n"))
-                {
-                    data.Data = SystemModListenerService.Logger.Substring(SystemModListenerService.Logger.LastIndexOf(
-                        "\n",
-                        StringComparison.CurrentCultureIgnoreCase)).Trim();
-                }
-                else
-                {
-                    data.Data = SystemModListenerService.Logger;
-                }
-
+                data.Data = SystemModListenerService.Logger;
                 data.Status = "Modifications detected!";
                 data.Level = CheckStatus.Dangerous;
             }
@@ -170,6 +165,37 @@ namespace AbnormalChecker
                 data.Status = "No modifications detected";
                 data.Level = CheckStatus.Normal;
             }
+
+            data.DataFilePath = SystemModListenerService.LogFile;
+
+            if (new File(mContext.FilesDir, data.DataFilePath).Exists())
+            {
+                using (StreamReader reader = new StreamReader(
+                    mContext.OpenFileInput(data.DataFilePath)))
+                {
+                    string text = reader.ReadToEnd();
+
+                    if (text.Length > 0)
+                    {
+                        data.Data = text.Split("\n").Last(s => s.Length > 0);
+                        data.Status = "Modifications detected!";
+                        data.Level = CheckStatus.Dangerous;
+                    }
+                    else
+                    {
+                        data.Data = null;
+                        data.Status = "No modifications detected";
+                        data.Level = CheckStatus.Normal;
+                    }
+                }
+            }
+            else
+            {
+                data.Data = null;
+                data.Status = "No modifications detected";
+                data.Level = CheckStatus.Normal;
+            }
+
 
             return data;
         }
@@ -209,7 +235,7 @@ namespace AbnormalChecker
             else
             {
                 data.Status = "Normal";
-                data.Data = $"{AbnormalBroadcastReceiver.unlockedTimes} unlocks total";
+                data.Data = $"{ScreenUnlockReceiver.unlockedTimes} unlocks total";
             }
 
             return data;
@@ -295,7 +321,7 @@ namespace AbnormalChecker
             }
         }
 
-        private static Dictionary<string, CategoryDataDel> UpdateDelegates(Context context)
+        private static Dictionary<string, CategoryUpdater> UpdateDelegates(Context context)
         {
             if (_allCategories == null)
             {
@@ -384,17 +410,42 @@ namespace AbnormalChecker
             }
         }
 
-
-        private static CategoryDataDel CreateCategoryDelegate(string category)
+        enum DelegateType
         {
-            string methodName = $"Get{category.First().ToString().ToUpper()}{category.Substring(1)}Data";
+            Updater,
+            Normalizer
+        }
+
+
+        public static void normalizeSystemData(string path, string ev)
+        {
+            using (StreamWriter writer = new StreamWriter(mContext.OpenFileOutput(
+                SystemModListenerService.ExcludedFiles, FileCreationMode.Append)))
+            {
+                writer.WriteLine($"{path}____{ev}");
+            }
+        }
+
+        private static CategoryUpdater CreateCategoryDelegate(string category, DelegateType type = DelegateType.Updater)
+        {
+            string methodName;
+            switch (type)
+            {
+                case DelegateType.Normalizer:
+                    methodName = $"Normalize{category.First().ToString().ToUpper()}{category.Substring(1)}Data";
+                    break;
+                default:
+                    methodName = $"Get{category.First().ToString().ToUpper()}{category.Substring(1)}Data";
+                    break;
+            }
+
             MethodInfo methodInfo = typeof(DataHolder).GetMethod(methodName, BindingFlags.Public | BindingFlags.Static,
                                         null,
                                         new[] {typeof(CategoryData)}, null) ??
                                     throw new NullPointerException(
                                         $"Cannot find method {methodName} in class {typeof(DataHolder)}");
-            CategoryDataDel categoryDelegate = Delegate.CreateDelegate(typeof(CategoryDataDel),
-                methodInfo) as CategoryDataDel;
+            CategoryUpdater categoryDelegate = Delegate.CreateDelegate(typeof(CategoryUpdater),
+                methodInfo) as CategoryUpdater;
             return categoryDelegate;
         }
 

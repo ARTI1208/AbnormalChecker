@@ -1,15 +1,19 @@
-﻿using AbnormalChecker.BroadcastReceivers;
+﻿using System.Collections.Generic;
+using System.IO;
+using AbnormalChecker.BroadcastReceivers;
 using AbnormalChecker.OtherUI;
 using AbnormalChecker.Services;
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
+using Android.Graphics.Drawables;
 using Android.OS;
 using Android.Preferences;
 using Android.Support.V7.App;
 using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
+using Java.Util;
 
 namespace AbnormalChecker.Activities
 {
@@ -17,7 +21,7 @@ namespace AbnormalChecker.Activities
     (
         Label = "AbnormalChecker",
         Theme = "@style/MainTheme",
-        Icon = "@drawable/icon",
+        Icon = "@mipmap/icon",
         MainLauncher = true
     )]
     // ReSharper disable once ClassNeverInstantiated.Global
@@ -69,6 +73,31 @@ namespace AbnormalChecker.Activities
             }
         }
 
+        public void RefreshList()
+        {
+            adapter?.Refresh();
+            if (Build.VERSION.SdkInt >= BuildVersionCodes.O 
+                && GetSystemService(ShortcutService) is ShortcutManager shortcutManager)
+            {
+                List<ShortcutInfo> shortcuts = new List<ShortcutInfo>();
+                foreach (var cat in DataHolder.GetSelectedCategories())
+                {
+                    DataHolder.CategoryData data = DataHolder.CategoriesDataDic[cat];
+
+                    Intent info = new Intent(this, typeof(MoreInfoActivity));
+                    info.PutExtra("category", cat);
+                    info.SetAction(Android.Content.Intent.ActionDefault);
+                    
+                    ShortcutInfo shortcutOne = new ShortcutInfo.Builder(this, cat)
+                        .SetShortLabel(data.Title)
+                        .SetIcon(Icon.CreateWithResource(this, Resource.Mipmap.Icon))
+                        .SetIntent(info).Build();
+                    shortcuts.Add(shortcutOne);
+                    shortcutManager.SetDynamicShortcuts(shortcuts);
+                }
+            }
+        }
+
         private void SetAdapter()
         {
             RecyclerView recyclerView = FindViewById<RecyclerView>(Resource.Id.categoriesRecyclerView);
@@ -102,9 +131,11 @@ namespace AbnormalChecker.Activities
             starter.SetClass(this, typeof(ServiceStarter));
             SendBroadcast(starter);
             Button b = FindViewById<Button>(Resource.Id.notif);
+            RefreshList();
             b.Click += delegate
             {
                 adapter?.Refresh();
+                
             };
         }
 

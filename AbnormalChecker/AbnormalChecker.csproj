@@ -49,9 +49,6 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
-    <Reference Include="OnBoardingLibrary, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
-      <HintPath>OnBoardingLibrary.dll</HintPath>
-    </Reference>
     <Reference Include="RestSharp, Version=106.6.7.0, Culture=neutral, PublicKeyToken=598062e77f915f75">
       <HintPath>..\packages\RestSharp.106.6.7\lib\netstandard2.0\RestSharp.dll</HintPath>
       <Private>True</Private>
@@ -235,7 +232,7 @@
     <Compile Include="Activities\OnBoardingActivity.cs" />
     <Compile Include="Activities\Settings.cs" />
     <Compile Include="Activities\StartActivity.cs" />
-    <Compile Include="BroadcastReceivers\AbnormalBroadcastReceiver.cs" />
+    <Compile Include="BroadcastReceivers\ScreenUnlockReceiver.cs" />
     <Compile Include="BroadcastReceivers\MakeNormalReceiver.cs" />
     <Compile Include="BroadcastReceivers\PhoneCallReceiver.cs" />
     <Compile Include="BroadcastReceivers\ServiceStarter.cs" />
@@ -256,15 +253,20 @@
     <Compile Include="Services\TestService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\drawable-anydpi-v24\ic_launcher_foreground.xml">
+      <SubType>Designer</SubType>
+      <Generator></Generator>
+    </AndroidResource>
     <AndroidResource Include="Resources\layout\Main.xml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
   <ItemGroup>
+    <AndroidResource Include="Resources\mipmap\Icon.png">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
     <AndroidResource Include="Resources\values\Strings.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Icon.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -349,6 +351,12 @@
   <ItemGroup>
     <Compile Include="OtherUI\FlowingGradient.cs" />
     <Compile Include="OtherUI\FlowingGradientClass.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\Icon.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-anydpi-v24\ic_launcher_background.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Annotations.28.0.0.1\build\monoandroid90\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Annotations.28.0.0.1\build\monoandroid90\Xamarin.Android.Support.Annotations.targets')" />

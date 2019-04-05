@@ -78,8 +78,7 @@ namespace AbnormalChecker.OtherUI
                 default:
                     myHolder.Card.SetCardBackgroundColor(Color.ParseColor("#ffffff"));
                     break;
-            }
-            
+            }     
             
             
             myHolder.Card.Click += delegate
@@ -99,7 +98,6 @@ namespace AbnormalChecker.OtherUI
                 intent.PutExtra("title", dataSet.Title);
                 intent.PutExtra("category", categories[position]);
                 mContext.StartActivity(intent);                
-//                Toast.MakeText(mContext, myHolder.TitleTextView.Text, ToastLength.Short).Show();
             };
         }
 

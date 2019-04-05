@@ -43,12 +43,7 @@ namespace AbnormalChecker.BroadcastReceivers
                 {
                     _preferences = PreferenceManager.GetDefaultSharedPreferences(context);
                 }
-                if (_preferences.GetBoolean(Settings.ScreenLockAutoAdjustment, false))
-                {
-                    AbnormalBroadcastReceiver.AutoAdjustmentMonitorUnlockCount = 
-                        _preferences.GetInt("monitor_unlock_count", 0);
-                }
-                context.ApplicationContext.RegisterReceiver(new AbnormalBroadcastReceiver(), screenStateFilter);
+                context.ApplicationContext.RegisterReceiver(new ScreenUnlockReceiver(), screenStateFilter);
 //                _isStarted = true;
 //                return;
 //            }

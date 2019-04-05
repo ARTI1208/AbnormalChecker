@@ -20,12 +20,36 @@ namespace AbnormalChecker
         private string mCategory;
         private NotificationManager notificationManager;
         private Context mContext;
+        private Intent NormalizeIntent;
 
         public NotificationSender(Context context, string category)
         {
             mCategory = category;
             mContext = context;
             notificationManager = (NotificationManager) mContext.GetSystemService(Context.NotificationService);
+        }
+
+        public void PutNormalizeExtra(string key, string value)
+        {
+            CreateNormalizeIntent().PutExtra(key, value);
+        }
+
+        private Intent CreateNormalizeIntent()
+        {
+            if (NormalizeIntent == null)
+            {
+                Intent normalIntent = new Intent(mContext, typeof(MakeNormalReceiver));
+                normalIntent.PutExtra("notification_id", mCategory.GetHashCode());
+                normalIntent.PutExtra("category", mCategory);
+                NormalizeIntent = normalIntent;    
+            }
+
+            return NormalizeIntent;
+        }
+
+        private PendingIntent IntentToNormalize(Intent intent)
+        {
+            return PendingIntent.GetBroadcast(mContext, 666, intent, PendingIntentFlags.CancelCurrent);
         }
 
         public void Send(int notificationType, string text)
@@ -71,20 +95,11 @@ namespace AbnormalChecker
             {
                 case WarningNotification:
                     builder.SetSmallIcon(Android.Resource.Drawable.StatSysWarning);
-            
-                    Intent normalIntent = new Intent(mContext, typeof(MakeNormalReceiver));
-                    normalIntent.PutExtra("notification_id", mCategory.GetHashCode());
-                    normalIntent.PutExtra("category", mCategory);
-                    PendingIntent normalPendingIntent = PendingIntent.GetBroadcast(mContext, 666, normalIntent, 
-                        PendingIntentFlags.CancelCurrent);
+
+                    NotificationCompat.Action makeNormal = new NotificationCompat.Action(Resource.Mipmap.Icon, 
+                        "Make normal", IntentToNormalize(CreateNormalizeIntent()));        
                     
-                    NotificationCompat.Action.Builder makeNormalBuilder = new NotificationCompat.Action.Builder(Resource.Drawable.Icon, 
-                        "Make normal", normalPendingIntent);
-                    
-                    NotificationCompat.Action makeNormal = new NotificationCompat.Action(Resource.Drawable.Icon, 
-                        "Make normal", normalPendingIntent);
-                    
-                    NotificationCompat.Action viewDetails = new NotificationCompat.Action(Resource.Drawable.Icon, 
+                    NotificationCompat.Action viewDetails = new NotificationCompat.Action(Resource.Mipmap.Icon, 
                         "View details", pendingIntent);
                     builder.AddAction(makeNormal).AddAction(viewDetails);
                     break;
@@ -95,7 +110,7 @@ namespace AbnormalChecker
                     builder.SetSmallIcon(Resource.Drawable.ic_stat_summary);
                     break;
                 default:
-                    builder.SetSmallIcon(Resource.Drawable.Icon);
+                    builder.SetSmallIcon(Resource.Mipmap.Icon);
                     break;
             }
             

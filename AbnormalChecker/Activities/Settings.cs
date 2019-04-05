@@ -14,11 +14,13 @@ namespace AbnormalChecker.Activities
 {
     [Activity(Label = "Settings", 
         Theme = "@style/MainTheme", 
-        Icon = "@drawable/icon")]
+        Icon = "@mipmap/icon"
+    )]
     public class Settings : Android.Support.V7.App.AppCompatActivity
     {
         public static readonly string ScreenLockAutoAdjustment = "auto_unlock_limit";
         public static readonly string ScreenLockAutoAdjustmentDayCount = "auto_unlock_monitor_time";
+        public static readonly string ScreenLockAutoAdjustmentType = "unlock_monitor_type";
         
         public enum SettingsCategory
         {
@@ -35,6 +37,9 @@ namespace AbnormalChecker.Activities
         
 
         private static ISharedPreferences mPreferences;
+        
+        
+        
         
         protected override void OnCreate(Bundle savedInstanceState)
         {
