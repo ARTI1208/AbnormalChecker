@@ -107,7 +107,6 @@ class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		/* We need to ensure that "AbnormalChecker.dll" comes first in this list. */
 		"AbnormalChecker.dll",
-		"OnBoardingLibrary.dll",
 		"RestSharp.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",
 		"Xamarin.Android.Arch.Core.Runtime.dll",

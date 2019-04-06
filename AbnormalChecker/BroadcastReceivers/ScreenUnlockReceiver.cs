@@ -25,21 +25,51 @@ namespace AbnormalChecker.BroadcastReceivers
 
         private readonly string UnlocksDayNumber = "unlocks_dow_";
         
-        private readonly string UnlocksToday = "unlocks_today";
+        public static readonly string UnlocksToday = "unlocks_today";
         
         private readonly string LastUnlockDay = "last_unlock_day";
 
         private static int lastDayUnlocked = -1;
 
-        public static int unlockedTimes { get; private set; }
+        public static bool IsNormal = true;
+
+        public static int NormalCount { get; set; } = -1;
+
+        public static int unlockedTimes { get; set; }
 
         private static int GetMonitoringDayCount()
         {
             return mPreferences.GetBoolean(Settings.ScreenLockAutoAdjustmentType, true) ? 7 : 1;
         }
 
+        public int GetNormalUnlocksCount(ISharedPreferences preferences)
+        {
+            if (GetMonitoringDayCount() == 7 && preferences.Contains($"{UnlocksDayNumber}{lastDayUnlocked}"))
+            {
+                NormalCount = preferences.GetInt($"{UnlocksDayNumber}{lastDayUnlocked}", DefaultUnlocksCount);
+            }
+            else
+            {
+                int s = 0;
+                int k = 0;
+                for (int i = 1; i <= 7; i++)
+                {
+                    int un = preferences.GetInt($"{UnlocksDayNumber}{i}", -1);
+                    if (un > 0)
+                    {
+                        s += un;
+                        k++;
+                    }
+                }
 
-        public long StartNewDayMonitor(Date dateTime)
+                NormalCount = k > 0 ? (int) Math.Ceiling((double) s / k) : DefaultUnlocksCount;
+            }
+
+            return NormalCount;
+        }
+        
+
+        private long GetMonitoringStartTime(Date dateTime)
         {
             Calendar c = Calendar.Instance;
             c.Time = dateTime;
@@ -49,7 +79,6 @@ namespace AbnormalChecker.BroadcastReceivers
             c.Set(CalendarField.Millisecond, 0);
             return c.TimeInMillis;
         }
-        
         
         public override void OnReceive(Context context, Intent intent)
         {
@@ -70,9 +99,25 @@ namespace AbnormalChecker.BroadcastReceivers
             long monitorStarted;
             if ((monitorStarted = mPreferences.GetLong(LastMonitorStarted, -1)) == -1)
             {
-                monitorStarted = StartNewDayMonitor(now);
+                monitorStarted = GetMonitoringStartTime(now);
                 mPreferences.Edit().PutLong(LastMonitorStarted, monitorStarted).Apply();
             }
+            
+            if (lastDayUnlocked == -1)
+            {
+                int tmpDay;
+                if ((tmpDay = mPreferences.GetInt(LastUnlockDay, -1)) != -1)
+                {
+                    lastDayUnlocked = tmpDay;
+                    unlockedTimes = mPreferences.GetInt(UnlocksToday, 0);
+                }
+                else
+                {
+                    lastDayUnlocked = Calendar.Instance.Get(CalendarField.DayOfWeek);
+                    mPreferences.Edit().PutInt(LastUnlockDay, lastDayUnlocked).Apply();                    
+                }
+            }
+
 
 //            if (lastDayUnlocked != -1 && lastDayUnlocked != Calendar.Instance.Get(CalendarField.DayOfWeek))
             if (TimeUnit.Milliseconds.ToDays(now.Time - monitorStarted) >= 1)
@@ -92,7 +137,7 @@ namespace AbnormalChecker.BroadcastReceivers
                 mPreferences.Edit()
                     .PutInt($"{UnlocksDayNumber}{tmpDay}", unlocksToPut)
                     .PutInt(LastUnlockDay, lastDayUnlocked)
-                    .PutLong(LastMonitorStarted, StartNewDayMonitor(now))
+                    .PutLong(LastMonitorStarted, GetMonitoringStartTime(now))
                     .PutInt(UnlocksToday, unlockedTimes)
                     .Apply();
                 
@@ -100,51 +145,19 @@ namespace AbnormalChecker.BroadcastReceivers
                 return;
             }
 
-            if (lastDayUnlocked == -1)
-            {
-                int tmpDay;
-                if ((tmpDay = mPreferences.GetInt(LastUnlockDay, -1)) != -1)
-                {
-                    lastDayUnlocked = tmpDay;
-                    unlockedTimes = mPreferences.GetInt(UnlocksToday, 0);
-                }
-                else
-                {
-                    lastDayUnlocked = Calendar.Instance.Get(CalendarField.DayOfWeek);
-                    mPreferences.Edit().PutInt(LastUnlockDay, lastDayUnlocked).Apply();                    
-                }
-            }
             
             mPreferences.Edit().PutInt(UnlocksToday, ++unlockedTimes).Apply();
             
             int mode = 0;
 
-            int normalValue;
-
-            if (GetMonitoringDayCount() == 7 && mPreferences.Contains($"{UnlocksDayNumber}{lastDayUnlocked}"))
+            if (unlockedTimes > GetNormalUnlocksCount(mPreferences) * 1.1)
             {
-                normalValue = mPreferences.GetInt($"{UnlocksDayNumber}{lastDayUnlocked}", DefaultUnlocksCount);
+                mode = 1;
+                IsNormal = false;
             }
             else
             {
-                int s = 0;
-                int k = 0;
-                for (int i = 1; i <= 7; i++)
-                {
-                    int un = mPreferences.GetInt($"{UnlocksDayNumber}{i}", -1);
-                    if (un > 0)
-                    {
-                        s += un;
-                        k++;
-                    }
-                }
-
-                normalValue = k > 0 ? (int) Math.Ceiling((double) s / k) : DefaultUnlocksCount;
-            }
-
-            if (unlockedTimes > normalValue * 1.1)
-            {
-                mode = 1;
+                IsNormal = true;
             }
 
             string notificationText;
@@ -153,7 +166,8 @@ namespace AbnormalChecker.BroadcastReceivers
             {
                 case 1:
                     notificationText =
-                        $"Detected too many unlocks during last day : {unlockedTimes}, normal value : {normalValue}";
+                        $"Detected too many unlocks during last day : {unlockedTimes}, normal value : {NormalCount}";
+                    MainActivity.adapter?.Refresh();
                     break;
 //                case 2:
 ////                notificationText = $"Detected {unlockedTimes} unlocks in last {TimeUnit.Milliseconds.ToSeconds(unlocks[last].Time - unlocks[(last + 1) % abnormalCount].Time)} seconds";

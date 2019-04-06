@@ -9,9 +9,9 @@
   <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-  <application android:label="AbnormalChecker" android:name="android.app.Application" android:allowBackup="true" android:icon="@drawable/icon" android:debuggable="true">
+  <application android:label="AbnormalChecker" android:name="android.support.multidex.MultiDexApplication" android:allowBackup="true" android:icon="@mipmap/icon" android:debuggable="true">
     <service android:name="md5f1fee5a2ff270838165dc76e33d1063e.SystemModListenerService" />
-    <receiver android:name="md5ee643d7230cfa41999bc9deb73080d4d.AbnormalBroadcastReceiver">
+    <receiver android:name="md5ee643d7230cfa41999bc9deb73080d4d.ScreenUnlockReceiver">
       <intent-filter>
         <action android:name="android.intent.action.SCREEN_ON" />
       </intent-filter>
@@ -32,14 +32,15 @@
         <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
       </intent-filter>
     </receiver>
-    <activity android:icon="@drawable/icon" android:label="AbnormalChecker" android:theme="@style/MainTheme" android:name="md55950ccd939a0b900e351a1e798fb1966.MainActivity">
+    <activity android:icon="@mipmap/icon" android:label="AbnormalChecker" android:theme="@style/MainTheme" android:name="md55950ccd939a0b900e351a1e798fb1966.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:icon="@drawable/icon" android:label="AbnormalChecker" android:theme="@style/MainTheme" android:name="md55950ccd939a0b900e351a1e798fb1966.MoreInfoActivity" />
-    <activity android:icon="@drawable/icon" android:label="Settings" android:theme="@style/MainTheme" android:name="md55950ccd939a0b900e351a1e798fb1966.Settings" />
+    <activity android:icon="@mipmap/icon" android:label="AbnormalChecker" android:theme="@style/MainTheme" android:name="md55950ccd939a0b900e351a1e798fb1966.MoreInfoActivity" />
+    <activity android:icon="@mipmap/icon" android:label="Settings" android:theme="@style/MainTheme" android:name="md55950ccd939a0b900e351a1e798fb1966.Settings" />
+    <activity android:icon="@mipmap/icon" android:label="AbnormalCheckerOn" android:theme="@style/MainTheme" android:name="md55950ccd939a0b900e351a1e798fb1966.StartActivity" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="ru.art2000.abnormal.mono.MonoRuntimeProvider.__mono_init__" />
     <!--suppress ExportedReceiver-->
     <receiver android:name="mono.android.Seppuku">

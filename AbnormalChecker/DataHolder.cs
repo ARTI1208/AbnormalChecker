@@ -23,6 +23,7 @@ using Android.Gms.Common;
 using Android.Gms.Location;
 using Android.OS;
 using Android.Util;
+using Android.Widget;
 using Java.Lang;
 using File = Java.IO.File;
 using ICollection = System.Collections.ICollection;
@@ -212,32 +213,26 @@ namespace AbnormalChecker
 
         public static CategoryData GetScreenData(CategoryData data)
         {
-            if (mPreferences.GetBoolean(Settings.ScreenLockAutoAdjustment, false))
+            int tmpUnlocks;
+            if (ScreenUnlockReceiver.unlockedTimes < (tmpUnlocks = mPreferences.GetInt(
+                    ScreenUnlockReceiver.UnlocksToday, 0)))
             {
-                data.Status = "Monitoring your regular activity";
-                SimpleDateFormat dateFormat;
-                Date now = new Date();
-                Date monitoringStart = new Date(mPreferences.GetLong("auto_start_time", now.Time));
-                int monitoringTime = mPreferences.GetInt(Settings.ScreenLockAutoAdjustmentDayCount, 1);
-                Date monitoringStop = new Date(monitoringStart.Time + TimeSpan.FromDays(monitoringTime).Milliseconds);
-                if (now.Time - monitoringStart.Time < TimeSpan.FromDays(1).Milliseconds)
-                {
-                    dateFormat = new SimpleDateFormat("kk:mm");
-                }
-                else
-                {
-                    dateFormat = new SimpleDateFormat("kk:mm, dd.MM.yyyy");
-                }
+                ScreenUnlockReceiver.unlockedTimes = tmpUnlocks;
+            }
 
-                data.Data = $"{monitoringTime}-day " +
-                            $"monitoring ends at {dateFormat.Format(monitoringStop)}";
+            if (ScreenUnlockReceiver.IsNormal)
+            {
+                data.Status = "Normal";
+                data.Level = CheckStatus.Normal;
+                data.Data = $"{ScreenUnlockReceiver.unlockedTimes} unlocks this day";    
             }
             else
             {
-                data.Status = "Normal";
-                data.Data = $"{ScreenUnlockReceiver.unlockedTimes} unlocks total";
+                data.Status = "Questionably";
+                data.Level = CheckStatus.Warning;
+                data.Data = $"{ScreenUnlockReceiver.unlockedTimes} unlocks this day, " +
+                            $"normal value {ScreenUnlockReceiver.NormalCount}";
             }
-
             return data;
         }
 

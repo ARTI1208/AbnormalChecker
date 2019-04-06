@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using AbnormalChecker.Activities;
+using AbnormalChecker.BroadcastReceivers;
 using Android.Content;
 using Android.Graphics;
 using Android.Support.V7.Widget;
@@ -31,7 +32,6 @@ namespace AbnormalChecker.OtherUI
             }
         }
 
-
         public void Refresh()
         {
             mDataHolder.Refresh();
@@ -45,9 +45,10 @@ namespace AbnormalChecker.OtherUI
                     categories.Add(pair.Key);
                 }
             }
+
             NotifyDataSetChanged();
         }
-        
+
         public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
         {
             ViewHolder myHolder = (ViewHolder) holder;
@@ -78,26 +79,21 @@ namespace AbnormalChecker.OtherUI
                 default:
                     myHolder.Card.SetCardBackgroundColor(Color.ParseColor("#ffffff"));
                     break;
-            }     
-            
-            
+            }
+
+
             myHolder.Card.Click += delegate
             {
-
-
-                
                 if (dataSet.Level == DataHolder.CheckStatus.PermissionsRequired)
                 {
                     MainActivity.GrantPermissions(dataSet.RequiredPermissions);
                     return;
                 }
-                
-                
-                
+
                 Intent intent = new Intent(mContext, typeof(MoreInfoActivity));
                 intent.PutExtra("title", dataSet.Title);
                 intent.PutExtra("category", categories[position]);
-                mContext.StartActivity(intent);                
+                mContext.StartActivity(intent);
             };
         }
 
