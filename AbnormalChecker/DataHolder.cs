@@ -1,11 +1,9 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Threading.Tasks;
 using AbnormalChecker.Activities;
 using AbnormalChecker.BroadcastReceivers;
 using AbnormalChecker.Extensions;
@@ -16,440 +14,316 @@ using Android.Content.PM;
 using Android.Locations;
 using Android.Preferences;
 using Android.Support.V4.Content;
-using Java.Text;
 using Java.Util;
 using Permission = Android.Content.PM.Permission;
-using Android.Gms.Common;
 using Android.Gms.Location;
-using Android.OS;
 using Android.Util;
-using Android.Widget;
 using Java.Lang;
 using File = Java.IO.File;
-using ICollection = System.Collections.ICollection;
-using Object = Java.Lang.Object;
 using String = System.String;
 
 namespace AbnormalChecker
 {
-    public delegate DataHolder.CategoryData CategoryUpdater(DataHolder.CategoryData data);
+	
+	public delegate DataHolder.CategoryData CategoryUpdater(DataHolder.CategoryData data);
 
-    public delegate DataHolder.CategoryData Normalizer(DataHolder.CategoryData data);
+	[SuppressMessage("ReSharper", "UnusedMember.Global")]
+	public class DataHolder
+	{
+		public static Dictionary<string, CategoryUpdater> Dictionary = new Dictionary<string, CategoryUpdater>();
+		public static Dictionary<string, CategoryUpdater> Normalizer = new Dictionary<string, CategoryUpdater>();
+		public static readonly Dictionary<string, CategoryData> CategoriesDataDic = new Dictionary<string, CategoryData>();
+		public static Dictionary<string, string[]> Permissions = new Dictionary<string, string[]>();
+		public static string RootCategory = "root";
+		public static string ScreenLocksCategory = "screen";
+		public static string LocationCategory = "location";
+		public const string SystemCategory = "system";
+		private static Context _mContext;
+		private static ISharedPreferences _mPreferences;
+		static FusedLocationProviderClient _fusedLocationProviderClient;
+		private static string[] _allCategories;
 
-    [SuppressMessage("ReSharper", "UnusedMember.Global")]
-    public class DataHolder
-    {
-        public static Dictionary<string, CategoryUpdater> dictionary = new Dictionary<string, CategoryUpdater>();
-        public static Dictionary<string, CategoryUpdater> normalizer = new Dictionary<string, CategoryUpdater>();
-        public static Dictionary<string, CategoryData> CategoriesDataDic = new Dictionary<string, CategoryData>();
-        public static Dictionary<string, string[]> Permissions = new Dictionary<string, string[]>();
-        public static string RootCategory = "root";
-        public static string ScreenLocksCategory = "screen";
-        public static string LocationCategory = "location";
-        public const string SystemCategory = "system";
-        private static Context mContext;
-        private static ISharedPreferences mPreferences;
+		public class CategoryData
+		{
+			public CategoryData(string title, CategoryUpdater updater)
+			{
+				Title = title;
+				_dataUpdater = updater;
+			}
 
-//        public class CategoryParcel : Java.Lang.Object, IParcelable
-//        {
-//
-//            public CategoryData Data
-//            {
-//                get;
-//                set;    
-//            }
-//            
-//            public int DescribeContents()
-//            {
-//                throw new NotImplementedException();
-//            }
-//
-//            public void WriteToParcel(Parcel dest, ParcelableWriteFlags flags)
-//            {
-//                
-//                dest.WriteString(Data.Title);
-//                dest.WriteString(Data.Status);
-//                dest.WriteString(Data.Data);
-//                dest.WriteStringArray(Data.RequiredPermissions);
-//                
-//                dest.WriteLong(User.Id);
-//                dest.WriteString(User.FirstName);
-//                dest.WriteString(User.LastName);
-//                dest.WriteInt(User.Age);
-//                dest.WriteString(User.Address);
-//                dest.WriteString(User.City);
-//                dest.WriteString(User.Country);
-//            }
-//        }
+			public void Update()
+			{
+				_dataUpdater?.Invoke(this);
+			}
 
-        public class CategoryData
-        {
-            public CategoryData(string title, CategoryUpdater updater)
-            {
-                Title = title;
-                DataUpdater = updater;
-            }
+			public string DataFilePath;
+			public string Title;
+			public string Status = "OK";
+			public string Data;
+			public CheckStatus Level = CheckStatus.Normal;
+			public string[] RequiredPermissions;
+			private readonly CategoryUpdater _dataUpdater;
+		}
 
-            public void Update()
-            {
-                DataUpdater?.Invoke(this);
-            }
+		public enum CheckStatus
+		{
+			Normal,
+			Warning,
+			Dangerous,
+			PermissionsRequired
+		}
+		
+		enum DelegateType
+		{
+			Updater,
+			Normalizer
+		}
 
+		#region Updaters
 
-            public string DataFilePath;
-            public string Title;
-            public string Status = "OK";
-            public string Data;
-            public CheckStatus Level = CheckStatus.Normal;
-            public string[] RequiredPermissions;
-            public CategoryUpdater DataUpdater;
-        }
+		public static CategoryData GetRootData(CategoryData data)
+		{
+			if (Checker.IsRooted(_mContext))
+			{
+				data.Status = "Device has root access";
+				data.Data = $"Found su binary at {Checker.GetSuBinaryPath()}";
+				data.Level = CheckStatus.Dangerous;
+			}
+			else
+			{
+				data.Status = "Device is not rooted";
+			}
 
-        public enum CheckStatus
-        {
-            Normal,
-            Warning,
-            Dangerous,
-            PermissionsRequired
-        }
+			return data;
+		}
 
-        public static CategoryData GetRootData(CategoryData data)
-        {
-            if (Checker.IsRooted(mContext))
-            {
-                data.Status = "Device has root access";
-                data.Data = $"Found su binary at {Checker.GetSuBinaryPath()}";
-                data.Level = CheckStatus.Dangerous;
-            }
-            else
-            {
-                data.Status = "Device is not rooted";
-            }
+		public static CategoryData GetLocationData(CategoryData data)
+		{
+			string status = "Permissions denied";
+			data.RequiredPermissions = new[]
+			{
+				Manifest.Permission.AccessFineLocation,
+				Manifest.Permission.AccessCoarseLocation
+			};
+			data.Level =
+				data.RequiredPermissions.Any(s => ContextCompat.CheckSelfPermission(_mContext, s) == Permission.Denied)
+					? CheckStatus.PermissionsRequired
+					: CheckStatus.Normal;
+			if (ContextCompat.CheckSelfPermission(_mContext, Manifest.Permission.AccessFineLocation) ==
+			    Permission.Granted)
+			{
+				status = "Permissions granted";
+				GetLastLocationFromDevice();
+			}
 
-            return data;
-        }
+			data.Status = status;
+			return data;
+		}
 
-        public static CategoryData GetLocationData(CategoryData data)
-        {
-            string status = "Permissions denied";
-            data.RequiredPermissions = new[]
-            {
-                Manifest.Permission.AccessFineLocation,
-                Manifest.Permission.AccessCoarseLocation
-            };
-            data.Level =
-                data.RequiredPermissions.Any(s => ContextCompat.CheckSelfPermission(mContext, s) == Permission.Denied)
-                    ? CheckStatus.PermissionsRequired
-                    : CheckStatus.Normal;
-            if (ContextCompat.CheckSelfPermission(mContext, Manifest.Permission.AccessFineLocation) ==
-                Permission.Granted)
-            {
-                status = "Permissions granted";
-                GetLastLocationFromDevice();
-            }
+		public static CategoryData GetSystemData(CategoryData data)
+		{
+			data.Title = "System Modification";
+			if (SystemModListenerService.Logger.Length > 0)
+			{
+				data.Data = SystemModListenerService.Logger;
+				data.Status = "Modifications detected!";
+				data.Level = CheckStatus.Dangerous;
+			}
+			else
+			{
+				data.Status = "No modifications detected";
+				data.Level = CheckStatus.Normal;
+			}
 
-            data.Status = status;
-            return data;
-        }
+			data.DataFilePath = SystemModListenerService.LogFile;
 
-        public static CategoryData GetSystemData(CategoryData data)
-        {
-            data.Title = "System Modification";
-            if (SystemModListenerService.Logger.Length > 0)
-            {
-                data.Data = SystemModListenerService.Logger;
-                data.Status = "Modifications detected!";
-                data.Level = CheckStatus.Dangerous;
-            }
-            else
-            {
-                data.Status = "No modifications detected";
-                data.Level = CheckStatus.Normal;
-            }
+			if (new File(_mContext.FilesDir, data.DataFilePath).Exists())
+			{
+				using (StreamReader reader = new StreamReader(
+					_mContext.OpenFileInput(data.DataFilePath)))
+				{
+					string text = reader.ReadToEnd();
 
-            data.DataFilePath = SystemModListenerService.LogFile;
+					if (text.Length > 0)
+					{
+						data.Data = text.Split("\n").Last(s => s.Length > 0);
+						data.Status = "Modifications detected!";
+						data.Level = CheckStatus.Dangerous;
+					}
+					else
+					{
+						data.Data = null;
+						data.Status = "No modifications detected";
+						data.Level = CheckStatus.Normal;
+					}
+				}
+			}
+			else
+			{
+				data.Data = null;
+				data.Status = "No modifications detected";
+				data.Level = CheckStatus.Normal;
+			}
 
-            if (new File(mContext.FilesDir, data.DataFilePath).Exists())
-            {
-                using (StreamReader reader = new StreamReader(
-                    mContext.OpenFileInput(data.DataFilePath)))
-                {
-                    string text = reader.ReadToEnd();
+			return data;
+		}
 
-                    if (text.Length > 0)
-                    {
-                        data.Data = text.Split("\n").Last(s => s.Length > 0);
-                        data.Status = "Modifications detected!";
-                        data.Level = CheckStatus.Dangerous;
-                    }
-                    else
-                    {
-                        data.Data = null;
-                        data.Status = "No modifications detected";
-                        data.Level = CheckStatus.Normal;
-                    }
-                }
-            }
-            else
-            {
-                data.Data = null;
-                data.Status = "No modifications detected";
-                data.Level = CheckStatus.Normal;
-            }
+		public static CategoryData GetScreenData(CategoryData data)
+		{
+			int tmpUnlocks;
+			if (ScreenUnlockReceiver.UnlockedTimes < (tmpUnlocks = _mPreferences.GetInt(
+				    ScreenUnlockReceiver.UnlocksToday, 0)))
+			{
+				ScreenUnlockReceiver.UnlockedTimes = tmpUnlocks;
+			}
+			if (ScreenUnlockReceiver.IsNormal)
+			{
+				data.Status = "Normal";
+				data.Level = CheckStatus.Normal;
+				data.Data = $"{ScreenUnlockReceiver.UnlockedTimes} unlocks this day";
+			}
+			else
+			{
+				data.Status = "Questionably";
+				data.Level = CheckStatus.Warning;
+				data.Data = $"{ScreenUnlockReceiver.UnlockedTimes} unlocks this day, " +
+				            $"normal value {ScreenUnlockReceiver.NormalCount}";
+			}
+			return data;
+		}
 
+		public static CategoryData GetPhoneData(CategoryData data)
+		{
+			data.Title = "Phone calls";
+			data.RequiredPermissions = new[]
+			{
+				Manifest.Permission.ReadPhoneState,
+				Manifest.Permission.ProcessOutgoingCalls
+			};
+			return data;
+		}
 
-            return data;
-        }
+		#endregion
 
-        public static ICollection<string> GetSelectedCategories()
-        {
-            return mPreferences.GetStringSet("selected_categories", _allCategories);
-        }
+		#region Normalizers
 
-        public static bool IsSelectedCategory(string category)
-        {
-            return GetSelectedCategories().Contains(category);
-        }
+		public static void NormalizeSystemData(string path, string ev)
+		{
+			using (StreamWriter writer = new StreamWriter(_mContext.OpenFileOutput(
+				SystemModListenerService.ExcludedFiles, FileCreationMode.Append)))
+			{
+				writer.WriteLine($"{path}____{ev}");
+			}
+		}
+		
+		public static void NormalizeScreenData(string path, string ev)
+		{
+			using (StreamWriter writer = new StreamWriter(_mContext.OpenFileOutput(
+				SystemModListenerService.ExcludedFiles, FileCreationMode.Append)))
+			{
+				writer.WriteLine($"{path}____{ev}");
+			}
+		}
 
-        public static CategoryData GetScreenData(CategoryData data)
-        {
-            int tmpUnlocks;
-            if (ScreenUnlockReceiver.unlockedTimes < (tmpUnlocks = mPreferences.GetInt(
-                    ScreenUnlockReceiver.UnlocksToday, 0)))
-            {
-                ScreenUnlockReceiver.unlockedTimes = tmpUnlocks;
-            }
+		#endregion
+		
+		public static ICollection<string> GetSelectedCategories()
+		{
+			return _mPreferences.GetStringSet("selected_categories", _allCategories);
+		}
 
-            if (ScreenUnlockReceiver.IsNormal)
-            {
-                data.Status = "Normal";
-                data.Level = CheckStatus.Normal;
-                data.Data = $"{ScreenUnlockReceiver.unlockedTimes} unlocks this day";    
-            }
-            else
-            {
-                data.Status = "Questionably";
-                data.Level = CheckStatus.Warning;
-                data.Data = $"{ScreenUnlockReceiver.unlockedTimes} unlocks this day, " +
-                            $"normal value {ScreenUnlockReceiver.NormalCount}";
-            }
-            return data;
-        }
+		public static bool IsSelectedCategory(string category)
+		{
+			return GetSelectedCategories().Contains(category);
+		}
 
-        public static CategoryData GetPhoneData(CategoryData data)
-        {
-            data.Title = "Phone calls";
-            data.RequiredPermissions = new[]
-            {
-                Manifest.Permission.ReadPhoneState,
-                Manifest.Permission.ProcessOutgoingCalls
-            };
-            return data;
-        }
+		public void Refresh()
+		{
+			ICollection<string> sel = GetSelectedCategories();
+			if (sel == null)
+			{
+				return;
+			}
 
-        public void Refresh()
-        {
-            ICollection<string> sel = GetSelectedCategories();
-            if (sel == null)
-            {
-                return;
-            }
+			foreach (var category in sel)
+			{
+				CategoryData categoryData = CategoriesDataDic[category];
+				categoryData.Update();
+			}
+		}
 
-            foreach (var category in sel)
-            {
-                CategoryData categoryData = CategoriesDataDic[category];
-                categoryData.Update();
-            }
-        }
+		static async void GetLastLocationFromDevice()
+		{
+			Location location = await _fusedLocationProviderClient.GetLastLocationAsync();
+			if (location == null)
+			{
+				Log.Error("opiom", "unknown loc");
+			}
+			else
+			{
+				CategoriesDataDic["location"].Data = FormatLocation(location);
+				MainActivity.adapter?.NotifyDataSetChanged();
+			}
+		}
 
-//        public void Refresh(string category)
-//        {
-//            CategoryData categoryData = dictionary[category]?.Invoke();
-//            if (categoryData != null)
-//            {
-//                    if (structs.ContainsKey(category))
-//                    {
-//                        structs[category] = categoryData;
-//                    }
-//                    else
-//                    {
-//                         structs.Add(category, categoryData);    
-//                    }
-//            }
-//        }
+		public static String[] GetAllRequiredPermissions(Context context)
+		{
+			_mContext = context;
+			return context
+				.PackageManager
+				.GetPackageInfo(context.PackageName, PackageInfoFlags.Permissions)
+				.RequestedPermissions.ToArray();
+		}
 
-        bool IsGooglePlayServicesInstalled()
-        {
-            var queryResult = GoogleApiAvailability.Instance.IsGooglePlayServicesAvailable(mContext);
-            if (queryResult == ConnectionResult.Success)
-            {
-                Log.Info("MainActivity", "Google Play Services is installed on this device.");
-                return true;
-            }
+		public static void Initialize(Context context)
+		{
+			_mContext = context;
+			_mPreferences = PreferenceManager.GetDefaultSharedPreferences(_mContext);
+			_fusedLocationProviderClient = LocationServices.GetFusedLocationProviderClient(_mContext);
+			_allCategories = context.Resources.GetStringArray(Resource.Array.categories_values);
+		}
 
-            if (GoogleApiAvailability.Instance.IsUserResolvableError(queryResult))
-            {
-                // Check if there is a way the user can resolve the issue
-                var errorString = GoogleApiAvailability.Instance.GetErrorString(queryResult);
-                Log.Error("MainActivity", "There is a problem with Google Play Services on this device: {0} - {1}",
-                    queryResult, errorString);
+		public DataHolder(Context context)
+		{
+			_mContext = context;
+			_mPreferences = PreferenceManager.GetDefaultSharedPreferences(_mContext);
+			_fusedLocationProviderClient = LocationServices.GetFusedLocationProviderClient(_mContext);
+			_allCategories = context.Resources.GetStringArray(Resource.Array.categories_values);
+			foreach (var category in _allCategories)
+			{
+				CategoriesDataDic[category] =
+					new CategoryData(category.MakeFirstUpper(), CreateCategoryDelegate(category));
+			}
+		}	
 
-                // Alternately, display the error to the user.
-            }
+		private static CategoryUpdater CreateCategoryDelegate(string category, DelegateType type = DelegateType.Updater)
+		{
+			string methodName;
+			switch (type)
+			{
+				case DelegateType.Normalizer:
+					methodName = $"Normalize{category.First().ToString().ToUpper()}{category.Substring(1)}Data";
+					break;
+				default:
+					methodName = $"Get{category.First().ToString().ToUpper()}{category.Substring(1)}Data";
+					break;
+			}
+			MethodInfo methodInfo = typeof(DataHolder).GetMethod(methodName, BindingFlags.Public | BindingFlags.Static,
+				                        null,
+				                        new[] {typeof(CategoryData)}, null) ??
+			                        throw new NullPointerException(
+				                        $"Cannot find method {methodName} in class {typeof(DataHolder)}");
+			CategoryUpdater categoryDelegate = Delegate.CreateDelegate(typeof(CategoryUpdater),
+				methodInfo) as CategoryUpdater;
+			return categoryDelegate;
+		}
 
-            return false;
-        }
-
-        static FusedLocationProviderClient fusedLocationProviderClient;
-
-        static async void GetLastLocationFromDevice()
-        {
-            Location location = await fusedLocationProviderClient.GetLastLocationAsync();
-            if (location == null)
-            {
-                Log.Error("opiom", "unknown loc");
-            }
-            else
-            {
-                CategoriesDataDic["location"].Data = formatLocation(location);
-                MainActivity.adapter?.NotifyDataSetChanged();
-            }
-        }
-
-        private static Dictionary<string, CategoryUpdater> UpdateDelegates(Context context)
-        {
-            if (_allCategories == null)
-            {
-                _allCategories = context.Resources.GetStringArray(Resource.Array.categories_values);
-            }
-
-            foreach (var category in _allCategories)
-            {
-                if (!dictionary.ContainsKey(category))
-                {
-                    dictionary.Add(category, CreateCategoryDelegate(category));
-                }
-            }
-
-            return dictionary;
-        }
-
-        public static String[] GetAllRequiredPermissions(Context context)
-        {
-            mContext = context;
-            return context
-                .PackageManager
-                .GetPackageInfo(context.PackageName, PackageInfoFlags.Permissions)
-                .RequestedPermissions.ToArray();
-        }
-
-
-//        public static string[] GetAllRequiredPermissions(Context context)
-//        {
-//
-//            return retrievePermissions(context);
-//            
-//            mContext = context;
-//            mPreferences = PreferenceManager.GetDefaultSharedPreferences(mContext);
-//            fusedLocationProviderClient = LocationServices.GetFusedLocationProviderClient(mContext);
-//            _allCategories = context.Resources.GetStringArray(Resource.Array.categories_values);
-//            UpdateDelegates(context);
-//            foreach (var pair in dictionary)
-//            {
-//                if (!CategoriesDataDic.ContainsKey(pair.Key))
-//                {
-//                    CategoriesDataDic.Add(pair.Key, pair.Value?.Invoke());
-//                }
-//            }
-//            List<string> permissions = new List<string>();
-//            foreach (var category in CategoriesDataDic)
-//            {
-//                if (category.Value.RequiredPermissions != null)
-//                {
-//                    permissions.AddRange(category.Value.RequiredPermissions);
-//                }
-//            }
-//
-//            return permissions.ToArray();
-//        }
-
-        private static string[] _allCategories;
-
-        static DataHolder()
-        {
-        }
-
-        public static void Initialize(Context context)
-        {
-            mContext = context;
-            mPreferences = PreferenceManager.GetDefaultSharedPreferences(mContext);
-            fusedLocationProviderClient = LocationServices.GetFusedLocationProviderClient(mContext);
-            _allCategories = context.Resources.GetStringArray(Resource.Array.categories_values);
-        }
-
-        public DataHolder(Context context)
-        {
-            mContext = context;
-            mPreferences = PreferenceManager.GetDefaultSharedPreferences(mContext);
-            fusedLocationProviderClient = LocationServices.GetFusedLocationProviderClient(mContext);
-            _allCategories = context.Resources.GetStringArray(Resource.Array.categories_values);
-
-//            Refresh();
-
-//            UpdateDelegates(context);
-
-            foreach (var category in _allCategories)
-            {
-                CategoriesDataDic[category] =
-                    new CategoryData(category.MakeFirstUpper(), CreateCategoryDelegate(category));
-            }
-        }
-
-        enum DelegateType
-        {
-            Updater,
-            Normalizer
-        }
-
-
-        public static void normalizeSystemData(string path, string ev)
-        {
-            using (StreamWriter writer = new StreamWriter(mContext.OpenFileOutput(
-                SystemModListenerService.ExcludedFiles, FileCreationMode.Append)))
-            {
-                writer.WriteLine($"{path}____{ev}");
-            }
-        }
-
-        private static CategoryUpdater CreateCategoryDelegate(string category, DelegateType type = DelegateType.Updater)
-        {
-            string methodName;
-            switch (type)
-            {
-                case DelegateType.Normalizer:
-                    methodName = $"Normalize{category.First().ToString().ToUpper()}{category.Substring(1)}Data";
-                    break;
-                default:
-                    methodName = $"Get{category.First().ToString().ToUpper()}{category.Substring(1)}Data";
-                    break;
-            }
-
-            MethodInfo methodInfo = typeof(DataHolder).GetMethod(methodName, BindingFlags.Public | BindingFlags.Static,
-                                        null,
-                                        new[] {typeof(CategoryData)}, null) ??
-                                    throw new NullPointerException(
-                                        $"Cannot find method {methodName} in class {typeof(DataHolder)}");
-            CategoryUpdater categoryDelegate = Delegate.CreateDelegate(typeof(CategoryUpdater),
-                methodInfo) as CategoryUpdater;
-            return categoryDelegate;
-        }
-
-        private static String formatLocation(Location location)
-        {
-            if (location == null)
-                return "";
-            return
-                $"Coordinates: lat = {location.Latitude:F3}, lon = {location.Longitude:F3}, time = {new Date(location.Time)}";
-        }
-    }
+		private static String FormatLocation(Location location)
+		{
+			if (location == null)
+				return "";
+			return
+				$"Coordinates: lat = {location.Latitude:F3}, lon = {location.Longitude:F3}, time = {new Date(location.Time)}";
+		}
+	}
 }

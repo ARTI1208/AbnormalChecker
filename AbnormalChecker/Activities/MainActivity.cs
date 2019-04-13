@@ -33,7 +33,10 @@ namespace AbnormalChecker.Activities
         public static CategoriesAdapter adapter { get; private set; }
 
         public const int PermissionRequestCode = 666;
+        
         private const int SettingsRequestCode = 777;
+        
+        private const int OnBoardingRequestCode = 555;
 
         public static void GrantPermissions(string[] permissions)
         {
@@ -49,16 +52,9 @@ namespace AbnormalChecker.Activities
             {
                 return;
             }
-
-            //TODO : OnBoarding Fragment
-            StartActivity(new Intent(this, typeof(StartActivity)));
-            
-            
-            
+            StartActivityForResult(new Intent(this, typeof(StartActivity)), OnBoardingRequestCode);
         }
         
-        
-
         private bool IsFirstRun()
         {
             return mPreferences.GetBoolean("first_run", true);
@@ -70,6 +66,7 @@ namespace AbnormalChecker.Activities
             if (requestCode == PermissionRequestCode)
             {
                 SetAdapter();
+                Toast.MakeText(this, "Result", ToastLength.Short).Show();
             }
         }
 
@@ -123,15 +120,15 @@ namespace AbnormalChecker.Activities
             {
                 SetAdapter();
             }
-            Intent serv = new Intent(ApplicationContext, typeof(AbnormalChecker.Services.TestService));
-            StartService(serv); 
-            StopService(serv); 
+//            Intent serv = new Intent(ApplicationContext, typeof(AbnormalChecker.Services.TestService));
+//            StartService(serv); 
+//            StopService(serv); 
             Intent starter = new Intent();
             starter.SetAction(ServiceStarter.ActionAbnormalMonitoring);
             starter.SetClass(this, typeof(ServiceStarter));
             SendBroadcast(starter);
             Button b = FindViewById<Button>(Resource.Id.notif);
-            RefreshList();
+//            RefreshList();
             b.Click += delegate
             {
                 adapter?.Refresh();
@@ -144,6 +141,13 @@ namespace AbnormalChecker.Activities
             if (requestCode == SettingsRequestCode)
             {
                 adapter.Refresh();
+            }
+
+            if (requestCode == OnBoardingRequestCode)
+            {
+                mPreferences.Edit().PutBoolean("first_run", false).Apply();
+                RequestPermissions(DataHolder.GetAllRequiredPermissions(this), PermissionRequestCode);
+                SetAdapter();
             }
         }
 

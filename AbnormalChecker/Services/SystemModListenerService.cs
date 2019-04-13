@@ -45,6 +45,7 @@ namespace AbnormalChecker.Services
                     _lastTime = new Date();
                     return;
                 }
+                            
                 _lastTime = new Date();
                 Logger = $"{GetFormattedDateTime()} : Detected {events} event for {path}";
                 if (new File(FilesDir, LogFile).Exists())

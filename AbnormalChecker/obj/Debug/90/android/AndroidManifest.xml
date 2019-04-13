@@ -41,7 +41,8 @@
     <activity android:icon="@mipmap/icon" android:label="AbnormalChecker" android:theme="@style/MainTheme" android:name="md55950ccd939a0b900e351a1e798fb1966.MoreInfoActivity" />
     <activity android:icon="@mipmap/icon" android:label="Settings" android:theme="@style/MainTheme" android:name="md55950ccd939a0b900e351a1e798fb1966.Settings" />
     <activity android:icon="@mipmap/icon" android:label="AbnormalCheckerOn" android:theme="@style/MainTheme" android:name="md55950ccd939a0b900e351a1e798fb1966.StartActivity" />
-    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="ru.art2000.abnormal.mono.MonoRuntimeProvider.__mono_init__" />
+    <provider android:name="mono.android.MultiDexLoader" android:exported="false" android:initOrder="1999999999" android:authorities="ru.art2000.abnormal.mono.android.MultiDexLoader.__mono_init__" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="1999999998" android:authorities="ru.art2000.abnormal.mono.MonoRuntimeProvider.__mono_init__" />
     <!--suppress ExportedReceiver-->
     <receiver android:name="mono.android.Seppuku">
       <intent-filter>

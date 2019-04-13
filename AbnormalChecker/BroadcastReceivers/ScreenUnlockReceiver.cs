@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using AbnormalChecker.Activities;
 using Android.App;
 using Android.Content;
@@ -21,32 +23,56 @@ namespace AbnormalChecker.BroadcastReceivers
 
         private static readonly int DefaultUnlocksCount = 10;
 
-        private readonly string LastMonitorStarted = "last_monitor_start";
+        #region Keys
+
+        private readonly string MonitoringLastStartTime = "last_monitor_start";
 
         private readonly string UnlocksDayNumber = "unlocks_dow_";
-        
+
         public static readonly string UnlocksToday = "unlocks_today";
-        
+
         private readonly string LastUnlockDay = "last_unlock_day";
 
-        private static int lastDayUnlocked = -1;
+        #endregion
+
+        #region UnlockSpeed
+
+        private static int _abnormaUnlockMinCount = 3;
+
+        private static int _abnormaUnlockPercentage = 20;
+
+        private static int _abnormalUnlockInterval = 10;
+
+//        private static long[] _unlockMillis;
+
+        private static int _lastPosition = 0;
+        
+        private static List<long> _unlockMillis;
+
+        private static int _speedUnlocks;
+        
+        private static int _todayNormalSpeedValue;
+
+        #endregion
+
+        private static int _lastDayUnlocked = -1;
 
         public static bool IsNormal = true;
 
         public static int NormalCount { get; set; } = -1;
 
-        public static int unlockedTimes { get; set; }
+        public static int UnlockedTimes { get; set; }
 
         private static int GetMonitoringDayCount()
         {
             return mPreferences.GetBoolean(Settings.ScreenLockAutoAdjustmentType, true) ? 7 : 1;
         }
 
-        public int GetNormalUnlocksCount(ISharedPreferences preferences)
+        private int GetNormalUnlocksCount(ISharedPreferences preferences)
         {
-            if (GetMonitoringDayCount() == 7 && preferences.Contains($"{UnlocksDayNumber}{lastDayUnlocked}"))
+            if (GetMonitoringDayCount() == 7 && preferences.Contains($"{UnlocksDayNumber}{_lastDayUnlocked}"))
             {
-                NormalCount = preferences.GetInt($"{UnlocksDayNumber}{lastDayUnlocked}", DefaultUnlocksCount);
+                NormalCount = preferences.GetInt($"{UnlocksDayNumber}{_lastDayUnlocked}", DefaultUnlocksCount);
             }
             else
             {
@@ -64,10 +90,8 @@ namespace AbnormalChecker.BroadcastReceivers
 
                 NormalCount = k > 0 ? (int) Math.Ceiling((double) s / k) : DefaultUnlocksCount;
             }
-
             return NormalCount;
         }
-        
 
         private long GetMonitoringStartTime(Date dateTime)
         {
@@ -79,7 +103,7 @@ namespace AbnormalChecker.BroadcastReceivers
             c.Set(CalendarField.Millisecond, 0);
             return c.TimeInMillis;
         }
-        
+
         public override void OnReceive(Context context, Intent intent)
         {
             Log.Debug("AAction", intent.Action);
@@ -96,61 +120,78 @@ namespace AbnormalChecker.BroadcastReceivers
 
             Date now = new Date();
 
-            long monitorStarted;
-            if ((monitorStarted = mPreferences.GetLong(LastMonitorStarted, -1)) == -1)
+            long monitoringStartTime;
+            if ((monitoringStartTime = mPreferences.GetLong(MonitoringLastStartTime, -1)) == -1)
             {
-                monitorStarted = GetMonitoringStartTime(now);
-                mPreferences.Edit().PutLong(LastMonitorStarted, monitorStarted).Apply();
+                monitoringStartTime = GetMonitoringStartTime(now);
+                mPreferences.Edit().PutLong(MonitoringLastStartTime, monitoringStartTime).Apply();
             }
-            
-            if (lastDayUnlocked == -1)
+
+            if (_lastDayUnlocked == -1)
             {
                 int tmpDay;
                 if ((tmpDay = mPreferences.GetInt(LastUnlockDay, -1)) != -1)
                 {
-                    lastDayUnlocked = tmpDay;
-                    unlockedTimes = mPreferences.GetInt(UnlocksToday, 0);
+                    _lastDayUnlocked = tmpDay;
+                    UnlockedTimes = mPreferences.GetInt(UnlocksToday, 0);
                 }
                 else
                 {
-                    lastDayUnlocked = Calendar.Instance.Get(CalendarField.DayOfWeek);
-                    mPreferences.Edit().PutInt(LastUnlockDay, lastDayUnlocked).Apply();                    
+                    _lastDayUnlocked = Calendar.Instance.Get(CalendarField.DayOfWeek);
+                    mPreferences.Edit().PutInt(LastUnlockDay, _lastDayUnlocked).Apply();
                 }
             }
 
+            if (_unlockMillis == null)
+            {
+                int thisDay = mPreferences.GetInt($"{UnlocksDayNumber}{_lastDayUnlocked}", 0);
+                _todayNormalSpeedValue = Math.Max(
+                    _abnormaUnlockMinCount, 
+                    (int) (thisDay * _abnormaUnlockPercentage / 100d));
+                _unlockMillis = new List<long>();
+            }
 
 //            if (lastDayUnlocked != -1 && lastDayUnlocked != Calendar.Instance.Get(CalendarField.DayOfWeek))
-            if (TimeUnit.Milliseconds.ToDays(now.Time - monitorStarted) >= 1)
+            if (TimeUnit.Milliseconds.ToDays(now.Time - monitoringStartTime) >= 1)
             {
-                int unlocksToPut = unlockedTimes;
+                int unlocksToPut = UnlockedTimes;
                 int u;
-                
-                if ((u = mPreferences.GetInt($"{UnlocksDayNumber}{lastDayUnlocked}", -1)) != -1)
+
+                if ((u = mPreferences.GetInt($"{UnlocksDayNumber}{_lastDayUnlocked}", -1)) != -1)
                 {
                     unlocksToPut = (int) Math.Ceiling((u + unlocksToPut) / 2d);
                 }
 
-                int tmpDay = lastDayUnlocked;
-                lastDayUnlocked = Calendar.Instance.Get(CalendarField.DayOfWeek);
-                unlockedTimes = 1;
+                int tmpDay = _lastDayUnlocked;
+                _lastDayUnlocked = Calendar.Instance.Get(CalendarField.DayOfWeek);
+                UnlockedTimes = 1;
                 
+                int thisDay = mPreferences.GetInt($"{UnlocksDayNumber}{_lastDayUnlocked}", 0);
+                _todayNormalSpeedValue = Math.Max(
+                    _abnormaUnlockMinCount, 
+                    (int) (thisDay * _abnormaUnlockPercentage / 100d));
+                _unlockMillis = new List<long>();
+
                 mPreferences.Edit()
                     .PutInt($"{UnlocksDayNumber}{tmpDay}", unlocksToPut)
-                    .PutInt(LastUnlockDay, lastDayUnlocked)
-                    .PutLong(LastMonitorStarted, GetMonitoringStartTime(now))
-                    .PutInt(UnlocksToday, unlockedTimes)
+                    .PutInt(LastUnlockDay, _lastDayUnlocked)
+                    .PutLong(MonitoringLastStartTime, GetMonitoringStartTime(now))
+                    .PutInt(UnlocksToday, UnlockedTimes)
                     .Apply();
-                
+
                 MainActivity.adapter?.Refresh();
                 return;
             }
 
+
+            mPreferences.Edit().PutInt(UnlocksToday, ++UnlockedTimes).Apply();
+
             
-            mPreferences.Edit().PutInt(UnlocksToday, ++unlockedTimes).Apply();
+            
             
             int mode = 0;
 
-            if (unlockedTimes > GetNormalUnlocksCount(mPreferences) * 1.1)
+            if (UnlockedTimes > GetNormalUnlocksCount(mPreferences) * 1.1)
             {
                 mode = 1;
                 IsNormal = false;
@@ -160,20 +201,56 @@ namespace AbnormalChecker.BroadcastReceivers
                 IsNormal = true;
             }
 
-            string notificationText;
+//            long tmpTime;
+//            if (_unlockMillis != null && (tmpTime = _unlockMillis[(++_lastPosition + 1) % _unl]) != 0 &&
+//                TimeSpan.FromMilliseconds(now.Time - tmpTime).Seconds < _abnormalUnlockInterval)
+//            {
+//                mode = 2;
+//            }
 
+            if (_unlockMillis.Count > _todayNormalSpeedValue)
+            {
+                if (TimeSpan.FromMilliseconds(now.Time - _unlockMillis[0]).Seconds <= _abnormalUnlockInterval)
+                {
+                    mode = 2;
+                    Toast.MakeText(context, $"{TimeSpan.FromMilliseconds(now.Time - _unlockMillis[0]).Seconds} vs {_abnormalUnlockInterval}", ToastLength.Short).Show();
+                }
+                else
+                {
+                    List<long> tmpList = new List<long>();
+                    foreach (var time in _unlockMillis)
+                    {
+                        if (TimeSpan.FromMilliseconds(now.Time - time).Seconds <= _abnormalUnlockInterval)
+                        {
+                            tmpList.Add(time);
+                        }        
+                    }
+                    _unlockMillis = tmpList;
+                }
+            }
+            
+
+//            _unlockMillis[_lastPosition] = now.Time;
+//            _unlockMillis?.SetValue(now.Time, _lastPosition = _lastPosition % _unlockMillis.Length);
+            _unlockMillis.Add(now.Time);
+
+            string notificationText;
+            
             switch (mode)
             {
                 case 1:
                     notificationText =
-                        $"Detected too many unlocks during last day : {unlockedTimes}, normal value : {NormalCount}";
+                        $"Detected too many unlocks during last day : {UnlockedTimes}, normal value : {NormalCount}";
                     MainActivity.adapter?.Refresh();
                     break;
-//                case 2:
-////                notificationText = $"Detected {unlockedTimes} unlocks in last {TimeUnit.Milliseconds.ToSeconds(unlocks[last].Time - unlocks[(last + 1) % abnormalCount].Time)} seconds";
+                case 2:
+                    notificationText = $"Detected {_unlockMillis.Count} unlocks in last " +
+                                       $@"{TimeUnit.Milliseconds.ToSeconds(
+                                           _unlockMillis.Last() - _unlockMillis.First())} seconds";
 //                    notificationText =
 //                        $"High speed : {unlockedTimes / TimeSpan.FromMilliseconds(now.Time - firstTime).TotalHours} vs {normalDay * speedUnlock}";
-//                    break;
+                    MainActivity.adapter?.Refresh();
+                    break;
                 default:
                     MainActivity.adapter?.Refresh();
                     return;

@@ -24,7 +24,7 @@ namespace AbnormalChecker.BroadcastReceivers
             switch (intent.GetStringExtra("category"))
             {
                 case DataHolder.SystemCategory:
-                    DataHolder.normalizeSystemData(
+                    DataHolder.NormalizeSystemData(
                         intent.GetStringExtra(SystemModListenerService.ExtraFilePath),
                         intent.GetStringExtra(SystemModListenerService.ExtraFileEvent));
                     break;

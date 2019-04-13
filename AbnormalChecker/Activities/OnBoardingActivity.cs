@@ -158,16 +158,21 @@ namespace AbnormalChecker.Activities
         }
     }
 
+    public override void OnBackPressed()
+    {
+        vpOnboarderPager.SetCurrentItem(vpOnboarderPager.CurrentItem - 1, true);     
+    }
+
     private void fadeIn(View v) {
 
         if (v.Visibility != ViewStates.Visible) {
             Animation fadeIn = new AlphaAnimation(0, 1);
-            Toast.MakeText(this, "fadein", ToastLength.Short).Show();
-            fadeIn.Interpolator = new DecelerateInterpolator(); //add this
+            fadeIn.Interpolator = new DecelerateInterpolator();
             fadeIn.Duration = 300;
             fadeIn.SetAnimationListener(new FadeView(v, true));
             v.StartAnimation(fadeIn);
         }
+        v.Visibility = ViewStates.Visible;
     }
 
     private void showFinish() {

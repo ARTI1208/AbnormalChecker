@@ -17,9 +17,7 @@ namespace AbnormalChecker.Activities
     {
         public override void onFinishButtonPressed()
         {
-            Toast.MakeText(this, "Done", ToastLength.Short).Show();
-            RequestPermissions(DataHolder.GetAllRequiredPermissions(this), MainActivity.PermissionRequestCode);
-            MainActivity.mPreferences.Edit().PutBoolean("first_run", false).Apply();
+            Finish();
         }
 
         protected override void OnCreate(Bundle savedInstanceState)
