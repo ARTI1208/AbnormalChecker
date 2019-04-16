@@ -17,10 +17,20 @@ namespace AbnormalChecker
         public const int SummaryNotification = 1;
         public const int InfoNotification = 2;
 
+        public enum NotificationType
+        {
+            WarningNotification,
+            SummaryNotification,
+            InfoNotification
+        }
+
         private string mCategory;
         private NotificationManager notificationManager;
         private Context mContext;
         private Intent NormalizeIntent;
+        
+        public static readonly string ExtraNotificationId = "notification_id";
+        public static readonly string ExtraNotificationCategory = "category";
 
         public NotificationSender(Context context, string category)
         {
@@ -33,14 +43,19 @@ namespace AbnormalChecker
         {
             CreateNormalizeIntent().PutExtra(key, value);
         }
+        
+        public void PutNormalizeExtra(string key, int value)
+        {
+            CreateNormalizeIntent().PutExtra(key, value);
+        }
 
         private Intent CreateNormalizeIntent()
         {
             if (NormalizeIntent == null)
             {
                 Intent normalIntent = new Intent(mContext, typeof(MakeNormalReceiver));
-                normalIntent.PutExtra("notification_id", mCategory.GetHashCode());
-                normalIntent.PutExtra("category", mCategory);
+                normalIntent.PutExtra(ExtraNotificationId, mCategory.GetHashCode());
+                normalIntent.PutExtra(ExtraNotificationCategory, mCategory);
                 NormalizeIntent = normalIntent;    
             }
 
@@ -52,7 +67,7 @@ namespace AbnormalChecker
             return PendingIntent.GetBroadcast(mContext, 666, intent, PendingIntentFlags.CancelCurrent);
         }
 
-        public void Send(int notificationType, string text)
+        public void Send(NotificationType notificationType, string text)
         {
             string categoryTitle = DataHolder.CategoriesDataDic[mCategory].Title;
             string title = "DummyTitle";
@@ -62,15 +77,15 @@ namespace AbnormalChecker
             NotificationImportance importance = NotificationImportance.Max;
             switch (notificationType)
             {
-                case WarningNotification:
+                case NotificationType.WarningNotification:
                     title = categoryTitle + " Warning";
                     description = $"This channel is used to send warnings associated with {categoryTitle}";
                     break;
-                case SummaryNotification:
+                case NotificationType.SummaryNotification:
                     title = "Daily Summary";
                     description = $"This channel is used to send daily summaries";
                     break;
-                case InfoNotification:
+                case NotificationType.InfoNotification:
                     title = categoryTitle + " Info";
                     description = $"This channel is used to send information associated with {categoryTitle}";
                     builder.SetPriority(NotificationCompat.PriorityDefault);
@@ -82,7 +97,7 @@ namespace AbnormalChecker
             intent.PutExtra("notification_id", mCategory.GetHashCode());
             intent.PutExtra("category", mCategory);
             PendingIntent pendingIntent = PendingIntent.GetActivity(mContext, 
-                notificationType, intent, PendingIntentFlags.CancelCurrent);
+                (int) notificationType, intent, PendingIntentFlags.CancelCurrent);
                         
             builder.SetContentTitle(title)
                 .SetContentText(text)
@@ -93,7 +108,7 @@ namespace AbnormalChecker
                
             switch (notificationType)
             {
-                case WarningNotification:
+                case NotificationType.WarningNotification:
                     builder.SetSmallIcon(Android.Resource.Drawable.StatSysWarning);
 
                     NotificationCompat.Action makeNormal = new NotificationCompat.Action(Resource.Mipmap.Icon, 
@@ -103,10 +118,10 @@ namespace AbnormalChecker
                         "View details", pendingIntent);
                     builder.AddAction(makeNormal).AddAction(viewDetails);
                     break;
-                case InfoNotification:
+                case NotificationType.InfoNotification:
                     builder.SetSmallIcon(Resource.Drawable.ic_stat_info);
                     break;
-                case SummaryNotification:
+                case NotificationType.SummaryNotification:
                     builder.SetSmallIcon(Resource.Drawable.ic_stat_summary);
                     break;
                 default:

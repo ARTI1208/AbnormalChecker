@@ -232,6 +232,8 @@
     <Compile Include="Activities\OnBoardingActivity.cs" />
     <Compile Include="Activities\Settings.cs" />
     <Compile Include="Activities\StartActivity.cs" />
+    <Compile Include="BroadcastReceivers\LocationToggleReceiver.cs" />
+    <Compile Include="BroadcastReceivers\LocationUpdateReceiver.cs" />
     <Compile Include="BroadcastReceivers\ScreenUnlockReceiver.cs" />
     <Compile Include="BroadcastReceivers\MakeNormalReceiver.cs" />
     <Compile Include="BroadcastReceivers\PhoneCallReceiver.cs" />
@@ -249,13 +251,15 @@
     <Compile Include="OtherUI\ViewScroller.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AbnormalLocationCallback.cs" />
     <Compile Include="Services\SystemModListenerService.cs" />
     <Compile Include="Services\TestService.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-anydpi-v24\ic_launcher_foreground.xml">
       <SubType>Designer</SubType>
-      <Generator></Generator>
+      <Generator>
+      </Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\Main.xml">
       <SubType>Designer</SubType>

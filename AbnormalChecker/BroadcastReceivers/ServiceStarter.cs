@@ -2,6 +2,7 @@ using AbnormalChecker.Activities;
 using AbnormalChecker.Services;
 using Android.App;
 using Android.Content;
+using Android.Locations;
 using Android.OS;
 using Android.Preferences;
 using Android.Util;
@@ -48,6 +49,11 @@ namespace AbnormalChecker.BroadcastReceivers
 				_preferences = PreferenceManager.GetDefaultSharedPreferences(context);
 			}
 			context.ApplicationContext.RegisterReceiver(new ScreenUnlockReceiver(), screenStateFilter);
+			
+			IntentFilter locationStateFilter = new IntentFilter();
+			locationStateFilter.AddAction(LocationManager.ModeChangedAction);
+//			locationStateFilter.AddAction(LocationManager.ProvidersChangedAction);
+			context.ApplicationContext.RegisterReceiver(new LocationToggleReceiver(), locationStateFilter);
 			_isStarted = true;
 		}
 

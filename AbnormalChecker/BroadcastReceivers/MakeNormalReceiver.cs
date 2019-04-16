@@ -28,6 +28,9 @@ namespace AbnormalChecker.BroadcastReceivers
                         intent.GetStringExtra(SystemModListenerService.ExtraFilePath),
                         intent.GetStringExtra(SystemModListenerService.ExtraFileEvent));
                     break;
+                case DataHolder.ScreenLocksCategory:
+                    DataHolder.NormalizeScreenData(intent);
+                    break;
             }
             
         }

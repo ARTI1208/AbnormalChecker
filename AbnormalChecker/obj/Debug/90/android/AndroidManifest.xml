@@ -11,6 +11,12 @@
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <application android:label="AbnormalChecker" android:name="android.support.multidex.MultiDexApplication" android:allowBackup="true" android:icon="@mipmap/icon" android:debuggable="true">
     <service android:name="md5f1fee5a2ff270838165dc76e33d1063e.SystemModListenerService" />
+    <receiver android:name="md5ee643d7230cfa41999bc9deb73080d4d.LocationToggleReceiver">
+      <intent-filter>
+        <action android:name="android.location.MODE_CHANGED" />
+      </intent-filter>
+    </receiver>
+    <receiver android:name="md5ee643d7230cfa41999bc9deb73080d4d.LocationUpdateReceiver" />
     <receiver android:name="md5ee643d7230cfa41999bc9deb73080d4d.ScreenUnlockReceiver">
       <intent-filter>
         <action android:name="android.intent.action.SCREEN_ON" />

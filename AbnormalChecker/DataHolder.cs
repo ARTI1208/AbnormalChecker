@@ -9,6 +9,7 @@ using AbnormalChecker.BroadcastReceivers;
 using AbnormalChecker.Extensions;
 using AbnormalChecker.Services;
 using Android;
+using Android.App;
 using Android.Content;
 using Android.Content.PM;
 using Android.Locations;
@@ -17,6 +18,7 @@ using Android.Support.V4.Content;
 using Java.Util;
 using Permission = Android.Content.PM.Permission;
 using Android.Gms.Location;
+using Android.OS;
 using Android.Util;
 using Java.Lang;
 using File = Java.IO.File;
@@ -35,13 +37,16 @@ namespace AbnormalChecker
 		public static readonly Dictionary<string, CategoryData> CategoriesDataDic = new Dictionary<string, CategoryData>();
 		public static Dictionary<string, string[]> Permissions = new Dictionary<string, string[]>();
 		public static string RootCategory = "root";
-		public static string ScreenLocksCategory = "screen";
+		public const string ScreenLocksCategory = "screen";
 		public static string LocationCategory = "location";
 		public const string SystemCategory = "system";
 		private static Context _mContext;
 		private static ISharedPreferences _mPreferences;
 		static FusedLocationProviderClient _fusedLocationProviderClient;
 		private static string[] _allCategories;
+		private static PendingIntent _locationPendingIntent;
+		private static readonly AbnormalLocationCallback Callback = new AbnormalLocationCallback();
+		public static Location PreviousLocation;
 
 		public class CategoryData
 		{
@@ -112,8 +117,50 @@ namespace AbnormalChecker
 			if (ContextCompat.CheckSelfPermission(_mContext, Manifest.Permission.AccessFineLocation) ==
 			    Permission.Granted)
 			{
-				status = "Permissions granted";
-				GetLastLocationFromDevice();
+				
+				
+				LocationManager locationManager = (LocationManager) 
+					_mContext.GetSystemService(Context.LocationService);
+
+				bool locationEnabled = false;
+
+				if (Build.VERSION.SdkInt >= BuildVersionCodes.P)
+				{
+					locationEnabled = locationManager.IsLocationEnabled;
+					Log.Debug("Locatinch", locationEnabled.ToString());
+				}
+				else
+				{
+					foreach (var provider in locationManager.AllProviders)
+					{
+						if (provider != LocationManager.PassiveProvider && locationManager.IsProviderEnabled(provider))
+						{
+							locationEnabled = true;
+							Log.Debug("Locatinch", provider);
+							break;
+						}	
+					}
+					
+					
+					
+					Log.Debug("Locatinch", locationEnabled.ToString());
+				}
+				
+				status = locationEnabled ? "Location tracking enabled" : "Tracking disabled";
+				
+				LocationRequest request = new LocationRequest();
+				request.SetInterval(5000);
+				request.SetFastestInterval(5000);
+				request.SetPriority(LocationRequest.PriorityHighAccuracy);
+				//Probably not needed
+				_fusedLocationProviderClient.RequestLocationUpdates(request, Callback , Looper.MyLooper());
+
+				if (_locationPendingIntent == null)
+				{
+					Intent intent = new Intent(_mContext, typeof(LocationUpdateReceiver));
+					_locationPendingIntent = PendingIntent.GetBroadcast(_mContext, 123, intent, PendingIntentFlags.UpdateCurrent);
+					_fusedLocationProviderClient.RequestLocationUpdates(request, _locationPendingIntent);
+				}
 			}
 
 			data.Status = status;
@@ -216,12 +263,16 @@ namespace AbnormalChecker
 			}
 		}
 		
-		public static void NormalizeScreenData(string path, string ev)
+		public static void NormalizeScreenData(Intent intent)
 		{
-			using (StreamWriter writer = new StreamWriter(_mContext.OpenFileOutput(
-				SystemModListenerService.ExcludedFiles, FileCreationMode.Append)))
+			foreach (var key in intent.Extras.KeySet())
 			{
-				writer.WriteLine($"{path}____{ev}");
+				int val = intent.GetIntExtra(key, -1);
+				if (val != -1 && key != NotificationSender.ExtraNotificationId)
+				{
+					_mPreferences.Edit().PutInt(key, val).Apply();
+					Log.Debug("ScreenNormalizer", $"{key} : {val}");
+				}
 			}
 		}
 
@@ -252,7 +303,7 @@ namespace AbnormalChecker
 			}
 		}
 
-		static async void GetLastLocationFromDevice()
+		public static async void GetLastLocationFromDevice()
 		{
 			Location location = await _fusedLocationProviderClient.GetLastLocationAsync();
 			if (location == null)
@@ -261,6 +312,23 @@ namespace AbnormalChecker
 			}
 			else
 			{
+				
+				if (PreviousLocation != null)
+				{
+					float[] res = new float[2];
+					Location.DistanceBetween(PreviousLocation.Latitude,
+						PreviousLocation.Longitude, location.Latitude, location.Longitude, res);
+					Log.Debug("AbnormalLocationResolver", $"Distance = {res[0]}");
+					if (res[0] > 10 * 1000)
+					{
+						NotificationSender sender = new NotificationSender(_mContext, LocationCategory);
+						sender.Send(NotificationSender.NotificationType.WarningNotification, 
+							$"Too big distance from previous point = {res[0] / 1000}km !");
+					}
+				}
+
+				PreviousLocation = location;
+				
 				CategoriesDataDic["location"].Data = FormatLocation(location);
 				MainActivity.adapter?.NotifyDataSetChanged();
 			}
@@ -318,7 +386,7 @@ namespace AbnormalChecker
 			return categoryDelegate;
 		}
 
-		private static String FormatLocation(Location location)
+		public static String FormatLocation(Location location)
 		{
 			if (location == null)
 				return "";
