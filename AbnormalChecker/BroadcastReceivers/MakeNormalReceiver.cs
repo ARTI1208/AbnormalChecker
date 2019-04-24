@@ -31,6 +31,9 @@ namespace AbnormalChecker.BroadcastReceivers
                 case DataHolder.ScreenLocksCategory:
                     DataHolder.NormalizeScreenData(intent);
                     break;
+                case DataHolder.LocationCategory:
+                    DataHolder.NormalizeLocationData(intent);
+                    break;
             }
             
         }

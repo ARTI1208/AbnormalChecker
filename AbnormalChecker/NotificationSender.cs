@@ -48,6 +48,11 @@ namespace AbnormalChecker
         {
             CreateNormalizeIntent().PutExtra(key, value);
         }
+        
+        public void PutNormalizeExtra(string key, double value)
+        {
+            CreateNormalizeIntent().PutExtra(key, value);
+        }
 
         private Intent CreateNormalizeIntent()
         {

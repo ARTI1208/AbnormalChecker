@@ -241,6 +241,7 @@
     <Compile Include="DataHolder.cs" />
     <Compile Include="Checker.cs" />
     <Compile Include="Extensions\RecursiveFileObserver.cs" />
+    <Compile Include="LocationUtils.cs" />
     <Compile Include="NotificationSender.cs" />
     <Compile Include="OtherUI\CategoriesAdapter.cs" />
     <Compile Include="OtherUI\CircleIndicatorView.cs" />
@@ -251,6 +252,7 @@
     <Compile Include="OtherUI\ViewScroller.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScreenUtils.cs" />
     <Compile Include="Services\AbnormalLocationCallback.cs" />
     <Compile Include="Services\SystemModListenerService.cs" />
     <Compile Include="Services\TestService.cs" />

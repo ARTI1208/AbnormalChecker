@@ -45,7 +45,7 @@ namespace AbnormalChecker.OtherUI
                     categories.Add(pair.Key);
                 }
             }
-
+            Log.Debug("DefaultOut", "Refr");
             NotifyDataSetChanged();
         }
 
@@ -55,10 +55,15 @@ namespace AbnormalChecker.OtherUI
             DataHolder.CategoryData dataSet = list[position];
             myHolder.TitleTextView.Text = dataSet.Title;
             myHolder.StatusTextView.Text = dataSet.Status;
+            
+            
+            
+            
             if (dataSet.Data != null)
             {
                 myHolder.DataTextView.Text = dataSet.Data;
                 myHolder.DataTextView.Visibility = ViewStates.Visible;
+                Log.Debug("DefaultOut", $"Bind {dataSet.Title}, {dataSet.Data} vs {myHolder.DataTextView.Text}");
             }
             else
             {
@@ -80,21 +85,22 @@ namespace AbnormalChecker.OtherUI
                     myHolder.Card.SetCardBackgroundColor(Color.ParseColor("#ffffff"));
                     break;
             }
-
-
-            myHolder.Card.Click += delegate
+            if (!myHolder.Card.HasOnClickListeners)
             {
-                if (dataSet.Level == DataHolder.CheckStatus.PermissionsRequired)
+                myHolder.Card.Click += delegate
                 {
-                    MainActivity.GrantPermissions(dataSet.RequiredPermissions);
-                    return;
-                }
-
-                Intent intent = new Intent(mContext, typeof(MoreInfoActivity));
-                intent.PutExtra("title", dataSet.Title);
-                intent.PutExtra("category", categories[position]);
-                mContext.StartActivity(intent);
-            };
+                    if (dataSet.Level == DataHolder.CheckStatus.PermissionsRequired)
+                    {
+                        MainActivity.GrantPermissions(dataSet.RequiredPermissions);
+                        return;
+                    }
+                    Intent intent = new Intent(mContext, typeof(MoreInfoActivity));
+                    intent.PutExtra("title", dataSet.Title);
+                    intent.PutExtra("category", categories[position]);
+                    Log.Debug("MoreInfoActivity", "started");
+                    mContext.StartActivity(intent);
+                };    
+            }
         }
 
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)

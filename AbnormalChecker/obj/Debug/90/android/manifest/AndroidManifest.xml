@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="ru.art2000.abnormal" android:versionCode="1" android:versionName="1.0">
-  <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="28" />
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
   <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
   <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
   <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
   <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+  <uses-permission android:name="android.permission.CALL_PHONE" />
   <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -27,9 +28,10 @@
         <action android:name="ru.art2000.action.MakeNormalAction" />
       </intent-filter>
     </receiver>
-    <receiver android:name="md5ee643d7230cfa41999bc9deb73080d4d.PhoneCallReceiver">
+    <receiver android:enabled="true" android:exported="true" android:name="md5ee643d7230cfa41999bc9deb73080d4d.PhoneCallReceiver">
       <intent-filter>
         <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+        <action android:name="android.intent.action.PHONE_STATE" />
       </intent-filter>
     </receiver>
     <receiver android:enabled="true" android:exported="true" android:name="md5ee643d7230cfa41999bc9deb73080d4d.ServiceStarter">
