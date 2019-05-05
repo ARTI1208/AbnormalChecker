@@ -41,7 +41,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:background="@drawable/rounded_button"
-                android:text="@string/button.finish"
+                android:text="@string/onboarding_button_finish"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:visibility="gone"/>

@@ -12,13 +12,8 @@ namespace AbnormalChecker.Services
 		public override void OnLocationResult(LocationResult result)
 		{
 			Log.Debug(LocationTag, DataHolder.FormatLocation(result.LastLocation));
-//			DataHolder.CategoriesDataDic["location"].Data = DataHolder.FormatLocation(result.LastLocation);
-//			MainActivity.adapter?.NotifyDataSetChanged();
-
 			DataHolder.GetLastLocationFromDevice();
-
 		}
-		
 		
 	}
 }

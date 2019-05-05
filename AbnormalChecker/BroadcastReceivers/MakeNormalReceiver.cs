@@ -34,6 +34,9 @@ namespace AbnormalChecker.BroadcastReceivers
                 case DataHolder.LocationCategory:
                     DataHolder.NormalizeLocationData(intent);
                     break;
+                case DataHolder.PhoneCategory:
+                    DataHolder.NormalizePhoneData(intent);
+                    break;
             }
             
         }

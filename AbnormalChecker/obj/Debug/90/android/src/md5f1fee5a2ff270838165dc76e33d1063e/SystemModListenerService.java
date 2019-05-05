@@ -12,6 +12,7 @@ public class SystemModListenerService
 		__md_methods = 
 			"n_onCreate:()V:GetOnCreateHandler\n" +
 			"n_onStartCommand:(Landroid/content/Intent;II)I:GetOnStartCommand_Landroid_content_Intent_IIHandler\n" +
+			"n_onDestroy:()V:GetOnDestroyHandler\n" +
 			"n_onBind:(Landroid/content/Intent;)Landroid/os/IBinder;:GetOnBind_Landroid_content_Intent_Handler\n" +
 			"";
 		mono.android.Runtime.register ("AbnormalChecker.Services.SystemModListenerService, AbnormalChecker", SystemModListenerService.class, __md_methods);
@@ -40,6 +41,14 @@ public class SystemModListenerService
 	}
 
 	private native int n_onStartCommand (android.content.Intent p0, int p1, int p2);
+
+
+	public void onDestroy ()
+	{
+		n_onDestroy ();
+	}
+
+	private native void n_onDestroy ();
 
 
 	public android.os.IBinder onBind (android.content.Intent p0)

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text.RegularExpressions;
 using AbnormalChecker.BroadcastReceivers;
 using AbnormalChecker.OtherUI;
@@ -14,12 +15,16 @@ using Android.OS;
 using Android.Preferences;
 using Android.Support.V7.App;
 using Android.Support.V7.Widget;
+using Android.Telecom;
+using Android.Telephony;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
 using Java.Util;
 using Java.Util.Concurrent;
+using PhoneNumbers;
 using File = Java.IO.File;
+using PhoneNumberFormat = PhoneNumbers.PhoneNumberFormat;
 
 namespace AbnormalChecker.Activities
 {
@@ -133,13 +138,55 @@ namespace AbnormalChecker.Activities
 //            StartService(serv); 
 //            StopService(serv); 
 			Intent starter = new Intent();
-			starter.SetAction(ServiceStarter.ActionAbnormalMonitoring);
-			starter.SetClass(this, typeof(ServiceStarter));
+			starter.SetAction(MonitoringStarter.ActionAbnormalMonitoring);
+			starter.SetClass(this, typeof(MonitoringStarter));
 			SendBroadcast(starter);
 			Button b = FindViewById<Button>(Resource.Id.notif);
+
+			SupportActionBar.Elevation = 0;
+			
 //            RefreshList();
 			b.Click += delegate
 			{
+
+				TelephonyManager telephonyManager = TelephonyManager.FromContext(this);
+				
+				PhoneNumberUtil phoneNumberUtils = PhoneNumberUtil.GetInstance();
+				try
+				{
+					PhoneNumber phoneNumberProto = phoneNumberUtils.Parse("+79169268915", "");
+					PhoneNumber phoneNumberProto2 = phoneNumberUtils.Parse("+79169268915", "");
+					PhoneNumber phoneNumber = new PhoneNumber.Builder()
+						.SetRawInput("+79169268915")
+//						.SetNationalNumber(ulong.Parse("89169268915"))
+						.Build();
+					
+					
+					string myPhoneNumber = new String(telephonyManager.Line1Number.Where(Char.IsDigit).ToArray());
+					
+					if (myPhoneNumber.Length == 0)
+					{
+						Log.Error("Art2000Tag", "Can't proceed outgoing call, your phone number is null!");
+						return;
+					}
+					
+					PhoneNumber thisPhoneNumber = phoneNumberUtils.Parse(myPhoneNumber, Resources.Configuration.Locale.Country);
+            
+					Log.Debug("Art2000Tag", $"my number : {myPhoneNumber}, int num {phoneNumberUtils.Format(thisPhoneNumber, PhoneNumberFormat.INTERNATIONAL)}");
+
+					
+					
+					
+					Log.Debug("MainActiivity", phoneNumberProto.CountryCode.ToString());
+				}
+				catch (Exception e)
+				{
+					Console.WriteLine($"MainActiivity exception: {e.Message}");
+				}
+				
+
+				
+				
 				adapter?.Refresh();
 				
 			};

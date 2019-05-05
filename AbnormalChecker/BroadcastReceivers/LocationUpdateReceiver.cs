@@ -12,7 +12,6 @@ namespace AbnormalChecker.BroadcastReceivers
 	{
 		public override void OnReceive(Context context, Intent intent)
 		{
-			Log.Debug("AbnormalLocationResolver", "Location Update1");
 			DataHolder.GetLastLocationFromDevice();
 		}
 	}

@@ -53,6 +53,11 @@ namespace AbnormalChecker
         {
             CreateNormalizeIntent().PutExtra(key, value);
         }
+        
+        public void PutNormalizeExtra(string key, bool value)
+        {
+            CreateNormalizeIntent().PutExtra(key, value);
+        }
 
         private Intent CreateNormalizeIntent()
         {
@@ -147,5 +152,6 @@ namespace AbnormalChecker
             }
             notificationManager.Notify(mCategory.GetHashCode(), builder.Build());
         }
+
     }
 }

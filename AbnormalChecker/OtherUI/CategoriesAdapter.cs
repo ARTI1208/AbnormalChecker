@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using AbnormalChecker.Activities;
 using AbnormalChecker.BroadcastReceivers;
+using AbnormalChecker.Services;
 using Android.Content;
 using Android.Graphics;
 using Android.Support.V7.Widget;
@@ -24,7 +25,6 @@ namespace AbnormalChecker.OtherUI
             mInflater = LayoutInflater.From(context);
             mDataHolder = new DataHolder(mContext);
             mDataHolder.Refresh();
-            Log.Debug("lisstcp1", DataHolder.CategoriesDataDic.Count.ToString());
             foreach (var pair in DataHolder.CategoriesDataDic)
             {
                 list.Add(pair.Value);
@@ -45,7 +45,6 @@ namespace AbnormalChecker.OtherUI
                     categories.Add(pair.Key);
                 }
             }
-            Log.Debug("DefaultOut", "Refr");
             NotifyDataSetChanged();
         }
 
@@ -63,7 +62,6 @@ namespace AbnormalChecker.OtherUI
             {
                 myHolder.DataTextView.Text = dataSet.Data;
                 myHolder.DataTextView.Visibility = ViewStates.Visible;
-                Log.Debug("DefaultOut", $"Bind {dataSet.Title}, {dataSet.Data} vs {myHolder.DataTextView.Text}");
             }
             else
             {
@@ -97,7 +95,6 @@ namespace AbnormalChecker.OtherUI
                     Intent intent = new Intent(mContext, typeof(MoreInfoActivity));
                     intent.PutExtra("title", dataSet.Title);
                     intent.PutExtra("category", categories[position]);
-                    Log.Debug("MoreInfoActivity", "started");
                     mContext.StartActivity(intent);
                 };    
             }

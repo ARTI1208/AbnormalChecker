@@ -20,6 +20,9 @@ namespace AbnormalChecker.BroadcastReceivers
     })]
     public class ScreenUnlockReceiver : BroadcastReceiver
     {
+        
+        private static ScreenUnlockReceiver _unlockReceiver;
+        
         private static ISharedPreferences _mPreferences;
         
         private readonly string AbnormalUnlocksTimeInterval = "unlocks_time_interval";
@@ -244,12 +247,29 @@ namespace AbnormalChecker.BroadcastReceivers
                     MainActivity.adapter?.Refresh();
                     break;
                 default:
-                    Log.Debug("DefaultOut", "Upd");
                     MainActivity.adapter?.Refresh();
                     return;
             }
 
             notificationSender.Send(NotificationSender.WarningNotification, notificationText);
+        }
+        
+        public static void SetUnlockReceiverStatus(Context context, bool enable)
+        {
+            if (enable && _unlockReceiver == null)
+            {
+                IntentFilter screenStateFilter = new IntentFilter();
+                screenStateFilter.AddAction(Intent.ActionScreenOn);
+                _unlockReceiver = new ScreenUnlockReceiver();
+                context.ApplicationContext.RegisterReceiver(_unlockReceiver, screenStateFilter);
+            }
+            else if (!enable && _unlockReceiver != null)
+            {
+                context.ApplicationContext.UnregisterReceiver(_unlockReceiver);
+                _unlockReceiver.UnregisterFromRuntime();
+                _unlockReceiver.Dispose();
+                _unlockReceiver = null;
+            }
         }
     }
 }

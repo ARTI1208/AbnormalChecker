@@ -1,8 +1,6 @@
 package md5ee643d7230cfa41999bc9deb73080d4d;
 
 
-@android.annotation.TargetApi(
-value = 21)
 public class PhoneCallReceiver
 	extends android.content.BroadcastReceiver
 	implements
@@ -25,8 +23,6 @@ public class PhoneCallReceiver
 			mono.android.TypeManager.Activate ("AbnormalChecker.BroadcastReceivers.PhoneCallReceiver, AbnormalChecker", "", this, new java.lang.Object[] {  });
 	}
 
-	@android.annotation.TargetApi(
-value = 21)
 
 	public void onReceive (android.content.Context p0, android.content.Intent p1)
 	{
