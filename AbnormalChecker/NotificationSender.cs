@@ -133,7 +133,6 @@ namespace AbnormalChecker
 					builder.SetSmallIcon(Resource.Mipmap.Icon);
 					break;
 			}
-
 			if (Build.VERSION.SdkInt >= BuildVersionCodes.O)
 			{
 				var channel = new NotificationChannel(mCategory, title, importance)
