@@ -11,11 +11,11 @@ namespace AbnormalChecker.BroadcastReceivers
 	[IntentFilter(new[]
 	{
 		Intent.ActionBootCompleted,
-		Intent.ActionMyPackageReplaced
+		Intent.ActionMyPackageReplaced,
+		ActionAbnormalMonitoring
 	})]
 	public class MonitoringStarter : BroadcastReceiver
 	{
-		private static ISharedPreferences _preferences;
 		private static bool _isStarted;
 
 		public const string ActionAbnormalMonitoring = "ru.art2000.action.ABNORMAL_MONITORING";
@@ -30,24 +30,25 @@ namespace AbnormalChecker.BroadcastReceivers
 				return;
 			}
 			Log.Debug("AbnormalMonitorService", $"Received {intent.Action}");
-			if (_preferences == null)
-			{
-				_preferences = PreferenceManager.GetDefaultSharedPreferences(context);
-			}
-			SystemModListenerService.SetSystemMonitoringStatus(context,
-				enable: DataHolder.IsSelectedCategory(DataHolder.SystemCategory));
+
+			DataHolder.Initialize(context);
+			
 			ScreenUnlockReceiver.SetUnlockReceiverStatus(context,
 				enable: DataHolder.IsSelectedCategory(DataHolder.ScreenCategory));
 			PhoneCallReceiver.SetCallReceiverStatus(context,
 				enable: DataHolder.IsSelectedCategory(DataHolder.PhoneCategory));
 			SmsReceiver.SetSmsReceiverStatus(context,
 				enable: DataHolder.IsSelectedCategory(DataHolder.SmsCategory));
-			_isStarted = true;
-		}
 
-		public void SetNewStatus(IList<string> selected)
-		{
+			if (intent.Action == ActionAbnormalMonitoring)
+			{
+				SystemModListenerService.SetSystemMonitoringStatus(context,
+					enable: DataHolder.IsSelectedCategory(DataHolder.SystemCategory));	
+			}
 			
+			DataHolder.SetLocationTrackingEnabled(DataHolder.IsSelectedCategory(DataHolder.LocationCategory));
+
+			_isStarted = true;
 		}
 		
 	}

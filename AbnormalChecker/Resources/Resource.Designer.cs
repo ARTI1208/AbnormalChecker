@@ -26,6 +26,1664 @@ namespace AbnormalChecker
 		
 		public static void UpdateIdValues()
 		{
+			global::OnBoardingLib.Resource.Animation.abc_fade_in = global::AbnormalChecker.Resource.Animation.abc_fade_in;
+			global::OnBoardingLib.Resource.Animation.abc_fade_out = global::AbnormalChecker.Resource.Animation.abc_fade_out;
+			global::OnBoardingLib.Resource.Animation.abc_grow_fade_in_from_bottom = global::AbnormalChecker.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::OnBoardingLib.Resource.Animation.abc_popup_enter = global::AbnormalChecker.Resource.Animation.abc_popup_enter;
+			global::OnBoardingLib.Resource.Animation.abc_popup_exit = global::AbnormalChecker.Resource.Animation.abc_popup_exit;
+			global::OnBoardingLib.Resource.Animation.abc_shrink_fade_out_from_bottom = global::AbnormalChecker.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::OnBoardingLib.Resource.Animation.abc_slide_in_bottom = global::AbnormalChecker.Resource.Animation.abc_slide_in_bottom;
+			global::OnBoardingLib.Resource.Animation.abc_slide_in_top = global::AbnormalChecker.Resource.Animation.abc_slide_in_top;
+			global::OnBoardingLib.Resource.Animation.abc_slide_out_bottom = global::AbnormalChecker.Resource.Animation.abc_slide_out_bottom;
+			global::OnBoardingLib.Resource.Animation.abc_slide_out_top = global::AbnormalChecker.Resource.Animation.abc_slide_out_top;
+			global::OnBoardingLib.Resource.Animation.abc_tooltip_enter = global::AbnormalChecker.Resource.Animation.abc_tooltip_enter;
+			global::OnBoardingLib.Resource.Animation.abc_tooltip_exit = global::AbnormalChecker.Resource.Animation.abc_tooltip_exit;
+			global::OnBoardingLib.Resource.Attribute.actionBarDivider = global::AbnormalChecker.Resource.Attribute.actionBarDivider;
+			global::OnBoardingLib.Resource.Attribute.actionBarItemBackground = global::AbnormalChecker.Resource.Attribute.actionBarItemBackground;
+			global::OnBoardingLib.Resource.Attribute.actionBarPopupTheme = global::AbnormalChecker.Resource.Attribute.actionBarPopupTheme;
+			global::OnBoardingLib.Resource.Attribute.actionBarSize = global::AbnormalChecker.Resource.Attribute.actionBarSize;
+			global::OnBoardingLib.Resource.Attribute.actionBarSplitStyle = global::AbnormalChecker.Resource.Attribute.actionBarSplitStyle;
+			global::OnBoardingLib.Resource.Attribute.actionBarStyle = global::AbnormalChecker.Resource.Attribute.actionBarStyle;
+			global::OnBoardingLib.Resource.Attribute.actionBarTabBarStyle = global::AbnormalChecker.Resource.Attribute.actionBarTabBarStyle;
+			global::OnBoardingLib.Resource.Attribute.actionBarTabStyle = global::AbnormalChecker.Resource.Attribute.actionBarTabStyle;
+			global::OnBoardingLib.Resource.Attribute.actionBarTabTextStyle = global::AbnormalChecker.Resource.Attribute.actionBarTabTextStyle;
+			global::OnBoardingLib.Resource.Attribute.actionBarTheme = global::AbnormalChecker.Resource.Attribute.actionBarTheme;
+			global::OnBoardingLib.Resource.Attribute.actionBarWidgetTheme = global::AbnormalChecker.Resource.Attribute.actionBarWidgetTheme;
+			global::OnBoardingLib.Resource.Attribute.actionButtonStyle = global::AbnormalChecker.Resource.Attribute.actionButtonStyle;
+			global::OnBoardingLib.Resource.Attribute.actionDropDownStyle = global::AbnormalChecker.Resource.Attribute.actionDropDownStyle;
+			global::OnBoardingLib.Resource.Attribute.actionLayout = global::AbnormalChecker.Resource.Attribute.actionLayout;
+			global::OnBoardingLib.Resource.Attribute.actionMenuTextAppearance = global::AbnormalChecker.Resource.Attribute.actionMenuTextAppearance;
+			global::OnBoardingLib.Resource.Attribute.actionMenuTextColor = global::AbnormalChecker.Resource.Attribute.actionMenuTextColor;
+			global::OnBoardingLib.Resource.Attribute.actionModeBackground = global::AbnormalChecker.Resource.Attribute.actionModeBackground;
+			global::OnBoardingLib.Resource.Attribute.actionModeCloseButtonStyle = global::AbnormalChecker.Resource.Attribute.actionModeCloseButtonStyle;
+			global::OnBoardingLib.Resource.Attribute.actionModeCloseDrawable = global::AbnormalChecker.Resource.Attribute.actionModeCloseDrawable;
+			global::OnBoardingLib.Resource.Attribute.actionModeCopyDrawable = global::AbnormalChecker.Resource.Attribute.actionModeCopyDrawable;
+			global::OnBoardingLib.Resource.Attribute.actionModeCutDrawable = global::AbnormalChecker.Resource.Attribute.actionModeCutDrawable;
+			global::OnBoardingLib.Resource.Attribute.actionModeFindDrawable = global::AbnormalChecker.Resource.Attribute.actionModeFindDrawable;
+			global::OnBoardingLib.Resource.Attribute.actionModePasteDrawable = global::AbnormalChecker.Resource.Attribute.actionModePasteDrawable;
+			global::OnBoardingLib.Resource.Attribute.actionModePopupWindowStyle = global::AbnormalChecker.Resource.Attribute.actionModePopupWindowStyle;
+			global::OnBoardingLib.Resource.Attribute.actionModeSelectAllDrawable = global::AbnormalChecker.Resource.Attribute.actionModeSelectAllDrawable;
+			global::OnBoardingLib.Resource.Attribute.actionModeShareDrawable = global::AbnormalChecker.Resource.Attribute.actionModeShareDrawable;
+			global::OnBoardingLib.Resource.Attribute.actionModeSplitBackground = global::AbnormalChecker.Resource.Attribute.actionModeSplitBackground;
+			global::OnBoardingLib.Resource.Attribute.actionModeStyle = global::AbnormalChecker.Resource.Attribute.actionModeStyle;
+			global::OnBoardingLib.Resource.Attribute.actionModeWebSearchDrawable = global::AbnormalChecker.Resource.Attribute.actionModeWebSearchDrawable;
+			global::OnBoardingLib.Resource.Attribute.actionOverflowButtonStyle = global::AbnormalChecker.Resource.Attribute.actionOverflowButtonStyle;
+			global::OnBoardingLib.Resource.Attribute.actionOverflowMenuStyle = global::AbnormalChecker.Resource.Attribute.actionOverflowMenuStyle;
+			global::OnBoardingLib.Resource.Attribute.actionProviderClass = global::AbnormalChecker.Resource.Attribute.actionProviderClass;
+			global::OnBoardingLib.Resource.Attribute.actionViewClass = global::AbnormalChecker.Resource.Attribute.actionViewClass;
+			global::OnBoardingLib.Resource.Attribute.activityChooserViewStyle = global::AbnormalChecker.Resource.Attribute.activityChooserViewStyle;
+			global::OnBoardingLib.Resource.Attribute.alertDialogButtonGroupStyle = global::AbnormalChecker.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::OnBoardingLib.Resource.Attribute.alertDialogCenterButtons = global::AbnormalChecker.Resource.Attribute.alertDialogCenterButtons;
+			global::OnBoardingLib.Resource.Attribute.alertDialogStyle = global::AbnormalChecker.Resource.Attribute.alertDialogStyle;
+			global::OnBoardingLib.Resource.Attribute.alertDialogTheme = global::AbnormalChecker.Resource.Attribute.alertDialogTheme;
+			global::OnBoardingLib.Resource.Attribute.allowStacking = global::AbnormalChecker.Resource.Attribute.allowStacking;
+			global::OnBoardingLib.Resource.Attribute.alpha = global::AbnormalChecker.Resource.Attribute.alpha;
+			global::OnBoardingLib.Resource.Attribute.alphabeticModifiers = global::AbnormalChecker.Resource.Attribute.alphabeticModifiers;
+			global::OnBoardingLib.Resource.Attribute.arrowHeadLength = global::AbnormalChecker.Resource.Attribute.arrowHeadLength;
+			global::OnBoardingLib.Resource.Attribute.arrowShaftLength = global::AbnormalChecker.Resource.Attribute.arrowShaftLength;
+			global::OnBoardingLib.Resource.Attribute.autoCompleteTextViewStyle = global::AbnormalChecker.Resource.Attribute.autoCompleteTextViewStyle;
+			global::OnBoardingLib.Resource.Attribute.autoSizeMaxTextSize = global::AbnormalChecker.Resource.Attribute.autoSizeMaxTextSize;
+			global::OnBoardingLib.Resource.Attribute.autoSizeMinTextSize = global::AbnormalChecker.Resource.Attribute.autoSizeMinTextSize;
+			global::OnBoardingLib.Resource.Attribute.autoSizePresetSizes = global::AbnormalChecker.Resource.Attribute.autoSizePresetSizes;
+			global::OnBoardingLib.Resource.Attribute.autoSizeStepGranularity = global::AbnormalChecker.Resource.Attribute.autoSizeStepGranularity;
+			global::OnBoardingLib.Resource.Attribute.autoSizeTextType = global::AbnormalChecker.Resource.Attribute.autoSizeTextType;
+			global::OnBoardingLib.Resource.Attribute.background = global::AbnormalChecker.Resource.Attribute.background;
+			global::OnBoardingLib.Resource.Attribute.backgroundSplit = global::AbnormalChecker.Resource.Attribute.backgroundSplit;
+			global::OnBoardingLib.Resource.Attribute.backgroundStacked = global::AbnormalChecker.Resource.Attribute.backgroundStacked;
+			global::OnBoardingLib.Resource.Attribute.backgroundTint = global::AbnormalChecker.Resource.Attribute.backgroundTint;
+			global::OnBoardingLib.Resource.Attribute.backgroundTintMode = global::AbnormalChecker.Resource.Attribute.backgroundTintMode;
+			global::OnBoardingLib.Resource.Attribute.barLength = global::AbnormalChecker.Resource.Attribute.barLength;
+			global::OnBoardingLib.Resource.Attribute.borderlessButtonStyle = global::AbnormalChecker.Resource.Attribute.borderlessButtonStyle;
+			global::OnBoardingLib.Resource.Attribute.buttonBarButtonStyle = global::AbnormalChecker.Resource.Attribute.buttonBarButtonStyle;
+			global::OnBoardingLib.Resource.Attribute.buttonBarNegativeButtonStyle = global::AbnormalChecker.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::OnBoardingLib.Resource.Attribute.buttonBarNeutralButtonStyle = global::AbnormalChecker.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::OnBoardingLib.Resource.Attribute.buttonBarPositiveButtonStyle = global::AbnormalChecker.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::OnBoardingLib.Resource.Attribute.buttonBarStyle = global::AbnormalChecker.Resource.Attribute.buttonBarStyle;
+			global::OnBoardingLib.Resource.Attribute.buttonGravity = global::AbnormalChecker.Resource.Attribute.buttonGravity;
+			global::OnBoardingLib.Resource.Attribute.buttonIconDimen = global::AbnormalChecker.Resource.Attribute.buttonIconDimen;
+			global::OnBoardingLib.Resource.Attribute.buttonPanelSideLayout = global::AbnormalChecker.Resource.Attribute.buttonPanelSideLayout;
+			global::OnBoardingLib.Resource.Attribute.buttonStyle = global::AbnormalChecker.Resource.Attribute.buttonStyle;
+			global::OnBoardingLib.Resource.Attribute.buttonStyleSmall = global::AbnormalChecker.Resource.Attribute.buttonStyleSmall;
+			global::OnBoardingLib.Resource.Attribute.buttonTint = global::AbnormalChecker.Resource.Attribute.buttonTint;
+			global::OnBoardingLib.Resource.Attribute.buttonTintMode = global::AbnormalChecker.Resource.Attribute.buttonTintMode;
+			global::OnBoardingLib.Resource.Attribute.cardBackgroundColor = global::AbnormalChecker.Resource.Attribute.cardBackgroundColor;
+			global::OnBoardingLib.Resource.Attribute.cardCornerRadius = global::AbnormalChecker.Resource.Attribute.cardCornerRadius;
+			global::OnBoardingLib.Resource.Attribute.cardElevation = global::AbnormalChecker.Resource.Attribute.cardElevation;
+			global::OnBoardingLib.Resource.Attribute.cardMaxElevation = global::AbnormalChecker.Resource.Attribute.cardMaxElevation;
+			global::OnBoardingLib.Resource.Attribute.cardPreventCornerOverlap = global::AbnormalChecker.Resource.Attribute.cardPreventCornerOverlap;
+			global::OnBoardingLib.Resource.Attribute.cardUseCompatPadding = global::AbnormalChecker.Resource.Attribute.cardUseCompatPadding;
+			global::OnBoardingLib.Resource.Attribute.cardViewStyle = global::AbnormalChecker.Resource.Attribute.cardViewStyle;
+			global::OnBoardingLib.Resource.Attribute.checkboxStyle = global::AbnormalChecker.Resource.Attribute.checkboxStyle;
+			global::OnBoardingLib.Resource.Attribute.checkedTextViewStyle = global::AbnormalChecker.Resource.Attribute.checkedTextViewStyle;
+			global::OnBoardingLib.Resource.Attribute.closeIcon = global::AbnormalChecker.Resource.Attribute.closeIcon;
+			global::OnBoardingLib.Resource.Attribute.closeItemLayout = global::AbnormalChecker.Resource.Attribute.closeItemLayout;
+			global::OnBoardingLib.Resource.Attribute.collapseContentDescription = global::AbnormalChecker.Resource.Attribute.collapseContentDescription;
+			global::OnBoardingLib.Resource.Attribute.collapseIcon = global::AbnormalChecker.Resource.Attribute.collapseIcon;
+			global::OnBoardingLib.Resource.Attribute.color = global::AbnormalChecker.Resource.Attribute.color;
+			global::OnBoardingLib.Resource.Attribute.colorAccent = global::AbnormalChecker.Resource.Attribute.colorAccent;
+			global::OnBoardingLib.Resource.Attribute.colorBackgroundFloating = global::AbnormalChecker.Resource.Attribute.colorBackgroundFloating;
+			global::OnBoardingLib.Resource.Attribute.colorButtonNormal = global::AbnormalChecker.Resource.Attribute.colorButtonNormal;
+			global::OnBoardingLib.Resource.Attribute.colorControlActivated = global::AbnormalChecker.Resource.Attribute.colorControlActivated;
+			global::OnBoardingLib.Resource.Attribute.colorControlHighlight = global::AbnormalChecker.Resource.Attribute.colorControlHighlight;
+			global::OnBoardingLib.Resource.Attribute.colorControlNormal = global::AbnormalChecker.Resource.Attribute.colorControlNormal;
+			global::OnBoardingLib.Resource.Attribute.colorError = global::AbnormalChecker.Resource.Attribute.colorError;
+			global::OnBoardingLib.Resource.Attribute.colorPrimary = global::AbnormalChecker.Resource.Attribute.colorPrimary;
+			global::OnBoardingLib.Resource.Attribute.colorPrimaryDark = global::AbnormalChecker.Resource.Attribute.colorPrimaryDark;
+			global::OnBoardingLib.Resource.Attribute.colorSwitchThumbNormal = global::AbnormalChecker.Resource.Attribute.colorSwitchThumbNormal;
+			global::OnBoardingLib.Resource.Attribute.commitIcon = global::AbnormalChecker.Resource.Attribute.commitIcon;
+			global::OnBoardingLib.Resource.Attribute.contentDescription = global::AbnormalChecker.Resource.Attribute.contentDescription;
+			global::OnBoardingLib.Resource.Attribute.contentInsetEnd = global::AbnormalChecker.Resource.Attribute.contentInsetEnd;
+			global::OnBoardingLib.Resource.Attribute.contentInsetEndWithActions = global::AbnormalChecker.Resource.Attribute.contentInsetEndWithActions;
+			global::OnBoardingLib.Resource.Attribute.contentInsetLeft = global::AbnormalChecker.Resource.Attribute.contentInsetLeft;
+			global::OnBoardingLib.Resource.Attribute.contentInsetRight = global::AbnormalChecker.Resource.Attribute.contentInsetRight;
+			global::OnBoardingLib.Resource.Attribute.contentInsetStart = global::AbnormalChecker.Resource.Attribute.contentInsetStart;
+			global::OnBoardingLib.Resource.Attribute.contentInsetStartWithNavigation = global::AbnormalChecker.Resource.Attribute.contentInsetStartWithNavigation;
+			global::OnBoardingLib.Resource.Attribute.contentPadding = global::AbnormalChecker.Resource.Attribute.contentPadding;
+			global::OnBoardingLib.Resource.Attribute.contentPaddingBottom = global::AbnormalChecker.Resource.Attribute.contentPaddingBottom;
+			global::OnBoardingLib.Resource.Attribute.contentPaddingLeft = global::AbnormalChecker.Resource.Attribute.contentPaddingLeft;
+			global::OnBoardingLib.Resource.Attribute.contentPaddingRight = global::AbnormalChecker.Resource.Attribute.contentPaddingRight;
+			global::OnBoardingLib.Resource.Attribute.contentPaddingTop = global::AbnormalChecker.Resource.Attribute.contentPaddingTop;
+			global::OnBoardingLib.Resource.Attribute.controlBackground = global::AbnormalChecker.Resource.Attribute.controlBackground;
+			global::OnBoardingLib.Resource.Attribute.customNavigationLayout = global::AbnormalChecker.Resource.Attribute.customNavigationLayout;
+			global::OnBoardingLib.Resource.Attribute.defaultQueryHint = global::AbnormalChecker.Resource.Attribute.defaultQueryHint;
+			global::OnBoardingLib.Resource.Attribute.dialogCornerRadius = global::AbnormalChecker.Resource.Attribute.dialogCornerRadius;
+			global::OnBoardingLib.Resource.Attribute.dialogPreferredPadding = global::AbnormalChecker.Resource.Attribute.dialogPreferredPadding;
+			global::OnBoardingLib.Resource.Attribute.dialogTheme = global::AbnormalChecker.Resource.Attribute.dialogTheme;
+			global::OnBoardingLib.Resource.Attribute.displayOptions = global::AbnormalChecker.Resource.Attribute.displayOptions;
+			global::OnBoardingLib.Resource.Attribute.divider = global::AbnormalChecker.Resource.Attribute.divider;
+			global::OnBoardingLib.Resource.Attribute.dividerHorizontal = global::AbnormalChecker.Resource.Attribute.dividerHorizontal;
+			global::OnBoardingLib.Resource.Attribute.dividerPadding = global::AbnormalChecker.Resource.Attribute.dividerPadding;
+			global::OnBoardingLib.Resource.Attribute.dividerVertical = global::AbnormalChecker.Resource.Attribute.dividerVertical;
+			global::OnBoardingLib.Resource.Attribute.drawableSize = global::AbnormalChecker.Resource.Attribute.drawableSize;
+			global::OnBoardingLib.Resource.Attribute.drawerArrowStyle = global::AbnormalChecker.Resource.Attribute.drawerArrowStyle;
+			global::OnBoardingLib.Resource.Attribute.dropDownListViewStyle = global::AbnormalChecker.Resource.Attribute.dropDownListViewStyle;
+			global::OnBoardingLib.Resource.Attribute.dropdownListPreferredItemHeight = global::AbnormalChecker.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::OnBoardingLib.Resource.Attribute.editTextBackground = global::AbnormalChecker.Resource.Attribute.editTextBackground;
+			global::OnBoardingLib.Resource.Attribute.editTextColor = global::AbnormalChecker.Resource.Attribute.editTextColor;
+			global::OnBoardingLib.Resource.Attribute.editTextStyle = global::AbnormalChecker.Resource.Attribute.editTextStyle;
+			global::OnBoardingLib.Resource.Attribute.elevation = global::AbnormalChecker.Resource.Attribute.elevation;
+			global::OnBoardingLib.Resource.Attribute.expandActivityOverflowButtonDrawable = global::AbnormalChecker.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::OnBoardingLib.Resource.Attribute.firstBaselineToTopHeight = global::AbnormalChecker.Resource.Attribute.firstBaselineToTopHeight;
+			global::OnBoardingLib.Resource.Attribute.font = global::AbnormalChecker.Resource.Attribute.font;
+			global::OnBoardingLib.Resource.Attribute.fontFamily = global::AbnormalChecker.Resource.Attribute.fontFamily;
+			global::OnBoardingLib.Resource.Attribute.fontProviderAuthority = global::AbnormalChecker.Resource.Attribute.fontProviderAuthority;
+			global::OnBoardingLib.Resource.Attribute.fontProviderCerts = global::AbnormalChecker.Resource.Attribute.fontProviderCerts;
+			global::OnBoardingLib.Resource.Attribute.fontProviderFetchStrategy = global::AbnormalChecker.Resource.Attribute.fontProviderFetchStrategy;
+			global::OnBoardingLib.Resource.Attribute.fontProviderFetchTimeout = global::AbnormalChecker.Resource.Attribute.fontProviderFetchTimeout;
+			global::OnBoardingLib.Resource.Attribute.fontProviderPackage = global::AbnormalChecker.Resource.Attribute.fontProviderPackage;
+			global::OnBoardingLib.Resource.Attribute.fontProviderQuery = global::AbnormalChecker.Resource.Attribute.fontProviderQuery;
+			global::OnBoardingLib.Resource.Attribute.fontStyle = global::AbnormalChecker.Resource.Attribute.fontStyle;
+			global::OnBoardingLib.Resource.Attribute.fontVariationSettings = global::AbnormalChecker.Resource.Attribute.fontVariationSettings;
+			global::OnBoardingLib.Resource.Attribute.fontWeight = global::AbnormalChecker.Resource.Attribute.fontWeight;
+			global::OnBoardingLib.Resource.Attribute.gapBetweenBars = global::AbnormalChecker.Resource.Attribute.gapBetweenBars;
+			global::OnBoardingLib.Resource.Attribute.goIcon = global::AbnormalChecker.Resource.Attribute.goIcon;
+			global::OnBoardingLib.Resource.Attribute.height = global::AbnormalChecker.Resource.Attribute.height;
+			global::OnBoardingLib.Resource.Attribute.hideOnContentScroll = global::AbnormalChecker.Resource.Attribute.hideOnContentScroll;
+			global::OnBoardingLib.Resource.Attribute.homeAsUpIndicator = global::AbnormalChecker.Resource.Attribute.homeAsUpIndicator;
+			global::OnBoardingLib.Resource.Attribute.homeLayout = global::AbnormalChecker.Resource.Attribute.homeLayout;
+			global::OnBoardingLib.Resource.Attribute.icon = global::AbnormalChecker.Resource.Attribute.icon;
+			global::OnBoardingLib.Resource.Attribute.iconTint = global::AbnormalChecker.Resource.Attribute.iconTint;
+			global::OnBoardingLib.Resource.Attribute.iconTintMode = global::AbnormalChecker.Resource.Attribute.iconTintMode;
+			global::OnBoardingLib.Resource.Attribute.iconifiedByDefault = global::AbnormalChecker.Resource.Attribute.iconifiedByDefault;
+			global::OnBoardingLib.Resource.Attribute.imageButtonStyle = global::AbnormalChecker.Resource.Attribute.imageButtonStyle;
+			global::OnBoardingLib.Resource.Attribute.indeterminateProgressStyle = global::AbnormalChecker.Resource.Attribute.indeterminateProgressStyle;
+			global::OnBoardingLib.Resource.Attribute.initialActivityCount = global::AbnormalChecker.Resource.Attribute.initialActivityCount;
+			global::OnBoardingLib.Resource.Attribute.isLightTheme = global::AbnormalChecker.Resource.Attribute.isLightTheme;
+			global::OnBoardingLib.Resource.Attribute.itemPadding = global::AbnormalChecker.Resource.Attribute.itemPadding;
+			global::OnBoardingLib.Resource.Attribute.lastBaselineToBottomHeight = global::AbnormalChecker.Resource.Attribute.lastBaselineToBottomHeight;
+			global::OnBoardingLib.Resource.Attribute.layout = global::AbnormalChecker.Resource.Attribute.layout;
+			global::OnBoardingLib.Resource.Attribute.lineHeight = global::AbnormalChecker.Resource.Attribute.lineHeight;
+			global::OnBoardingLib.Resource.Attribute.listChoiceBackgroundIndicator = global::AbnormalChecker.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::OnBoardingLib.Resource.Attribute.listDividerAlertDialog = global::AbnormalChecker.Resource.Attribute.listDividerAlertDialog;
+			global::OnBoardingLib.Resource.Attribute.listItemLayout = global::AbnormalChecker.Resource.Attribute.listItemLayout;
+			global::OnBoardingLib.Resource.Attribute.listLayout = global::AbnormalChecker.Resource.Attribute.listLayout;
+			global::OnBoardingLib.Resource.Attribute.listMenuViewStyle = global::AbnormalChecker.Resource.Attribute.listMenuViewStyle;
+			global::OnBoardingLib.Resource.Attribute.listPopupWindowStyle = global::AbnormalChecker.Resource.Attribute.listPopupWindowStyle;
+			global::OnBoardingLib.Resource.Attribute.listPreferredItemHeight = global::AbnormalChecker.Resource.Attribute.listPreferredItemHeight;
+			global::OnBoardingLib.Resource.Attribute.listPreferredItemHeightLarge = global::AbnormalChecker.Resource.Attribute.listPreferredItemHeightLarge;
+			global::OnBoardingLib.Resource.Attribute.listPreferredItemHeightSmall = global::AbnormalChecker.Resource.Attribute.listPreferredItemHeightSmall;
+			global::OnBoardingLib.Resource.Attribute.listPreferredItemPaddingLeft = global::AbnormalChecker.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::OnBoardingLib.Resource.Attribute.listPreferredItemPaddingRight = global::AbnormalChecker.Resource.Attribute.listPreferredItemPaddingRight;
+			global::OnBoardingLib.Resource.Attribute.logo = global::AbnormalChecker.Resource.Attribute.logo;
+			global::OnBoardingLib.Resource.Attribute.logoDescription = global::AbnormalChecker.Resource.Attribute.logoDescription;
+			global::OnBoardingLib.Resource.Attribute.maxButtonHeight = global::AbnormalChecker.Resource.Attribute.maxButtonHeight;
+			global::OnBoardingLib.Resource.Attribute.measureWithLargestChild = global::AbnormalChecker.Resource.Attribute.measureWithLargestChild;
+			global::OnBoardingLib.Resource.Attribute.multiChoiceItemLayout = global::AbnormalChecker.Resource.Attribute.multiChoiceItemLayout;
+			global::OnBoardingLib.Resource.Attribute.navigationContentDescription = global::AbnormalChecker.Resource.Attribute.navigationContentDescription;
+			global::OnBoardingLib.Resource.Attribute.navigationIcon = global::AbnormalChecker.Resource.Attribute.navigationIcon;
+			global::OnBoardingLib.Resource.Attribute.navigationMode = global::AbnormalChecker.Resource.Attribute.navigationMode;
+			global::OnBoardingLib.Resource.Attribute.numericModifiers = global::AbnormalChecker.Resource.Attribute.numericModifiers;
+			global::OnBoardingLib.Resource.Attribute.overlapAnchor = global::AbnormalChecker.Resource.Attribute.overlapAnchor;
+			global::OnBoardingLib.Resource.Attribute.paddingBottomNoButtons = global::AbnormalChecker.Resource.Attribute.paddingBottomNoButtons;
+			global::OnBoardingLib.Resource.Attribute.paddingEnd = global::AbnormalChecker.Resource.Attribute.paddingEnd;
+			global::OnBoardingLib.Resource.Attribute.paddingStart = global::AbnormalChecker.Resource.Attribute.paddingStart;
+			global::OnBoardingLib.Resource.Attribute.paddingTopNoTitle = global::AbnormalChecker.Resource.Attribute.paddingTopNoTitle;
+			global::OnBoardingLib.Resource.Attribute.panelBackground = global::AbnormalChecker.Resource.Attribute.panelBackground;
+			global::OnBoardingLib.Resource.Attribute.panelMenuListTheme = global::AbnormalChecker.Resource.Attribute.panelMenuListTheme;
+			global::OnBoardingLib.Resource.Attribute.panelMenuListWidth = global::AbnormalChecker.Resource.Attribute.panelMenuListWidth;
+			global::OnBoardingLib.Resource.Attribute.popupMenuStyle = global::AbnormalChecker.Resource.Attribute.popupMenuStyle;
+			global::OnBoardingLib.Resource.Attribute.popupTheme = global::AbnormalChecker.Resource.Attribute.popupTheme;
+			global::OnBoardingLib.Resource.Attribute.popupWindowStyle = global::AbnormalChecker.Resource.Attribute.popupWindowStyle;
+			global::OnBoardingLib.Resource.Attribute.preserveIconSpacing = global::AbnormalChecker.Resource.Attribute.preserveIconSpacing;
+			global::OnBoardingLib.Resource.Attribute.progressBarPadding = global::AbnormalChecker.Resource.Attribute.progressBarPadding;
+			global::OnBoardingLib.Resource.Attribute.progressBarStyle = global::AbnormalChecker.Resource.Attribute.progressBarStyle;
+			global::OnBoardingLib.Resource.Attribute.queryBackground = global::AbnormalChecker.Resource.Attribute.queryBackground;
+			global::OnBoardingLib.Resource.Attribute.queryHint = global::AbnormalChecker.Resource.Attribute.queryHint;
+			global::OnBoardingLib.Resource.Attribute.radioButtonStyle = global::AbnormalChecker.Resource.Attribute.radioButtonStyle;
+			global::OnBoardingLib.Resource.Attribute.ratingBarStyle = global::AbnormalChecker.Resource.Attribute.ratingBarStyle;
+			global::OnBoardingLib.Resource.Attribute.ratingBarStyleIndicator = global::AbnormalChecker.Resource.Attribute.ratingBarStyleIndicator;
+			global::OnBoardingLib.Resource.Attribute.ratingBarStyleSmall = global::AbnormalChecker.Resource.Attribute.ratingBarStyleSmall;
+			global::OnBoardingLib.Resource.Attribute.searchHintIcon = global::AbnormalChecker.Resource.Attribute.searchHintIcon;
+			global::OnBoardingLib.Resource.Attribute.searchIcon = global::AbnormalChecker.Resource.Attribute.searchIcon;
+			global::OnBoardingLib.Resource.Attribute.searchViewStyle = global::AbnormalChecker.Resource.Attribute.searchViewStyle;
+			global::OnBoardingLib.Resource.Attribute.seekBarStyle = global::AbnormalChecker.Resource.Attribute.seekBarStyle;
+			global::OnBoardingLib.Resource.Attribute.selectableItemBackground = global::AbnormalChecker.Resource.Attribute.selectableItemBackground;
+			global::OnBoardingLib.Resource.Attribute.selectableItemBackgroundBorderless = global::AbnormalChecker.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::OnBoardingLib.Resource.Attribute.showAsAction = global::AbnormalChecker.Resource.Attribute.showAsAction;
+			global::OnBoardingLib.Resource.Attribute.showDividers = global::AbnormalChecker.Resource.Attribute.showDividers;
+			global::OnBoardingLib.Resource.Attribute.showText = global::AbnormalChecker.Resource.Attribute.showText;
+			global::OnBoardingLib.Resource.Attribute.showTitle = global::AbnormalChecker.Resource.Attribute.showTitle;
+			global::OnBoardingLib.Resource.Attribute.singleChoiceItemLayout = global::AbnormalChecker.Resource.Attribute.singleChoiceItemLayout;
+			global::OnBoardingLib.Resource.Attribute.spinBars = global::AbnormalChecker.Resource.Attribute.spinBars;
+			global::OnBoardingLib.Resource.Attribute.spinnerDropDownItemStyle = global::AbnormalChecker.Resource.Attribute.spinnerDropDownItemStyle;
+			global::OnBoardingLib.Resource.Attribute.spinnerStyle = global::AbnormalChecker.Resource.Attribute.spinnerStyle;
+			global::OnBoardingLib.Resource.Attribute.splitTrack = global::AbnormalChecker.Resource.Attribute.splitTrack;
+			global::OnBoardingLib.Resource.Attribute.srcCompat = global::AbnormalChecker.Resource.Attribute.srcCompat;
+			global::OnBoardingLib.Resource.Attribute.state_above_anchor = global::AbnormalChecker.Resource.Attribute.state_above_anchor;
+			global::OnBoardingLib.Resource.Attribute.subMenuArrow = global::AbnormalChecker.Resource.Attribute.subMenuArrow;
+			global::OnBoardingLib.Resource.Attribute.submitBackground = global::AbnormalChecker.Resource.Attribute.submitBackground;
+			global::OnBoardingLib.Resource.Attribute.subtitle = global::AbnormalChecker.Resource.Attribute.subtitle;
+			global::OnBoardingLib.Resource.Attribute.subtitleTextAppearance = global::AbnormalChecker.Resource.Attribute.subtitleTextAppearance;
+			global::OnBoardingLib.Resource.Attribute.subtitleTextColor = global::AbnormalChecker.Resource.Attribute.subtitleTextColor;
+			global::OnBoardingLib.Resource.Attribute.subtitleTextStyle = global::AbnormalChecker.Resource.Attribute.subtitleTextStyle;
+			global::OnBoardingLib.Resource.Attribute.suggestionRowLayout = global::AbnormalChecker.Resource.Attribute.suggestionRowLayout;
+			global::OnBoardingLib.Resource.Attribute.switchMinWidth = global::AbnormalChecker.Resource.Attribute.switchMinWidth;
+			global::OnBoardingLib.Resource.Attribute.switchPadding = global::AbnormalChecker.Resource.Attribute.switchPadding;
+			global::OnBoardingLib.Resource.Attribute.switchStyle = global::AbnormalChecker.Resource.Attribute.switchStyle;
+			global::OnBoardingLib.Resource.Attribute.switchTextAppearance = global::AbnormalChecker.Resource.Attribute.switchTextAppearance;
+			global::OnBoardingLib.Resource.Attribute.textAllCaps = global::AbnormalChecker.Resource.Attribute.textAllCaps;
+			global::OnBoardingLib.Resource.Attribute.textAppearanceLargePopupMenu = global::AbnormalChecker.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::OnBoardingLib.Resource.Attribute.textAppearanceListItem = global::AbnormalChecker.Resource.Attribute.textAppearanceListItem;
+			global::OnBoardingLib.Resource.Attribute.textAppearanceListItemSecondary = global::AbnormalChecker.Resource.Attribute.textAppearanceListItemSecondary;
+			global::OnBoardingLib.Resource.Attribute.textAppearanceListItemSmall = global::AbnormalChecker.Resource.Attribute.textAppearanceListItemSmall;
+			global::OnBoardingLib.Resource.Attribute.textAppearancePopupMenuHeader = global::AbnormalChecker.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::OnBoardingLib.Resource.Attribute.textAppearanceSearchResultSubtitle = global::AbnormalChecker.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::OnBoardingLib.Resource.Attribute.textAppearanceSearchResultTitle = global::AbnormalChecker.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::OnBoardingLib.Resource.Attribute.textAppearanceSmallPopupMenu = global::AbnormalChecker.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::OnBoardingLib.Resource.Attribute.textColorAlertDialogListItem = global::AbnormalChecker.Resource.Attribute.textColorAlertDialogListItem;
+			global::OnBoardingLib.Resource.Attribute.textColorSearchUrl = global::AbnormalChecker.Resource.Attribute.textColorSearchUrl;
+			global::OnBoardingLib.Resource.Attribute.theme = global::AbnormalChecker.Resource.Attribute.theme;
+			global::OnBoardingLib.Resource.Attribute.thickness = global::AbnormalChecker.Resource.Attribute.thickness;
+			global::OnBoardingLib.Resource.Attribute.thumbTextPadding = global::AbnormalChecker.Resource.Attribute.thumbTextPadding;
+			global::OnBoardingLib.Resource.Attribute.thumbTint = global::AbnormalChecker.Resource.Attribute.thumbTint;
+			global::OnBoardingLib.Resource.Attribute.thumbTintMode = global::AbnormalChecker.Resource.Attribute.thumbTintMode;
+			global::OnBoardingLib.Resource.Attribute.tickMark = global::AbnormalChecker.Resource.Attribute.tickMark;
+			global::OnBoardingLib.Resource.Attribute.tickMarkTint = global::AbnormalChecker.Resource.Attribute.tickMarkTint;
+			global::OnBoardingLib.Resource.Attribute.tickMarkTintMode = global::AbnormalChecker.Resource.Attribute.tickMarkTintMode;
+			global::OnBoardingLib.Resource.Attribute.tint = global::AbnormalChecker.Resource.Attribute.tint;
+			global::OnBoardingLib.Resource.Attribute.tintMode = global::AbnormalChecker.Resource.Attribute.tintMode;
+			global::OnBoardingLib.Resource.Attribute.title = global::AbnormalChecker.Resource.Attribute.title;
+			global::OnBoardingLib.Resource.Attribute.titleMargin = global::AbnormalChecker.Resource.Attribute.titleMargin;
+			global::OnBoardingLib.Resource.Attribute.titleMarginBottom = global::AbnormalChecker.Resource.Attribute.titleMarginBottom;
+			global::OnBoardingLib.Resource.Attribute.titleMarginEnd = global::AbnormalChecker.Resource.Attribute.titleMarginEnd;
+			global::OnBoardingLib.Resource.Attribute.titleMarginStart = global::AbnormalChecker.Resource.Attribute.titleMarginStart;
+			global::OnBoardingLib.Resource.Attribute.titleMarginTop = global::AbnormalChecker.Resource.Attribute.titleMarginTop;
+			global::OnBoardingLib.Resource.Attribute.titleMargins = global::AbnormalChecker.Resource.Attribute.titleMargins;
+			global::OnBoardingLib.Resource.Attribute.titleTextAppearance = global::AbnormalChecker.Resource.Attribute.titleTextAppearance;
+			global::OnBoardingLib.Resource.Attribute.titleTextColor = global::AbnormalChecker.Resource.Attribute.titleTextColor;
+			global::OnBoardingLib.Resource.Attribute.titleTextStyle = global::AbnormalChecker.Resource.Attribute.titleTextStyle;
+			global::OnBoardingLib.Resource.Attribute.toolbarNavigationButtonStyle = global::AbnormalChecker.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::OnBoardingLib.Resource.Attribute.toolbarStyle = global::AbnormalChecker.Resource.Attribute.toolbarStyle;
+			global::OnBoardingLib.Resource.Attribute.tooltipForegroundColor = global::AbnormalChecker.Resource.Attribute.tooltipForegroundColor;
+			global::OnBoardingLib.Resource.Attribute.tooltipFrameBackground = global::AbnormalChecker.Resource.Attribute.tooltipFrameBackground;
+			global::OnBoardingLib.Resource.Attribute.tooltipText = global::AbnormalChecker.Resource.Attribute.tooltipText;
+			global::OnBoardingLib.Resource.Attribute.track = global::AbnormalChecker.Resource.Attribute.track;
+			global::OnBoardingLib.Resource.Attribute.trackTint = global::AbnormalChecker.Resource.Attribute.trackTint;
+			global::OnBoardingLib.Resource.Attribute.trackTintMode = global::AbnormalChecker.Resource.Attribute.trackTintMode;
+			global::OnBoardingLib.Resource.Attribute.transition_drawable = global::AbnormalChecker.Resource.Attribute.transition_drawable;
+			global::OnBoardingLib.Resource.Attribute.transition_duration = global::AbnormalChecker.Resource.Attribute.transition_duration;
+			global::OnBoardingLib.Resource.Attribute.ttcIndex = global::AbnormalChecker.Resource.Attribute.ttcIndex;
+			global::OnBoardingLib.Resource.Attribute.viewInflaterClass = global::AbnormalChecker.Resource.Attribute.viewInflaterClass;
+			global::OnBoardingLib.Resource.Attribute.voiceIcon = global::AbnormalChecker.Resource.Attribute.voiceIcon;
+			global::OnBoardingLib.Resource.Attribute.windowActionBar = global::AbnormalChecker.Resource.Attribute.windowActionBar;
+			global::OnBoardingLib.Resource.Attribute.windowActionBarOverlay = global::AbnormalChecker.Resource.Attribute.windowActionBarOverlay;
+			global::OnBoardingLib.Resource.Attribute.windowActionModeOverlay = global::AbnormalChecker.Resource.Attribute.windowActionModeOverlay;
+			global::OnBoardingLib.Resource.Attribute.windowFixedHeightMajor = global::AbnormalChecker.Resource.Attribute.windowFixedHeightMajor;
+			global::OnBoardingLib.Resource.Attribute.windowFixedHeightMinor = global::AbnormalChecker.Resource.Attribute.windowFixedHeightMinor;
+			global::OnBoardingLib.Resource.Attribute.windowFixedWidthMajor = global::AbnormalChecker.Resource.Attribute.windowFixedWidthMajor;
+			global::OnBoardingLib.Resource.Attribute.windowFixedWidthMinor = global::AbnormalChecker.Resource.Attribute.windowFixedWidthMinor;
+			global::OnBoardingLib.Resource.Attribute.windowMinWidthMajor = global::AbnormalChecker.Resource.Attribute.windowMinWidthMajor;
+			global::OnBoardingLib.Resource.Attribute.windowMinWidthMinor = global::AbnormalChecker.Resource.Attribute.windowMinWidthMinor;
+			global::OnBoardingLib.Resource.Attribute.windowNoTitle = global::AbnormalChecker.Resource.Attribute.windowNoTitle;
+			global::OnBoardingLib.Resource.Boolean.abc_action_bar_embed_tabs = global::AbnormalChecker.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::OnBoardingLib.Resource.Boolean.abc_allow_stacked_button_bar = global::AbnormalChecker.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::OnBoardingLib.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::AbnormalChecker.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::OnBoardingLib.Resource.Color.abc_background_cache_hint_selector_material_dark = global::AbnormalChecker.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::OnBoardingLib.Resource.Color.abc_background_cache_hint_selector_material_light = global::AbnormalChecker.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::OnBoardingLib.Resource.Color.abc_btn_colored_borderless_text_material = global::AbnormalChecker.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::OnBoardingLib.Resource.Color.abc_btn_colored_text_material = global::AbnormalChecker.Resource.Color.abc_btn_colored_text_material;
+			global::OnBoardingLib.Resource.Color.abc_color_highlight_material = global::AbnormalChecker.Resource.Color.abc_color_highlight_material;
+			global::OnBoardingLib.Resource.Color.abc_hint_foreground_material_dark = global::AbnormalChecker.Resource.Color.abc_hint_foreground_material_dark;
+			global::OnBoardingLib.Resource.Color.abc_hint_foreground_material_light = global::AbnormalChecker.Resource.Color.abc_hint_foreground_material_light;
+			global::OnBoardingLib.Resource.Color.abc_input_method_navigation_guard = global::AbnormalChecker.Resource.Color.abc_input_method_navigation_guard;
+			global::OnBoardingLib.Resource.Color.abc_primary_text_disable_only_material_dark = global::AbnormalChecker.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::OnBoardingLib.Resource.Color.abc_primary_text_disable_only_material_light = global::AbnormalChecker.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::OnBoardingLib.Resource.Color.abc_primary_text_material_dark = global::AbnormalChecker.Resource.Color.abc_primary_text_material_dark;
+			global::OnBoardingLib.Resource.Color.abc_primary_text_material_light = global::AbnormalChecker.Resource.Color.abc_primary_text_material_light;
+			global::OnBoardingLib.Resource.Color.abc_search_url_text = global::AbnormalChecker.Resource.Color.abc_search_url_text;
+			global::OnBoardingLib.Resource.Color.abc_search_url_text_normal = global::AbnormalChecker.Resource.Color.abc_search_url_text_normal;
+			global::OnBoardingLib.Resource.Color.abc_search_url_text_pressed = global::AbnormalChecker.Resource.Color.abc_search_url_text_pressed;
+			global::OnBoardingLib.Resource.Color.abc_search_url_text_selected = global::AbnormalChecker.Resource.Color.abc_search_url_text_selected;
+			global::OnBoardingLib.Resource.Color.abc_secondary_text_material_dark = global::AbnormalChecker.Resource.Color.abc_secondary_text_material_dark;
+			global::OnBoardingLib.Resource.Color.abc_secondary_text_material_light = global::AbnormalChecker.Resource.Color.abc_secondary_text_material_light;
+			global::OnBoardingLib.Resource.Color.abc_tint_btn_checkable = global::AbnormalChecker.Resource.Color.abc_tint_btn_checkable;
+			global::OnBoardingLib.Resource.Color.abc_tint_default = global::AbnormalChecker.Resource.Color.abc_tint_default;
+			global::OnBoardingLib.Resource.Color.abc_tint_edittext = global::AbnormalChecker.Resource.Color.abc_tint_edittext;
+			global::OnBoardingLib.Resource.Color.abc_tint_seek_thumb = global::AbnormalChecker.Resource.Color.abc_tint_seek_thumb;
+			global::OnBoardingLib.Resource.Color.abc_tint_spinner = global::AbnormalChecker.Resource.Color.abc_tint_spinner;
+			global::OnBoardingLib.Resource.Color.abc_tint_switch_track = global::AbnormalChecker.Resource.Color.abc_tint_switch_track;
+			global::OnBoardingLib.Resource.Color.accent_material_dark = global::AbnormalChecker.Resource.Color.accent_material_dark;
+			global::OnBoardingLib.Resource.Color.accent_material_light = global::AbnormalChecker.Resource.Color.accent_material_light;
+			global::OnBoardingLib.Resource.Color.active_indicator = global::AbnormalChecker.Resource.Color.active_indicator;
+			global::OnBoardingLib.Resource.Color.background_floating_material_dark = global::AbnormalChecker.Resource.Color.background_floating_material_dark;
+			global::OnBoardingLib.Resource.Color.background_floating_material_light = global::AbnormalChecker.Resource.Color.background_floating_material_light;
+			global::OnBoardingLib.Resource.Color.background_material_dark = global::AbnormalChecker.Resource.Color.background_material_dark;
+			global::OnBoardingLib.Resource.Color.background_material_light = global::AbnormalChecker.Resource.Color.background_material_light;
+			global::OnBoardingLib.Resource.Color.bg = global::AbnormalChecker.Resource.Color.bg;
+			global::OnBoardingLib.Resource.Color.black = global::AbnormalChecker.Resource.Color.black;
+			global::OnBoardingLib.Resource.Color.black_transparent = global::AbnormalChecker.Resource.Color.black_transparent;
+			global::OnBoardingLib.Resource.Color.black_transparent_image = global::AbnormalChecker.Resource.Color.black_transparent_image;
+			global::OnBoardingLib.Resource.Color.bright_foreground_disabled_material_dark = global::AbnormalChecker.Resource.Color.bright_foreground_disabled_material_dark;
+			global::OnBoardingLib.Resource.Color.bright_foreground_disabled_material_light = global::AbnormalChecker.Resource.Color.bright_foreground_disabled_material_light;
+			global::OnBoardingLib.Resource.Color.bright_foreground_inverse_material_dark = global::AbnormalChecker.Resource.Color.bright_foreground_inverse_material_dark;
+			global::OnBoardingLib.Resource.Color.bright_foreground_inverse_material_light = global::AbnormalChecker.Resource.Color.bright_foreground_inverse_material_light;
+			global::OnBoardingLib.Resource.Color.bright_foreground_material_dark = global::AbnormalChecker.Resource.Color.bright_foreground_material_dark;
+			global::OnBoardingLib.Resource.Color.bright_foreground_material_light = global::AbnormalChecker.Resource.Color.bright_foreground_material_light;
+			global::OnBoardingLib.Resource.Color.button_material_dark = global::AbnormalChecker.Resource.Color.button_material_dark;
+			global::OnBoardingLib.Resource.Color.button_material_light = global::AbnormalChecker.Resource.Color.button_material_light;
+			global::OnBoardingLib.Resource.Color.cardview_dark_background = global::AbnormalChecker.Resource.Color.cardview_dark_background;
+			global::OnBoardingLib.Resource.Color.cardview_light_background = global::AbnormalChecker.Resource.Color.cardview_light_background;
+			global::OnBoardingLib.Resource.Color.cardview_shadow_end_color = global::AbnormalChecker.Resource.Color.cardview_shadow_end_color;
+			global::OnBoardingLib.Resource.Color.cardview_shadow_start_color = global::AbnormalChecker.Resource.Color.cardview_shadow_start_color;
+			global::OnBoardingLib.Resource.Color.dim_foreground_disabled_material_dark = global::AbnormalChecker.Resource.Color.dim_foreground_disabled_material_dark;
+			global::OnBoardingLib.Resource.Color.dim_foreground_disabled_material_light = global::AbnormalChecker.Resource.Color.dim_foreground_disabled_material_light;
+			global::OnBoardingLib.Resource.Color.dim_foreground_material_dark = global::AbnormalChecker.Resource.Color.dim_foreground_material_dark;
+			global::OnBoardingLib.Resource.Color.dim_foreground_material_light = global::AbnormalChecker.Resource.Color.dim_foreground_material_light;
+			global::OnBoardingLib.Resource.Color.error_color_material_dark = global::AbnormalChecker.Resource.Color.error_color_material_dark;
+			global::OnBoardingLib.Resource.Color.error_color_material_light = global::AbnormalChecker.Resource.Color.error_color_material_light;
+			global::OnBoardingLib.Resource.Color.foreground_material_dark = global::AbnormalChecker.Resource.Color.foreground_material_dark;
+			global::OnBoardingLib.Resource.Color.foreground_material_light = global::AbnormalChecker.Resource.Color.foreground_material_light;
+			global::OnBoardingLib.Resource.Color.grey_200 = global::AbnormalChecker.Resource.Color.grey_200;
+			global::OnBoardingLib.Resource.Color.grey_300 = global::AbnormalChecker.Resource.Color.grey_300;
+			global::OnBoardingLib.Resource.Color.grey_600 = global::AbnormalChecker.Resource.Color.grey_600;
+			global::OnBoardingLib.Resource.Color.highlighted_text_material_dark = global::AbnormalChecker.Resource.Color.highlighted_text_material_dark;
+			global::OnBoardingLib.Resource.Color.highlighted_text_material_light = global::AbnormalChecker.Resource.Color.highlighted_text_material_light;
+			global::OnBoardingLib.Resource.Color.inactive_indicator = global::AbnormalChecker.Resource.Color.inactive_indicator;
+			global::OnBoardingLib.Resource.Color.material_blue_grey_800 = global::AbnormalChecker.Resource.Color.material_blue_grey_800;
+			global::OnBoardingLib.Resource.Color.material_blue_grey_900 = global::AbnormalChecker.Resource.Color.material_blue_grey_900;
+			global::OnBoardingLib.Resource.Color.material_blue_grey_950 = global::AbnormalChecker.Resource.Color.material_blue_grey_950;
+			global::OnBoardingLib.Resource.Color.material_deep_teal_200 = global::AbnormalChecker.Resource.Color.material_deep_teal_200;
+			global::OnBoardingLib.Resource.Color.material_deep_teal_500 = global::AbnormalChecker.Resource.Color.material_deep_teal_500;
+			global::OnBoardingLib.Resource.Color.material_grey_100 = global::AbnormalChecker.Resource.Color.material_grey_100;
+			global::OnBoardingLib.Resource.Color.material_grey_300 = global::AbnormalChecker.Resource.Color.material_grey_300;
+			global::OnBoardingLib.Resource.Color.material_grey_50 = global::AbnormalChecker.Resource.Color.material_grey_50;
+			global::OnBoardingLib.Resource.Color.material_grey_600 = global::AbnormalChecker.Resource.Color.material_grey_600;
+			global::OnBoardingLib.Resource.Color.material_grey_800 = global::AbnormalChecker.Resource.Color.material_grey_800;
+			global::OnBoardingLib.Resource.Color.material_grey_850 = global::AbnormalChecker.Resource.Color.material_grey_850;
+			global::OnBoardingLib.Resource.Color.material_grey_900 = global::AbnormalChecker.Resource.Color.material_grey_900;
+			global::OnBoardingLib.Resource.Color.notification_action_color_filter = global::AbnormalChecker.Resource.Color.notification_action_color_filter;
+			global::OnBoardingLib.Resource.Color.notification_icon_bg_color = global::AbnormalChecker.Resource.Color.notification_icon_bg_color;
+			global::OnBoardingLib.Resource.Color.primary_dark_material_dark = global::AbnormalChecker.Resource.Color.primary_dark_material_dark;
+			global::OnBoardingLib.Resource.Color.primary_dark_material_light = global::AbnormalChecker.Resource.Color.primary_dark_material_light;
+			global::OnBoardingLib.Resource.Color.primary_material_dark = global::AbnormalChecker.Resource.Color.primary_material_dark;
+			global::OnBoardingLib.Resource.Color.primary_material_light = global::AbnormalChecker.Resource.Color.primary_material_light;
+			global::OnBoardingLib.Resource.Color.primary_text_default_material_dark = global::AbnormalChecker.Resource.Color.primary_text_default_material_dark;
+			global::OnBoardingLib.Resource.Color.primary_text_default_material_light = global::AbnormalChecker.Resource.Color.primary_text_default_material_light;
+			global::OnBoardingLib.Resource.Color.primary_text_disabled_material_dark = global::AbnormalChecker.Resource.Color.primary_text_disabled_material_dark;
+			global::OnBoardingLib.Resource.Color.primary_text_disabled_material_light = global::AbnormalChecker.Resource.Color.primary_text_disabled_material_light;
+			global::OnBoardingLib.Resource.Color.ripple_material_dark = global::AbnormalChecker.Resource.Color.ripple_material_dark;
+			global::OnBoardingLib.Resource.Color.ripple_material_light = global::AbnormalChecker.Resource.Color.ripple_material_light;
+			global::OnBoardingLib.Resource.Color.secondary_text_default_material_dark = global::AbnormalChecker.Resource.Color.secondary_text_default_material_dark;
+			global::OnBoardingLib.Resource.Color.secondary_text_default_material_light = global::AbnormalChecker.Resource.Color.secondary_text_default_material_light;
+			global::OnBoardingLib.Resource.Color.secondary_text_disabled_material_dark = global::AbnormalChecker.Resource.Color.secondary_text_disabled_material_dark;
+			global::OnBoardingLib.Resource.Color.secondary_text_disabled_material_light = global::AbnormalChecker.Resource.Color.secondary_text_disabled_material_light;
+			global::OnBoardingLib.Resource.Color.switch_thumb_disabled_material_dark = global::AbnormalChecker.Resource.Color.switch_thumb_disabled_material_dark;
+			global::OnBoardingLib.Resource.Color.switch_thumb_disabled_material_light = global::AbnormalChecker.Resource.Color.switch_thumb_disabled_material_light;
+			global::OnBoardingLib.Resource.Color.switch_thumb_material_dark = global::AbnormalChecker.Resource.Color.switch_thumb_material_dark;
+			global::OnBoardingLib.Resource.Color.switch_thumb_material_light = global::AbnormalChecker.Resource.Color.switch_thumb_material_light;
+			global::OnBoardingLib.Resource.Color.switch_thumb_normal_material_dark = global::AbnormalChecker.Resource.Color.switch_thumb_normal_material_dark;
+			global::OnBoardingLib.Resource.Color.switch_thumb_normal_material_light = global::AbnormalChecker.Resource.Color.switch_thumb_normal_material_light;
+			global::OnBoardingLib.Resource.Color.tooltip_background_dark = global::AbnormalChecker.Resource.Color.tooltip_background_dark;
+			global::OnBoardingLib.Resource.Color.tooltip_background_light = global::AbnormalChecker.Resource.Color.tooltip_background_light;
+			global::OnBoardingLib.Resource.Color.white = global::AbnormalChecker.Resource.Color.white;
+			global::OnBoardingLib.Resource.Dimension.abc_action_bar_content_inset_material = global::AbnormalChecker.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::OnBoardingLib.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::AbnormalChecker.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::OnBoardingLib.Resource.Dimension.abc_action_bar_default_height_material = global::AbnormalChecker.Resource.Dimension.abc_action_bar_default_height_material;
+			global::OnBoardingLib.Resource.Dimension.abc_action_bar_default_padding_end_material = global::AbnormalChecker.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::OnBoardingLib.Resource.Dimension.abc_action_bar_default_padding_start_material = global::AbnormalChecker.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::OnBoardingLib.Resource.Dimension.abc_action_bar_elevation_material = global::AbnormalChecker.Resource.Dimension.abc_action_bar_elevation_material;
+			global::OnBoardingLib.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::AbnormalChecker.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::OnBoardingLib.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::AbnormalChecker.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::OnBoardingLib.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::AbnormalChecker.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::OnBoardingLib.Resource.Dimension.abc_action_bar_stacked_max_height = global::AbnormalChecker.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::OnBoardingLib.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::AbnormalChecker.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::OnBoardingLib.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::AbnormalChecker.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::OnBoardingLib.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::AbnormalChecker.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::OnBoardingLib.Resource.Dimension.abc_action_button_min_height_material = global::AbnormalChecker.Resource.Dimension.abc_action_button_min_height_material;
+			global::OnBoardingLib.Resource.Dimension.abc_action_button_min_width_material = global::AbnormalChecker.Resource.Dimension.abc_action_button_min_width_material;
+			global::OnBoardingLib.Resource.Dimension.abc_action_button_min_width_overflow_material = global::AbnormalChecker.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::OnBoardingLib.Resource.Dimension.abc_alert_dialog_button_bar_height = global::AbnormalChecker.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::OnBoardingLib.Resource.Dimension.abc_alert_dialog_button_dimen = global::AbnormalChecker.Resource.Dimension.abc_alert_dialog_button_dimen;
+			global::OnBoardingLib.Resource.Dimension.abc_button_inset_horizontal_material = global::AbnormalChecker.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::OnBoardingLib.Resource.Dimension.abc_button_inset_vertical_material = global::AbnormalChecker.Resource.Dimension.abc_button_inset_vertical_material;
+			global::OnBoardingLib.Resource.Dimension.abc_button_padding_horizontal_material = global::AbnormalChecker.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::OnBoardingLib.Resource.Dimension.abc_button_padding_vertical_material = global::AbnormalChecker.Resource.Dimension.abc_button_padding_vertical_material;
+			global::OnBoardingLib.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::AbnormalChecker.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::OnBoardingLib.Resource.Dimension.abc_config_prefDialogWidth = global::AbnormalChecker.Resource.Dimension.abc_config_prefDialogWidth;
+			global::OnBoardingLib.Resource.Dimension.abc_control_corner_material = global::AbnormalChecker.Resource.Dimension.abc_control_corner_material;
+			global::OnBoardingLib.Resource.Dimension.abc_control_inset_material = global::AbnormalChecker.Resource.Dimension.abc_control_inset_material;
+			global::OnBoardingLib.Resource.Dimension.abc_control_padding_material = global::AbnormalChecker.Resource.Dimension.abc_control_padding_material;
+			global::OnBoardingLib.Resource.Dimension.abc_dialog_corner_radius_material = global::AbnormalChecker.Resource.Dimension.abc_dialog_corner_radius_material;
+			global::OnBoardingLib.Resource.Dimension.abc_dialog_fixed_height_major = global::AbnormalChecker.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::OnBoardingLib.Resource.Dimension.abc_dialog_fixed_height_minor = global::AbnormalChecker.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::OnBoardingLib.Resource.Dimension.abc_dialog_fixed_width_major = global::AbnormalChecker.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::OnBoardingLib.Resource.Dimension.abc_dialog_fixed_width_minor = global::AbnormalChecker.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::OnBoardingLib.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::AbnormalChecker.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::OnBoardingLib.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::AbnormalChecker.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::OnBoardingLib.Resource.Dimension.abc_dialog_min_width_major = global::AbnormalChecker.Resource.Dimension.abc_dialog_min_width_major;
+			global::OnBoardingLib.Resource.Dimension.abc_dialog_min_width_minor = global::AbnormalChecker.Resource.Dimension.abc_dialog_min_width_minor;
+			global::OnBoardingLib.Resource.Dimension.abc_dialog_padding_material = global::AbnormalChecker.Resource.Dimension.abc_dialog_padding_material;
+			global::OnBoardingLib.Resource.Dimension.abc_dialog_padding_top_material = global::AbnormalChecker.Resource.Dimension.abc_dialog_padding_top_material;
+			global::OnBoardingLib.Resource.Dimension.abc_dialog_title_divider_material = global::AbnormalChecker.Resource.Dimension.abc_dialog_title_divider_material;
+			global::OnBoardingLib.Resource.Dimension.abc_disabled_alpha_material_dark = global::AbnormalChecker.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::OnBoardingLib.Resource.Dimension.abc_disabled_alpha_material_light = global::AbnormalChecker.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::OnBoardingLib.Resource.Dimension.abc_dropdownitem_icon_width = global::AbnormalChecker.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::OnBoardingLib.Resource.Dimension.abc_dropdownitem_text_padding_left = global::AbnormalChecker.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::OnBoardingLib.Resource.Dimension.abc_dropdownitem_text_padding_right = global::AbnormalChecker.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::OnBoardingLib.Resource.Dimension.abc_edit_text_inset_bottom_material = global::AbnormalChecker.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::OnBoardingLib.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::AbnormalChecker.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::OnBoardingLib.Resource.Dimension.abc_edit_text_inset_top_material = global::AbnormalChecker.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::OnBoardingLib.Resource.Dimension.abc_floating_window_z = global::AbnormalChecker.Resource.Dimension.abc_floating_window_z;
+			global::OnBoardingLib.Resource.Dimension.abc_list_item_padding_horizontal_material = global::AbnormalChecker.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::OnBoardingLib.Resource.Dimension.abc_panel_menu_list_width = global::AbnormalChecker.Resource.Dimension.abc_panel_menu_list_width;
+			global::OnBoardingLib.Resource.Dimension.abc_progress_bar_height_material = global::AbnormalChecker.Resource.Dimension.abc_progress_bar_height_material;
+			global::OnBoardingLib.Resource.Dimension.abc_search_view_preferred_height = global::AbnormalChecker.Resource.Dimension.abc_search_view_preferred_height;
+			global::OnBoardingLib.Resource.Dimension.abc_search_view_preferred_width = global::AbnormalChecker.Resource.Dimension.abc_search_view_preferred_width;
+			global::OnBoardingLib.Resource.Dimension.abc_seekbar_track_background_height_material = global::AbnormalChecker.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::OnBoardingLib.Resource.Dimension.abc_seekbar_track_progress_height_material = global::AbnormalChecker.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::OnBoardingLib.Resource.Dimension.abc_select_dialog_padding_start_material = global::AbnormalChecker.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::OnBoardingLib.Resource.Dimension.abc_switch_padding = global::AbnormalChecker.Resource.Dimension.abc_switch_padding;
+			global::OnBoardingLib.Resource.Dimension.abc_text_size_body_1_material = global::AbnormalChecker.Resource.Dimension.abc_text_size_body_1_material;
+			global::OnBoardingLib.Resource.Dimension.abc_text_size_body_2_material = global::AbnormalChecker.Resource.Dimension.abc_text_size_body_2_material;
+			global::OnBoardingLib.Resource.Dimension.abc_text_size_button_material = global::AbnormalChecker.Resource.Dimension.abc_text_size_button_material;
+			global::OnBoardingLib.Resource.Dimension.abc_text_size_caption_material = global::AbnormalChecker.Resource.Dimension.abc_text_size_caption_material;
+			global::OnBoardingLib.Resource.Dimension.abc_text_size_display_1_material = global::AbnormalChecker.Resource.Dimension.abc_text_size_display_1_material;
+			global::OnBoardingLib.Resource.Dimension.abc_text_size_display_2_material = global::AbnormalChecker.Resource.Dimension.abc_text_size_display_2_material;
+			global::OnBoardingLib.Resource.Dimension.abc_text_size_display_3_material = global::AbnormalChecker.Resource.Dimension.abc_text_size_display_3_material;
+			global::OnBoardingLib.Resource.Dimension.abc_text_size_display_4_material = global::AbnormalChecker.Resource.Dimension.abc_text_size_display_4_material;
+			global::OnBoardingLib.Resource.Dimension.abc_text_size_headline_material = global::AbnormalChecker.Resource.Dimension.abc_text_size_headline_material;
+			global::OnBoardingLib.Resource.Dimension.abc_text_size_large_material = global::AbnormalChecker.Resource.Dimension.abc_text_size_large_material;
+			global::OnBoardingLib.Resource.Dimension.abc_text_size_medium_material = global::AbnormalChecker.Resource.Dimension.abc_text_size_medium_material;
+			global::OnBoardingLib.Resource.Dimension.abc_text_size_menu_header_material = global::AbnormalChecker.Resource.Dimension.abc_text_size_menu_header_material;
+			global::OnBoardingLib.Resource.Dimension.abc_text_size_menu_material = global::AbnormalChecker.Resource.Dimension.abc_text_size_menu_material;
+			global::OnBoardingLib.Resource.Dimension.abc_text_size_small_material = global::AbnormalChecker.Resource.Dimension.abc_text_size_small_material;
+			global::OnBoardingLib.Resource.Dimension.abc_text_size_subhead_material = global::AbnormalChecker.Resource.Dimension.abc_text_size_subhead_material;
+			global::OnBoardingLib.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::AbnormalChecker.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::OnBoardingLib.Resource.Dimension.abc_text_size_title_material = global::AbnormalChecker.Resource.Dimension.abc_text_size_title_material;
+			global::OnBoardingLib.Resource.Dimension.abc_text_size_title_material_toolbar = global::AbnormalChecker.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::OnBoardingLib.Resource.Dimension.activity_half_margin = global::AbnormalChecker.Resource.Dimension.activity_half_margin;
+			global::OnBoardingLib.Resource.Dimension.activity_margin = global::AbnormalChecker.Resource.Dimension.activity_margin;
+			global::OnBoardingLib.Resource.Dimension.cardview_compat_inset_shadow = global::AbnormalChecker.Resource.Dimension.cardview_compat_inset_shadow;
+			global::OnBoardingLib.Resource.Dimension.cardview_default_elevation = global::AbnormalChecker.Resource.Dimension.cardview_default_elevation;
+			global::OnBoardingLib.Resource.Dimension.cardview_default_radius = global::AbnormalChecker.Resource.Dimension.cardview_default_radius;
+			global::OnBoardingLib.Resource.Dimension.compat_button_inset_horizontal_material = global::AbnormalChecker.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::OnBoardingLib.Resource.Dimension.compat_button_inset_vertical_material = global::AbnormalChecker.Resource.Dimension.compat_button_inset_vertical_material;
+			global::OnBoardingLib.Resource.Dimension.compat_button_padding_horizontal_material = global::AbnormalChecker.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::OnBoardingLib.Resource.Dimension.compat_button_padding_vertical_material = global::AbnormalChecker.Resource.Dimension.compat_button_padding_vertical_material;
+			global::OnBoardingLib.Resource.Dimension.compat_control_corner_material = global::AbnormalChecker.Resource.Dimension.compat_control_corner_material;
+			global::OnBoardingLib.Resource.Dimension.compat_notification_large_icon_max_height = global::AbnormalChecker.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::OnBoardingLib.Resource.Dimension.compat_notification_large_icon_max_width = global::AbnormalChecker.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::OnBoardingLib.Resource.Dimension.disabled_alpha_material_dark = global::AbnormalChecker.Resource.Dimension.disabled_alpha_material_dark;
+			global::OnBoardingLib.Resource.Dimension.disabled_alpha_material_light = global::AbnormalChecker.Resource.Dimension.disabled_alpha_material_light;
+			global::OnBoardingLib.Resource.Dimension.highlight_alpha_material_colored = global::AbnormalChecker.Resource.Dimension.highlight_alpha_material_colored;
+			global::OnBoardingLib.Resource.Dimension.highlight_alpha_material_dark = global::AbnormalChecker.Resource.Dimension.highlight_alpha_material_dark;
+			global::OnBoardingLib.Resource.Dimension.highlight_alpha_material_light = global::AbnormalChecker.Resource.Dimension.highlight_alpha_material_light;
+			global::OnBoardingLib.Resource.Dimension.hint_alpha_material_dark = global::AbnormalChecker.Resource.Dimension.hint_alpha_material_dark;
+			global::OnBoardingLib.Resource.Dimension.hint_alpha_material_light = global::AbnormalChecker.Resource.Dimension.hint_alpha_material_light;
+			global::OnBoardingLib.Resource.Dimension.hint_pressed_alpha_material_dark = global::AbnormalChecker.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::OnBoardingLib.Resource.Dimension.hint_pressed_alpha_material_light = global::AbnormalChecker.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::OnBoardingLib.Resource.Dimension.indicator_size = global::AbnormalChecker.Resource.Dimension.indicator_size;
+			global::OnBoardingLib.Resource.Dimension.notification_action_icon_size = global::AbnormalChecker.Resource.Dimension.notification_action_icon_size;
+			global::OnBoardingLib.Resource.Dimension.notification_action_text_size = global::AbnormalChecker.Resource.Dimension.notification_action_text_size;
+			global::OnBoardingLib.Resource.Dimension.notification_big_circle_margin = global::AbnormalChecker.Resource.Dimension.notification_big_circle_margin;
+			global::OnBoardingLib.Resource.Dimension.notification_content_margin_start = global::AbnormalChecker.Resource.Dimension.notification_content_margin_start;
+			global::OnBoardingLib.Resource.Dimension.notification_large_icon_height = global::AbnormalChecker.Resource.Dimension.notification_large_icon_height;
+			global::OnBoardingLib.Resource.Dimension.notification_large_icon_width = global::AbnormalChecker.Resource.Dimension.notification_large_icon_width;
+			global::OnBoardingLib.Resource.Dimension.notification_main_column_padding_top = global::AbnormalChecker.Resource.Dimension.notification_main_column_padding_top;
+			global::OnBoardingLib.Resource.Dimension.notification_media_narrow_margin = global::AbnormalChecker.Resource.Dimension.notification_media_narrow_margin;
+			global::OnBoardingLib.Resource.Dimension.notification_right_icon_size = global::AbnormalChecker.Resource.Dimension.notification_right_icon_size;
+			global::OnBoardingLib.Resource.Dimension.notification_right_side_padding_top = global::AbnormalChecker.Resource.Dimension.notification_right_side_padding_top;
+			global::OnBoardingLib.Resource.Dimension.notification_small_icon_background_padding = global::AbnormalChecker.Resource.Dimension.notification_small_icon_background_padding;
+			global::OnBoardingLib.Resource.Dimension.notification_small_icon_size_as_large = global::AbnormalChecker.Resource.Dimension.notification_small_icon_size_as_large;
+			global::OnBoardingLib.Resource.Dimension.notification_subtext_size = global::AbnormalChecker.Resource.Dimension.notification_subtext_size;
+			global::OnBoardingLib.Resource.Dimension.notification_top_pad = global::AbnormalChecker.Resource.Dimension.notification_top_pad;
+			global::OnBoardingLib.Resource.Dimension.notification_top_pad_large_text = global::AbnormalChecker.Resource.Dimension.notification_top_pad_large_text;
+			global::OnBoardingLib.Resource.Dimension.section_image_item = global::AbnormalChecker.Resource.Dimension.section_image_item;
+			global::OnBoardingLib.Resource.Dimension.tooltip_corner_radius = global::AbnormalChecker.Resource.Dimension.tooltip_corner_radius;
+			global::OnBoardingLib.Resource.Dimension.tooltip_horizontal_padding = global::AbnormalChecker.Resource.Dimension.tooltip_horizontal_padding;
+			global::OnBoardingLib.Resource.Dimension.tooltip_margin = global::AbnormalChecker.Resource.Dimension.tooltip_margin;
+			global::OnBoardingLib.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::AbnormalChecker.Resource.Dimension.tooltip_precise_anchor_extra_offset;
+			global::OnBoardingLib.Resource.Dimension.tooltip_precise_anchor_threshold = global::AbnormalChecker.Resource.Dimension.tooltip_precise_anchor_threshold;
+			global::OnBoardingLib.Resource.Dimension.tooltip_vertical_padding = global::AbnormalChecker.Resource.Dimension.tooltip_vertical_padding;
+			global::OnBoardingLib.Resource.Dimension.tooltip_y_offset_non_touch = global::AbnormalChecker.Resource.Dimension.tooltip_y_offset_non_touch;
+			global::OnBoardingLib.Resource.Dimension.tooltip_y_offset_touch = global::AbnormalChecker.Resource.Dimension.tooltip_y_offset_touch;
+			global::OnBoardingLib.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::AbnormalChecker.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::OnBoardingLib.Resource.Drawable.abc_action_bar_item_background_material = global::AbnormalChecker.Resource.Drawable.abc_action_bar_item_background_material;
+			global::OnBoardingLib.Resource.Drawable.abc_btn_borderless_material = global::AbnormalChecker.Resource.Drawable.abc_btn_borderless_material;
+			global::OnBoardingLib.Resource.Drawable.abc_btn_check_material = global::AbnormalChecker.Resource.Drawable.abc_btn_check_material;
+			global::OnBoardingLib.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::AbnormalChecker.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::OnBoardingLib.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::AbnormalChecker.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::OnBoardingLib.Resource.Drawable.abc_btn_colored_material = global::AbnormalChecker.Resource.Drawable.abc_btn_colored_material;
+			global::OnBoardingLib.Resource.Drawable.abc_btn_default_mtrl_shape = global::AbnormalChecker.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::OnBoardingLib.Resource.Drawable.abc_btn_radio_material = global::AbnormalChecker.Resource.Drawable.abc_btn_radio_material;
+			global::OnBoardingLib.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::AbnormalChecker.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::OnBoardingLib.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::AbnormalChecker.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::OnBoardingLib.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::AbnormalChecker.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::OnBoardingLib.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::AbnormalChecker.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::OnBoardingLib.Resource.Drawable.abc_cab_background_internal_bg = global::AbnormalChecker.Resource.Drawable.abc_cab_background_internal_bg;
+			global::OnBoardingLib.Resource.Drawable.abc_cab_background_top_material = global::AbnormalChecker.Resource.Drawable.abc_cab_background_top_material;
+			global::OnBoardingLib.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::AbnormalChecker.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::OnBoardingLib.Resource.Drawable.abc_control_background_material = global::AbnormalChecker.Resource.Drawable.abc_control_background_material;
+			global::OnBoardingLib.Resource.Drawable.abc_dialog_material_background = global::AbnormalChecker.Resource.Drawable.abc_dialog_material_background;
+			global::OnBoardingLib.Resource.Drawable.abc_edit_text_material = global::AbnormalChecker.Resource.Drawable.abc_edit_text_material;
+			global::OnBoardingLib.Resource.Drawable.abc_ic_ab_back_material = global::AbnormalChecker.Resource.Drawable.abc_ic_ab_back_material;
+			global::OnBoardingLib.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::AbnormalChecker.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::OnBoardingLib.Resource.Drawable.abc_ic_clear_material = global::AbnormalChecker.Resource.Drawable.abc_ic_clear_material;
+			global::OnBoardingLib.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::AbnormalChecker.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::OnBoardingLib.Resource.Drawable.abc_ic_go_search_api_material = global::AbnormalChecker.Resource.Drawable.abc_ic_go_search_api_material;
+			global::OnBoardingLib.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::AbnormalChecker.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::OnBoardingLib.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::AbnormalChecker.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::OnBoardingLib.Resource.Drawable.abc_ic_menu_overflow_material = global::AbnormalChecker.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::OnBoardingLib.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::AbnormalChecker.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::OnBoardingLib.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::AbnormalChecker.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::OnBoardingLib.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::AbnormalChecker.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::OnBoardingLib.Resource.Drawable.abc_ic_search_api_material = global::AbnormalChecker.Resource.Drawable.abc_ic_search_api_material;
+			global::OnBoardingLib.Resource.Drawable.abc_ic_star_black_16dp = global::AbnormalChecker.Resource.Drawable.abc_ic_star_black_16dp;
+			global::OnBoardingLib.Resource.Drawable.abc_ic_star_black_36dp = global::AbnormalChecker.Resource.Drawable.abc_ic_star_black_36dp;
+			global::OnBoardingLib.Resource.Drawable.abc_ic_star_black_48dp = global::AbnormalChecker.Resource.Drawable.abc_ic_star_black_48dp;
+			global::OnBoardingLib.Resource.Drawable.abc_ic_star_half_black_16dp = global::AbnormalChecker.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::OnBoardingLib.Resource.Drawable.abc_ic_star_half_black_36dp = global::AbnormalChecker.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::OnBoardingLib.Resource.Drawable.abc_ic_star_half_black_48dp = global::AbnormalChecker.Resource.Drawable.abc_ic_star_half_black_48dp;
+			global::OnBoardingLib.Resource.Drawable.abc_ic_voice_search_api_material = global::AbnormalChecker.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::OnBoardingLib.Resource.Drawable.abc_item_background_holo_dark = global::AbnormalChecker.Resource.Drawable.abc_item_background_holo_dark;
+			global::OnBoardingLib.Resource.Drawable.abc_item_background_holo_light = global::AbnormalChecker.Resource.Drawable.abc_item_background_holo_light;
+			global::OnBoardingLib.Resource.Drawable.abc_list_divider_material = global::AbnormalChecker.Resource.Drawable.abc_list_divider_material;
+			global::OnBoardingLib.Resource.Drawable.abc_list_divider_mtrl_alpha = global::AbnormalChecker.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::OnBoardingLib.Resource.Drawable.abc_list_focused_holo = global::AbnormalChecker.Resource.Drawable.abc_list_focused_holo;
+			global::OnBoardingLib.Resource.Drawable.abc_list_longpressed_holo = global::AbnormalChecker.Resource.Drawable.abc_list_longpressed_holo;
+			global::OnBoardingLib.Resource.Drawable.abc_list_pressed_holo_dark = global::AbnormalChecker.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::OnBoardingLib.Resource.Drawable.abc_list_pressed_holo_light = global::AbnormalChecker.Resource.Drawable.abc_list_pressed_holo_light;
+			global::OnBoardingLib.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::AbnormalChecker.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::OnBoardingLib.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::AbnormalChecker.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::OnBoardingLib.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::AbnormalChecker.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::OnBoardingLib.Resource.Drawable.abc_list_selector_disabled_holo_light = global::AbnormalChecker.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::OnBoardingLib.Resource.Drawable.abc_list_selector_holo_dark = global::AbnormalChecker.Resource.Drawable.abc_list_selector_holo_dark;
+			global::OnBoardingLib.Resource.Drawable.abc_list_selector_holo_light = global::AbnormalChecker.Resource.Drawable.abc_list_selector_holo_light;
+			global::OnBoardingLib.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::AbnormalChecker.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::OnBoardingLib.Resource.Drawable.abc_popup_background_mtrl_mult = global::AbnormalChecker.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::OnBoardingLib.Resource.Drawable.abc_ratingbar_indicator_material = global::AbnormalChecker.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::OnBoardingLib.Resource.Drawable.abc_ratingbar_material = global::AbnormalChecker.Resource.Drawable.abc_ratingbar_material;
+			global::OnBoardingLib.Resource.Drawable.abc_ratingbar_small_material = global::AbnormalChecker.Resource.Drawable.abc_ratingbar_small_material;
+			global::OnBoardingLib.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::AbnormalChecker.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::OnBoardingLib.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::AbnormalChecker.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::OnBoardingLib.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::AbnormalChecker.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::OnBoardingLib.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::AbnormalChecker.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::OnBoardingLib.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::AbnormalChecker.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::OnBoardingLib.Resource.Drawable.abc_seekbar_thumb_material = global::AbnormalChecker.Resource.Drawable.abc_seekbar_thumb_material;
+			global::OnBoardingLib.Resource.Drawable.abc_seekbar_tick_mark_material = global::AbnormalChecker.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::OnBoardingLib.Resource.Drawable.abc_seekbar_track_material = global::AbnormalChecker.Resource.Drawable.abc_seekbar_track_material;
+			global::OnBoardingLib.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::AbnormalChecker.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::OnBoardingLib.Resource.Drawable.abc_spinner_textfield_background_material = global::AbnormalChecker.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::OnBoardingLib.Resource.Drawable.abc_switch_thumb_material = global::AbnormalChecker.Resource.Drawable.abc_switch_thumb_material;
+			global::OnBoardingLib.Resource.Drawable.abc_switch_track_mtrl_alpha = global::AbnormalChecker.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::OnBoardingLib.Resource.Drawable.abc_tab_indicator_material = global::AbnormalChecker.Resource.Drawable.abc_tab_indicator_material;
+			global::OnBoardingLib.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::AbnormalChecker.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::OnBoardingLib.Resource.Drawable.abc_text_cursor_material = global::AbnormalChecker.Resource.Drawable.abc_text_cursor_material;
+			global::OnBoardingLib.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::AbnormalChecker.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
+			global::OnBoardingLib.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::AbnormalChecker.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
+			global::OnBoardingLib.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::AbnormalChecker.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
+			global::OnBoardingLib.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::AbnormalChecker.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
+			global::OnBoardingLib.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::AbnormalChecker.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
+			global::OnBoardingLib.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::AbnormalChecker.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
+			global::OnBoardingLib.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::AbnormalChecker.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::OnBoardingLib.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::AbnormalChecker.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::OnBoardingLib.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::AbnormalChecker.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::OnBoardingLib.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::AbnormalChecker.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::OnBoardingLib.Resource.Drawable.abc_textfield_search_material = global::AbnormalChecker.Resource.Drawable.abc_textfield_search_material;
+			global::OnBoardingLib.Resource.Drawable.abc_vector_test = global::AbnormalChecker.Resource.Drawable.abc_vector_test;
+			global::OnBoardingLib.Resource.Drawable.fifth_bg = global::AbnormalChecker.Resource.Drawable.fifth_bg;
+			global::OnBoardingLib.Resource.Drawable.forth_bg = global::AbnormalChecker.Resource.Drawable.forth_bg;
+			global::OnBoardingLib.Resource.Drawable.new_state = global::AbnormalChecker.Resource.Drawable.new_state;
+			global::OnBoardingLib.Resource.Drawable.next = global::AbnormalChecker.Resource.Drawable.next;
+			global::OnBoardingLib.Resource.Drawable.notification_action_background = global::AbnormalChecker.Resource.Drawable.notification_action_background;
+			global::OnBoardingLib.Resource.Drawable.notification_bg = global::AbnormalChecker.Resource.Drawable.notification_bg;
+			global::OnBoardingLib.Resource.Drawable.notification_bg_low = global::AbnormalChecker.Resource.Drawable.notification_bg_low;
+			global::OnBoardingLib.Resource.Drawable.notification_bg_low_normal = global::AbnormalChecker.Resource.Drawable.notification_bg_low_normal;
+			global::OnBoardingLib.Resource.Drawable.notification_bg_low_pressed = global::AbnormalChecker.Resource.Drawable.notification_bg_low_pressed;
+			global::OnBoardingLib.Resource.Drawable.notification_bg_normal = global::AbnormalChecker.Resource.Drawable.notification_bg_normal;
+			global::OnBoardingLib.Resource.Drawable.notification_bg_normal_pressed = global::AbnormalChecker.Resource.Drawable.notification_bg_normal_pressed;
+			global::OnBoardingLib.Resource.Drawable.notification_icon_background = global::AbnormalChecker.Resource.Drawable.notification_icon_background;
+			global::OnBoardingLib.Resource.Drawable.notification_template_icon_bg = global::AbnormalChecker.Resource.Drawable.notification_template_icon_bg;
+			global::OnBoardingLib.Resource.Drawable.notification_template_icon_low_bg = global::AbnormalChecker.Resource.Drawable.notification_template_icon_low_bg;
+			global::OnBoardingLib.Resource.Drawable.notification_tile_bg = global::AbnormalChecker.Resource.Drawable.notification_tile_bg;
+			global::OnBoardingLib.Resource.Drawable.notify_panel_notification_icon_bg = global::AbnormalChecker.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::OnBoardingLib.Resource.Drawable.original_state = global::AbnormalChecker.Resource.Drawable.original_state;
+			global::OnBoardingLib.Resource.Drawable.previous = global::AbnormalChecker.Resource.Drawable.previous;
+			global::OnBoardingLib.Resource.Drawable.rectangle_button = global::AbnormalChecker.Resource.Drawable.rectangle_button;
+			global::OnBoardingLib.Resource.Drawable.rounded_button = global::AbnormalChecker.Resource.Drawable.rounded_button;
+			global::OnBoardingLib.Resource.Drawable.seventh_bg = global::AbnormalChecker.Resource.Drawable.seventh_bg;
+			global::OnBoardingLib.Resource.Drawable.sixth_b = global::AbnormalChecker.Resource.Drawable.sixth_b;
+			global::OnBoardingLib.Resource.Drawable.thrid_bg = global::AbnormalChecker.Resource.Drawable.thrid_bg;
+			global::OnBoardingLib.Resource.Drawable.tooltip_frame_dark = global::AbnormalChecker.Resource.Drawable.tooltip_frame_dark;
+			global::OnBoardingLib.Resource.Drawable.tooltip_frame_light = global::AbnormalChecker.Resource.Drawable.tooltip_frame_light;
+			global::OnBoardingLib.Resource.Drawable.translate = global::AbnormalChecker.Resource.Drawable.translate;
+			global::OnBoardingLib.Resource.Id.ALT = global::AbnormalChecker.Resource.Id.ALT;
+			global::OnBoardingLib.Resource.Id.CTRL = global::AbnormalChecker.Resource.Id.CTRL;
+			global::OnBoardingLib.Resource.Id.FUNCTION = global::AbnormalChecker.Resource.Id.FUNCTION;
+			global::OnBoardingLib.Resource.Id.META = global::AbnormalChecker.Resource.Id.META;
+			global::OnBoardingLib.Resource.Id.SHIFT = global::AbnormalChecker.Resource.Id.SHIFT;
+			global::OnBoardingLib.Resource.Id.SYM = global::AbnormalChecker.Resource.Id.SYM;
+			global::OnBoardingLib.Resource.Id.action_bar = global::AbnormalChecker.Resource.Id.action_bar;
+			global::OnBoardingLib.Resource.Id.action_bar_activity_content = global::AbnormalChecker.Resource.Id.action_bar_activity_content;
+			global::OnBoardingLib.Resource.Id.action_bar_container = global::AbnormalChecker.Resource.Id.action_bar_container;
+			global::OnBoardingLib.Resource.Id.action_bar_root = global::AbnormalChecker.Resource.Id.action_bar_root;
+			global::OnBoardingLib.Resource.Id.action_bar_spinner = global::AbnormalChecker.Resource.Id.action_bar_spinner;
+			global::OnBoardingLib.Resource.Id.action_bar_subtitle = global::AbnormalChecker.Resource.Id.action_bar_subtitle;
+			global::OnBoardingLib.Resource.Id.action_bar_title = global::AbnormalChecker.Resource.Id.action_bar_title;
+			global::OnBoardingLib.Resource.Id.action_container = global::AbnormalChecker.Resource.Id.action_container;
+			global::OnBoardingLib.Resource.Id.action_context_bar = global::AbnormalChecker.Resource.Id.action_context_bar;
+			global::OnBoardingLib.Resource.Id.action_divider = global::AbnormalChecker.Resource.Id.action_divider;
+			global::OnBoardingLib.Resource.Id.action_image = global::AbnormalChecker.Resource.Id.action_image;
+			global::OnBoardingLib.Resource.Id.action_menu_divider = global::AbnormalChecker.Resource.Id.action_menu_divider;
+			global::OnBoardingLib.Resource.Id.action_menu_presenter = global::AbnormalChecker.Resource.Id.action_menu_presenter;
+			global::OnBoardingLib.Resource.Id.action_mode_bar = global::AbnormalChecker.Resource.Id.action_mode_bar;
+			global::OnBoardingLib.Resource.Id.action_mode_bar_stub = global::AbnormalChecker.Resource.Id.action_mode_bar_stub;
+			global::OnBoardingLib.Resource.Id.action_mode_close_button = global::AbnormalChecker.Resource.Id.action_mode_close_button;
+			global::OnBoardingLib.Resource.Id.action_text = global::AbnormalChecker.Resource.Id.action_text;
+			global::OnBoardingLib.Resource.Id.actions = global::AbnormalChecker.Resource.Id.actions;
+			global::OnBoardingLib.Resource.Id.activity_chooser_view_content = global::AbnormalChecker.Resource.Id.activity_chooser_view_content;
+			global::OnBoardingLib.Resource.Id.add = global::AbnormalChecker.Resource.Id.add;
+			global::OnBoardingLib.Resource.Id.alertTitle = global::AbnormalChecker.Resource.Id.alertTitle;
+			global::OnBoardingLib.Resource.Id.always = global::AbnormalChecker.Resource.Id.always;
+			global::OnBoardingLib.Resource.Id.async = global::AbnormalChecker.Resource.Id.async;
+			global::OnBoardingLib.Resource.Id.background_image = global::AbnormalChecker.Resource.Id.background_image;
+			global::OnBoardingLib.Resource.Id.background_image_overlay = global::AbnormalChecker.Resource.Id.background_image_overlay;
+			global::OnBoardingLib.Resource.Id.beginning = global::AbnormalChecker.Resource.Id.beginning;
+			global::OnBoardingLib.Resource.Id.blocking = global::AbnormalChecker.Resource.Id.blocking;
+			global::OnBoardingLib.Resource.Id.bottom = global::AbnormalChecker.Resource.Id.bottom;
+			global::OnBoardingLib.Resource.Id.btn_skip = global::AbnormalChecker.Resource.Id.btn_skip;
+			global::OnBoardingLib.Resource.Id.buttonPanel = global::AbnormalChecker.Resource.Id.buttonPanel;
+			global::OnBoardingLib.Resource.Id.buttons_layout = global::AbnormalChecker.Resource.Id.buttons_layout;
+			global::OnBoardingLib.Resource.Id.checkbox = global::AbnormalChecker.Resource.Id.checkbox;
+			global::OnBoardingLib.Resource.Id.chronometer = global::AbnormalChecker.Resource.Id.chronometer;
+			global::OnBoardingLib.Resource.Id.circle_indicator_view = global::AbnormalChecker.Resource.Id.circle_indicator_view;
+			global::OnBoardingLib.Resource.Id.collapseActionView = global::AbnormalChecker.Resource.Id.collapseActionView;
+			global::OnBoardingLib.Resource.Id.content = global::AbnormalChecker.Resource.Id.content;
+			global::OnBoardingLib.Resource.Id.contentPanel = global::AbnormalChecker.Resource.Id.contentPanel;
+			global::OnBoardingLib.Resource.Id.custom = global::AbnormalChecker.Resource.Id.custom;
+			global::OnBoardingLib.Resource.Id.customPanel = global::AbnormalChecker.Resource.Id.customPanel;
+			global::OnBoardingLib.Resource.Id.cv_cardview = global::AbnormalChecker.Resource.Id.cv_cardview;
+			global::OnBoardingLib.Resource.Id.decor_content_parent = global::AbnormalChecker.Resource.Id.decor_content_parent;
+			global::OnBoardingLib.Resource.Id.default_activity_button = global::AbnormalChecker.Resource.Id.default_activity_button;
+			global::OnBoardingLib.Resource.Id.disableHome = global::AbnormalChecker.Resource.Id.disableHome;
+			global::OnBoardingLib.Resource.Id.edit_query = global::AbnormalChecker.Resource.Id.edit_query;
+			global::OnBoardingLib.Resource.Id.end = global::AbnormalChecker.Resource.Id.end;
+			global::OnBoardingLib.Resource.Id.expand_activities_button = global::AbnormalChecker.Resource.Id.expand_activities_button;
+			global::OnBoardingLib.Resource.Id.expanded_menu = global::AbnormalChecker.Resource.Id.expanded_menu;
+			global::OnBoardingLib.Resource.Id.forever = global::AbnormalChecker.Resource.Id.forever;
+			global::OnBoardingLib.Resource.Id.group_divider = global::AbnormalChecker.Resource.Id.group_divider;
+			global::OnBoardingLib.Resource.Id.home = global::AbnormalChecker.Resource.Id.home;
+			global::OnBoardingLib.Resource.Id.homeAsUp = global::AbnormalChecker.Resource.Id.homeAsUp;
+			global::OnBoardingLib.Resource.Id.icon = global::AbnormalChecker.Resource.Id.icon;
+			global::OnBoardingLib.Resource.Id.icon_group = global::AbnormalChecker.Resource.Id.icon_group;
+			global::OnBoardingLib.Resource.Id.ifRoom = global::AbnormalChecker.Resource.Id.ifRoom;
+			global::OnBoardingLib.Resource.Id.image = global::AbnormalChecker.Resource.Id.image;
+			global::OnBoardingLib.Resource.Id.info = global::AbnormalChecker.Resource.Id.info;
+			global::OnBoardingLib.Resource.Id.italic = global::AbnormalChecker.Resource.Id.italic;
+			global::OnBoardingLib.Resource.Id.ivNext = global::AbnormalChecker.Resource.Id.ivNext;
+			global::OnBoardingLib.Resource.Id.ivPrev = global::AbnormalChecker.Resource.Id.ivPrev;
+			global::OnBoardingLib.Resource.Id.iv_image = global::AbnormalChecker.Resource.Id.iv_image;
+			global::OnBoardingLib.Resource.Id.line1 = global::AbnormalChecker.Resource.Id.line1;
+			global::OnBoardingLib.Resource.Id.line3 = global::AbnormalChecker.Resource.Id.line3;
+			global::OnBoardingLib.Resource.Id.listMode = global::AbnormalChecker.Resource.Id.listMode;
+			global::OnBoardingLib.Resource.Id.list_item = global::AbnormalChecker.Resource.Id.list_item;
+			global::OnBoardingLib.Resource.Id.message = global::AbnormalChecker.Resource.Id.message;
+			global::OnBoardingLib.Resource.Id.middle = global::AbnormalChecker.Resource.Id.middle;
+			global::OnBoardingLib.Resource.Id.multiply = global::AbnormalChecker.Resource.Id.multiply;
+			global::OnBoardingLib.Resource.Id.navigation_layout = global::AbnormalChecker.Resource.Id.navigation_layout;
+			global::OnBoardingLib.Resource.Id.never = global::AbnormalChecker.Resource.Id.never;
+			global::OnBoardingLib.Resource.Id.none = global::AbnormalChecker.Resource.Id.none;
+			global::OnBoardingLib.Resource.Id.normal = global::AbnormalChecker.Resource.Id.normal;
+			global::OnBoardingLib.Resource.Id.notification_background = global::AbnormalChecker.Resource.Id.notification_background;
+			global::OnBoardingLib.Resource.Id.notification_main_column = global::AbnormalChecker.Resource.Id.notification_main_column;
+			global::OnBoardingLib.Resource.Id.notification_main_column_container = global::AbnormalChecker.Resource.Id.notification_main_column_container;
+			global::OnBoardingLib.Resource.Id.parentPanel = global::AbnormalChecker.Resource.Id.parentPanel;
+			global::OnBoardingLib.Resource.Id.parent_layout = global::AbnormalChecker.Resource.Id.parent_layout;
+			global::OnBoardingLib.Resource.Id.progress_circular = global::AbnormalChecker.Resource.Id.progress_circular;
+			global::OnBoardingLib.Resource.Id.progress_horizontal = global::AbnormalChecker.Resource.Id.progress_horizontal;
+			global::OnBoardingLib.Resource.Id.radio = global::AbnormalChecker.Resource.Id.radio;
+			global::OnBoardingLib.Resource.Id.right_icon = global::AbnormalChecker.Resource.Id.right_icon;
+			global::OnBoardingLib.Resource.Id.right_side = global::AbnormalChecker.Resource.Id.right_side;
+			global::OnBoardingLib.Resource.Id.screen = global::AbnormalChecker.Resource.Id.screen;
+			global::OnBoardingLib.Resource.Id.scrollIndicatorDown = global::AbnormalChecker.Resource.Id.scrollIndicatorDown;
+			global::OnBoardingLib.Resource.Id.scrollIndicatorUp = global::AbnormalChecker.Resource.Id.scrollIndicatorUp;
+			global::OnBoardingLib.Resource.Id.scrollView = global::AbnormalChecker.Resource.Id.scrollView;
+			global::OnBoardingLib.Resource.Id.search_badge = global::AbnormalChecker.Resource.Id.search_badge;
+			global::OnBoardingLib.Resource.Id.search_bar = global::AbnormalChecker.Resource.Id.search_bar;
+			global::OnBoardingLib.Resource.Id.search_button = global::AbnormalChecker.Resource.Id.search_button;
+			global::OnBoardingLib.Resource.Id.search_close_btn = global::AbnormalChecker.Resource.Id.search_close_btn;
+			global::OnBoardingLib.Resource.Id.search_edit_frame = global::AbnormalChecker.Resource.Id.search_edit_frame;
+			global::OnBoardingLib.Resource.Id.search_go_btn = global::AbnormalChecker.Resource.Id.search_go_btn;
+			global::OnBoardingLib.Resource.Id.search_mag_icon = global::AbnormalChecker.Resource.Id.search_mag_icon;
+			global::OnBoardingLib.Resource.Id.search_plate = global::AbnormalChecker.Resource.Id.search_plate;
+			global::OnBoardingLib.Resource.Id.search_src_text = global::AbnormalChecker.Resource.Id.search_src_text;
+			global::OnBoardingLib.Resource.Id.search_voice_btn = global::AbnormalChecker.Resource.Id.search_voice_btn;
+			global::OnBoardingLib.Resource.Id.select_dialog_listview = global::AbnormalChecker.Resource.Id.select_dialog_listview;
+			global::OnBoardingLib.Resource.Id.selected = global::AbnormalChecker.Resource.Id.selected;
+			global::OnBoardingLib.Resource.Id.shortcut = global::AbnormalChecker.Resource.Id.shortcut;
+			global::OnBoardingLib.Resource.Id.showCustom = global::AbnormalChecker.Resource.Id.showCustom;
+			global::OnBoardingLib.Resource.Id.showHome = global::AbnormalChecker.Resource.Id.showHome;
+			global::OnBoardingLib.Resource.Id.showTitle = global::AbnormalChecker.Resource.Id.showTitle;
+			global::OnBoardingLib.Resource.Id.spacer = global::AbnormalChecker.Resource.Id.spacer;
+			global::OnBoardingLib.Resource.Id.split_action_bar = global::AbnormalChecker.Resource.Id.split_action_bar;
+			global::OnBoardingLib.Resource.Id.src_atop = global::AbnormalChecker.Resource.Id.src_atop;
+			global::OnBoardingLib.Resource.Id.src_in = global::AbnormalChecker.Resource.Id.src_in;
+			global::OnBoardingLib.Resource.Id.src_over = global::AbnormalChecker.Resource.Id.src_over;
+			global::OnBoardingLib.Resource.Id.submenuarrow = global::AbnormalChecker.Resource.Id.submenuarrow;
+			global::OnBoardingLib.Resource.Id.submit_area = global::AbnormalChecker.Resource.Id.submit_area;
+			global::OnBoardingLib.Resource.Id.tabMode = global::AbnormalChecker.Resource.Id.tabMode;
+			global::OnBoardingLib.Resource.Id.tag_transition_group = global::AbnormalChecker.Resource.Id.tag_transition_group;
+			global::OnBoardingLib.Resource.Id.tag_unhandled_key_event_manager = global::AbnormalChecker.Resource.Id.tag_unhandled_key_event_manager;
+			global::OnBoardingLib.Resource.Id.tag_unhandled_key_listeners = global::AbnormalChecker.Resource.Id.tag_unhandled_key_listeners;
+			global::OnBoardingLib.Resource.Id.text = global::AbnormalChecker.Resource.Id.text;
+			global::OnBoardingLib.Resource.Id.text2 = global::AbnormalChecker.Resource.Id.text2;
+			global::OnBoardingLib.Resource.Id.textSpacerNoButtons = global::AbnormalChecker.Resource.Id.textSpacerNoButtons;
+			global::OnBoardingLib.Resource.Id.textSpacerNoTitle = global::AbnormalChecker.Resource.Id.textSpacerNoTitle;
+			global::OnBoardingLib.Resource.Id.time = global::AbnormalChecker.Resource.Id.time;
+			global::OnBoardingLib.Resource.Id.title = global::AbnormalChecker.Resource.Id.title;
+			global::OnBoardingLib.Resource.Id.titleDividerNoCustom = global::AbnormalChecker.Resource.Id.titleDividerNoCustom;
+			global::OnBoardingLib.Resource.Id.title_template = global::AbnormalChecker.Resource.Id.title_template;
+			global::OnBoardingLib.Resource.Id.top = global::AbnormalChecker.Resource.Id.top;
+			global::OnBoardingLib.Resource.Id.topPanel = global::AbnormalChecker.Resource.Id.topPanel;
+			global::OnBoardingLib.Resource.Id.tv_description = global::AbnormalChecker.Resource.Id.tv_description;
+			global::OnBoardingLib.Resource.Id.tv_title = global::AbnormalChecker.Resource.Id.tv_title;
+			global::OnBoardingLib.Resource.Id.uniform = global::AbnormalChecker.Resource.Id.uniform;
+			global::OnBoardingLib.Resource.Id.up = global::AbnormalChecker.Resource.Id.up;
+			global::OnBoardingLib.Resource.Id.useLogo = global::AbnormalChecker.Resource.Id.useLogo;
+			global::OnBoardingLib.Resource.Id.vp_pager = global::AbnormalChecker.Resource.Id.vp_pager;
+			global::OnBoardingLib.Resource.Id.withText = global::AbnormalChecker.Resource.Id.withText;
+			global::OnBoardingLib.Resource.Id.wrap_content = global::AbnormalChecker.Resource.Id.wrap_content;
+			global::OnBoardingLib.Resource.Integer.abc_config_activityDefaultDur = global::AbnormalChecker.Resource.Integer.abc_config_activityDefaultDur;
+			global::OnBoardingLib.Resource.Integer.abc_config_activityShortDur = global::AbnormalChecker.Resource.Integer.abc_config_activityShortDur;
+			global::OnBoardingLib.Resource.Integer.cancel_button_image_alpha = global::AbnormalChecker.Resource.Integer.cancel_button_image_alpha;
+			global::OnBoardingLib.Resource.Integer.config_tooltipAnimTime = global::AbnormalChecker.Resource.Integer.config_tooltipAnimTime;
+			global::OnBoardingLib.Resource.Integer.status_bar_notification_info_maxnum = global::AbnormalChecker.Resource.Integer.status_bar_notification_info_maxnum;
+			global::OnBoardingLib.Resource.Layout.abc_action_bar_title_item = global::AbnormalChecker.Resource.Layout.abc_action_bar_title_item;
+			global::OnBoardingLib.Resource.Layout.abc_action_bar_up_container = global::AbnormalChecker.Resource.Layout.abc_action_bar_up_container;
+			global::OnBoardingLib.Resource.Layout.abc_action_menu_item_layout = global::AbnormalChecker.Resource.Layout.abc_action_menu_item_layout;
+			global::OnBoardingLib.Resource.Layout.abc_action_menu_layout = global::AbnormalChecker.Resource.Layout.abc_action_menu_layout;
+			global::OnBoardingLib.Resource.Layout.abc_action_mode_bar = global::AbnormalChecker.Resource.Layout.abc_action_mode_bar;
+			global::OnBoardingLib.Resource.Layout.abc_action_mode_close_item_material = global::AbnormalChecker.Resource.Layout.abc_action_mode_close_item_material;
+			global::OnBoardingLib.Resource.Layout.abc_activity_chooser_view = global::AbnormalChecker.Resource.Layout.abc_activity_chooser_view;
+			global::OnBoardingLib.Resource.Layout.abc_activity_chooser_view_list_item = global::AbnormalChecker.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::OnBoardingLib.Resource.Layout.abc_alert_dialog_button_bar_material = global::AbnormalChecker.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::OnBoardingLib.Resource.Layout.abc_alert_dialog_material = global::AbnormalChecker.Resource.Layout.abc_alert_dialog_material;
+			global::OnBoardingLib.Resource.Layout.abc_alert_dialog_title_material = global::AbnormalChecker.Resource.Layout.abc_alert_dialog_title_material;
+			global::OnBoardingLib.Resource.Layout.abc_cascading_menu_item_layout = global::AbnormalChecker.Resource.Layout.abc_cascading_menu_item_layout;
+			global::OnBoardingLib.Resource.Layout.abc_dialog_title_material = global::AbnormalChecker.Resource.Layout.abc_dialog_title_material;
+			global::OnBoardingLib.Resource.Layout.abc_expanded_menu_layout = global::AbnormalChecker.Resource.Layout.abc_expanded_menu_layout;
+			global::OnBoardingLib.Resource.Layout.abc_list_menu_item_checkbox = global::AbnormalChecker.Resource.Layout.abc_list_menu_item_checkbox;
+			global::OnBoardingLib.Resource.Layout.abc_list_menu_item_icon = global::AbnormalChecker.Resource.Layout.abc_list_menu_item_icon;
+			global::OnBoardingLib.Resource.Layout.abc_list_menu_item_layout = global::AbnormalChecker.Resource.Layout.abc_list_menu_item_layout;
+			global::OnBoardingLib.Resource.Layout.abc_list_menu_item_radio = global::AbnormalChecker.Resource.Layout.abc_list_menu_item_radio;
+			global::OnBoardingLib.Resource.Layout.abc_popup_menu_header_item_layout = global::AbnormalChecker.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::OnBoardingLib.Resource.Layout.abc_popup_menu_item_layout = global::AbnormalChecker.Resource.Layout.abc_popup_menu_item_layout;
+			global::OnBoardingLib.Resource.Layout.abc_screen_content_include = global::AbnormalChecker.Resource.Layout.abc_screen_content_include;
+			global::OnBoardingLib.Resource.Layout.abc_screen_simple = global::AbnormalChecker.Resource.Layout.abc_screen_simple;
+			global::OnBoardingLib.Resource.Layout.abc_screen_simple_overlay_action_mode = global::AbnormalChecker.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::OnBoardingLib.Resource.Layout.abc_screen_toolbar = global::AbnormalChecker.Resource.Layout.abc_screen_toolbar;
+			global::OnBoardingLib.Resource.Layout.abc_search_dropdown_item_icons_2line = global::AbnormalChecker.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::OnBoardingLib.Resource.Layout.abc_search_view = global::AbnormalChecker.Resource.Layout.abc_search_view;
+			global::OnBoardingLib.Resource.Layout.abc_select_dialog_material = global::AbnormalChecker.Resource.Layout.abc_select_dialog_material;
+			global::OnBoardingLib.Resource.Layout.abc_tooltip = global::AbnormalChecker.Resource.Layout.abc_tooltip;
+			global::OnBoardingLib.Resource.Layout.boarding_activity = global::AbnormalChecker.Resource.Layout.boarding_activity;
+			global::OnBoardingLib.Resource.Layout.boarding_fragment = global::AbnormalChecker.Resource.Layout.boarding_fragment;
+			global::OnBoardingLib.Resource.Layout.notification_action = global::AbnormalChecker.Resource.Layout.notification_action;
+			global::OnBoardingLib.Resource.Layout.notification_action_tombstone = global::AbnormalChecker.Resource.Layout.notification_action_tombstone;
+			global::OnBoardingLib.Resource.Layout.notification_template_custom_big = global::AbnormalChecker.Resource.Layout.notification_template_custom_big;
+			global::OnBoardingLib.Resource.Layout.notification_template_icon_group = global::AbnormalChecker.Resource.Layout.notification_template_icon_group;
+			global::OnBoardingLib.Resource.Layout.notification_template_part_chronometer = global::AbnormalChecker.Resource.Layout.notification_template_part_chronometer;
+			global::OnBoardingLib.Resource.Layout.notification_template_part_time = global::AbnormalChecker.Resource.Layout.notification_template_part_time;
+			global::OnBoardingLib.Resource.Layout.select_dialog_item_material = global::AbnormalChecker.Resource.Layout.select_dialog_item_material;
+			global::OnBoardingLib.Resource.Layout.select_dialog_multichoice_material = global::AbnormalChecker.Resource.Layout.select_dialog_multichoice_material;
+			global::OnBoardingLib.Resource.Layout.select_dialog_singlechoice_material = global::AbnormalChecker.Resource.Layout.select_dialog_singlechoice_material;
+			global::OnBoardingLib.Resource.Layout.support_simple_spinner_dropdown_item = global::AbnormalChecker.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::OnBoardingLib.Resource.String.abc_action_bar_home_description = global::AbnormalChecker.Resource.String.abc_action_bar_home_description;
+			global::OnBoardingLib.Resource.String.abc_action_bar_up_description = global::AbnormalChecker.Resource.String.abc_action_bar_up_description;
+			global::OnBoardingLib.Resource.String.abc_action_menu_overflow_description = global::AbnormalChecker.Resource.String.abc_action_menu_overflow_description;
+			global::OnBoardingLib.Resource.String.abc_action_mode_done = global::AbnormalChecker.Resource.String.abc_action_mode_done;
+			global::OnBoardingLib.Resource.String.abc_activity_chooser_view_see_all = global::AbnormalChecker.Resource.String.abc_activity_chooser_view_see_all;
+			global::OnBoardingLib.Resource.String.abc_activitychooserview_choose_application = global::AbnormalChecker.Resource.String.abc_activitychooserview_choose_application;
+			global::OnBoardingLib.Resource.String.abc_capital_off = global::AbnormalChecker.Resource.String.abc_capital_off;
+			global::OnBoardingLib.Resource.String.abc_capital_on = global::AbnormalChecker.Resource.String.abc_capital_on;
+			global::OnBoardingLib.Resource.String.abc_font_family_body_1_material = global::AbnormalChecker.Resource.String.abc_font_family_body_1_material;
+			global::OnBoardingLib.Resource.String.abc_font_family_body_2_material = global::AbnormalChecker.Resource.String.abc_font_family_body_2_material;
+			global::OnBoardingLib.Resource.String.abc_font_family_button_material = global::AbnormalChecker.Resource.String.abc_font_family_button_material;
+			global::OnBoardingLib.Resource.String.abc_font_family_caption_material = global::AbnormalChecker.Resource.String.abc_font_family_caption_material;
+			global::OnBoardingLib.Resource.String.abc_font_family_display_1_material = global::AbnormalChecker.Resource.String.abc_font_family_display_1_material;
+			global::OnBoardingLib.Resource.String.abc_font_family_display_2_material = global::AbnormalChecker.Resource.String.abc_font_family_display_2_material;
+			global::OnBoardingLib.Resource.String.abc_font_family_display_3_material = global::AbnormalChecker.Resource.String.abc_font_family_display_3_material;
+			global::OnBoardingLib.Resource.String.abc_font_family_display_4_material = global::AbnormalChecker.Resource.String.abc_font_family_display_4_material;
+			global::OnBoardingLib.Resource.String.abc_font_family_headline_material = global::AbnormalChecker.Resource.String.abc_font_family_headline_material;
+			global::OnBoardingLib.Resource.String.abc_font_family_menu_material = global::AbnormalChecker.Resource.String.abc_font_family_menu_material;
+			global::OnBoardingLib.Resource.String.abc_font_family_subhead_material = global::AbnormalChecker.Resource.String.abc_font_family_subhead_material;
+			global::OnBoardingLib.Resource.String.abc_font_family_title_material = global::AbnormalChecker.Resource.String.abc_font_family_title_material;
+			global::OnBoardingLib.Resource.String.abc_menu_alt_shortcut_label = global::AbnormalChecker.Resource.String.abc_menu_alt_shortcut_label;
+			global::OnBoardingLib.Resource.String.abc_menu_ctrl_shortcut_label = global::AbnormalChecker.Resource.String.abc_menu_ctrl_shortcut_label;
+			global::OnBoardingLib.Resource.String.abc_menu_delete_shortcut_label = global::AbnormalChecker.Resource.String.abc_menu_delete_shortcut_label;
+			global::OnBoardingLib.Resource.String.abc_menu_enter_shortcut_label = global::AbnormalChecker.Resource.String.abc_menu_enter_shortcut_label;
+			global::OnBoardingLib.Resource.String.abc_menu_function_shortcut_label = global::AbnormalChecker.Resource.String.abc_menu_function_shortcut_label;
+			global::OnBoardingLib.Resource.String.abc_menu_meta_shortcut_label = global::AbnormalChecker.Resource.String.abc_menu_meta_shortcut_label;
+			global::OnBoardingLib.Resource.String.abc_menu_shift_shortcut_label = global::AbnormalChecker.Resource.String.abc_menu_shift_shortcut_label;
+			global::OnBoardingLib.Resource.String.abc_menu_space_shortcut_label = global::AbnormalChecker.Resource.String.abc_menu_space_shortcut_label;
+			global::OnBoardingLib.Resource.String.abc_menu_sym_shortcut_label = global::AbnormalChecker.Resource.String.abc_menu_sym_shortcut_label;
+			global::OnBoardingLib.Resource.String.abc_prepend_shortcut_label = global::AbnormalChecker.Resource.String.abc_prepend_shortcut_label;
+			global::OnBoardingLib.Resource.String.abc_search_hint = global::AbnormalChecker.Resource.String.abc_search_hint;
+			global::OnBoardingLib.Resource.String.abc_searchview_description_clear = global::AbnormalChecker.Resource.String.abc_searchview_description_clear;
+			global::OnBoardingLib.Resource.String.abc_searchview_description_query = global::AbnormalChecker.Resource.String.abc_searchview_description_query;
+			global::OnBoardingLib.Resource.String.abc_searchview_description_search = global::AbnormalChecker.Resource.String.abc_searchview_description_search;
+			global::OnBoardingLib.Resource.String.abc_searchview_description_submit = global::AbnormalChecker.Resource.String.abc_searchview_description_submit;
+			global::OnBoardingLib.Resource.String.abc_searchview_description_voice = global::AbnormalChecker.Resource.String.abc_searchview_description_voice;
+			global::OnBoardingLib.Resource.String.abc_shareactionprovider_share_with = global::AbnormalChecker.Resource.String.abc_shareactionprovider_share_with;
+			global::OnBoardingLib.Resource.String.abc_shareactionprovider_share_with_application = global::AbnormalChecker.Resource.String.abc_shareactionprovider_share_with_application;
+			global::OnBoardingLib.Resource.String.abc_toolbar_collapse_description = global::AbnormalChecker.Resource.String.abc_toolbar_collapse_description;
+			global::OnBoardingLib.Resource.String.onboarding_button_finish_default = global::AbnormalChecker.Resource.String.onboarding_button_finish_default;
+			global::OnBoardingLib.Resource.String.search_menu_title = global::AbnormalChecker.Resource.String.search_menu_title;
+			global::OnBoardingLib.Resource.String.status_bar_notification_info_overflow = global::AbnormalChecker.Resource.String.status_bar_notification_info_overflow;
+			global::OnBoardingLib.Resource.Style.AlertDialog_AppCompat = global::AbnormalChecker.Resource.Style.AlertDialog_AppCompat;
+			global::OnBoardingLib.Resource.Style.AlertDialog_AppCompat_Light = global::AbnormalChecker.Resource.Style.AlertDialog_AppCompat_Light;
+			global::OnBoardingLib.Resource.Style.Animation_AppCompat_Dialog = global::AbnormalChecker.Resource.Style.Animation_AppCompat_Dialog;
+			global::OnBoardingLib.Resource.Style.Animation_AppCompat_DropDownUp = global::AbnormalChecker.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::OnBoardingLib.Resource.Style.Animation_AppCompat_Tooltip = global::AbnormalChecker.Resource.Style.Animation_AppCompat_Tooltip;
+			global::OnBoardingLib.Resource.Style.Base_AlertDialog_AppCompat = global::AbnormalChecker.Resource.Style.Base_AlertDialog_AppCompat;
+			global::OnBoardingLib.Resource.Style.Base_AlertDialog_AppCompat_Light = global::AbnormalChecker.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::OnBoardingLib.Resource.Style.Base_Animation_AppCompat_Dialog = global::AbnormalChecker.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::OnBoardingLib.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::AbnormalChecker.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::OnBoardingLib.Resource.Style.Base_Animation_AppCompat_Tooltip = global::AbnormalChecker.Resource.Style.Base_Animation_AppCompat_Tooltip;
+			global::OnBoardingLib.Resource.Style.Base_CardView = global::AbnormalChecker.Resource.Style.Base_CardView;
+			global::OnBoardingLib.Resource.Style.Base_DialogWindowTitle_AppCompat = global::AbnormalChecker.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::OnBoardingLib.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::AbnormalChecker.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Button = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Large = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Small = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Title = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::AbnormalChecker.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::AbnormalChecker.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::AbnormalChecker.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::OnBoardingLib.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::AbnormalChecker.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::OnBoardingLib.Resource.Style.Base_Theme_AppCompat = global::AbnormalChecker.Resource.Style.Base_Theme_AppCompat;
+			global::OnBoardingLib.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::AbnormalChecker.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::OnBoardingLib.Resource.Style.Base_Theme_AppCompat_Dialog = global::AbnormalChecker.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::OnBoardingLib.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::AbnormalChecker.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::OnBoardingLib.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::AbnormalChecker.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::OnBoardingLib.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::AbnormalChecker.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::OnBoardingLib.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::AbnormalChecker.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::OnBoardingLib.Resource.Style.Base_Theme_AppCompat_Light = global::AbnormalChecker.Resource.Style.Base_Theme_AppCompat_Light;
+			global::OnBoardingLib.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::AbnormalChecker.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::OnBoardingLib.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::AbnormalChecker.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::OnBoardingLib.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::AbnormalChecker.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::OnBoardingLib.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::AbnormalChecker.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::OnBoardingLib.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::AbnormalChecker.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::OnBoardingLib.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::AbnormalChecker.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::OnBoardingLib.Resource.Style.Base_ThemeOverlay_AppCompat = global::AbnormalChecker.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::OnBoardingLib.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::AbnormalChecker.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::OnBoardingLib.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::AbnormalChecker.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::OnBoardingLib.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::AbnormalChecker.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::OnBoardingLib.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::AbnormalChecker.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::OnBoardingLib.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::AbnormalChecker.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::OnBoardingLib.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::AbnormalChecker.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::OnBoardingLib.Resource.Style.Base_V21_Theme_AppCompat = global::AbnormalChecker.Resource.Style.Base_V21_Theme_AppCompat;
+			global::OnBoardingLib.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::AbnormalChecker.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::OnBoardingLib.Resource.Style.Base_V21_Theme_AppCompat_Light = global::AbnormalChecker.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::OnBoardingLib.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::AbnormalChecker.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::OnBoardingLib.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::AbnormalChecker.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::OnBoardingLib.Resource.Style.Base_V22_Theme_AppCompat = global::AbnormalChecker.Resource.Style.Base_V22_Theme_AppCompat;
+			global::OnBoardingLib.Resource.Style.Base_V22_Theme_AppCompat_Light = global::AbnormalChecker.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::OnBoardingLib.Resource.Style.Base_V23_Theme_AppCompat = global::AbnormalChecker.Resource.Style.Base_V23_Theme_AppCompat;
+			global::OnBoardingLib.Resource.Style.Base_V23_Theme_AppCompat_Light = global::AbnormalChecker.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::OnBoardingLib.Resource.Style.Base_V26_Theme_AppCompat = global::AbnormalChecker.Resource.Style.Base_V26_Theme_AppCompat;
+			global::OnBoardingLib.Resource.Style.Base_V26_Theme_AppCompat_Light = global::AbnormalChecker.Resource.Style.Base_V26_Theme_AppCompat_Light;
+			global::OnBoardingLib.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::AbnormalChecker.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
+			global::OnBoardingLib.Resource.Style.Base_V28_Theme_AppCompat = global::AbnormalChecker.Resource.Style.Base_V28_Theme_AppCompat;
+			global::OnBoardingLib.Resource.Style.Base_V28_Theme_AppCompat_Light = global::AbnormalChecker.Resource.Style.Base_V28_Theme_AppCompat_Light;
+			global::OnBoardingLib.Resource.Style.Base_V7_Theme_AppCompat = global::AbnormalChecker.Resource.Style.Base_V7_Theme_AppCompat;
+			global::OnBoardingLib.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::AbnormalChecker.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::OnBoardingLib.Resource.Style.Base_V7_Theme_AppCompat_Light = global::AbnormalChecker.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::OnBoardingLib.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::AbnormalChecker.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::OnBoardingLib.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::AbnormalChecker.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::OnBoardingLib.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::AbnormalChecker.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::OnBoardingLib.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::AbnormalChecker.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::OnBoardingLib.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::AbnormalChecker.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_ActionBar = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_ActionButton = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_ActionMode = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_Button = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_Button;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_Button_Small = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_EditText = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_ImageButton = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_ListView = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_RatingBar = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_SearchView = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_SeekBar = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_Spinner = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_Toolbar = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::OnBoardingLib.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::AbnormalChecker.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::OnBoardingLib.Resource.Style.CardView = global::AbnormalChecker.Resource.Style.CardView;
+			global::OnBoardingLib.Resource.Style.CardView_Dark = global::AbnormalChecker.Resource.Style.CardView_Dark;
+			global::OnBoardingLib.Resource.Style.CardView_Light = global::AbnormalChecker.Resource.Style.CardView_Light;
+			global::OnBoardingLib.Resource.Style.Platform_AppCompat = global::AbnormalChecker.Resource.Style.Platform_AppCompat;
+			global::OnBoardingLib.Resource.Style.Platform_AppCompat_Light = global::AbnormalChecker.Resource.Style.Platform_AppCompat_Light;
+			global::OnBoardingLib.Resource.Style.Platform_ThemeOverlay_AppCompat = global::AbnormalChecker.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::OnBoardingLib.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::AbnormalChecker.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::OnBoardingLib.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::AbnormalChecker.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::OnBoardingLib.Resource.Style.Platform_V21_AppCompat = global::AbnormalChecker.Resource.Style.Platform_V21_AppCompat;
+			global::OnBoardingLib.Resource.Style.Platform_V21_AppCompat_Light = global::AbnormalChecker.Resource.Style.Platform_V21_AppCompat_Light;
+			global::OnBoardingLib.Resource.Style.Platform_V25_AppCompat = global::AbnormalChecker.Resource.Style.Platform_V25_AppCompat;
+			global::OnBoardingLib.Resource.Style.Platform_V25_AppCompat_Light = global::AbnormalChecker.Resource.Style.Platform_V25_AppCompat_Light;
+			global::OnBoardingLib.Resource.Style.Platform_Widget_AppCompat_Spinner = global::AbnormalChecker.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::OnBoardingLib.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::AbnormalChecker.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::OnBoardingLib.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::AbnormalChecker.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::OnBoardingLib.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::AbnormalChecker.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::OnBoardingLib.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::AbnormalChecker.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::OnBoardingLib.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::AbnormalChecker.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::OnBoardingLib.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut = global::AbnormalChecker.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut;
+			global::OnBoardingLib.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow = global::AbnormalChecker.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow;
+			global::OnBoardingLib.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::AbnormalChecker.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::OnBoardingLib.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = global::AbnormalChecker.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title;
+			global::OnBoardingLib.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::AbnormalChecker.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::OnBoardingLib.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::AbnormalChecker.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::OnBoardingLib.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::AbnormalChecker.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::OnBoardingLib.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::AbnormalChecker.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::OnBoardingLib.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::AbnormalChecker.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::OnBoardingLib.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::AbnormalChecker.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::OnBoardingLib.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::AbnormalChecker.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::OnBoardingLib.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::AbnormalChecker.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Body1 = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Body2 = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Button = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Button;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Caption = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Display1 = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Display2 = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Display3 = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Display4 = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Headline = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Inverse = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Large = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Large;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Medium = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Menu = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Small = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Small;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Subhead = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Title = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Title;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Tooltip = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Tooltip;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::OnBoardingLib.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::AbnormalChecker.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::OnBoardingLib.Resource.Style.TextAppearance_Compat_Notification = global::AbnormalChecker.Resource.Style.TextAppearance_Compat_Notification;
+			global::OnBoardingLib.Resource.Style.TextAppearance_Compat_Notification_Info = global::AbnormalChecker.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::OnBoardingLib.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::AbnormalChecker.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::OnBoardingLib.Resource.Style.TextAppearance_Compat_Notification_Time = global::AbnormalChecker.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::OnBoardingLib.Resource.Style.TextAppearance_Compat_Notification_Title = global::AbnormalChecker.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::OnBoardingLib.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::AbnormalChecker.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::OnBoardingLib.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::AbnormalChecker.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::OnBoardingLib.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::AbnormalChecker.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::OnBoardingLib.Resource.Style.Theme_AppCompat = global::AbnormalChecker.Resource.Style.Theme_AppCompat;
+			global::OnBoardingLib.Resource.Style.Theme_AppCompat_CompactMenu = global::AbnormalChecker.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::OnBoardingLib.Resource.Style.Theme_AppCompat_DayNight = global::AbnormalChecker.Resource.Style.Theme_AppCompat_DayNight;
+			global::OnBoardingLib.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::AbnormalChecker.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::OnBoardingLib.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::AbnormalChecker.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::OnBoardingLib.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::AbnormalChecker.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::OnBoardingLib.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::AbnormalChecker.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::OnBoardingLib.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::AbnormalChecker.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::OnBoardingLib.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::AbnormalChecker.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::OnBoardingLib.Resource.Style.Theme_AppCompat_Dialog = global::AbnormalChecker.Resource.Style.Theme_AppCompat_Dialog;
+			global::OnBoardingLib.Resource.Style.Theme_AppCompat_Dialog_Alert = global::AbnormalChecker.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::OnBoardingLib.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::AbnormalChecker.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::OnBoardingLib.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::AbnormalChecker.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::OnBoardingLib.Resource.Style.Theme_AppCompat_Light = global::AbnormalChecker.Resource.Style.Theme_AppCompat_Light;
+			global::OnBoardingLib.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::AbnormalChecker.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::OnBoardingLib.Resource.Style.Theme_AppCompat_Light_Dialog = global::AbnormalChecker.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::OnBoardingLib.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::AbnormalChecker.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::OnBoardingLib.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::AbnormalChecker.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::OnBoardingLib.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::AbnormalChecker.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::OnBoardingLib.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::AbnormalChecker.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::OnBoardingLib.Resource.Style.Theme_AppCompat_NoActionBar = global::AbnormalChecker.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::OnBoardingLib.Resource.Style.ThemeOverlay_AppCompat = global::AbnormalChecker.Resource.Style.ThemeOverlay_AppCompat;
+			global::OnBoardingLib.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::AbnormalChecker.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::OnBoardingLib.Resource.Style.ThemeOverlay_AppCompat_Dark = global::AbnormalChecker.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::OnBoardingLib.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::AbnormalChecker.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::OnBoardingLib.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::AbnormalChecker.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::OnBoardingLib.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::AbnormalChecker.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::OnBoardingLib.Resource.Style.ThemeOverlay_AppCompat_Light = global::AbnormalChecker.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_ActionBar = global::AbnormalChecker.Resource.Style.Widget_AppCompat_ActionBar;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::AbnormalChecker.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::AbnormalChecker.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::AbnormalChecker.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::AbnormalChecker.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_ActionButton = global::AbnormalChecker.Resource.Style.Widget_AppCompat_ActionButton;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::AbnormalChecker.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::AbnormalChecker.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_ActionMode = global::AbnormalChecker.Resource.Style.Widget_AppCompat_ActionMode;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_ActivityChooserView = global::AbnormalChecker.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::AbnormalChecker.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Button = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Button;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Button_Borderless = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Button_Colored = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Button_Small = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Button_Small;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_ButtonBar = global::AbnormalChecker.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::AbnormalChecker.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::AbnormalChecker.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::AbnormalChecker.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::AbnormalChecker.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::AbnormalChecker.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::AbnormalChecker.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_EditText = global::AbnormalChecker.Resource.Style.Widget_AppCompat_EditText;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_ImageButton = global::AbnormalChecker.Resource.Style.Widget_AppCompat_ImageButton;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Light_ActionBar = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Light_ActionButton = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Light_SearchView = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_ListMenuView = global::AbnormalChecker.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_ListPopupWindow = global::AbnormalChecker.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_ListView = global::AbnormalChecker.Resource.Style.Widget_AppCompat_ListView;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_ListView_DropDown = global::AbnormalChecker.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_ListView_Menu = global::AbnormalChecker.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_PopupMenu = global::AbnormalChecker.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::AbnormalChecker.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_PopupWindow = global::AbnormalChecker.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_ProgressBar = global::AbnormalChecker.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::AbnormalChecker.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_RatingBar = global::AbnormalChecker.Resource.Style.Widget_AppCompat_RatingBar;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::AbnormalChecker.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_RatingBar_Small = global::AbnormalChecker.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_SearchView = global::AbnormalChecker.Resource.Style.Widget_AppCompat_SearchView;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::AbnormalChecker.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_SeekBar = global::AbnormalChecker.Resource.Style.Widget_AppCompat_SeekBar;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::AbnormalChecker.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Spinner = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Spinner;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::AbnormalChecker.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Toolbar = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Toolbar;
+			global::OnBoardingLib.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::AbnormalChecker.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::OnBoardingLib.Resource.Style.Widget_Compat_NotificationActionContainer = global::AbnormalChecker.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::OnBoardingLib.Resource.Style.Widget_Compat_NotificationActionText = global::AbnormalChecker.Resource.Style.Widget_Compat_NotificationActionText;
+			global::OnBoardingLib.Resource.Styleable.ActionBar = global::AbnormalChecker.Resource.Styleable.ActionBar;
+			global::OnBoardingLib.Resource.Styleable.ActionBar_background = global::AbnormalChecker.Resource.Styleable.ActionBar_background;
+			global::OnBoardingLib.Resource.Styleable.ActionBar_backgroundSplit = global::AbnormalChecker.Resource.Styleable.ActionBar_backgroundSplit;
+			global::OnBoardingLib.Resource.Styleable.ActionBar_backgroundStacked = global::AbnormalChecker.Resource.Styleable.ActionBar_backgroundStacked;
+			global::OnBoardingLib.Resource.Styleable.ActionBar_contentInsetEnd = global::AbnormalChecker.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::OnBoardingLib.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::AbnormalChecker.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::OnBoardingLib.Resource.Styleable.ActionBar_contentInsetLeft = global::AbnormalChecker.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::OnBoardingLib.Resource.Styleable.ActionBar_contentInsetRight = global::AbnormalChecker.Resource.Styleable.ActionBar_contentInsetRight;
+			global::OnBoardingLib.Resource.Styleable.ActionBar_contentInsetStart = global::AbnormalChecker.Resource.Styleable.ActionBar_contentInsetStart;
+			global::OnBoardingLib.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::AbnormalChecker.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::OnBoardingLib.Resource.Styleable.ActionBar_customNavigationLayout = global::AbnormalChecker.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::OnBoardingLib.Resource.Styleable.ActionBar_displayOptions = global::AbnormalChecker.Resource.Styleable.ActionBar_displayOptions;
+			global::OnBoardingLib.Resource.Styleable.ActionBar_divider = global::AbnormalChecker.Resource.Styleable.ActionBar_divider;
+			global::OnBoardingLib.Resource.Styleable.ActionBar_elevation = global::AbnormalChecker.Resource.Styleable.ActionBar_elevation;
+			global::OnBoardingLib.Resource.Styleable.ActionBar_height = global::AbnormalChecker.Resource.Styleable.ActionBar_height;
+			global::OnBoardingLib.Resource.Styleable.ActionBar_hideOnContentScroll = global::AbnormalChecker.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::OnBoardingLib.Resource.Styleable.ActionBar_homeAsUpIndicator = global::AbnormalChecker.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::OnBoardingLib.Resource.Styleable.ActionBar_homeLayout = global::AbnormalChecker.Resource.Styleable.ActionBar_homeLayout;
+			global::OnBoardingLib.Resource.Styleable.ActionBar_icon = global::AbnormalChecker.Resource.Styleable.ActionBar_icon;
+			global::OnBoardingLib.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::AbnormalChecker.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::OnBoardingLib.Resource.Styleable.ActionBar_itemPadding = global::AbnormalChecker.Resource.Styleable.ActionBar_itemPadding;
+			global::OnBoardingLib.Resource.Styleable.ActionBar_logo = global::AbnormalChecker.Resource.Styleable.ActionBar_logo;
+			global::OnBoardingLib.Resource.Styleable.ActionBar_navigationMode = global::AbnormalChecker.Resource.Styleable.ActionBar_navigationMode;
+			global::OnBoardingLib.Resource.Styleable.ActionBar_popupTheme = global::AbnormalChecker.Resource.Styleable.ActionBar_popupTheme;
+			global::OnBoardingLib.Resource.Styleable.ActionBar_progressBarPadding = global::AbnormalChecker.Resource.Styleable.ActionBar_progressBarPadding;
+			global::OnBoardingLib.Resource.Styleable.ActionBar_progressBarStyle = global::AbnormalChecker.Resource.Styleable.ActionBar_progressBarStyle;
+			global::OnBoardingLib.Resource.Styleable.ActionBar_subtitle = global::AbnormalChecker.Resource.Styleable.ActionBar_subtitle;
+			global::OnBoardingLib.Resource.Styleable.ActionBar_subtitleTextStyle = global::AbnormalChecker.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::OnBoardingLib.Resource.Styleable.ActionBar_title = global::AbnormalChecker.Resource.Styleable.ActionBar_title;
+			global::OnBoardingLib.Resource.Styleable.ActionBar_titleTextStyle = global::AbnormalChecker.Resource.Styleable.ActionBar_titleTextStyle;
+			global::OnBoardingLib.Resource.Styleable.ActionBarLayout = global::AbnormalChecker.Resource.Styleable.ActionBarLayout;
+			global::OnBoardingLib.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::AbnormalChecker.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::OnBoardingLib.Resource.Styleable.ActionMenuItemView = global::AbnormalChecker.Resource.Styleable.ActionMenuItemView;
+			global::OnBoardingLib.Resource.Styleable.ActionMenuItemView_android_minWidth = global::AbnormalChecker.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::OnBoardingLib.Resource.Styleable.ActionMenuView = global::AbnormalChecker.Resource.Styleable.ActionMenuView;
+			global::OnBoardingLib.Resource.Styleable.ActionMode = global::AbnormalChecker.Resource.Styleable.ActionMode;
+			global::OnBoardingLib.Resource.Styleable.ActionMode_background = global::AbnormalChecker.Resource.Styleable.ActionMode_background;
+			global::OnBoardingLib.Resource.Styleable.ActionMode_backgroundSplit = global::AbnormalChecker.Resource.Styleable.ActionMode_backgroundSplit;
+			global::OnBoardingLib.Resource.Styleable.ActionMode_closeItemLayout = global::AbnormalChecker.Resource.Styleable.ActionMode_closeItemLayout;
+			global::OnBoardingLib.Resource.Styleable.ActionMode_height = global::AbnormalChecker.Resource.Styleable.ActionMode_height;
+			global::OnBoardingLib.Resource.Styleable.ActionMode_subtitleTextStyle = global::AbnormalChecker.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::OnBoardingLib.Resource.Styleable.ActionMode_titleTextStyle = global::AbnormalChecker.Resource.Styleable.ActionMode_titleTextStyle;
+			global::OnBoardingLib.Resource.Styleable.ActivityChooserView = global::AbnormalChecker.Resource.Styleable.ActivityChooserView;
+			global::OnBoardingLib.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::AbnormalChecker.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::OnBoardingLib.Resource.Styleable.ActivityChooserView_initialActivityCount = global::AbnormalChecker.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::OnBoardingLib.Resource.Styleable.AlertDialog = global::AbnormalChecker.Resource.Styleable.AlertDialog;
+			global::OnBoardingLib.Resource.Styleable.AlertDialog_android_layout = global::AbnormalChecker.Resource.Styleable.AlertDialog_android_layout;
+			global::OnBoardingLib.Resource.Styleable.AlertDialog_buttonIconDimen = global::AbnormalChecker.Resource.Styleable.AlertDialog_buttonIconDimen;
+			global::OnBoardingLib.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::AbnormalChecker.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::OnBoardingLib.Resource.Styleable.AlertDialog_listItemLayout = global::AbnormalChecker.Resource.Styleable.AlertDialog_listItemLayout;
+			global::OnBoardingLib.Resource.Styleable.AlertDialog_listLayout = global::AbnormalChecker.Resource.Styleable.AlertDialog_listLayout;
+			global::OnBoardingLib.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::AbnormalChecker.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::OnBoardingLib.Resource.Styleable.AlertDialog_showTitle = global::AbnormalChecker.Resource.Styleable.AlertDialog_showTitle;
+			global::OnBoardingLib.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::AbnormalChecker.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::OnBoardingLib.Resource.Styleable.AnimatedStateListDrawableCompat = global::AbnormalChecker.Resource.Styleable.AnimatedStateListDrawableCompat;
+			global::OnBoardingLib.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize = global::AbnormalChecker.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize;
+			global::OnBoardingLib.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither = global::AbnormalChecker.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither;
+			global::OnBoardingLib.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration = global::AbnormalChecker.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration;
+			global::OnBoardingLib.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration = global::AbnormalChecker.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration;
+			global::OnBoardingLib.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding = global::AbnormalChecker.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding;
+			global::OnBoardingLib.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible = global::AbnormalChecker.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible;
+			global::OnBoardingLib.Resource.Styleable.AnimatedStateListDrawableItem = global::AbnormalChecker.Resource.Styleable.AnimatedStateListDrawableItem;
+			global::OnBoardingLib.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable = global::AbnormalChecker.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable;
+			global::OnBoardingLib.Resource.Styleable.AnimatedStateListDrawableItem_android_id = global::AbnormalChecker.Resource.Styleable.AnimatedStateListDrawableItem_android_id;
+			global::OnBoardingLib.Resource.Styleable.AnimatedStateListDrawableTransition = global::AbnormalChecker.Resource.Styleable.AnimatedStateListDrawableTransition;
+			global::OnBoardingLib.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable = global::AbnormalChecker.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable;
+			global::OnBoardingLib.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId = global::AbnormalChecker.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId;
+			global::OnBoardingLib.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible = global::AbnormalChecker.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible;
+			global::OnBoardingLib.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId = global::AbnormalChecker.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId;
+			global::OnBoardingLib.Resource.Styleable.AppCompatImageView = global::AbnormalChecker.Resource.Styleable.AppCompatImageView;
+			global::OnBoardingLib.Resource.Styleable.AppCompatImageView_android_src = global::AbnormalChecker.Resource.Styleable.AppCompatImageView_android_src;
+			global::OnBoardingLib.Resource.Styleable.AppCompatImageView_srcCompat = global::AbnormalChecker.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::OnBoardingLib.Resource.Styleable.AppCompatImageView_tint = global::AbnormalChecker.Resource.Styleable.AppCompatImageView_tint;
+			global::OnBoardingLib.Resource.Styleable.AppCompatImageView_tintMode = global::AbnormalChecker.Resource.Styleable.AppCompatImageView_tintMode;
+			global::OnBoardingLib.Resource.Styleable.AppCompatSeekBar = global::AbnormalChecker.Resource.Styleable.AppCompatSeekBar;
+			global::OnBoardingLib.Resource.Styleable.AppCompatSeekBar_android_thumb = global::AbnormalChecker.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::OnBoardingLib.Resource.Styleable.AppCompatSeekBar_tickMark = global::AbnormalChecker.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::OnBoardingLib.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::AbnormalChecker.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::OnBoardingLib.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::AbnormalChecker.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTextHelper = global::AbnormalChecker.Resource.Styleable.AppCompatTextHelper;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::AbnormalChecker.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::AbnormalChecker.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::AbnormalChecker.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::AbnormalChecker.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::AbnormalChecker.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::AbnormalChecker.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::AbnormalChecker.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTextView = global::AbnormalChecker.Resource.Styleable.AppCompatTextView;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTextView_android_textAppearance = global::AbnormalChecker.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::AbnormalChecker.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::AbnormalChecker.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::AbnormalChecker.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::AbnormalChecker.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::AbnormalChecker.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight = global::AbnormalChecker.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTextView_fontFamily = global::AbnormalChecker.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight = global::AbnormalChecker.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTextView_lineHeight = global::AbnormalChecker.Resource.Styleable.AppCompatTextView_lineHeight;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTextView_textAllCaps = global::AbnormalChecker.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme = global::AbnormalChecker.Resource.Styleable.AppCompatTheme;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_actionBarDivider = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_actionBarSize = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_actionBarStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_actionBarTheme = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_actionModeBackground = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_actionModeStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_buttonStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_checkboxStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_colorAccent = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_colorControlActivated = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_colorControlNormal = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_colorError = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_colorError;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_colorPrimary = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_controlBackground = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_dialogCornerRadius = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_dialogCornerRadius;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_dialogTheme = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_dividerVertical = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_editTextBackground = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_editTextColor = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_editTextStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_panelBackground = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_searchViewStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_seekBarStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_spinnerStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_switchStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_toolbarStyle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_viewInflaterClass = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_viewInflaterClass;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_windowActionBar = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::OnBoardingLib.Resource.Styleable.AppCompatTheme_windowNoTitle = global::AbnormalChecker.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::OnBoardingLib.Resource.Styleable.ButtonBarLayout = global::AbnormalChecker.Resource.Styleable.ButtonBarLayout;
+			global::OnBoardingLib.Resource.Styleable.ButtonBarLayout_allowStacking = global::AbnormalChecker.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::OnBoardingLib.Resource.Styleable.CardView = global::AbnormalChecker.Resource.Styleable.CardView;
+			global::OnBoardingLib.Resource.Styleable.CardView_android_minHeight = global::AbnormalChecker.Resource.Styleable.CardView_android_minHeight;
+			global::OnBoardingLib.Resource.Styleable.CardView_android_minWidth = global::AbnormalChecker.Resource.Styleable.CardView_android_minWidth;
+			global::OnBoardingLib.Resource.Styleable.CardView_cardBackgroundColor = global::AbnormalChecker.Resource.Styleable.CardView_cardBackgroundColor;
+			global::OnBoardingLib.Resource.Styleable.CardView_cardCornerRadius = global::AbnormalChecker.Resource.Styleable.CardView_cardCornerRadius;
+			global::OnBoardingLib.Resource.Styleable.CardView_cardElevation = global::AbnormalChecker.Resource.Styleable.CardView_cardElevation;
+			global::OnBoardingLib.Resource.Styleable.CardView_cardMaxElevation = global::AbnormalChecker.Resource.Styleable.CardView_cardMaxElevation;
+			global::OnBoardingLib.Resource.Styleable.CardView_cardPreventCornerOverlap = global::AbnormalChecker.Resource.Styleable.CardView_cardPreventCornerOverlap;
+			global::OnBoardingLib.Resource.Styleable.CardView_cardUseCompatPadding = global::AbnormalChecker.Resource.Styleable.CardView_cardUseCompatPadding;
+			global::OnBoardingLib.Resource.Styleable.CardView_contentPadding = global::AbnormalChecker.Resource.Styleable.CardView_contentPadding;
+			global::OnBoardingLib.Resource.Styleable.CardView_contentPaddingBottom = global::AbnormalChecker.Resource.Styleable.CardView_contentPaddingBottom;
+			global::OnBoardingLib.Resource.Styleable.CardView_contentPaddingLeft = global::AbnormalChecker.Resource.Styleable.CardView_contentPaddingLeft;
+			global::OnBoardingLib.Resource.Styleable.CardView_contentPaddingRight = global::AbnormalChecker.Resource.Styleable.CardView_contentPaddingRight;
+			global::OnBoardingLib.Resource.Styleable.CardView_contentPaddingTop = global::AbnormalChecker.Resource.Styleable.CardView_contentPaddingTop;
+			global::OnBoardingLib.Resource.Styleable.ColorStateListItem = global::AbnormalChecker.Resource.Styleable.ColorStateListItem;
+			global::OnBoardingLib.Resource.Styleable.ColorStateListItem_alpha = global::AbnormalChecker.Resource.Styleable.ColorStateListItem_alpha;
+			global::OnBoardingLib.Resource.Styleable.ColorStateListItem_android_alpha = global::AbnormalChecker.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::OnBoardingLib.Resource.Styleable.ColorStateListItem_android_color = global::AbnormalChecker.Resource.Styleable.ColorStateListItem_android_color;
+			global::OnBoardingLib.Resource.Styleable.CompoundButton = global::AbnormalChecker.Resource.Styleable.CompoundButton;
+			global::OnBoardingLib.Resource.Styleable.CompoundButton_android_button = global::AbnormalChecker.Resource.Styleable.CompoundButton_android_button;
+			global::OnBoardingLib.Resource.Styleable.CompoundButton_buttonTint = global::AbnormalChecker.Resource.Styleable.CompoundButton_buttonTint;
+			global::OnBoardingLib.Resource.Styleable.CompoundButton_buttonTintMode = global::AbnormalChecker.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::OnBoardingLib.Resource.Styleable.DrawerArrowToggle = global::AbnormalChecker.Resource.Styleable.DrawerArrowToggle;
+			global::OnBoardingLib.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::AbnormalChecker.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::OnBoardingLib.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::AbnormalChecker.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::OnBoardingLib.Resource.Styleable.DrawerArrowToggle_barLength = global::AbnormalChecker.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::OnBoardingLib.Resource.Styleable.DrawerArrowToggle_color = global::AbnormalChecker.Resource.Styleable.DrawerArrowToggle_color;
+			global::OnBoardingLib.Resource.Styleable.DrawerArrowToggle_drawableSize = global::AbnormalChecker.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::OnBoardingLib.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::AbnormalChecker.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::OnBoardingLib.Resource.Styleable.DrawerArrowToggle_spinBars = global::AbnormalChecker.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::OnBoardingLib.Resource.Styleable.DrawerArrowToggle_thickness = global::AbnormalChecker.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::OnBoardingLib.Resource.Styleable.FontFamily = global::AbnormalChecker.Resource.Styleable.FontFamily;
+			global::OnBoardingLib.Resource.Styleable.FontFamily_fontProviderAuthority = global::AbnormalChecker.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::OnBoardingLib.Resource.Styleable.FontFamily_fontProviderCerts = global::AbnormalChecker.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::OnBoardingLib.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::AbnormalChecker.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::OnBoardingLib.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::AbnormalChecker.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::OnBoardingLib.Resource.Styleable.FontFamily_fontProviderPackage = global::AbnormalChecker.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::OnBoardingLib.Resource.Styleable.FontFamily_fontProviderQuery = global::AbnormalChecker.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::OnBoardingLib.Resource.Styleable.FontFamilyFont = global::AbnormalChecker.Resource.Styleable.FontFamilyFont;
+			global::OnBoardingLib.Resource.Styleable.FontFamilyFont_android_font = global::AbnormalChecker.Resource.Styleable.FontFamilyFont_android_font;
+			global::OnBoardingLib.Resource.Styleable.FontFamilyFont_android_fontStyle = global::AbnormalChecker.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::OnBoardingLib.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::AbnormalChecker.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
+			global::OnBoardingLib.Resource.Styleable.FontFamilyFont_android_fontWeight = global::AbnormalChecker.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::OnBoardingLib.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::AbnormalChecker.Resource.Styleable.FontFamilyFont_android_ttcIndex;
+			global::OnBoardingLib.Resource.Styleable.FontFamilyFont_font = global::AbnormalChecker.Resource.Styleable.FontFamilyFont_font;
+			global::OnBoardingLib.Resource.Styleable.FontFamilyFont_fontStyle = global::AbnormalChecker.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::OnBoardingLib.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::AbnormalChecker.Resource.Styleable.FontFamilyFont_fontVariationSettings;
+			global::OnBoardingLib.Resource.Styleable.FontFamilyFont_fontWeight = global::AbnormalChecker.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::OnBoardingLib.Resource.Styleable.FontFamilyFont_ttcIndex = global::AbnormalChecker.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::OnBoardingLib.Resource.Styleable.GradientColor = global::AbnormalChecker.Resource.Styleable.GradientColor;
+			global::OnBoardingLib.Resource.Styleable.GradientColor_android_centerColor = global::AbnormalChecker.Resource.Styleable.GradientColor_android_centerColor;
+			global::OnBoardingLib.Resource.Styleable.GradientColor_android_centerX = global::AbnormalChecker.Resource.Styleable.GradientColor_android_centerX;
+			global::OnBoardingLib.Resource.Styleable.GradientColor_android_centerY = global::AbnormalChecker.Resource.Styleable.GradientColor_android_centerY;
+			global::OnBoardingLib.Resource.Styleable.GradientColor_android_endColor = global::AbnormalChecker.Resource.Styleable.GradientColor_android_endColor;
+			global::OnBoardingLib.Resource.Styleable.GradientColor_android_endX = global::AbnormalChecker.Resource.Styleable.GradientColor_android_endX;
+			global::OnBoardingLib.Resource.Styleable.GradientColor_android_endY = global::AbnormalChecker.Resource.Styleable.GradientColor_android_endY;
+			global::OnBoardingLib.Resource.Styleable.GradientColor_android_gradientRadius = global::AbnormalChecker.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::OnBoardingLib.Resource.Styleable.GradientColor_android_startColor = global::AbnormalChecker.Resource.Styleable.GradientColor_android_startColor;
+			global::OnBoardingLib.Resource.Styleable.GradientColor_android_startX = global::AbnormalChecker.Resource.Styleable.GradientColor_android_startX;
+			global::OnBoardingLib.Resource.Styleable.GradientColor_android_startY = global::AbnormalChecker.Resource.Styleable.GradientColor_android_startY;
+			global::OnBoardingLib.Resource.Styleable.GradientColor_android_tileMode = global::AbnormalChecker.Resource.Styleable.GradientColor_android_tileMode;
+			global::OnBoardingLib.Resource.Styleable.GradientColor_android_type = global::AbnormalChecker.Resource.Styleable.GradientColor_android_type;
+			global::OnBoardingLib.Resource.Styleable.GradientColorItem = global::AbnormalChecker.Resource.Styleable.GradientColorItem;
+			global::OnBoardingLib.Resource.Styleable.GradientColorItem_android_color = global::AbnormalChecker.Resource.Styleable.GradientColorItem_android_color;
+			global::OnBoardingLib.Resource.Styleable.GradientColorItem_android_offset = global::AbnormalChecker.Resource.Styleable.GradientColorItem_android_offset;
+			global::OnBoardingLib.Resource.Styleable.LinearLayoutCompat = global::AbnormalChecker.Resource.Styleable.LinearLayoutCompat;
+			global::OnBoardingLib.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::AbnormalChecker.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::OnBoardingLib.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::AbnormalChecker.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::OnBoardingLib.Resource.Styleable.LinearLayoutCompat_android_gravity = global::AbnormalChecker.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::OnBoardingLib.Resource.Styleable.LinearLayoutCompat_android_orientation = global::AbnormalChecker.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::OnBoardingLib.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::AbnormalChecker.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::OnBoardingLib.Resource.Styleable.LinearLayoutCompat_divider = global::AbnormalChecker.Resource.Styleable.LinearLayoutCompat_divider;
+			global::OnBoardingLib.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::AbnormalChecker.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::OnBoardingLib.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::AbnormalChecker.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::OnBoardingLib.Resource.Styleable.LinearLayoutCompat_showDividers = global::AbnormalChecker.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::OnBoardingLib.Resource.Styleable.LinearLayoutCompat_Layout = global::AbnormalChecker.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::OnBoardingLib.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::AbnormalChecker.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::OnBoardingLib.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::AbnormalChecker.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::OnBoardingLib.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::AbnormalChecker.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::OnBoardingLib.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::AbnormalChecker.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::OnBoardingLib.Resource.Styleable.ListPopupWindow = global::AbnormalChecker.Resource.Styleable.ListPopupWindow;
+			global::OnBoardingLib.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::AbnormalChecker.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::OnBoardingLib.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::AbnormalChecker.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::OnBoardingLib.Resource.Styleable.MenuGroup = global::AbnormalChecker.Resource.Styleable.MenuGroup;
+			global::OnBoardingLib.Resource.Styleable.MenuGroup_android_checkableBehavior = global::AbnormalChecker.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::OnBoardingLib.Resource.Styleable.MenuGroup_android_enabled = global::AbnormalChecker.Resource.Styleable.MenuGroup_android_enabled;
+			global::OnBoardingLib.Resource.Styleable.MenuGroup_android_id = global::AbnormalChecker.Resource.Styleable.MenuGroup_android_id;
+			global::OnBoardingLib.Resource.Styleable.MenuGroup_android_menuCategory = global::AbnormalChecker.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::OnBoardingLib.Resource.Styleable.MenuGroup_android_orderInCategory = global::AbnormalChecker.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::OnBoardingLib.Resource.Styleable.MenuGroup_android_visible = global::AbnormalChecker.Resource.Styleable.MenuGroup_android_visible;
+			global::OnBoardingLib.Resource.Styleable.MenuItem = global::AbnormalChecker.Resource.Styleable.MenuItem;
+			global::OnBoardingLib.Resource.Styleable.MenuItem_actionLayout = global::AbnormalChecker.Resource.Styleable.MenuItem_actionLayout;
+			global::OnBoardingLib.Resource.Styleable.MenuItem_actionProviderClass = global::AbnormalChecker.Resource.Styleable.MenuItem_actionProviderClass;
+			global::OnBoardingLib.Resource.Styleable.MenuItem_actionViewClass = global::AbnormalChecker.Resource.Styleable.MenuItem_actionViewClass;
+			global::OnBoardingLib.Resource.Styleable.MenuItem_alphabeticModifiers = global::AbnormalChecker.Resource.Styleable.MenuItem_alphabeticModifiers;
+			global::OnBoardingLib.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::AbnormalChecker.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::OnBoardingLib.Resource.Styleable.MenuItem_android_checkable = global::AbnormalChecker.Resource.Styleable.MenuItem_android_checkable;
+			global::OnBoardingLib.Resource.Styleable.MenuItem_android_checked = global::AbnormalChecker.Resource.Styleable.MenuItem_android_checked;
+			global::OnBoardingLib.Resource.Styleable.MenuItem_android_enabled = global::AbnormalChecker.Resource.Styleable.MenuItem_android_enabled;
+			global::OnBoardingLib.Resource.Styleable.MenuItem_android_icon = global::AbnormalChecker.Resource.Styleable.MenuItem_android_icon;
+			global::OnBoardingLib.Resource.Styleable.MenuItem_android_id = global::AbnormalChecker.Resource.Styleable.MenuItem_android_id;
+			global::OnBoardingLib.Resource.Styleable.MenuItem_android_menuCategory = global::AbnormalChecker.Resource.Styleable.MenuItem_android_menuCategory;
+			global::OnBoardingLib.Resource.Styleable.MenuItem_android_numericShortcut = global::AbnormalChecker.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::OnBoardingLib.Resource.Styleable.MenuItem_android_onClick = global::AbnormalChecker.Resource.Styleable.MenuItem_android_onClick;
+			global::OnBoardingLib.Resource.Styleable.MenuItem_android_orderInCategory = global::AbnormalChecker.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::OnBoardingLib.Resource.Styleable.MenuItem_android_title = global::AbnormalChecker.Resource.Styleable.MenuItem_android_title;
+			global::OnBoardingLib.Resource.Styleable.MenuItem_android_titleCondensed = global::AbnormalChecker.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::OnBoardingLib.Resource.Styleable.MenuItem_android_visible = global::AbnormalChecker.Resource.Styleable.MenuItem_android_visible;
+			global::OnBoardingLib.Resource.Styleable.MenuItem_contentDescription = global::AbnormalChecker.Resource.Styleable.MenuItem_contentDescription;
+			global::OnBoardingLib.Resource.Styleable.MenuItem_iconTint = global::AbnormalChecker.Resource.Styleable.MenuItem_iconTint;
+			global::OnBoardingLib.Resource.Styleable.MenuItem_iconTintMode = global::AbnormalChecker.Resource.Styleable.MenuItem_iconTintMode;
+			global::OnBoardingLib.Resource.Styleable.MenuItem_numericModifiers = global::AbnormalChecker.Resource.Styleable.MenuItem_numericModifiers;
+			global::OnBoardingLib.Resource.Styleable.MenuItem_showAsAction = global::AbnormalChecker.Resource.Styleable.MenuItem_showAsAction;
+			global::OnBoardingLib.Resource.Styleable.MenuItem_tooltipText = global::AbnormalChecker.Resource.Styleable.MenuItem_tooltipText;
+			global::OnBoardingLib.Resource.Styleable.MenuView = global::AbnormalChecker.Resource.Styleable.MenuView;
+			global::OnBoardingLib.Resource.Styleable.MenuView_android_headerBackground = global::AbnormalChecker.Resource.Styleable.MenuView_android_headerBackground;
+			global::OnBoardingLib.Resource.Styleable.MenuView_android_horizontalDivider = global::AbnormalChecker.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::OnBoardingLib.Resource.Styleable.MenuView_android_itemBackground = global::AbnormalChecker.Resource.Styleable.MenuView_android_itemBackground;
+			global::OnBoardingLib.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::AbnormalChecker.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::OnBoardingLib.Resource.Styleable.MenuView_android_itemTextAppearance = global::AbnormalChecker.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::OnBoardingLib.Resource.Styleable.MenuView_android_verticalDivider = global::AbnormalChecker.Resource.Styleable.MenuView_android_verticalDivider;
+			global::OnBoardingLib.Resource.Styleable.MenuView_android_windowAnimationStyle = global::AbnormalChecker.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::OnBoardingLib.Resource.Styleable.MenuView_preserveIconSpacing = global::AbnormalChecker.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::OnBoardingLib.Resource.Styleable.MenuView_subMenuArrow = global::AbnormalChecker.Resource.Styleable.MenuView_subMenuArrow;
+			global::OnBoardingLib.Resource.Styleable.PopupWindow = global::AbnormalChecker.Resource.Styleable.PopupWindow;
+			global::OnBoardingLib.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::AbnormalChecker.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::OnBoardingLib.Resource.Styleable.PopupWindow_android_popupBackground = global::AbnormalChecker.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::OnBoardingLib.Resource.Styleable.PopupWindow_overlapAnchor = global::AbnormalChecker.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::OnBoardingLib.Resource.Styleable.PopupWindowBackgroundState = global::AbnormalChecker.Resource.Styleable.PopupWindowBackgroundState;
+			global::OnBoardingLib.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::AbnormalChecker.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::OnBoardingLib.Resource.Styleable.RecycleListView = global::AbnormalChecker.Resource.Styleable.RecycleListView;
+			global::OnBoardingLib.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::AbnormalChecker.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::OnBoardingLib.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::AbnormalChecker.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::OnBoardingLib.Resource.Styleable.SearchView = global::AbnormalChecker.Resource.Styleable.SearchView;
+			global::OnBoardingLib.Resource.Styleable.SearchView_android_focusable = global::AbnormalChecker.Resource.Styleable.SearchView_android_focusable;
+			global::OnBoardingLib.Resource.Styleable.SearchView_android_imeOptions = global::AbnormalChecker.Resource.Styleable.SearchView_android_imeOptions;
+			global::OnBoardingLib.Resource.Styleable.SearchView_android_inputType = global::AbnormalChecker.Resource.Styleable.SearchView_android_inputType;
+			global::OnBoardingLib.Resource.Styleable.SearchView_android_maxWidth = global::AbnormalChecker.Resource.Styleable.SearchView_android_maxWidth;
+			global::OnBoardingLib.Resource.Styleable.SearchView_closeIcon = global::AbnormalChecker.Resource.Styleable.SearchView_closeIcon;
+			global::OnBoardingLib.Resource.Styleable.SearchView_commitIcon = global::AbnormalChecker.Resource.Styleable.SearchView_commitIcon;
+			global::OnBoardingLib.Resource.Styleable.SearchView_defaultQueryHint = global::AbnormalChecker.Resource.Styleable.SearchView_defaultQueryHint;
+			global::OnBoardingLib.Resource.Styleable.SearchView_goIcon = global::AbnormalChecker.Resource.Styleable.SearchView_goIcon;
+			global::OnBoardingLib.Resource.Styleable.SearchView_iconifiedByDefault = global::AbnormalChecker.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::OnBoardingLib.Resource.Styleable.SearchView_layout = global::AbnormalChecker.Resource.Styleable.SearchView_layout;
+			global::OnBoardingLib.Resource.Styleable.SearchView_queryBackground = global::AbnormalChecker.Resource.Styleable.SearchView_queryBackground;
+			global::OnBoardingLib.Resource.Styleable.SearchView_queryHint = global::AbnormalChecker.Resource.Styleable.SearchView_queryHint;
+			global::OnBoardingLib.Resource.Styleable.SearchView_searchHintIcon = global::AbnormalChecker.Resource.Styleable.SearchView_searchHintIcon;
+			global::OnBoardingLib.Resource.Styleable.SearchView_searchIcon = global::AbnormalChecker.Resource.Styleable.SearchView_searchIcon;
+			global::OnBoardingLib.Resource.Styleable.SearchView_submitBackground = global::AbnormalChecker.Resource.Styleable.SearchView_submitBackground;
+			global::OnBoardingLib.Resource.Styleable.SearchView_suggestionRowLayout = global::AbnormalChecker.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::OnBoardingLib.Resource.Styleable.SearchView_voiceIcon = global::AbnormalChecker.Resource.Styleable.SearchView_voiceIcon;
+			global::OnBoardingLib.Resource.Styleable.Spinner = global::AbnormalChecker.Resource.Styleable.Spinner;
+			global::OnBoardingLib.Resource.Styleable.Spinner_android_dropDownWidth = global::AbnormalChecker.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::OnBoardingLib.Resource.Styleable.Spinner_android_entries = global::AbnormalChecker.Resource.Styleable.Spinner_android_entries;
+			global::OnBoardingLib.Resource.Styleable.Spinner_android_popupBackground = global::AbnormalChecker.Resource.Styleable.Spinner_android_popupBackground;
+			global::OnBoardingLib.Resource.Styleable.Spinner_android_prompt = global::AbnormalChecker.Resource.Styleable.Spinner_android_prompt;
+			global::OnBoardingLib.Resource.Styleable.Spinner_popupTheme = global::AbnormalChecker.Resource.Styleable.Spinner_popupTheme;
+			global::OnBoardingLib.Resource.Styleable.StateListDrawable = global::AbnormalChecker.Resource.Styleable.StateListDrawable;
+			global::OnBoardingLib.Resource.Styleable.StateListDrawable_android_constantSize = global::AbnormalChecker.Resource.Styleable.StateListDrawable_android_constantSize;
+			global::OnBoardingLib.Resource.Styleable.StateListDrawable_android_dither = global::AbnormalChecker.Resource.Styleable.StateListDrawable_android_dither;
+			global::OnBoardingLib.Resource.Styleable.StateListDrawable_android_enterFadeDuration = global::AbnormalChecker.Resource.Styleable.StateListDrawable_android_enterFadeDuration;
+			global::OnBoardingLib.Resource.Styleable.StateListDrawable_android_exitFadeDuration = global::AbnormalChecker.Resource.Styleable.StateListDrawable_android_exitFadeDuration;
+			global::OnBoardingLib.Resource.Styleable.StateListDrawable_android_variablePadding = global::AbnormalChecker.Resource.Styleable.StateListDrawable_android_variablePadding;
+			global::OnBoardingLib.Resource.Styleable.StateListDrawable_android_visible = global::AbnormalChecker.Resource.Styleable.StateListDrawable_android_visible;
+			global::OnBoardingLib.Resource.Styleable.StateListDrawableItem = global::AbnormalChecker.Resource.Styleable.StateListDrawableItem;
+			global::OnBoardingLib.Resource.Styleable.StateListDrawableItem_android_drawable = global::AbnormalChecker.Resource.Styleable.StateListDrawableItem_android_drawable;
+			global::OnBoardingLib.Resource.Styleable.SwitchCompat = global::AbnormalChecker.Resource.Styleable.SwitchCompat;
+			global::OnBoardingLib.Resource.Styleable.SwitchCompat_android_textOff = global::AbnormalChecker.Resource.Styleable.SwitchCompat_android_textOff;
+			global::OnBoardingLib.Resource.Styleable.SwitchCompat_android_textOn = global::AbnormalChecker.Resource.Styleable.SwitchCompat_android_textOn;
+			global::OnBoardingLib.Resource.Styleable.SwitchCompat_android_thumb = global::AbnormalChecker.Resource.Styleable.SwitchCompat_android_thumb;
+			global::OnBoardingLib.Resource.Styleable.SwitchCompat_showText = global::AbnormalChecker.Resource.Styleable.SwitchCompat_showText;
+			global::OnBoardingLib.Resource.Styleable.SwitchCompat_splitTrack = global::AbnormalChecker.Resource.Styleable.SwitchCompat_splitTrack;
+			global::OnBoardingLib.Resource.Styleable.SwitchCompat_switchMinWidth = global::AbnormalChecker.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::OnBoardingLib.Resource.Styleable.SwitchCompat_switchPadding = global::AbnormalChecker.Resource.Styleable.SwitchCompat_switchPadding;
+			global::OnBoardingLib.Resource.Styleable.SwitchCompat_switchTextAppearance = global::AbnormalChecker.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::OnBoardingLib.Resource.Styleable.SwitchCompat_thumbTextPadding = global::AbnormalChecker.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::OnBoardingLib.Resource.Styleable.SwitchCompat_thumbTint = global::AbnormalChecker.Resource.Styleable.SwitchCompat_thumbTint;
+			global::OnBoardingLib.Resource.Styleable.SwitchCompat_thumbTintMode = global::AbnormalChecker.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::OnBoardingLib.Resource.Styleable.SwitchCompat_track = global::AbnormalChecker.Resource.Styleable.SwitchCompat_track;
+			global::OnBoardingLib.Resource.Styleable.SwitchCompat_trackTint = global::AbnormalChecker.Resource.Styleable.SwitchCompat_trackTint;
+			global::OnBoardingLib.Resource.Styleable.SwitchCompat_trackTintMode = global::AbnormalChecker.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::OnBoardingLib.Resource.Styleable.TextAppearance = global::AbnormalChecker.Resource.Styleable.TextAppearance;
+			global::OnBoardingLib.Resource.Styleable.TextAppearance_android_fontFamily = global::AbnormalChecker.Resource.Styleable.TextAppearance_android_fontFamily;
+			global::OnBoardingLib.Resource.Styleable.TextAppearance_android_shadowColor = global::AbnormalChecker.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::OnBoardingLib.Resource.Styleable.TextAppearance_android_shadowDx = global::AbnormalChecker.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::OnBoardingLib.Resource.Styleable.TextAppearance_android_shadowDy = global::AbnormalChecker.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::OnBoardingLib.Resource.Styleable.TextAppearance_android_shadowRadius = global::AbnormalChecker.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::OnBoardingLib.Resource.Styleable.TextAppearance_android_textColor = global::AbnormalChecker.Resource.Styleable.TextAppearance_android_textColor;
+			global::OnBoardingLib.Resource.Styleable.TextAppearance_android_textColorHint = global::AbnormalChecker.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::OnBoardingLib.Resource.Styleable.TextAppearance_android_textColorLink = global::AbnormalChecker.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::OnBoardingLib.Resource.Styleable.TextAppearance_android_textSize = global::AbnormalChecker.Resource.Styleable.TextAppearance_android_textSize;
+			global::OnBoardingLib.Resource.Styleable.TextAppearance_android_textStyle = global::AbnormalChecker.Resource.Styleable.TextAppearance_android_textStyle;
+			global::OnBoardingLib.Resource.Styleable.TextAppearance_android_typeface = global::AbnormalChecker.Resource.Styleable.TextAppearance_android_typeface;
+			global::OnBoardingLib.Resource.Styleable.TextAppearance_fontFamily = global::AbnormalChecker.Resource.Styleable.TextAppearance_fontFamily;
+			global::OnBoardingLib.Resource.Styleable.TextAppearance_textAllCaps = global::AbnormalChecker.Resource.Styleable.TextAppearance_textAllCaps;
+			global::OnBoardingLib.Resource.Styleable.Toolbar = global::AbnormalChecker.Resource.Styleable.Toolbar;
+			global::OnBoardingLib.Resource.Styleable.Toolbar_android_gravity = global::AbnormalChecker.Resource.Styleable.Toolbar_android_gravity;
+			global::OnBoardingLib.Resource.Styleable.Toolbar_android_minHeight = global::AbnormalChecker.Resource.Styleable.Toolbar_android_minHeight;
+			global::OnBoardingLib.Resource.Styleable.Toolbar_buttonGravity = global::AbnormalChecker.Resource.Styleable.Toolbar_buttonGravity;
+			global::OnBoardingLib.Resource.Styleable.Toolbar_collapseContentDescription = global::AbnormalChecker.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::OnBoardingLib.Resource.Styleable.Toolbar_collapseIcon = global::AbnormalChecker.Resource.Styleable.Toolbar_collapseIcon;
+			global::OnBoardingLib.Resource.Styleable.Toolbar_contentInsetEnd = global::AbnormalChecker.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::OnBoardingLib.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::AbnormalChecker.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::OnBoardingLib.Resource.Styleable.Toolbar_contentInsetLeft = global::AbnormalChecker.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::OnBoardingLib.Resource.Styleable.Toolbar_contentInsetRight = global::AbnormalChecker.Resource.Styleable.Toolbar_contentInsetRight;
+			global::OnBoardingLib.Resource.Styleable.Toolbar_contentInsetStart = global::AbnormalChecker.Resource.Styleable.Toolbar_contentInsetStart;
+			global::OnBoardingLib.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::AbnormalChecker.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::OnBoardingLib.Resource.Styleable.Toolbar_logo = global::AbnormalChecker.Resource.Styleable.Toolbar_logo;
+			global::OnBoardingLib.Resource.Styleable.Toolbar_logoDescription = global::AbnormalChecker.Resource.Styleable.Toolbar_logoDescription;
+			global::OnBoardingLib.Resource.Styleable.Toolbar_maxButtonHeight = global::AbnormalChecker.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::OnBoardingLib.Resource.Styleable.Toolbar_navigationContentDescription = global::AbnormalChecker.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::OnBoardingLib.Resource.Styleable.Toolbar_navigationIcon = global::AbnormalChecker.Resource.Styleable.Toolbar_navigationIcon;
+			global::OnBoardingLib.Resource.Styleable.Toolbar_popupTheme = global::AbnormalChecker.Resource.Styleable.Toolbar_popupTheme;
+			global::OnBoardingLib.Resource.Styleable.Toolbar_subtitle = global::AbnormalChecker.Resource.Styleable.Toolbar_subtitle;
+			global::OnBoardingLib.Resource.Styleable.Toolbar_subtitleTextAppearance = global::AbnormalChecker.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::OnBoardingLib.Resource.Styleable.Toolbar_subtitleTextColor = global::AbnormalChecker.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::OnBoardingLib.Resource.Styleable.Toolbar_title = global::AbnormalChecker.Resource.Styleable.Toolbar_title;
+			global::OnBoardingLib.Resource.Styleable.Toolbar_titleMargin = global::AbnormalChecker.Resource.Styleable.Toolbar_titleMargin;
+			global::OnBoardingLib.Resource.Styleable.Toolbar_titleMarginBottom = global::AbnormalChecker.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::OnBoardingLib.Resource.Styleable.Toolbar_titleMarginEnd = global::AbnormalChecker.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::OnBoardingLib.Resource.Styleable.Toolbar_titleMarginStart = global::AbnormalChecker.Resource.Styleable.Toolbar_titleMarginStart;
+			global::OnBoardingLib.Resource.Styleable.Toolbar_titleMarginTop = global::AbnormalChecker.Resource.Styleable.Toolbar_titleMarginTop;
+			global::OnBoardingLib.Resource.Styleable.Toolbar_titleMargins = global::AbnormalChecker.Resource.Styleable.Toolbar_titleMargins;
+			global::OnBoardingLib.Resource.Styleable.Toolbar_titleTextAppearance = global::AbnormalChecker.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::OnBoardingLib.Resource.Styleable.Toolbar_titleTextColor = global::AbnormalChecker.Resource.Styleable.Toolbar_titleTextColor;
+			global::OnBoardingLib.Resource.Styleable.View = global::AbnormalChecker.Resource.Styleable.View;
+			global::OnBoardingLib.Resource.Styleable.View_android_focusable = global::AbnormalChecker.Resource.Styleable.View_android_focusable;
+			global::OnBoardingLib.Resource.Styleable.View_android_theme = global::AbnormalChecker.Resource.Styleable.View_android_theme;
+			global::OnBoardingLib.Resource.Styleable.View_paddingEnd = global::AbnormalChecker.Resource.Styleable.View_paddingEnd;
+			global::OnBoardingLib.Resource.Styleable.View_paddingStart = global::AbnormalChecker.Resource.Styleable.View_paddingStart;
+			global::OnBoardingLib.Resource.Styleable.View_theme = global::AbnormalChecker.Resource.Styleable.View_theme;
+			global::OnBoardingLib.Resource.Styleable.ViewBackgroundHelper = global::AbnormalChecker.Resource.Styleable.ViewBackgroundHelper;
+			global::OnBoardingLib.Resource.Styleable.ViewBackgroundHelper_android_background = global::AbnormalChecker.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::OnBoardingLib.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::AbnormalChecker.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::OnBoardingLib.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::AbnormalChecker.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::OnBoardingLib.Resource.Styleable.ViewStubCompat = global::AbnormalChecker.Resource.Styleable.ViewStubCompat;
+			global::OnBoardingLib.Resource.Styleable.ViewStubCompat_android_id = global::AbnormalChecker.Resource.Styleable.ViewStubCompat_android_id;
+			global::OnBoardingLib.Resource.Styleable.ViewStubCompat_android_inflatedId = global::AbnormalChecker.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::OnBoardingLib.Resource.Styleable.ViewStubCompat_android_layout = global::AbnormalChecker.Resource.Styleable.ViewStubCompat_android_layout;
+			global::OnBoardingLib.Resource.Styleable.gradient = global::AbnormalChecker.Resource.Styleable.gradient;
+			global::OnBoardingLib.Resource.Styleable.gradient_transition_drawable = global::AbnormalChecker.Resource.Styleable.gradient_transition_drawable;
+			global::OnBoardingLib.Resource.Styleable.gradient_transition_duration = global::AbnormalChecker.Resource.Styleable.gradient_transition_duration;
 		}
 		
 		public partial class Animation
@@ -3843,235 +5501,250 @@ namespace AbnormalChecker
 			public const int ic_launcher_foreground = 2130837613;
 			
 			// aapt resource value: 0x7f02006e
-			public const int ic_stat_info = 2130837614;
+			public const int ic_notif_details = 2130837614;
 			
 			// aapt resource value: 0x7f02006f
-			public const int ic_stat_summary = 2130837615;
+			public const int ic_notif_normalize = 2130837615;
 			
 			// aapt resource value: 0x7f020070
-			public const int lb_action_bg = 2130837616;
+			public const int ic_stat_info = 2130837616;
 			
 			// aapt resource value: 0x7f020071
-			public const int lb_action_bg_focused = 2130837617;
+			public const int ic_stat_summary = 2130837617;
 			
 			// aapt resource value: 0x7f020072
-			public const int lb_background = 2130837618;
+			public const int lb_action_bg = 2130837618;
 			
 			// aapt resource value: 0x7f020073
-			public const int lb_card_foreground = 2130837619;
+			public const int lb_action_bg_focused = 2130837619;
 			
 			// aapt resource value: 0x7f020074
-			public const int lb_card_shadow_focused = 2130837620;
+			public const int lb_background = 2130837620;
 			
 			// aapt resource value: 0x7f020075
-			public const int lb_card_shadow_normal = 2130837621;
+			public const int lb_card_foreground = 2130837621;
 			
 			// aapt resource value: 0x7f020076
-			public const int lb_control_button_primary = 2130837622;
+			public const int lb_card_shadow_focused = 2130837622;
 			
 			// aapt resource value: 0x7f020077
-			public const int lb_control_button_secondary = 2130837623;
+			public const int lb_card_shadow_normal = 2130837623;
 			
 			// aapt resource value: 0x7f020078
-			public const int lb_headers_right_fading = 2130837624;
+			public const int lb_control_button_primary = 2130837624;
 			
 			// aapt resource value: 0x7f020079
-			public const int lb_ic_actions_right_arrow = 2130837625;
+			public const int lb_control_button_secondary = 2130837625;
 			
 			// aapt resource value: 0x7f02007a
-			public const int lb_ic_cc = 2130837626;
+			public const int lb_headers_right_fading = 2130837626;
 			
 			// aapt resource value: 0x7f02007b
-			public const int lb_ic_fast_forward = 2130837627;
+			public const int lb_ic_actions_right_arrow = 2130837627;
 			
 			// aapt resource value: 0x7f02007c
-			public const int lb_ic_fast_rewind = 2130837628;
+			public const int lb_ic_cc = 2130837628;
 			
 			// aapt resource value: 0x7f02007d
-			public const int lb_ic_guidedactions_item_chevron = 2130837629;
+			public const int lb_ic_fast_forward = 2130837629;
 			
 			// aapt resource value: 0x7f02007e
-			public const int lb_ic_hq = 2130837630;
+			public const int lb_ic_fast_rewind = 2130837630;
 			
 			// aapt resource value: 0x7f02007f
-			public const int lb_ic_in_app_search = 2130837631;
+			public const int lb_ic_guidedactions_item_chevron = 2130837631;
 			
 			// aapt resource value: 0x7f020080
-			public const int lb_ic_loop = 2130837632;
+			public const int lb_ic_hq = 2130837632;
 			
 			// aapt resource value: 0x7f020081
-			public const int lb_ic_loop_one = 2130837633;
+			public const int lb_ic_in_app_search = 2130837633;
 			
 			// aapt resource value: 0x7f020082
-			public const int lb_ic_more = 2130837634;
+			public const int lb_ic_loop = 2130837634;
 			
 			// aapt resource value: 0x7f020083
-			public const int lb_ic_nav_arrow = 2130837635;
+			public const int lb_ic_loop_one = 2130837635;
 			
 			// aapt resource value: 0x7f020084
-			public const int lb_ic_pause = 2130837636;
+			public const int lb_ic_more = 2130837636;
 			
 			// aapt resource value: 0x7f020085
-			public const int lb_ic_pip = 2130837637;
+			public const int lb_ic_nav_arrow = 2130837637;
 			
 			// aapt resource value: 0x7f020086
-			public const int lb_ic_play = 2130837638;
+			public const int lb_ic_pause = 2130837638;
 			
 			// aapt resource value: 0x7f020087
-			public const int lb_ic_play_fit = 2130837639;
+			public const int lb_ic_pip = 2130837639;
 			
 			// aapt resource value: 0x7f020088
-			public const int lb_ic_playback_loop = 2130837640;
+			public const int lb_ic_play = 2130837640;
 			
 			// aapt resource value: 0x7f020089
-			public const int lb_ic_replay = 2130837641;
+			public const int lb_ic_play_fit = 2130837641;
 			
 			// aapt resource value: 0x7f02008a
-			public const int lb_ic_sad_cloud = 2130837642;
+			public const int lb_ic_playback_loop = 2130837642;
 			
 			// aapt resource value: 0x7f02008b
-			public const int lb_ic_search_mic = 2130837643;
+			public const int lb_ic_replay = 2130837643;
 			
 			// aapt resource value: 0x7f02008c
-			public const int lb_ic_search_mic_out = 2130837644;
+			public const int lb_ic_sad_cloud = 2130837644;
 			
 			// aapt resource value: 0x7f02008d
-			public const int lb_ic_shuffle = 2130837645;
+			public const int lb_ic_search_mic = 2130837645;
 			
 			// aapt resource value: 0x7f02008e
-			public const int lb_ic_skip_next = 2130837646;
+			public const int lb_ic_search_mic_out = 2130837646;
 			
 			// aapt resource value: 0x7f02008f
-			public const int lb_ic_skip_previous = 2130837647;
+			public const int lb_ic_shuffle = 2130837647;
 			
 			// aapt resource value: 0x7f020090
-			public const int lb_ic_stop = 2130837648;
+			public const int lb_ic_skip_next = 2130837648;
 			
 			// aapt resource value: 0x7f020091
-			public const int lb_ic_thumb_down = 2130837649;
+			public const int lb_ic_skip_previous = 2130837649;
 			
 			// aapt resource value: 0x7f020092
-			public const int lb_ic_thumb_down_outline = 2130837650;
+			public const int lb_ic_stop = 2130837650;
 			
 			// aapt resource value: 0x7f020093
-			public const int lb_ic_thumb_up = 2130837651;
+			public const int lb_ic_thumb_down = 2130837651;
 			
 			// aapt resource value: 0x7f020094
-			public const int lb_ic_thumb_up_outline = 2130837652;
+			public const int lb_ic_thumb_down_outline = 2130837652;
 			
 			// aapt resource value: 0x7f020095
-			public const int lb_in_app_search_bg = 2130837653;
+			public const int lb_ic_thumb_up = 2130837653;
 			
 			// aapt resource value: 0x7f020096
-			public const int lb_in_app_search_shadow_focused = 2130837654;
+			public const int lb_ic_thumb_up_outline = 2130837654;
 			
 			// aapt resource value: 0x7f020097
-			public const int lb_in_app_search_shadow_normal = 2130837655;
+			public const int lb_in_app_search_bg = 2130837655;
 			
 			// aapt resource value: 0x7f020098
-			public const int lb_onboarding_start_button_background = 2130837656;
+			public const int lb_in_app_search_shadow_focused = 2130837656;
 			
 			// aapt resource value: 0x7f020099
-			public const int lb_playback_now_playing_bar = 2130837657;
+			public const int lb_in_app_search_shadow_normal = 2130837657;
 			
 			// aapt resource value: 0x7f02009a
-			public const int lb_playback_progress_bar = 2130837658;
+			public const int lb_onboarding_start_button_background = 2130837658;
 			
 			// aapt resource value: 0x7f02009b
-			public const int lb_search_orb = 2130837659;
+			public const int lb_playback_now_playing_bar = 2130837659;
 			
 			// aapt resource value: 0x7f02009c
-			public const int lb_selectable_item_rounded_rect = 2130837660;
+			public const int lb_playback_progress_bar = 2130837660;
 			
 			// aapt resource value: 0x7f02009d
-			public const int lb_speech_orb = 2130837661;
+			public const int lb_search_orb = 2130837661;
 			
 			// aapt resource value: 0x7f02009e
-			public const int lb_text_dot_one = 2130837662;
+			public const int lb_selectable_item_rounded_rect = 2130837662;
 			
 			// aapt resource value: 0x7f02009f
-			public const int lb_text_dot_one_small = 2130837663;
+			public const int lb_speech_orb = 2130837663;
 			
 			// aapt resource value: 0x7f0200a0
-			public const int lb_text_dot_two = 2130837664;
+			public const int lb_text_dot_one = 2130837664;
 			
 			// aapt resource value: 0x7f0200a1
-			public const int lb_text_dot_two_small = 2130837665;
+			public const int lb_text_dot_one_small = 2130837665;
 			
 			// aapt resource value: 0x7f0200a2
-			public const int new_state = 2130837666;
+			public const int lb_text_dot_two = 2130837666;
 			
 			// aapt resource value: 0x7f0200a3
-			public const int next = 2130837667;
+			public const int lb_text_dot_two_small = 2130837667;
 			
 			// aapt resource value: 0x7f0200a4
-			public const int notification_action_background = 2130837668;
+			public const int new_state = 2130837668;
 			
 			// aapt resource value: 0x7f0200a5
-			public const int notification_bg = 2130837669;
+			public const int next = 2130837669;
 			
 			// aapt resource value: 0x7f0200a6
-			public const int notification_bg_low = 2130837670;
+			public const int notification_action_background = 2130837670;
 			
 			// aapt resource value: 0x7f0200a7
-			public const int notification_bg_low_normal = 2130837671;
+			public const int notification_bg = 2130837671;
 			
 			// aapt resource value: 0x7f0200a8
-			public const int notification_bg_low_pressed = 2130837672;
+			public const int notification_bg_low = 2130837672;
 			
 			// aapt resource value: 0x7f0200a9
-			public const int notification_bg_normal = 2130837673;
+			public const int notification_bg_low_normal = 2130837673;
 			
 			// aapt resource value: 0x7f0200aa
-			public const int notification_bg_normal_pressed = 2130837674;
+			public const int notification_bg_low_pressed = 2130837674;
 			
 			// aapt resource value: 0x7f0200ab
-			public const int notification_icon_background = 2130837675;
-			
-			// aapt resource value: 0x7f0200b9
-			public const int notification_template_icon_bg = 2130837689;
-			
-			// aapt resource value: 0x7f0200ba
-			public const int notification_template_icon_low_bg = 2130837690;
+			public const int notification_bg_normal = 2130837675;
 			
 			// aapt resource value: 0x7f0200ac
-			public const int notification_tile_bg = 2130837676;
+			public const int notification_bg_normal_pressed = 2130837676;
 			
 			// aapt resource value: 0x7f0200ad
-			public const int notify_panel_notification_icon_bg = 2130837677;
+			public const int notification_icon_background = 2130837677;
+			
+			// aapt resource value: 0x7f0200be
+			public const int notification_template_icon_bg = 2130837694;
+			
+			// aapt resource value: 0x7f0200bf
+			public const int notification_template_icon_low_bg = 2130837695;
 			
 			// aapt resource value: 0x7f0200ae
-			public const int original_state = 2130837678;
+			public const int notification_tile_bg = 2130837678;
 			
 			// aapt resource value: 0x7f0200af
-			public const int preference_list_divider_material = 2130837679;
+			public const int notify_panel_notification_icon_bg = 2130837679;
 			
 			// aapt resource value: 0x7f0200b0
-			public const int previous = 2130837680;
+			public const int onboarding_permissions = 2130837680;
 			
 			// aapt resource value: 0x7f0200b1
-			public const int rectangle_button = 2130837681;
+			public const int onboarding_welcome = 2130837681;
 			
 			// aapt resource value: 0x7f0200b2
-			public const int rounded_button = 2130837682;
+			public const int original_state = 2130837682;
 			
 			// aapt resource value: 0x7f0200b3
-			public const int seventh_bg = 2130837683;
+			public const int preference_list_divider_material = 2130837683;
 			
 			// aapt resource value: 0x7f0200b4
-			public const int sixth_b = 2130837684;
+			public const int previous = 2130837684;
 			
 			// aapt resource value: 0x7f0200b5
-			public const int thrid_bg = 2130837685;
+			public const int rectangle_button = 2130837685;
 			
 			// aapt resource value: 0x7f0200b6
-			public const int tooltip_frame_dark = 2130837686;
+			public const int rounded_button = 2130837686;
 			
 			// aapt resource value: 0x7f0200b7
-			public const int tooltip_frame_light = 2130837687;
+			public const int seventh_bg = 2130837687;
 			
 			// aapt resource value: 0x7f0200b8
-			public const int translate = 2130837688;
+			public const int sixth_b = 2130837688;
+			
+			// aapt resource value: 0x7f0200b9
+			public const int splash = 2130837689;
+			
+			// aapt resource value: 0x7f0200ba
+			public const int thrid_bg = 2130837690;
+			
+			// aapt resource value: 0x7f0200bb
+			public const int tooltip_frame_dark = 2130837691;
+			
+			// aapt resource value: 0x7f0200bc
+			public const int tooltip_frame_light = 2130837692;
+			
+			// aapt resource value: 0x7f0200bd
+			public const int translate = 2130837693;
 			
 			static Drawable()
 			{
@@ -5794,8 +7467,8 @@ namespace AbnormalChecker
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f0b0066
-			public const int ApplicationName = 2131427430;
+			// aapt resource value: 0x7f0b0067
+			public const int ApplicationName = 2131427431;
 			
 			// aapt resource value: 0x7f0b0016
 			public const int abc_action_bar_home_description = 2131427350;
@@ -5914,53 +7587,62 @@ namespace AbnormalChecker
 			// aapt resource value: 0x7f0b0030
 			public const int abc_toolbar_collapse_description = 2131427376;
 			
-			// aapt resource value: 0x7f0b0088
-			public const int category_general_status_normal = 2131427464;
+			// aapt resource value: 0x7f0b008f
+			public const int category_general_status_normal = 2131427471;
+			
+			// aapt resource value: 0x7f0b0090
+			public const int category_general_status_questionably = 2131427472;
+			
+			// aapt resource value: 0x7f0b0091
+			public const int category_general_status_suspicious_activity = 2131427473;
+			
+			// aapt resource value: 0x7f0b008b
+			public const int category_info_data = 2131427467;
+			
+			// aapt resource value: 0x7f0b008c
+			public const int category_info_no_data = 2131427468;
+			
+			// aapt resource value: 0x7f0b008d
+			public const int category_info_no_permissions_required = 2131427469;
 			
 			// aapt resource value: 0x7f0b0089
-			public const int category_general_status_questionably = 2131427465;
+			public const int category_info_permissions = 2131427465;
+			
+			// aapt resource value: 0x7f0b008e
+			public const int category_info_permissions_denied = 2131427470;
 			
 			// aapt resource value: 0x7f0b008a
-			public const int category_general_status_suspicious_activity = 2131427466;
-			
-			// aapt resource value: 0x7f0b0084
-			public const int category_info_data = 2131427460;
-			
-			// aapt resource value: 0x7f0b0085
-			public const int category_info_no_data = 2131427461;
-			
-			// aapt resource value: 0x7f0b0086
-			public const int category_info_no_permissions_required = 2131427462;
-			
-			// aapt resource value: 0x7f0b0082
-			public const int category_info_permissions = 2131427458;
-			
-			// aapt resource value: 0x7f0b0087
-			public const int category_info_permissions_denied = 2131427463;
-			
-			// aapt resource value: 0x7f0b0083
-			public const int category_info_status = 2131427459;
-			
-			// aapt resource value: 0x7f0b0070
-			public const int category_location = 2131427440;
-			
-			// aapt resource value: 0x7f0b0075
-			public const int category_location_data = 2131427445;
-			
-			// aapt resource value: 0x7f0b0073
-			public const int category_location_latitude = 2131427443;
-			
-			// aapt resource value: 0x7f0b0074
-			public const int category_location_longitude = 2131427444;
+			public const int category_info_status = 2131427466;
 			
 			// aapt resource value: 0x7f0b0072
-			public const int category_location_tracking_disabled = 2131427442;
+			public const int category_location = 2131427442;
 			
-			// aapt resource value: 0x7f0b0071
-			public const int category_location_tracking_enabled = 2131427441;
+			// aapt resource value: 0x7f0b0077
+			public const int category_location_data = 2131427447;
+			
+			// aapt resource value: 0x7f0b0075
+			public const int category_location_latitude = 2131427445;
 			
 			// aapt resource value: 0x7f0b0076
-			public const int category_phone = 2131427446;
+			public const int category_location_longitude = 2131427446;
+			
+			// aapt resource value: 0x7f0b0078
+			public const int category_location_notif_big_distance = 2131427448;
+			
+			// aapt resource value: 0x7f0b0074
+			public const int category_location_tracking_disabled = 2131427444;
+			
+			// aapt resource value: 0x7f0b0073
+			public const int category_location_tracking_enabled = 2131427443;
+			
+			// aapt resource value: 0x7f0b0079
+			public const int category_phone = 2131427449;
+			
+			// aapt resource value: 0x7f0b007a
+			public const int category_phone_notification_suspicious_call_from = 2131427450;
+			
+			// aapt resource value: 0x7f0b007b
+			public const int category_phone_notification_suspicious_call_to = 2131427451;
 			
 			// aapt resource value: 0x7f0b0069
 			public const int category_root = 2131427433;
@@ -5983,17 +7665,29 @@ namespace AbnormalChecker
 			// aapt resource value: 0x7f0b006f
 			public const int category_screen_data_questionably = 2131427439;
 			
-			// aapt resource value: 0x7f0b0077
-			public const int category_sms = 2131427447;
+			// aapt resource value: 0x7f0b0070
+			public const int category_screen_notif_daily_overflow = 2131427440;
 			
-			// aapt resource value: 0x7f0b0078
-			public const int category_system = 2131427448;
+			// aapt resource value: 0x7f0b0071
+			public const int category_screen_notif_west_fast_hand = 2131427441;
 			
-			// aapt resource value: 0x7f0b007a
-			public const int category_system_modifications_detected = 2131427450;
+			// aapt resource value: 0x7f0b007c
+			public const int category_sms = 2131427452;
 			
-			// aapt resource value: 0x7f0b0079
-			public const int category_system_no_modifications = 2131427449;
+			// aapt resource value: 0x7f0b007d
+			public const int category_sms_notification_suspicious_message_from = 2131427453;
+			
+			// aapt resource value: 0x7f0b007e
+			public const int category_system = 2131427454;
+			
+			// aapt resource value: 0x7f0b0080
+			public const int category_system_modifications_detected = 2131427456;
+			
+			// aapt resource value: 0x7f0b007f
+			public const int category_system_no_modifications = 2131427455;
+			
+			// aapt resource value: 0x7f0b0081
+			public const int category_system_notif_modification_detected = 2131427457;
 			
 			// aapt resource value: 0x7f0b0001
 			public const int common_google_play_services_enable_button = 2131427329;
@@ -6169,8 +7863,38 @@ namespace AbnormalChecker
 			// aapt resource value: 0x7f0b0068
 			public const int menu_item_settings = 2131427432;
 			
-			// aapt resource value: 0x7f0b0067
-			public const int onboarding_button_finish = 2131427431;
+			// aapt resource value: 0x7f0b0099
+			public const int notification_button_details = 2131427481;
+			
+			// aapt resource value: 0x7f0b0098
+			public const int notification_button_normalize = 2131427480;
+			
+			// aapt resource value: 0x7f0b009a
+			public const int notification_type_warning = 2131427482;
+			
+			// aapt resource value: 0x7f0b009b
+			public const int notification_type_warning_description = 2131427483;
+			
+			// aapt resource value: 0x7f0b0066
+			public const int onboarding_button_finish_default = 2131427430;
+			
+			// aapt resource value: 0x7f0b0097
+			public const int onboarding_finish_title_give_permissions = 2131427479;
+			
+			// aapt resource value: 0x7f0b0096
+			public const int onboarding_finish_title_start = 2131427478;
+			
+			// aapt resource value: 0x7f0b0093
+			public const int onboarding_page1_summary = 2131427475;
+			
+			// aapt resource value: 0x7f0b0092
+			public const int onboarding_page1_title = 2131427474;
+			
+			// aapt resource value: 0x7f0b0095
+			public const int onboarding_page2_summary = 2131427477;
+			
+			// aapt resource value: 0x7f0b0094
+			public const int onboarding_page2_title = 2131427476;
 			
 			// aapt resource value: 0x7f0b0064
 			public const int orb_search_action = 2131427428;
@@ -6178,26 +7902,26 @@ namespace AbnormalChecker
 			// aapt resource value: 0x7f0b0031
 			public const int search_menu_title = 2131427377;
 			
-			// aapt resource value: 0x7f0b0080
-			public const int settings_app_info_title = 2131427456;
+			// aapt resource value: 0x7f0b0087
+			public const int settings_app_info_title = 2131427463;
 			
-			// aapt resource value: 0x7f0b0081
-			public const int settings_developer_egg = 2131427457;
+			// aapt resource value: 0x7f0b0088
+			public const int settings_developer_egg = 2131427464;
 			
-			// aapt resource value: 0x7f0b007c
-			public const int settings_monitor_list_summary = 2131427452;
+			// aapt resource value: 0x7f0b0083
+			public const int settings_monitor_list_summary = 2131427459;
 			
-			// aapt resource value: 0x7f0b007b
-			public const int settings_monitor_list_title = 2131427451;
+			// aapt resource value: 0x7f0b0082
+			public const int settings_monitor_list_title = 2131427458;
 			
-			// aapt resource value: 0x7f0b007f
-			public const int settings_unlocks_monitor_type_summary_off = 2131427455;
+			// aapt resource value: 0x7f0b0086
+			public const int settings_unlocks_monitor_type_summary_off = 2131427462;
 			
-			// aapt resource value: 0x7f0b007e
-			public const int settings_unlocks_monitor_type_summary_on = 2131427454;
+			// aapt resource value: 0x7f0b0085
+			public const int settings_unlocks_monitor_type_summary_on = 2131427461;
 			
-			// aapt resource value: 0x7f0b007d
-			public const int settings_unlocks_monitor_type_title = 2131427453;
+			// aapt resource value: 0x7f0b0084
+			public const int settings_unlocks_monitor_type_title = 2131427460;
 			
 			// aapt resource value: 0x7f0b0065
 			public const int status_bar_notification_info_overflow = 2131427429;
@@ -6892,6 +8616,9 @@ namespace AbnormalChecker
 			
 			// aapt resource value: 0x7f10003f
 			public const int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = 2131755071;
+			
+			// aapt resource value: 0x7f1001f2
+			public const int StartTheme = 2131755506;
 			
 			// aapt resource value: 0x7f1000e6
 			public const int TextAppearance_AppCompat = 2131755238;

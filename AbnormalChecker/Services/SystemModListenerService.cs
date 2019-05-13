@@ -9,6 +9,7 @@ using Android.OS;
 using Android.Util;
 using Android.Widget;
 using Java.Util;
+using Java.Util.Concurrent;
 using File = Java.IO.File;
 
 namespace AbnormalChecker.Services
@@ -37,6 +38,7 @@ namespace AbnormalChecker.Services
 			if (enable && _instanceIntent == null)
 			{
 				_instanceIntent = new Intent(context, typeof(SystemModListenerService));
+//				context.StartForegroundService(_instanceIntent);
 				context.StartService(_instanceIntent);
 			}
 			else if (_instanceIntent != null)
@@ -61,13 +63,13 @@ namespace AbnormalChecker.Services
 				{
 					_lastTime = new Date();
 				}
-				else if (TimeSpan.FromMilliseconds(new Date().Time - _lastTime.Time).Seconds < 1)
+				else if (TimeUnit.Milliseconds.ToSeconds(new Date().Time - _lastTime.Time) < 1)
 				{
 					_lastTime = new Date();
 					return;
 				}
 				_lastTime = new Date();
-				Logger = $"{GetFormattedDateTime()} : Detected {events} event for {path}";
+				Logger = $"{new Date().GetFormattedDateTime()} : Detected {events} event for {path}";
 				if (new File(FilesDir, ExcludedFiles).Exists())
 				{
 					using (StreamReader reader = new StreamReader(OpenFileInput(ExcludedFiles)))
@@ -82,7 +84,7 @@ namespace AbnormalChecker.Services
 				{
 					WriteAndSend(sender, path, events);
 				}
-				MainActivity.adapter?.Refresh();
+				MainActivity.Adapter?.Refresh();
 			}
 
 			_mFileObserver = new RecursiveFileObserver(system.AbsolutePath, OnModificationDetected,
@@ -91,21 +93,16 @@ namespace AbnormalChecker.Services
 
 		private void WriteAndSend(NotificationSender sender, string path, FileObserverEvents events)
 		{
+			string message = string.Format(GetString(Resource.String.category_system_notif_modification_detected), events, path);
+			
 			using (StreamWriter writer = new StreamWriter(OpenFileOutput(LogFile, FileCreationMode.Append)))
 			{
-				writer.WriteLine($"{GetFormattedDateTime()} : Detected {events} event for {path}");
+				writer.WriteLine($"{new Date().GetFormattedDateTime()} : {message}");
 			}
 
 			sender.PutNormalizeExtra(ExtraFilePath, path);
 			sender.PutNormalizeExtra(ExtraFileEvent, events.ToString());
-			sender.Send(NotificationSender.WarningNotification, $"Detected {events} event for {path}");
-		}
-
-		private string GetFormattedDateTime()
-		{
-			Date now = new Date();
-			SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy, kk:mm:ss");
-			return dateFormat.Format(now);
+			sender.Send(NotificationType.WarningNotification, message);
 		}
 
 		public override StartCommandResult OnStartCommand(Intent intent, StartCommandFlags flags, int startId)

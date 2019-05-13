@@ -232,10 +232,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\MainActivity.cs" />
-    <Compile Include="Activities\MoreInfoActivity.cs" />
-    <Compile Include="Activities\OnBoardingActivity.cs" />
-    <Compile Include="Activities\Settings.cs" />
-    <Compile Include="Activities\StartActivity.cs" />
+    <Compile Include="Activities\CategoryInfoActivity.cs" />
+    <Compile Include="Activities\SettingsActivity.cs" />
+    <Compile Include="Activities\WelcomeActivity.cs" />
     <Compile Include="BroadcastReceivers\LocationUpdateReceiver.cs" />
     <Compile Include="BroadcastReceivers\ScreenUnlockReceiver.cs" />
     <Compile Include="BroadcastReceivers\MakeNormalReceiver.cs" />
@@ -243,30 +242,42 @@
     <Compile Include="BroadcastReceivers\MonitoringStarter.cs" />
     <Compile Include="BroadcastReceivers\SmsReceiver.cs" />
     <Compile Include="DataHolder.cs" />
-    <Compile Include="RootChecker.cs" />
-    <Compile Include="Extensions\MyExtensionMethods.cs" />
+    <Compile Include="OtherUI\CategoryClickListener.cs" />
+    <Compile Include="Extensions\ExtensionMethods.cs" />
     <Compile Include="Extensions\RecursiveFileObserver.cs" />
-    <Compile Include="LocationUtils.cs" />
     <Compile Include="NotificationSender.cs" />
     <Compile Include="OtherUI\CategoriesAdapter.cs" />
-    <Compile Include="OtherUI\CircleIndicatorView.cs" />
-    <Compile Include="OtherUI\FadeView.cs" />
-    <Compile Include="OtherUI\OnBoardingAdapter.cs" />
-    <Compile Include="OtherUI\OnBoardingCard.cs" />
-    <Compile Include="OtherUI\OnBoardingFragment.cs" />
-    <Compile Include="OtherUI\ViewScroller.cs" />
-    <Compile Include="PhoneUtils.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ScreenUtils.cs" />
     <Compile Include="Services\AbnormalLocationCallback.cs" />
     <Compile Include="Services\SystemModListenerService.cs" />
+    <Compile Include="Utils\LocationUtils.cs" />
+    <Compile Include="Utils\PhoneUtils.cs" />
+    <Compile Include="Utils\RootUtils.cs" />
+    <Compile Include="Utils\ScreenUtils.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-anydpi-v24\ic_launcher_foreground.xml">
+    <AndroidResource Include="Resources\drawable-anydpi\ic_launcher_foreground.xml">
       <SubType>Designer</SubType>
       <Generator>
       </Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-v21\ic_notif_details.xml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-v21\ic_notif_normalize.xml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-v21\splash.xml" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\onboarding_permissions.png">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-xxhdpi\onboarding_welcome.png">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\Main.xml">
       <SubType>Designer</SubType>
@@ -314,7 +325,7 @@
     <AndroidResource Include="Resources\drawable-hdpi\ic_stat_info.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\ic_stat_info.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_stat_info.png" />
-    <AndroidResource Include="Resources\drawable-anydpi-v24\ic_stat_info.xml" />
+    <AndroidResource Include="Resources\drawable-anydpi\ic_stat_info.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\ic_stat_summary.png" />
@@ -326,51 +337,25 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_stat_summary.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-anydpi-v24\ic_stat_summary.xml" />
+    <AndroidResource Include="Resources\drawable-anydpi\ic_stat_summary.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\more_info_activity.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\values\Colors.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\values\Dimensions.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\values\Attrs.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout-v21\boarding_activity.xml" />
-    <AndroidResource Include="Resources\layout\boarding_activity.xml" />
-    <AndroidResource Include="Resources\layout\boarding_fragment.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\fifth_bg.xml" />
-    <AndroidResource Include="Resources\drawable\forth_bg.xml" />
-    <AndroidResource Include="Resources\drawable\new_state.xml" />
-    <AndroidResource Include="Resources\drawable\next.png" />
-    <AndroidResource Include="Resources\drawable\original_state.xml" />
-    <AndroidResource Include="Resources\drawable\previous.png" />
-    <AndroidResource Include="Resources\drawable\rectangle_button.xml" />
-    <AndroidResource Include="Resources\drawable\rounded_button.xml" />
-    <AndroidResource Include="Resources\drawable\seventh_bg.xml" />
-    <AndroidResource Include="Resources\drawable\sixth_b.xml" />
-    <AndroidResource Include="Resources\drawable\thrid_bg.xml" />
-    <AndroidResource Include="Resources\drawable\translate.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="OtherUI\FlowingGradient.cs" />
-    <Compile Include="OtherUI\FlowingGradientClass.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\mipmap-anydpi-v26\Icon.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable-anydpi-v24\ic_launcher_background.xml" />
+    <AndroidResource Include="Resources\drawable-anydpi\ic_launcher_background.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values-ru\Strings.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OnBoardingLib\OnBoardingLib.csproj">
+      <Project>{7661774c-cdd1-454c-8d2b-11f2d22dcf7f}</Project>
+      <Name>OnBoardingLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Annotations.28.0.0.1\build\monoandroid90\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Annotations.28.0.0.1\build\monoandroid90\Xamarin.Android.Support.Annotations.targets')" />

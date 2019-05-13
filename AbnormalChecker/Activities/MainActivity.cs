@@ -1,70 +1,57 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text.RegularExpressions;
 using AbnormalChecker.BroadcastReceivers;
+using AbnormalChecker.Extensions;
 using AbnormalChecker.OtherUI;
-using AbnormalChecker.Services;
+using AbnormalChecker.Utils;
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
 using Android.Graphics.Drawables;
-using Android.Locations;
 using Android.OS;
 using Android.Preferences;
 using Android.Support.V7.App;
 using Android.Support.V7.Widget;
-using Android.Telecom;
-using Android.Telephony;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
 using Java.Util;
 using Java.Util.Concurrent;
-using PhoneNumbers;
-using File = Java.IO.File;
-using PhoneNumberFormat = PhoneNumbers.PhoneNumberFormat;
 
 namespace AbnormalChecker.Activities
 {
 	[Activity
 	(
 		Label = "AbnormalChecker",
-		Theme = "@style/MainTheme",
+		Theme = "@style/StartTheme",
 		Icon = "@mipmap/icon",
 		MainLauncher = true
 	)]
 	// ReSharper disable once ClassNeverInstantiated.Global
 	public class MainActivity : AppCompatActivity
 	{
-		private static ISharedPreferences mPreferences { get; set; }
-
-		private static MainActivity _activity;
-		public static CategoriesAdapter adapter { get; private set; }
-
-		public const int PermissionRequestCode = 666;
+		private const int PermissionRequestCode = 666;
 
 		private const int SettingsRequestCode = 777;
 
 		private const int OnBoardingRequestCode = 555;
 
+		private static MainActivity _activity;
+		private ISharedPreferences mPreferences;
+		public static CategoriesAdapter Adapter { get; private set; }
+
 		public static void GrantPermissions(string[] permissions)
 		{
 			if (permissions != null && permissions.Length > 0)
-			{
 				_activity.RequestPermissions(permissions, PermissionRequestCode);
-			}
 		}
 
 		private void CheckAndGrantPermissions()
 		{
-			if (Build.VERSION.SdkInt < BuildVersionCodes.M)
-			{
-				return;
-			}
+			if (Build.VERSION.SdkInt < BuildVersionCodes.M) return;
 
-			StartActivityForResult(new Intent(this, typeof(StartActivity)), OnBoardingRequestCode);
+			StartActivityForResult(new Intent(this, typeof(WelcomeActivity)), OnBoardingRequestCode);
 		}
 
 		private bool IsFirstRun()
@@ -82,177 +69,152 @@ namespace AbnormalChecker.Activities
 			}
 		}
 
-		public void RefreshList()
+		private void RefreshList()
 		{
-			adapter?.Refresh();
+			Adapter?.Refresh();
 			if (Build.VERSION.SdkInt >= BuildVersionCodes.O
 			    && GetSystemService(ShortcutService) is ShortcutManager shortcutManager)
 			{
-				List<ShortcutInfo> shortcuts = new List<ShortcutInfo>();
+				var shortcuts = new List<ShortcutInfo>();
 				foreach (var cat in DataHolder.GetSelectedCategories())
 				{
-					DataHolder.CategoryData data = DataHolder.CategoriesDataDic[cat];
+					if (!DataHolder.CategoriesDataDic.ContainsKey(cat))
+					{
+						DataHolder.Initialize(this);
+					}
 
-					Intent info = new Intent(this, typeof(MoreInfoActivity));
+					var data = DataHolder.CategoriesDataDic[cat];
+
+					var info = new Intent(this, typeof(CategoryInfoActivity));
 					info.PutExtra("category", cat);
-					info.SetAction(Android.Content.Intent.ActionDefault);
+					info.SetAction(Intent.ActionDefault);
 
-					ShortcutInfo shortcutOne = new ShortcutInfo.Builder(this, cat)
+					var shortcutOne = new ShortcutInfo.Builder(this, cat)
 						.SetShortLabel(data.Title)
 						.SetIcon(Icon.CreateWithResource(this, Resource.Mipmap.Icon))
 						.SetIntent(info).Build();
 					shortcuts.Add(shortcutOne);
-					shortcutManager.SetDynamicShortcuts(shortcuts);
+
+					if (shortcuts.Count == shortcutManager.MaxShortcutCountPerActivity)
+					{
+						break;
+					}
+					
 				}
+				shortcutManager.SetDynamicShortcuts(shortcuts);
 			}
 		}
 
 		private void SetAdapter()
 		{
-			RecyclerView recyclerView = FindViewById<RecyclerView>(Resource.Id.categoriesRecyclerView);
-			LinearLayoutManager llm = new LinearLayoutManager(this);
-			adapter = new CategoriesAdapter(this);
+			var recyclerView = FindViewById<RecyclerView>(Resource.Id.categoriesRecyclerView);
+			var llm = new LinearLayoutManager(this);
+			Adapter = new CategoriesAdapter(this);
 			recyclerView.SetLayoutManager(llm);
-			recyclerView.SetAdapter(adapter);
-			adapter?.Refresh();
+			recyclerView.SetAdapter(Adapter);
+			Adapter?.Refresh();
 		}
 
 		protected override void OnCreate(Bundle bundle)
 		{
 			base.OnCreate(bundle);
+			SetTheme(Resource.Style.MainTheme);
 			SetContentView(Resource.Layout.Main);
 			_activity = this;
 			mPreferences = PreferenceManager.GetDefaultSharedPreferences(this);
+			Log.Debug("AbDateWTF", TimeUnit.Milliseconds.ToSeconds(2941000).ToString());
 			DataHolder.Initialize(this);
 			UpdateScreenData();
 			if (IsFirstRun())
-			{
 				CheckAndGrantPermissions();
-			}
 			else
-			{
 				SetAdapter();
-			}
-
-//            Intent serv = new Intent(ApplicationContext, typeof(AbnormalChecker.Services.TestService));
-//            StartService(serv); 
-//            StopService(serv); 
-			Intent starter = new Intent();
+			var starter = new Intent();
 			starter.SetAction(MonitoringStarter.ActionAbnormalMonitoring);
 			starter.SetClass(this, typeof(MonitoringStarter));
 			SendBroadcast(starter);
-			Button b = FindViewById<Button>(Resource.Id.notif);
+			var b = FindViewById<Button>(Resource.Id.notif);
 
 			SupportActionBar.Elevation = 0;
+
+			try
+			{
+				RefreshList();
+			}
+			catch (Exception e)
+			{
+				Log.Error("AbnormalShortcuts", e.Message);
+			}
 			
-//            RefreshList();
+			b.Visibility = ViewStates.Gone;
 			b.Click += delegate
 			{
-
-				TelephonyManager telephonyManager = TelephonyManager.FromContext(this);
-				
-				PhoneNumberUtil phoneNumberUtils = PhoneNumberUtil.GetInstance();
-				try
-				{
-					PhoneNumber phoneNumberProto = phoneNumberUtils.Parse("+79169268915", "");
-					PhoneNumber phoneNumberProto2 = phoneNumberUtils.Parse("+79169268915", "");
-					PhoneNumber phoneNumber = new PhoneNumber.Builder()
-						.SetRawInput("+79169268915")
-//						.SetNationalNumber(ulong.Parse("89169268915"))
-						.Build();
-					
-					
-					string myPhoneNumber = new String(telephonyManager.Line1Number.Where(Char.IsDigit).ToArray());
-					
-					if (myPhoneNumber.Length == 0)
-					{
-						Log.Error("Art2000Tag", "Can't proceed outgoing call, your phone number is null!");
-						return;
-					}
-					
-					PhoneNumber thisPhoneNumber = phoneNumberUtils.Parse(myPhoneNumber, Resources.Configuration.Locale.Country);
-            
-					Log.Debug("Art2000Tag", $"my number : {myPhoneNumber}, int num {phoneNumberUtils.Format(thisPhoneNumber, PhoneNumberFormat.INTERNATIONAL)}");
-
-					
-					
-					
-					Log.Debug("MainActiivity", phoneNumberProto.CountryCode.ToString());
-				}
-				catch (Exception e)
-				{
-					Console.WriteLine($"MainActiivity exception: {e.Message}");
-				}
-				
-
-				
-				
-				adapter?.Refresh();
-				
+				Adapter?.Refresh();
 			};
 		}
 
 		private void UpdateScreenData()
 		{
-			Date now = new Date();
+			var now = new Date();
 			long monitoringStartTime;
 			if ((monitoringStartTime = mPreferences.GetLong(ScreenUtils.MonitoringLastStartTime, -1)) == -1)
 			{
 				monitoringStartTime = ScreenUtils.GetMonitoringStartTime(now);
 				mPreferences.Edit().PutLong(ScreenUtils.MonitoringLastStartTime, monitoringStartTime).Apply();
-				Log.Debug("UpdateScreenDatad", $"monitoring");
+				Log.Debug("UpdateScreenDatad", "monitoring");
+				using (StreamWriter writer = new StreamWriter(
+					OpenFileOutput(ScreenUnlockReceiver.DebugFile, FileCreationMode.Append)))
+				{
+					
+					
+					writer.WriteLine($"----Monitoring m start Time: {now.GetFormattedDateTime()}----");
+				}
 			}
 			else
 			{
-				int today = mPreferences.GetInt(ScreenUtils.UnlocksToday, -1);
+//				monitoringStartTime = ScreenUtils.GetMonitoringStartTime(now);
+				var today = mPreferences.GetInt(ScreenUtils.UnlocksToday, -1);
 				Log.Debug("UpdateScreenDatae", $"{today}");
+				monitoringStartTime = ScreenUtils.GetMonitoringStartTime(new Date(monitoringStartTime));
 				if (TimeUnit.Milliseconds.ToDays(now.Time - monitoringStartTime) >= 1 && today != -1)
 				{
 					int u;
-					int lastDayUnlocked = mPreferences.GetInt(ScreenUtils.LastUnlockDay, -1);
+					var lastDayUnlocked = mPreferences.GetInt(ScreenUtils.LastUnlockDay, -1);
 					if ((u = mPreferences.GetInt($"{ScreenUtils.UnlocksDayNumber}{lastDayUnlocked}", -1)) != -1)
-					{
 						today = (int) Math.Ceiling((u + today) / 2d);
-					}
 					Log.Debug("UpdateScreenDatad", $"{lastDayUnlocked}");
 					Log.Debug("UpdateScreenDatac", $"{today}");
 					if (lastDayUnlocked != -1)
-					{
 						mPreferences.Edit()
 							.PutInt($"{ScreenUtils.UnlocksDayNumber}{lastDayUnlocked}", today)
 							.PutInt(ScreenUtils.LastUnlockDay, lastDayUnlocked)
 							.PutLong(ScreenUtils.MonitoringLastStartTime, monitoringStartTime)
 							.PutInt(ScreenUtils.UnlocksToday, 0)
 							.PutInt(ScreenUtils.UnlocksNewNormalCount, -1)
-							.Apply();	
-					}
+							.Apply();
 					else
-					{
 						mPreferences.Edit()
 							.PutLong(ScreenUtils.MonitoringLastStartTime, monitoringStartTime)
 							.PutInt(ScreenUtils.UnlocksToday, 0)
 							.PutInt(ScreenUtils.UnlocksNewNormalCount, -1)
 							.Apply();
-					}
 					ScreenUnlockReceiver.SetToZero();
 				}
 			}
-			adapter?.Refresh();
+
+			Adapter?.Refresh();
 		}
 
 		protected override void OnResume()
-		{	
+		{
 			base.OnResume();
 			UpdateScreenData();
-			adapter?.Refresh();
+			Adapter?.Refresh();
 		}
 
 		protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
 		{
-			if (requestCode == SettingsRequestCode)
-			{
-				adapter.Refresh();
-			}
+			if (requestCode == SettingsRequestCode) Adapter.Refresh();
 
 			if (requestCode == OnBoardingRequestCode)
 			{
@@ -271,9 +233,7 @@ namespace AbnormalChecker.Activities
 		public override bool OnOptionsItemSelected(IMenuItem item)
 		{
 			if (item.ItemId == Resource.Id.settings_item)
-			{
-				StartActivityForResult(new Intent(this, typeof(Settings)), SettingsRequestCode);
-			}
+				StartActivityForResult(new Intent(this, typeof(SettingsActivity)), SettingsRequestCode);
 
 			return base.OnOptionsItemSelected(item);
 		}

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="onboarding_button_finish">Вперёд</string>
+	<string name="onboarding_button_finish_default">Вперёд</string>
 	<string name="menu_item_settings">Настройки</string>
 	
 	<string name="category_root">Root</string>
@@ -11,6 +11,8 @@
 	<string name="category_screen">Разблокировки экрана</string>
 	<string name="category_screen_data_normal">{0} разблокировок сегодня</string>
 	<string name="category_screen_data_questionably">{0} разблокировок сегодня, нормальное значение {1}</string>
+	<string name="category_screen_notif_daily_overflow">Слишком много разблокирвок сегодня : {0}, нормально значение : {1}</string>
+	<string name="category_screen_notif_west_fast_hand">Обнаружено {0} разблокировок в последние {1} секунд</string>
 	
 	<string name="category_location">Местоположение</string>
 	<string name="category_location_tracking_enabled">Отслеживание местоположения включено</string>
@@ -18,12 +20,19 @@
 	<string name="category_location_longitude">Долгота</string>
 	<string name="category_location_latitude">Широта</string>
 	<string name="category_location_data">Координаты: {0:F3} с.ш., {1:F3} в.д., время = {2}</string>
+	<string name="category_location_notif_big_distance">Большое расстояние ({0}km) от знакомых мест!</string>
 	
 	<string name="category_phone">Звонки</string>
+	<string name="category_phone_notification_suspicious_call_from">Подозрительный звонок от {0}</string>
+	<string name="category_phone_notification_suspicious_call_to">Подозрительный звонок {0}</string>
+
+	<string name="category_sms">SMS</string>
+	<string name="category_sms_notification_suspicious_message_from">Подозрительное сообщение от {0}</string>
 	
 	<string name="category_system">Изменения системы</string>
 	<string name="category_system_no_modifications">Изменений не обнаружено</string>
 	<string name="category_system_modifications_detected">Обнаружены изменения!</string>
+	<string name="category_system_notif_modification_detected">Обнаружено действие {0} для {1}</string>
 	
 	<string name="settings_monitor_list_title">Отслеживаемые категории</string>
 	<string name="settings_monitor_list_summary">Не выбранные будут скрыты с главного экрана</string>
@@ -42,4 +51,20 @@
 
 	<string name="category_general_status_normal">Нормально</string>
 	<string name="category_general_status_questionably">Подозрительно</string>
+	<string name="category_general_status_suspicious_activity">Подозрительная активность</string>
+
+	<string name="onboarding_page1_title">Добро пожаловать в {0}!</string>
+	<string name="onboarding_page1_summary">Решение в проблеме обнаружения подозрительного поведения</string>
+	<string name="onboarding_page2_title">Запрос разрешений</string>
+	<string name="onboarding_page2_summary">Для работоспособности приложению требуются некоторые разрешения</string>
+
+	<string name="onboarding_finish_title_start">Начать использовать</string>
+	<string name="onboarding_finish_title_give_permissions">Предоставить</string>
+
+	<string name="notification_button_normalize">Нормализировать</string>
+	<string name="notification_button_details">Детали</string>
+	
+	<string name="notification_type_warning">Предупреждение категории {0}</string>
+	<string name="notification_type_warning_description">Этот канал используется для отправки предупреждений связанных с категорией {0}</string>
+	
 </resources>

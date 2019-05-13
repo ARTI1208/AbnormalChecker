@@ -29,17 +29,18 @@
       <intent-filter>
         <action android:name="android.intent.action.BOOT_COMPLETED" />
         <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+        <action android:name="ru.art2000.action.ABNORMAL_MONITORING" />
       </intent-filter>
     </receiver>
-    <activity android:icon="@mipmap/icon" android:label="AbnormalChecker" android:theme="@style/MainTheme" android:name="md55950ccd939a0b900e351a1e798fb1966.MainActivity">
+    <activity android:icon="@mipmap/icon" android:label="AbnormalChecker" android:theme="@style/StartTheme" android:name="md55950ccd939a0b900e351a1e798fb1966.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity android:icon="@mipmap/icon" android:label="AbnormalChecker" android:theme="@style/MainTheme" android:name="md55950ccd939a0b900e351a1e798fb1966.MoreInfoActivity" />
-    <activity android:icon="@mipmap/icon" android:label="@string/menu_item_settings" android:theme="@style/MainTheme" android:name="md55950ccd939a0b900e351a1e798fb1966.Settings" />
-    <activity android:icon="@mipmap/icon" android:label="AbnormalCheckerOn" android:theme="@style/MainTheme" android:name="md55950ccd939a0b900e351a1e798fb1966.StartActivity" />
+    <activity android:icon="@mipmap/icon" android:label="AbnormalChecker" android:theme="@style/StartTheme" android:name="md55950ccd939a0b900e351a1e798fb1966.CategoryInfoActivity" />
+    <activity android:icon="@mipmap/icon" android:label="@string/menu_item_settings" android:theme="@style/MainTheme" android:name="md55950ccd939a0b900e351a1e798fb1966.SettingsActivity" />
+    <activity android:icon="@mipmap/icon" android:label="AbnormalCheckerOn" android:theme="@style/MainTheme" android:name="md55950ccd939a0b900e351a1e798fb1966.WelcomeActivity" />
     <provider android:name="mono.android.MultiDexLoader" android:exported="false" android:initOrder="1999999999" android:authorities="ru.art2000.abnormal.mono.android.MultiDexLoader.__mono_init__" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="1999999998" android:authorities="ru.art2000.abnormal.mono.MonoRuntimeProvider.__mono_init__" />
     <!--suppress ExportedReceiver-->

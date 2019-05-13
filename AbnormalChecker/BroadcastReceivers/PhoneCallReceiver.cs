@@ -1,6 +1,8 @@
 using System.IO;
 using System.Linq;
+using AbnormalChecker.Activities;
 using AbnormalChecker.Extensions;
+using AbnormalChecker.Utils;
 using Android.Content;
 using Android.Telephony;
 using Android.Util;
@@ -101,17 +103,21 @@ namespace AbnormalChecker.BroadcastReceivers
 				}
 			}
 
+			string warningMessage = string.Format(
+				context.GetString(Resource.String.category_phone_notification_suspicious_call_to),
+				callerPhoneNumber.GetInternationalNumber());
+			
 			using (StreamWriter writer =
 				new StreamWriter(context.OpenFileOutput(PhoneUtils.SuspiciousCallsFile, FileCreationMode.Append)))
 			{
-				writer.WriteLine($"Suspicious call to {callerPhoneNumber.GetInternationalNumber()}");
+				writer.WriteLine(warningMessage);
 			}
 
 			NotificationSender sender = new NotificationSender(context, DataHolder.PhoneCategory);
 			sender.PutNormalizeExtra(PhoneUtils.CountryCodeKey, callerPhoneNumber.CountryCode);
 			sender.PutNormalizeExtra(PhoneUtils.IsOutgoingKey, true);
-			sender.Send(NotificationSender.NotificationType.WarningNotification,
-				$"Suspicious call to {callerPhoneNumber.GetInternationalNumber()}");
+			sender.Send(NotificationType.WarningNotification, warningMessage);
+			MainActivity.Adapter?.Refresh();
 		}
 
 		private void OnIncomingCall(Context context, string phoneNumber)
@@ -131,7 +137,8 @@ namespace AbnormalChecker.BroadcastReceivers
 			}
 
 			PhoneNumberUtil phoneNumberUtils = PhoneNumberUtil.GetInstance();
-			PhoneNumber callerPhoneNumber = phoneNumberUtils.Parse(phoneNumber, context.Resources.Configuration.Locale.Country);
+			PhoneNumber callerPhoneNumber =
+				phoneNumberUtils.Parse(phoneNumber, context.Resources.Configuration.Locale.Country);
 			PhoneNumber thisPhoneNumber =
 				phoneNumberUtils.Parse(myPhoneNumber, context.Resources.Configuration.Locale.Country);
 			if (callerPhoneNumber.CountryCode == thisPhoneNumber.CountryCode)
@@ -160,18 +167,22 @@ namespace AbnormalChecker.BroadcastReceivers
 					}
 				}
 			}
+			
+			string warningMessage = string.Format(
+				context.GetString(Resource.String.category_phone_notification_suspicious_call_from),
+				callerPhoneNumber.GetInternationalNumber());
 
 			using (StreamWriter writer =
 				new StreamWriter(context.OpenFileOutput(PhoneUtils.SuspiciousCallsFile, FileCreationMode.Append)))
 			{
-				writer.WriteLine($"Suspicious call from {callerPhoneNumber.GetInternationalNumber()}");
+				writer.WriteLine(warningMessage);
 			}
 
 			NotificationSender sender = new NotificationSender(context, DataHolder.PhoneCategory);
 			sender.PutNormalizeExtra(PhoneUtils.CountryCodeKey, callerPhoneNumber.CountryCode);
 			sender.PutNormalizeExtra(PhoneUtils.IsOutgoingKey, false);
-			sender.Send(NotificationSender.NotificationType.WarningNotification,
-				$"Suspicious call from {callerPhoneNumber.GetInternationalNumber()}");
+			sender.Send(NotificationType.WarningNotification, warningMessage);
+			MainActivity.Adapter?.Refresh();
 		}
 	}
 }

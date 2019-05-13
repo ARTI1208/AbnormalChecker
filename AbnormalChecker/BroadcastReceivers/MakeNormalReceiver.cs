@@ -12,13 +12,11 @@ namespace AbnormalChecker.BroadcastReceivers
     })]
     public class MakeNormalReceiver : BroadcastReceiver
     {
-
-        public const string NormalAction = "ru.art2000.action.MakeNormalAction";
+        private const string NormalAction = "ru.art2000.action.MakeNormalAction";
         
         public override void OnReceive(Context context, Intent intent)
         {
-            NotificationManager notificationManager = 
-                (NotificationManager) context.GetSystemService(Context.NotificationService);
+            NotificationManager notificationManager = NotificationManager.FromContext(context);
             notificationManager.Cancel(intent.GetIntExtra("notification_id", 0));
 
             switch (intent.GetStringExtra("category"))
@@ -36,6 +34,9 @@ namespace AbnormalChecker.BroadcastReceivers
                     break;
                 case DataHolder.PhoneCategory:
                     DataHolder.NormalizePhoneData(intent);
+                    break;
+                case DataHolder.SmsCategory:
+                    DataHolder.NormalizeSmsData(intent);
                     break;
             }
             

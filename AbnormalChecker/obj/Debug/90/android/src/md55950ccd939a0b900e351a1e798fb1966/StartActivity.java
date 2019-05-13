@@ -2,7 +2,7 @@ package md55950ccd939a0b900e351a1e798fb1966;
 
 
 public class StartActivity
-	extends md55950ccd939a0b900e351a1e798fb1966.OnBoardingActivity
+	extends md59d854c05b0c0687d84d0292d26edfe6c.OnBoardingActivity
 	implements
 		mono.android.IGCUserPeer
 {
