@@ -22,6 +22,7 @@ array;obj\Debug\90\res\values\arrays.xml
 attr;D:\Coding\C#\AbnormalChecker\AbnormalChecker\obj\Debug\90\lp\45\jl\res\values\attrs.xml
 attr;obj\Debug\90\res\values\attrs.xml
 background;obj\Debug\90\res\mipmap-anydpi-v26\icon.xml
+bitmap;obj\Debug\90\res\drawable-v21\splash.xml
 Button;obj\Debug\90\res\layout\main.xml
 CircleIndicatorView;D:\Coding\C#\AbnormalChecker\AbnormalChecker\obj\Debug\90\lp\45\jl\res\layout-v21\boarding_activity.xml
 color;D:\Coding\C#\AbnormalChecker\AbnormalChecker\obj\Debug\90\lp\45\jl\res\values\colors.xml

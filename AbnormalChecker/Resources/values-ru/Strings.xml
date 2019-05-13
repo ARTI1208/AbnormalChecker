@@ -11,7 +11,7 @@
 	<string name="category_screen">Разблокировки экрана</string>
 	<string name="category_screen_data_normal">{0} разблокировок сегодня</string>
 	<string name="category_screen_data_questionably">{0} разблокировок сегодня, нормальное значение {1}</string>
-	<string name="category_screen_notif_daily_overflow">Слишком много разблокирвок сегодня : {0}, нормально значение : {1}</string>
+	<string name="category_screen_notif_daily_overflow">Слишком много разблокирвок сегодня : {0}, нормальное значение : {1}</string>
 	<string name="category_screen_notif_west_fast_hand">Обнаружено {0} разблокировок в последние {1} секунд</string>
 	
 	<string name="category_location">Местоположение</string>
@@ -21,6 +21,7 @@
 	<string name="category_location_latitude">Широта</string>
 	<string name="category_location_data">Координаты: {0:F3} с.ш., {1:F3} в.д., время = {2}</string>
 	<string name="category_location_notif_big_distance">Большое расстояние ({0}km) от знакомых мест!</string>
+	<string name="category_location_status_no_play_services">Сервисы Google Play не установлены, местоположение не может быть отслежено</string>
 	
 	<string name="category_phone">Звонки</string>
 	<string name="category_phone_notification_suspicious_call_from">Подозрительный звонок от {0}</string>

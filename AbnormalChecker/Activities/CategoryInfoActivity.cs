@@ -37,12 +37,12 @@ namespace AbnormalChecker.Activities
 			var status = FindViewById<TextView>(Resource.Id.status);
 			var permissions = FindViewById<TextView>(Resource.Id.permissions);
 			var data = FindViewById<TextView>(Resource.Id.data);
-			mCategoryData = DataHolder.CategoriesDataDic.GetValueOrDefault(Intent.GetStringExtra("category"), null);
+			mCategoryData = DataHolder.CategoriesDictionary.GetValueOrDefault(Intent.GetStringExtra("category"), null);
 			if (mCategoryData == null)
 			{
 				DataHolder.Initialize(this);
 				DataHolder.Refresh();
-				mCategoryData = DataHolder.CategoriesDataDic[Intent.GetStringExtra("category")];
+				mCategoryData = DataHolder.CategoriesDictionary[Intent.GetStringExtra("category")];
 			}
 			SupportActionBar.Title = mCategoryData.Title;
 			SupportActionBar.SetDisplayHomeAsUpEnabled(true);

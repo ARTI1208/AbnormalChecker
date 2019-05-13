@@ -4,23 +4,19 @@ using System.Diagnostics.CodeAnalysis;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using AbnormalChecker.Activities;
 using AbnormalChecker.BroadcastReceivers;
 using AbnormalChecker.Extensions;
 using AbnormalChecker.Services;
 using AbnormalChecker.Utils;
 using Android;
-using Android.App;
 using Android.Content;
 using Android.Content.PM;
-using Android.Gms.Location;
+using Android.Gms.Common;
 using Android.Locations;
 using Android.OS;
 using Android.Preferences;
 using Android.Support.V4.Content;
 using Android.Util;
-using Java.Text;
-using Java.Util;
 using File = Java.IO.File;
 
 namespace AbnormalChecker
@@ -46,27 +42,13 @@ namespace AbnormalChecker
 		public const string PhoneCategory = "phone";
 		public const string SmsCategory = "sms";
 
-		public static readonly Dictionary<string, CategoryData> CategoriesDataDic =
+		public static readonly Dictionary<string, CategoryData> CategoriesDictionary =
 			new Dictionary<string, CategoryData>();
 
 		private static Context _mContext;
 		private static ISharedPreferences _mPreferences;
-		private static FusedLocationProviderClient _fusedLocationProviderClient;
-		private static string[] _allCategories;
-		private static PendingIntent _locationPendingIntent;
-		private static readonly AbnormalLocationCallback Callback = new AbnormalLocationCallback();
-		public static Location PreviousLocation;
 
-		public DataHolder(Context context)
-		{
-			_mContext = context;
-			_mPreferences = PreferenceManager.GetDefaultSharedPreferences(_mContext);
-			_fusedLocationProviderClient = LocationServices.GetFusedLocationProviderClient(_mContext);
-			_allCategories = context.Resources.GetStringArray(Resource.Array.categories_values);
-			foreach (var category in _allCategories)
-				CategoriesDataDic[category] =
-					new CategoryData(category.MakeFirstUpper(), CreateCategoryDelegate(category));
-		}
+		private static string[] _allCategories;
 
 		public static ICollection<string> GetSelectedCategories()
 		{
@@ -75,7 +57,7 @@ namespace AbnormalChecker
 
 		public static bool IsSelectedCategory(string category)
 		{
-			ICollection<string> collection = GetSelectedCategories();
+			var collection = GetSelectedCategories();
 			return collection != null && collection.Contains(category);
 		}
 
@@ -86,150 +68,8 @@ namespace AbnormalChecker
 
 			foreach (var category in sel)
 			{
-				var categoryData = CategoriesDataDic[category];
+				var categoryData = CategoriesDictionary[category];
 				categoryData.Update();
-			}
-		}
-
-		public static async void GetLastLocationFromDevice()
-		{
-			Log.Debug("LastAbLocation", "start");
-			if (_fusedLocationProviderClient == null)
-			{
-				Log.Debug("LastAbLocation", "fu is null!");
-				return;
-			}
-			var location = await _fusedLocationProviderClient.GetLastLocationAsync();
-			if (location == null) return;
-			Log.Debug("LastAbLocation", "loc not null");
-			var res = new float[2];
-			var bigDestination = true;
-			var entered = false;
-			if (new File(_mContext.FilesDir, LocationUtils.LocationCoordinatesFile).Exists())
-			{
-				using (var reader =
-					new StreamReader(_mContext.OpenFileInput(LocationUtils.LocationCoordinatesFile)))
-				{
-					foreach (var line in reader.ReadToEnd().Split("\n"))
-					{
-						if (!line.Contains("Latitude")) continue;
-
-						var latString = line.Substring(line.AfterIndex("Latitude = "),
-							line.IndexOf(", Long") - line.AfterIndex("Latitude = "));
-						var longString = line.Substring(line.AfterIndex("Longitude = "));
-						double latDouble;
-						double longDouble;
-						try
-						{
-							latDouble = double.Parse(latString);
-							longDouble = double.Parse(longString);
-						}
-						catch (Exception)
-						{
-							continue;
-						}
-
-						Location.DistanceBetween(latDouble,
-							longDouble, location.Latitude, location.Longitude, res);
-						Log.Debug("NewAbLoction", res[0].ToString());
-						entered = true;
-						if (res[0] < 10 * 1000)
-						{
-							bigDestination = false;
-							break;
-						}
-					}
-				}
-				Log.Debug("LastAbLocation", "read known loc");
-			}
-
-			if (entered && bigDestination)
-			{
-				Log.Debug("LastAbLocation", "big d1");
-				var notPrevious = true;
-				if (PreviousLocation != null)
-				{
-					float[] prevRes = new float[2];
-					Location.DistanceBetween(PreviousLocation.Latitude,
-						PreviousLocation.Longitude, location.Latitude, location.Longitude, prevRes);
-					if (prevRes[0] < 500) notPrevious = false;
-					Log.Debug("LastAbLocation", "big d2");
-				}
-				Log.Debug("LastAbLocation", "big d3");
-				if (notPrevious)
-				{
-					var sender = new NotificationSender(_mContext, LocationCategory);
-					sender.PutNormalizeExtra(LocationUtils.LocationLatitude, location.Latitude);
-					sender.PutNormalizeExtra(LocationUtils.LocationLongitude, location.Longitude);
-
-					string distance =
-						string.Format(_mContext.GetString(Resource.String.category_location_notif_big_distance),
-							res[0] / 1000);
-
-					sender.Send(NotificationType.WarningNotification, distance);
-					PreviousLocation = location;
-					CategoriesDataDic[LocationCategory].Level = CheckStatus.Dangerous;
-					Log.Debug("LastAbLocation", "big d4");
-				}
-			}
-			else
-			{
-				Log.Debug("LastAbLocation", "big d5");
-				if (CategoriesDataDic[LocationCategory].Level == CheckStatus.Dangerous)
-				{
-					CategoriesDataDic[LocationCategory].Level = CheckStatus.Warning;	
-				}
-			}
-
-			if (!new File(_mContext.FilesDir, LocationUtils.LocationCoordinatesFile).Exists())
-				using (var writer =
-					new StreamWriter(_mContext.OpenFileOutput(LocationUtils.LocationCoordinatesFile,
-						FileCreationMode.Private)))
-				{
-					writer.WriteLine("Known locations:");
-					writer.WriteLine($"Latitude = {location.Latitude}, Longitude = {location.Longitude}");
-				}
-
-			CategoriesDataDic[LocationCategory].Data = FormatLocation(location);
-			Log.Debug("LastAbLocation", "big d6");
-			if (MainActivity.Adapter != null)
-			{
-				
-				int pos = MainActivity.Adapter.categories.FindIndex(s => s == LocationCategory);
-				Log.Debug("LastAbLocation", $"big d8 = {pos} ");
-				MainActivity.Adapter.NotifyItemChanged(pos);
-			}
-			
-			Log.Debug("LastAbLocation", "big d7");
-
-//			MainActivity.Adapter?.NotifyDataSetChanged();
-		}
-
-		public static void SetLocationTrackingEnabled(bool enabled)
-		{
-			if (enabled)
-			{
-				var request = new LocationRequest();
-				request.SetInterval(5000);
-				request.SetFastestInterval(5000);
-				request.SetPriority(LocationRequest.PriorityHighAccuracy);
-
-				//Probably not needed
-				_fusedLocationProviderClient.RequestLocationUpdates(request, Callback, Looper.MainLooper);
-
-				if (_locationPendingIntent == null)
-				{
-					var intent = new Intent(_mContext, typeof(LocationUpdateReceiver));
-					_locationPendingIntent =
-						PendingIntent.GetBroadcast(_mContext, 123, intent, PendingIntentFlags.UpdateCurrent);
-					_fusedLocationProviderClient.RequestLocationUpdates(request, _locationPendingIntent);
-				}
-			}
-			else
-			{
-				_fusedLocationProviderClient.RemoveLocationUpdates(Callback);
-				_fusedLocationProviderClient.RemoveLocationUpdates(_locationPendingIntent);
-				_locationPendingIntent = null;
 			}
 		}
 
@@ -246,10 +86,10 @@ namespace AbnormalChecker
 		{
 			_mContext = context;
 			_mPreferences = PreferenceManager.GetDefaultSharedPreferences(_mContext);
-			_fusedLocationProviderClient = LocationServices.GetFusedLocationProviderClient(_mContext);
+			LocationUtils.Init(context);
 			_allCategories = context.Resources.GetStringArray(Resource.Array.categories_values);
 			foreach (var category in _allCategories)
-				CategoriesDataDic[category] =
+				CategoriesDictionary[category] =
 					new CategoryData(category.MakeFirstUpper(), CreateCategoryDelegate(category));
 		}
 
@@ -272,26 +112,16 @@ namespace AbnormalChecker
 			return categoryDelegate;
 		}
 
-		public static string FormatLocation(Location location)
-		{
-			if (location == null)
-				return "";
-			var dateFormatter = DateFormat.DateTimeInstance;
-			return
-				string.Format(_mContext.GetString(Resource.String.category_location_data), location.Latitude,
-					location.Longitude, dateFormatter.Format(new Date(location.Time)));
-		}
-
 		public class CategoryData
 		{
 			private readonly CategoryUpdater dataUpdater;
+			public string Data;
+
+			public string DataFilePath;
 			private CheckStatus level = CheckStatus.Normal;
 
 			private string[] requiredPermissions;
 			private string status = "OK";
-			public string Data;
-
-			public string DataFilePath;
 			public string Title;
 
 			public CategoryData(string title, CategoryUpdater updater)
@@ -386,37 +216,50 @@ namespace AbnormalChecker
 		public static CategoryData GetLocationData(CategoryData data)
 		{
 			var status = _mContext.GetString(Resource.String.category_info_permissions_denied);
-			Log.Debug("AbLocationDat", "den");
 			data.Title = _mContext.GetString(Resource.String.category_location);
 			data.RequiredPermissions = new[]
 			{
 				Manifest.Permission.AccessFineLocation,
 				Manifest.Permission.AccessCoarseLocation
 			};
+			data.DataFilePath = LocationUtils.LocationCoordinatesFile;
+
+			if (GoogleApiAvailability.Instance.IsGooglePlayServicesAvailable(_mContext) != ConnectionResult.Success)
+			{
+				data.Status =
+					_mContext.GetString(Resource.String.category_location_status_no_play_services);
+//				MainActivity.Adapter?.Refresh();
+				return data;
+			}
+
 			if (data.Level != CheckStatus.PermissionsRequired)
 			{
 				var locationManager = LocationManager.FromContext(_mContext);
 
 				var locationEnabled = false;
 
-				if (Build.VERSION.SdkInt >= BuildVersionCodes.P)
-					locationEnabled = locationManager.IsLocationEnabled;
-				else
-					foreach (var provider in locationManager.AllProviders)
-						if (provider != LocationManager.PassiveProvider && locationManager.IsProviderEnabled(provider))
-						{
-							locationEnabled = true;
-							break;
-						}
+				if (IsSelectedCategory(LocationCategory))
+				{
+					if (Build.VERSION.SdkInt >= BuildVersionCodes.P)
+						locationEnabled = locationManager.IsLocationEnabled;
+					else
+						foreach (var provider in locationManager.AllProviders)
+							if (provider != LocationManager.PassiveProvider &&
+							    locationManager.IsProviderEnabled(provider))
+							{
+								locationEnabled = true;
+								break;
+							}
+				}
 
 				status = locationEnabled
 					? _mContext.GetString(Resource.String.category_location_tracking_enabled)
 					: _mContext.GetString(Resource.String.category_location_tracking_disabled);
-				Log.Debug("AbLocationDat", status);
-				SetLocationTrackingEnabled(locationEnabled);
+
+				if (!locationEnabled) data.Data = null;
+				LocationUtils.SetLocationTrackingEnabled(locationEnabled);
 			}
 
-			data.DataFilePath = LocationUtils.LocationCoordinatesFile;
 			data.Status = status;
 			return data;
 		}
@@ -600,7 +443,6 @@ namespace AbnormalChecker
 				if (val != -1 && key != NotificationSender.ExtraNotificationId)
 				{
 					_mPreferences.Edit().PutInt(key, val).Apply();
-					Log.Debug("ScreenNormalizer", $"{key} : {val}");
 				}
 			}
 		}
@@ -623,7 +465,7 @@ namespace AbnormalChecker
 				{
 					writer.WriteLine(
 						$"Latitude = {latDouble}, Longitude = {longDouble}");
-					CategoriesDataDic[LocationCategory].Level = CheckStatus.Normal;
+					CategoriesDictionary[LocationCategory].Level = CheckStatus.Normal;
 				}
 			}
 		}

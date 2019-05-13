@@ -235,6 +235,7 @@
     <Compile Include="Activities\CategoryInfoActivity.cs" />
     <Compile Include="Activities\SettingsActivity.cs" />
     <Compile Include="Activities\WelcomeActivity.cs" />
+    <Compile Include="BroadcastReceivers\LocationModeChangeReceiver.cs" />
     <Compile Include="BroadcastReceivers\LocationUpdateReceiver.cs" />
     <Compile Include="BroadcastReceivers\ScreenUnlockReceiver.cs" />
     <Compile Include="BroadcastReceivers\MakeNormalReceiver.cs" />

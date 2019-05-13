@@ -72,7 +72,7 @@ namespace AbnormalChecker
 
 		public void Send(NotificationType notificationType, string text)
 		{
-			var categoryTitle = DataHolder.CategoriesDataDic[mCategory].Title;
+			var categoryTitle = DataHolder.CategoriesDictionary[mCategory].Title;
 			var title = "DummyTitle";
 			var description = "BaseDescription";
 			var builder = new NotificationCompat.Builder(mContext, title);

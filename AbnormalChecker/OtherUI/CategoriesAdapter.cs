@@ -23,7 +23,7 @@ namespace AbnormalChecker.OtherUI
 			DataHolder.Refresh();
 			list.Clear();
 			categories.Clear();
-			foreach (var pair in DataHolder.CategoriesDataDic)
+			foreach (var pair in DataHolder.CategoriesDictionary)
 			{
 				list.Add(pair.Value);
 				categories.Add(pair.Key);
@@ -37,7 +37,7 @@ namespace AbnormalChecker.OtherUI
 			DataHolder.Refresh();
 			list.Clear();
 			categories.Clear();
-			foreach (var pair in DataHolder.CategoriesDataDic)
+			foreach (var pair in DataHolder.CategoriesDictionary)
 				if (DataHolder.GetSelectedCategories().Contains(pair.Key))
 				{
 					list.Add(pair.Value);
@@ -60,9 +60,6 @@ namespace AbnormalChecker.OtherUI
 			var dataSet = list[position];
 			myHolder.TitleTextView.Text = dataSet.Title;
 			myHolder.StatusTextView.Text = dataSet.Status;
-
-
-			Log.Debug(nameof(CategoriesAdapter), $"Bindng {dataSet.Title}");
 			
 			if (dataSet.Data != null)
 			{

@@ -1,7 +1,9 @@
 using System.Collections.Generic;
 using AbnormalChecker.Services;
+using AbnormalChecker.Utils;
 using Android.App;
 using Android.Content;
+using Android.Locations;
 using Android.Preferences;
 using Android.Util;
 
@@ -39,14 +41,18 @@ namespace AbnormalChecker.BroadcastReceivers
 				enable: DataHolder.IsSelectedCategory(DataHolder.PhoneCategory));
 			SmsReceiver.SetSmsReceiverStatus(context,
 				enable: DataHolder.IsSelectedCategory(DataHolder.SmsCategory));
-
+			
+			IntentFilter filter = new IntentFilter();
+			filter.AddAction(LocationManager.ModeChangedAction);
+			context.ApplicationContext.RegisterReceiver(new LocationModeChangeReceiver(), filter);
+			
 			if (intent.Action == ActionAbnormalMonitoring)
 			{
 				SystemModListenerService.SetSystemMonitoringStatus(context,
 					enable: DataHolder.IsSelectedCategory(DataHolder.SystemCategory));	
 			}
 			
-			DataHolder.SetLocationTrackingEnabled(DataHolder.IsSelectedCategory(DataHolder.LocationCategory));
+			LocationUtils.SetLocationTrackingEnabled(DataHolder.IsSelectedCategory(DataHolder.LocationCategory));
 
 			_isStarted = true;
 		}

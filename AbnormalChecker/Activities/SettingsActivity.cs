@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using AbnormalChecker.BroadcastReceivers;
 using AbnormalChecker.Services;
+using AbnormalChecker.Utils;
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -10,6 +11,7 @@ using Android.Support.V7.App;
 using Android.Support.V7.Preferences;
 using Android.Util;
 using Java.Util;
+using Java.Util.Prefs;
 
 namespace AbnormalChecker.Activities
 {
@@ -80,6 +82,8 @@ namespace AbnormalChecker.Activities
 					foreach (var file in Activity.FilesDir.ListFiles())
 						if (file.IsFile)
 							file.Delete();
+					PreferenceManager.GetDefaultSharedPreferences(Activity).Edit().Remove(MainActivity.KeyFirstRun)
+						.Apply();
 				};
 			}
 		}
@@ -102,16 +106,14 @@ namespace AbnormalChecker.Activities
 					var set = args.NewValue.JavaCast<HashSet>();
 					SystemModListenerService.SetSystemMonitoringStatus(Activity,
 						set.Contains(DataHolder.SystemCategory));
-					DataHolder.SetLocationTrackingEnabled(set.Contains(DataHolder.LocationCategory));
+					LocationUtils.SetLocationTrackingEnabled(set.Contains(DataHolder.LocationCategory));
 					ScreenUnlockReceiver.SetUnlockReceiverStatus(Activity, set.Contains(DataHolder.ScreenCategory));
 					PhoneCallReceiver.SetCallReceiverStatus(Activity, set.Contains(DataHolder.PhoneCategory));
 					SmsReceiver.SetSmsReceiverStatus(Activity, set.Contains(DataHolder.SmsCategory));
-					DataHolder.SetLocationTrackingEnabled(set.Contains(DataHolder.LocationCategory));
 
 					var categories = new List<string>();
 					foreach (var val in set.ToArray())
 					{
-						Log.Debug("SettingsFragAb", val.ToString());
 						categories.Add(val.ToString());
 					}
 

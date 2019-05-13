@@ -22,6 +22,7 @@
     <string name="category_location_longitude">Longitude</string>
     <string name="category_location_data">Coordinates: lat = {0:F3}, lon = {1:F3}, time = {2}</string>
     <string name="category_location_notif_big_distance">Too big distance ({0}km) from known location!</string>
+    <string name="category_location_status_no_play_services">No Play Services, location cannot be tracked</string>
     
     <string name="category_phone">Phone Calls</string>
     <string name="category_phone_notification_suspicious_call_from">Suspicious call from {0}</string>

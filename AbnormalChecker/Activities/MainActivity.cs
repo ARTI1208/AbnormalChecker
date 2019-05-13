@@ -11,6 +11,8 @@ using Android.Content.PM;
 using Android.Graphics.Drawables;
 using Android.OS;
 using Android.Preferences;
+using Android.Support.V4.App;
+using Android.Support.V4.Content;
 using Android.Support.V7.App;
 using Android.Support.V7.Widget;
 using Android.Util;
@@ -39,6 +41,9 @@ namespace AbnormalChecker.Activities
 
 		private static MainActivity _activity;
 		private ISharedPreferences mPreferences;
+
+		public const string KeyFirstRun = "first_run";
+		
 		public static CategoriesAdapter Adapter { get; private set; }
 
 		public static void GrantPermissions(string[] permissions)
@@ -47,16 +52,14 @@ namespace AbnormalChecker.Activities
 				_activity.RequestPermissions(permissions, PermissionRequestCode);
 		}
 
-		private void CheckAndGrantPermissions()
+		private void LaunchWelcomeActivity()
 		{
-			if (Build.VERSION.SdkInt < BuildVersionCodes.M) return;
-
 			StartActivityForResult(new Intent(this, typeof(WelcomeActivity)), OnBoardingRequestCode);
 		}
 
 		private bool IsFirstRun()
 		{
-			return mPreferences.GetBoolean("first_run", true);
+			return mPreferences.GetBoolean(KeyFirstRun, true);
 		}
 
 		public override void OnRequestPermissionsResult(int requestCode, string[] permissions,
@@ -78,12 +81,12 @@ namespace AbnormalChecker.Activities
 				var shortcuts = new List<ShortcutInfo>();
 				foreach (var cat in DataHolder.GetSelectedCategories())
 				{
-					if (!DataHolder.CategoriesDataDic.ContainsKey(cat))
+					if (!DataHolder.CategoriesDictionary.ContainsKey(cat))
 					{
 						DataHolder.Initialize(this);
 					}
 
-					var data = DataHolder.CategoriesDataDic[cat];
+					var data = DataHolder.CategoriesDictionary[cat];
 
 					var info = new Intent(this, typeof(CategoryInfoActivity));
 					info.PutExtra("category", cat);
@@ -122,11 +125,10 @@ namespace AbnormalChecker.Activities
 			SetContentView(Resource.Layout.Main);
 			_activity = this;
 			mPreferences = PreferenceManager.GetDefaultSharedPreferences(this);
-			Log.Debug("AbDateWTF", TimeUnit.Milliseconds.ToSeconds(2941000).ToString());
 			DataHolder.Initialize(this);
 			UpdateScreenData();
 			if (IsFirstRun())
-				CheckAndGrantPermissions();
+				LaunchWelcomeActivity();
 			else
 				SetAdapter();
 			var starter = new Intent();
@@ -161,20 +163,15 @@ namespace AbnormalChecker.Activities
 			{
 				monitoringStartTime = ScreenUtils.GetMonitoringStartTime(now);
 				mPreferences.Edit().PutLong(ScreenUtils.MonitoringLastStartTime, monitoringStartTime).Apply();
-				Log.Debug("UpdateScreenDatad", "monitoring");
 				using (StreamWriter writer = new StreamWriter(
 					OpenFileOutput(ScreenUnlockReceiver.DebugFile, FileCreationMode.Append)))
 				{
-					
-					
 					writer.WriteLine($"----Monitoring m start Time: {now.GetFormattedDateTime()}----");
 				}
 			}
 			else
 			{
-//				monitoringStartTime = ScreenUtils.GetMonitoringStartTime(now);
 				var today = mPreferences.GetInt(ScreenUtils.UnlocksToday, -1);
-				Log.Debug("UpdateScreenDatae", $"{today}");
 				monitoringStartTime = ScreenUtils.GetMonitoringStartTime(new Date(monitoringStartTime));
 				if (TimeUnit.Milliseconds.ToDays(now.Time - monitoringStartTime) >= 1 && today != -1)
 				{
@@ -182,8 +179,6 @@ namespace AbnormalChecker.Activities
 					var lastDayUnlocked = mPreferences.GetInt(ScreenUtils.LastUnlockDay, -1);
 					if ((u = mPreferences.GetInt($"{ScreenUtils.UnlocksDayNumber}{lastDayUnlocked}", -1)) != -1)
 						today = (int) Math.Ceiling((u + today) / 2d);
-					Log.Debug("UpdateScreenDatad", $"{lastDayUnlocked}");
-					Log.Debug("UpdateScreenDatac", $"{today}");
 					if (lastDayUnlocked != -1)
 						mPreferences.Edit()
 							.PutInt($"{ScreenUtils.UnlocksDayNumber}{lastDayUnlocked}", today)
@@ -201,7 +196,6 @@ namespace AbnormalChecker.Activities
 					ScreenUnlockReceiver.SetToZero();
 				}
 			}
-
 			Adapter?.Refresh();
 		}
 
@@ -214,12 +208,13 @@ namespace AbnormalChecker.Activities
 
 		protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
 		{
-			if (requestCode == SettingsRequestCode) Adapter.Refresh();
+			if (requestCode == SettingsRequestCode) Adapter?.Refresh();
 
 			if (requestCode == OnBoardingRequestCode)
 			{
-				mPreferences.Edit().PutBoolean("first_run", false).Apply();
-				RequestPermissions(DataHolder.GetAllRequiredPermissions(this), PermissionRequestCode);
+				mPreferences.Edit().PutBoolean(KeyFirstRun, false).Apply();
+//				RequestPermissions(DataHolder.GetAllRequiredPermissions(this), PermissionRequestCode);
+				ActivityCompat.RequestPermissions(this, DataHolder.GetAllRequiredPermissions(this), PermissionRequestCode);
 				SetAdapter();
 			}
 		}

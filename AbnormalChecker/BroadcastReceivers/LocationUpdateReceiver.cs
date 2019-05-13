@@ -1,4 +1,5 @@
 using AbnormalChecker.Activities;
+using AbnormalChecker.Utils;
 using Android.App;
 using Android.Content;
 using Android.Locations;
@@ -12,7 +13,7 @@ namespace AbnormalChecker.BroadcastReceivers
 	{
 		public override void OnReceive(Context context, Intent intent)
 		{
-			DataHolder.GetLastLocationFromDevice();
+			LocationUtils.GetLastLocationFromDevice();
 		}
 	}
 }

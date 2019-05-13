@@ -4,7 +4,7 @@ using Java.Util;
 
 namespace AbnormalChecker.Utils
 {
-	public class ScreenUtils
+	public static class ScreenUtils
 	{
 		#region Keys
 
@@ -28,14 +28,7 @@ namespace AbnormalChecker.Utils
 			c.Set(CalendarField.Minute, 0);
 			c.Set(CalendarField.Second, 1);
 			c.Set(CalendarField.Millisecond, 0);
-			Date now = new Date();
-			Log.Debug("AbMonitoringStart", $"Now {now.GetFormattedDateTime()}, val = {now.Time}");
-			Log.Debug("AbMonitoringStart", $"Pass {dateTime.GetFormattedDateTime()}, val = {dateTime.Time}");
-			Log.Debug("AbMonitoringStart", $"Day start {new Date(c.TimeInMillis).GetFormattedDateTime()}, val = {c.TimeInMillis}");
-			Log.Debug("AbMonitoringStart", $"Diff {(now.Time - c.TimeInMillis).ToString()}");
 			return c.TimeInMillis;
 		}
-		
-		
 	}
 }

@@ -42,13 +42,10 @@ namespace AbnormalChecker.BroadcastReceivers
 			{
 				if (message == null)
 				{
-					Log.Error(nameof(SmsReceiver), "SMS message is null -- ABORT");
-					break;
+					continue;
 				}
 
 				string phoneNumber = message.DisplayOriginatingAddress;
-				string smsDisplayMessage = message.DisplayMessageBody;
-				Log.Debug(nameof(SmsReceiver), $"from {phoneNumber}, message : {smsDisplayMessage}");
 
 				TelephonyManager telephonyManager = TelephonyManager.FromContext(context);
 				if (phoneNumber == null)

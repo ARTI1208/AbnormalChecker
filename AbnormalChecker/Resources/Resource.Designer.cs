@@ -7587,32 +7587,32 @@ namespace AbnormalChecker
 			// aapt resource value: 0x7f0b0030
 			public const int abc_toolbar_collapse_description = 2131427376;
 			
-			// aapt resource value: 0x7f0b008f
-			public const int category_general_status_normal = 2131427471;
-			
 			// aapt resource value: 0x7f0b0090
-			public const int category_general_status_questionably = 2131427472;
+			public const int category_general_status_normal = 2131427472;
 			
 			// aapt resource value: 0x7f0b0091
-			public const int category_general_status_suspicious_activity = 2131427473;
+			public const int category_general_status_questionably = 2131427473;
 			
-			// aapt resource value: 0x7f0b008b
-			public const int category_info_data = 2131427467;
+			// aapt resource value: 0x7f0b0092
+			public const int category_general_status_suspicious_activity = 2131427474;
 			
 			// aapt resource value: 0x7f0b008c
-			public const int category_info_no_data = 2131427468;
+			public const int category_info_data = 2131427468;
 			
 			// aapt resource value: 0x7f0b008d
-			public const int category_info_no_permissions_required = 2131427469;
-			
-			// aapt resource value: 0x7f0b0089
-			public const int category_info_permissions = 2131427465;
+			public const int category_info_no_data = 2131427469;
 			
 			// aapt resource value: 0x7f0b008e
-			public const int category_info_permissions_denied = 2131427470;
+			public const int category_info_no_permissions_required = 2131427470;
 			
 			// aapt resource value: 0x7f0b008a
-			public const int category_info_status = 2131427466;
+			public const int category_info_permissions = 2131427466;
+			
+			// aapt resource value: 0x7f0b008f
+			public const int category_info_permissions_denied = 2131427471;
+			
+			// aapt resource value: 0x7f0b008b
+			public const int category_info_status = 2131427467;
 			
 			// aapt resource value: 0x7f0b0072
 			public const int category_location = 2131427442;
@@ -7629,20 +7629,23 @@ namespace AbnormalChecker
 			// aapt resource value: 0x7f0b0078
 			public const int category_location_notif_big_distance = 2131427448;
 			
+			// aapt resource value: 0x7f0b0079
+			public const int category_location_status_no_play_services = 2131427449;
+			
 			// aapt resource value: 0x7f0b0074
 			public const int category_location_tracking_disabled = 2131427444;
 			
 			// aapt resource value: 0x7f0b0073
 			public const int category_location_tracking_enabled = 2131427443;
 			
-			// aapt resource value: 0x7f0b0079
-			public const int category_phone = 2131427449;
-			
 			// aapt resource value: 0x7f0b007a
-			public const int category_phone_notification_suspicious_call_from = 2131427450;
+			public const int category_phone = 2131427450;
 			
 			// aapt resource value: 0x7f0b007b
-			public const int category_phone_notification_suspicious_call_to = 2131427451;
+			public const int category_phone_notification_suspicious_call_from = 2131427451;
+			
+			// aapt resource value: 0x7f0b007c
+			public const int category_phone_notification_suspicious_call_to = 2131427452;
 			
 			// aapt resource value: 0x7f0b0069
 			public const int category_root = 2131427433;
@@ -7671,23 +7674,23 @@ namespace AbnormalChecker
 			// aapt resource value: 0x7f0b0071
 			public const int category_screen_notif_west_fast_hand = 2131427441;
 			
-			// aapt resource value: 0x7f0b007c
-			public const int category_sms = 2131427452;
-			
 			// aapt resource value: 0x7f0b007d
-			public const int category_sms_notification_suspicious_message_from = 2131427453;
+			public const int category_sms = 2131427453;
 			
 			// aapt resource value: 0x7f0b007e
-			public const int category_system = 2131427454;
-			
-			// aapt resource value: 0x7f0b0080
-			public const int category_system_modifications_detected = 2131427456;
+			public const int category_sms_notification_suspicious_message_from = 2131427454;
 			
 			// aapt resource value: 0x7f0b007f
-			public const int category_system_no_modifications = 2131427455;
+			public const int category_system = 2131427455;
 			
 			// aapt resource value: 0x7f0b0081
-			public const int category_system_notif_modification_detected = 2131427457;
+			public const int category_system_modifications_detected = 2131427457;
+			
+			// aapt resource value: 0x7f0b0080
+			public const int category_system_no_modifications = 2131427456;
+			
+			// aapt resource value: 0x7f0b0082
+			public const int category_system_notif_modification_detected = 2131427458;
 			
 			// aapt resource value: 0x7f0b0001
 			public const int common_google_play_services_enable_button = 2131427329;
@@ -7863,38 +7866,38 @@ namespace AbnormalChecker
 			// aapt resource value: 0x7f0b0068
 			public const int menu_item_settings = 2131427432;
 			
-			// aapt resource value: 0x7f0b0099
-			public const int notification_button_details = 2131427481;
-			
-			// aapt resource value: 0x7f0b0098
-			public const int notification_button_normalize = 2131427480;
-			
 			// aapt resource value: 0x7f0b009a
-			public const int notification_type_warning = 2131427482;
+			public const int notification_button_details = 2131427482;
+			
+			// aapt resource value: 0x7f0b0099
+			public const int notification_button_normalize = 2131427481;
 			
 			// aapt resource value: 0x7f0b009b
-			public const int notification_type_warning_description = 2131427483;
+			public const int notification_type_warning = 2131427483;
+			
+			// aapt resource value: 0x7f0b009c
+			public const int notification_type_warning_description = 2131427484;
 			
 			// aapt resource value: 0x7f0b0066
 			public const int onboarding_button_finish_default = 2131427430;
 			
+			// aapt resource value: 0x7f0b0098
+			public const int onboarding_finish_title_give_permissions = 2131427480;
+			
 			// aapt resource value: 0x7f0b0097
-			public const int onboarding_finish_title_give_permissions = 2131427479;
-			
-			// aapt resource value: 0x7f0b0096
-			public const int onboarding_finish_title_start = 2131427478;
-			
-			// aapt resource value: 0x7f0b0093
-			public const int onboarding_page1_summary = 2131427475;
-			
-			// aapt resource value: 0x7f0b0092
-			public const int onboarding_page1_title = 2131427474;
-			
-			// aapt resource value: 0x7f0b0095
-			public const int onboarding_page2_summary = 2131427477;
+			public const int onboarding_finish_title_start = 2131427479;
 			
 			// aapt resource value: 0x7f0b0094
-			public const int onboarding_page2_title = 2131427476;
+			public const int onboarding_page1_summary = 2131427476;
+			
+			// aapt resource value: 0x7f0b0093
+			public const int onboarding_page1_title = 2131427475;
+			
+			// aapt resource value: 0x7f0b0096
+			public const int onboarding_page2_summary = 2131427478;
+			
+			// aapt resource value: 0x7f0b0095
+			public const int onboarding_page2_title = 2131427477;
 			
 			// aapt resource value: 0x7f0b0064
 			public const int orb_search_action = 2131427428;
@@ -7902,26 +7905,26 @@ namespace AbnormalChecker
 			// aapt resource value: 0x7f0b0031
 			public const int search_menu_title = 2131427377;
 			
-			// aapt resource value: 0x7f0b0087
-			public const int settings_app_info_title = 2131427463;
-			
 			// aapt resource value: 0x7f0b0088
-			public const int settings_developer_egg = 2131427464;
+			public const int settings_app_info_title = 2131427464;
 			
-			// aapt resource value: 0x7f0b0083
-			public const int settings_monitor_list_summary = 2131427459;
-			
-			// aapt resource value: 0x7f0b0082
-			public const int settings_monitor_list_title = 2131427458;
-			
-			// aapt resource value: 0x7f0b0086
-			public const int settings_unlocks_monitor_type_summary_off = 2131427462;
-			
-			// aapt resource value: 0x7f0b0085
-			public const int settings_unlocks_monitor_type_summary_on = 2131427461;
+			// aapt resource value: 0x7f0b0089
+			public const int settings_developer_egg = 2131427465;
 			
 			// aapt resource value: 0x7f0b0084
-			public const int settings_unlocks_monitor_type_title = 2131427460;
+			public const int settings_monitor_list_summary = 2131427460;
+			
+			// aapt resource value: 0x7f0b0083
+			public const int settings_monitor_list_title = 2131427459;
+			
+			// aapt resource value: 0x7f0b0087
+			public const int settings_unlocks_monitor_type_summary_off = 2131427463;
+			
+			// aapt resource value: 0x7f0b0086
+			public const int settings_unlocks_monitor_type_summary_on = 2131427462;
+			
+			// aapt resource value: 0x7f0b0085
+			public const int settings_unlocks_monitor_type_title = 2131427461;
 			
 			// aapt resource value: 0x7f0b0065
 			public const int status_bar_notification_info_overflow = 2131427429;
