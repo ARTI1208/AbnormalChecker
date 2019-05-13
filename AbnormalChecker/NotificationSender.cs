@@ -118,7 +118,6 @@ namespace AbnormalChecker
 					var makeNormal = new NotificationCompat.Action(Resource.Drawable.ic_notif_normalize,
 						mContext.GetString(Resource.String.notification_button_normalize),
 						IntentToNormalize(CreateNormalizeIntent()));
-
 					var viewDetails = new NotificationCompat.Action(Resource.Drawable.ic_notif_details,
 						mContext.GetString(Resource.String.notification_button_details), pendingIntent);
 					builder.AddAction(makeNormal).AddAction(viewDetails);
