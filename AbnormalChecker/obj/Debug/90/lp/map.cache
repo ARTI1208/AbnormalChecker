@@ -1,5 +1,5 @@
+OnBoardingLib
 PhoneNumbers
-RestSharp
 System.Runtime
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Core.Runtime
@@ -29,7 +29,6 @@ Xamarin.Android.Support.Print
 Xamarin.Android.Support.SlidingPaneLayout
 Xamarin.Android.Support.SwipeRefreshLayout
 Xamarin.Android.Support.v14.Preference
-Xamarin.Android.Support.v17.Leanback
 Xamarin.Android.Support.v4
 Xamarin.Android.Support.v7.AppCompat
 Xamarin.Android.Support.v7.CardView
@@ -43,4 +42,3 @@ Xamarin.GooglePlayServices.Basement
 Xamarin.GooglePlayServices.Location
 Xamarin.GooglePlayServices.Places.PlaceReport
 Xamarin.GooglePlayServices.Tasks
-OnBoardingLib

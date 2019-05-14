@@ -11,7 +11,6 @@ using Android.Support.V7.App;
 using Android.Support.V7.Preferences;
 using Android.Util;
 using Java.Util;
-using Java.Util.Prefs;
 
 namespace AbnormalChecker.Activities
 {

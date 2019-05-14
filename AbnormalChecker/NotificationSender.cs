@@ -18,7 +18,7 @@ namespace AbnormalChecker
 	public class NotificationSender
 	{
 		public static readonly string ExtraNotificationId = "notification_id";
-		private static readonly string ExtraNotificationCategory = "category";
+		public static readonly string ExtraNotificationCategory = "category";
 
 		private readonly string mCategory;
 		private readonly Context mContext;
@@ -57,6 +57,7 @@ namespace AbnormalChecker
 			if (normalizeIntent == null)
 			{
 				var normalIntent = new Intent(mContext, typeof(MakeNormalReceiver));
+				normalIntent.PutExtra(ExtraNotificationId, mCategory.GetHashCode());
 				normalIntent.PutExtra(ExtraNotificationCategory, mCategory);
 				normalizeIntent = normalIntent;
 			}

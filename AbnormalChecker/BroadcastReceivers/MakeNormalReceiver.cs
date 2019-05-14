@@ -1,6 +1,7 @@
 using AbnormalChecker.Services;
 using Android.App;
 using Android.Content;
+using Android.Util;
 using Android.Widget;
 
 namespace AbnormalChecker.BroadcastReceivers
@@ -17,9 +18,9 @@ namespace AbnormalChecker.BroadcastReceivers
         public override void OnReceive(Context context, Intent intent)
         {
             NotificationManager notificationManager = NotificationManager.FromContext(context);
-            notificationManager.Cancel(intent.GetIntExtra("notification_id", 0));
+            notificationManager.Cancel(intent.GetIntExtra(NotificationSender.ExtraNotificationId, 0));
 
-            switch (intent.GetStringExtra("category"))
+            switch (intent.GetStringExtra(NotificationSender.ExtraNotificationCategory))
             {
                 case DataHolder.SystemCategory:
                     DataHolder.NormalizeSystemData(

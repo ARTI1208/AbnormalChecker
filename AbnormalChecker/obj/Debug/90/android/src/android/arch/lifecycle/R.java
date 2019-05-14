@@ -21,35 +21,10 @@ public final class R {
         public static int abc_slide_out_top=0x7f050009;
         public static int abc_tooltip_enter=0x7f05000a;
         public static int abc_tooltip_exit=0x7f05000b;
-        public static int lb_decelerator_2=0x7f05000c;
-        public static int lb_decelerator_4=0x7f05000d;
-    }
-    public static final class animator {
-        public static int lb_guidedactions_item_pressed=0x7f060000;
-        public static int lb_guidedactions_item_unpressed=0x7f060001;
-        public static int lb_guidedstep_slide_down=0x7f060002;
-        public static int lb_guidedstep_slide_up=0x7f060003;
-        public static int lb_onboarding_description_enter=0x7f060004;
-        public static int lb_onboarding_logo_enter=0x7f060005;
-        public static int lb_onboarding_logo_exit=0x7f060006;
-        public static int lb_onboarding_page_indicator_enter=0x7f060007;
-        public static int lb_onboarding_page_indicator_fade_in=0x7f060008;
-        public static int lb_onboarding_page_indicator_fade_out=0x7f060009;
-        public static int lb_onboarding_start_button_fade_in=0x7f06000a;
-        public static int lb_onboarding_start_button_fade_out=0x7f06000b;
-        public static int lb_onboarding_title_enter=0x7f06000c;
-        public static int lb_playback_bg_fade_in=0x7f06000d;
-        public static int lb_playback_bg_fade_out=0x7f06000e;
-        public static int lb_playback_controls_fade_in=0x7f06000f;
-        public static int lb_playback_controls_fade_out=0x7f060010;
-        public static int lb_playback_description_fade_in=0x7f060011;
-        public static int lb_playback_description_fade_out=0x7f060012;
-        public static int lb_playback_rows_fade_in=0x7f060013;
-        public static int lb_playback_rows_fade_out=0x7f060014;
     }
     public static final class array {
-        public static int categories=0x7f120000;
-        public static int categories_values=0x7f120001;
+        public static int categories=0x7f0e0000;
+        public static int categories_values=0x7f0e0001;
     }
     public static final class attr {
         /**  Custom divider drawable to use for elements in the action bar. 
@@ -257,16 +232,6 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static int actionViewClass=0x7f010119;
-        /**  Defines the duration in milliseconds of the activated animation for
-             a card layout. 
-         <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int activatedAnimationDuration=0x7f0101e0;
         /**  Default ActivityChooserView style. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -350,7 +315,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static int alpha=0x7f010214;
+        public static int alpha=0x7f01015c;
         /**  The alphabetic modifier key. This is the modifier when using a keyboard
             with alphabetic keys. The values should be kept in sync with KeyEvent 
          <p>Must be one or more (separated by '|') of the following constant values.</p>
@@ -368,16 +333,6 @@ containing a value of this type.
 </table>
          */
         public static int alphabeticModifiers=0x7f010115;
-        /**  Attribute for background color of the arrow in PagingIndicator. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int arrowBgColor=0x7f0101d8;
-        /**  Attribute for the arrow color in PagingIndicator. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int arrowColor=0x7f0101d7;
         /**  The length of the arrow head when formed to make an arrow 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
@@ -389,11 +344,6 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static int arrowHeadLength=0x7f01010e;
-        /**  Attributes for the radius of the arrow. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int arrowRadius=0x7f0101d3;
         /**  The length of the shaft when formed to make an arrow 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
@@ -527,113 +477,11 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static int barLength=0x7f010110;
-        /**  CardView styles 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int baseCardViewStyle=0x7f0101a4;
         /**  Style for buttons without an explicit border, often used in groups. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static int borderlessButtonStyle=0x7f0100c6;
-        /**  bottom padding of BrowseFragment 
-         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int browsePaddingBottom=0x7f010192;
-        /**  end padding of BrowseFragment, RowsFragment, DetailsFragment 
-         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int browsePaddingEnd=0x7f010190;
-        /**  start padding of BrowseFragment, RowsFragment, DetailsFragment 
-         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int browsePaddingStart=0x7f01018f;
-        /**  top padding of BrowseFragment 
-         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int browsePaddingTop=0x7f010191;
-        /**  fading edge length of start of browse row when HeadersFragment is visible 
-         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int browseRowsFadingEdgeLength=0x7f010195;
-        /**  start margin of RowsFragment inside BrowseFragment when HeadersFragment is visible 
-         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int browseRowsMarginStart=0x7f010193;
-        /**  top margin of RowsFragment inside BrowseFragment when BrowseFragment title is visible 
-         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int browseRowsMarginTop=0x7f010194;
-        /**  fragment title icon style 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int browseTitleIconStyle=0x7f010197;
-        /**  fragment title text style 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int browseTitleTextStyle=0x7f010196;
-        /**  customize title view layout file, it must have title view with id browse_title_group 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int browseTitleViewLayout=0x7f010199;
-        /**  fragment title view style 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int browseTitleViewStyle=0x7f010198;
         /**  Style for buttons within button bars 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -739,13 +587,6 @@ containing a value of this type.
 </table>
          */
         public static int buttonTintMode=0x7f010109;
-        /**  Defines the background of card 
-         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-         */
-        public static int cardBackground=0x7f0101da;
         /**  Background color for CardView. 
          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
@@ -778,13 +619,6 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static int cardElevation=0x7f01004f;
-        /**  Defines the background of card 
-         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-         */
-        public static int cardForeground=0x7f0101d9;
         /**  Maximum Elevation for CardView. 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
@@ -805,27 +639,6 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static int cardPreventCornerOverlap=0x7f010052;
-        /**  Defines the type of the card layout 
-         <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>mainOnly</code></td><td>0</td><td> A simple card layout with a single layout region. </td></tr>
-<tr><td><code>infoOver</code></td><td>1</td><td> A card layout with two layout regions: a main area which is
-                 always visible, and an info region that appears over the lower
-                 area of the main region. </td></tr>
-<tr><td><code>infoUnder</code></td><td>2</td><td> A card layout with two layout regions: a main area which is
-                 always visible, and an info region that appears below the main
-                 region. </td></tr>
-<tr><td><code>infoUnderWithExtra</code></td><td>3</td><td> A card layout with three layout regions: a main area which is
-                 always visible, an info region that appears below the main
-                 region, and an extra region that appears below the info region
-                 after a small delay. </td></tr>
-</table>
-         */
-        public static int cardType=0x7f0101db;
         /**  Add padding in API v21+ as well to have the same measurements with previous versions. 
          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
@@ -872,10 +685,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static int closeItemLayout=0x7f010076;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int closed_captioning=0x7f0101fb;
         /**  Text to set as the content description for the collapse button. 
          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
@@ -1015,25 +824,6 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static int colorSwitchThumbNormal=0x7f0100ea;
-        /**  Defining width of each column of VerticalGridView 
-         <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-<p>May be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>wrap_content</code></td><td>-2</td><td></td></tr>
-</table>
-         */
-        public static int columnWidth=0x7f010209;
         /**  Commit icon shown in the query suggestion row 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -1183,43 +973,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static int coordinatorLayoutStyle=0x7f01020b;
+        public static int coordinatorLayoutStyle=0x7f010153;
         /**  Specifies a layout for custom navigation. Overrides navigationMode. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static int customNavigationLayout=0x7f010067;
-        /**  e.g. "MDY", "MY" 
-         <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int datePickerFormat=0x7f0101e8;
-        /**  Default brand color used for the background of certain leanback visual elements
-             such as the headers fragment. If your app runs on:
-             a) SDK 21+: set colorPrimary, used by the leanback launcher and elsewhere, and defaultBrandColor will inherit it.
-             b) SDK < 21: set the brand color explicitly via defaultBrandColor, or programatically.
-         
-         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-         */
-        public static int defaultBrandColor=0x7f0101c1;
-        /**  Default dark brand color used for the background of certain leanback visual elements
-             such as the actions background. If your app runs on:
-             a) SDK 21+: set colorPrimaryDark, used by the leanback launcher and elsewhere, and defaultBrandColorDark will inherit it.
-             b) SDK < 21: set the brand color explicitly via defaultBrandColorDark, or programatically.
-         
-         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-         */
-        public static int defaultBrandColorDark=0x7f0101c2;
         /**  Default query hint used when {@code queryHint} is undefined and
              the search view's {@code SearchableInfo} does not provide a hint. 
          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
@@ -1230,38 +989,6 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static int defaultQueryHint=0x7f010128;
-        /**  Default color that search orb pulses to.  If not set, this color is determined programatically based on the defaultSearchColor 
-         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-         */
-        public static int defaultSearchBrightColor=0x7f0101c5;
-        /**  Default background color for Search Icon 
-         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-         */
-        public static int defaultSearchColor=0x7f0101c3;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int defaultSearchIcon=0x7f0101c8;
-        /**  Default icon color for Search Icon 
-         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-         */
-        public static int defaultSearchIconColor=0x7f0101c4;
-        /**  Default color for SectionHeader, by default same as defaultSearchColor 
-         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-         */
-        public static int defaultSectionHeaderColor=0x7f0101c6;
         /**  The default value for the preference, which will be set either if persistence
              is off or persistence is on and the preference is not found in the persistent
              storage.  
@@ -1283,23 +1010,6 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static int dependency=0x7f010021;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int detailsActionButtonStyle=0x7f0101ae;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int detailsDescriptionBodyStyle=0x7f0101ad;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int detailsDescriptionSubtitleStyle=0x7f0101ac;
-        /**  for details overviews 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int detailsDescriptionTitleStyle=0x7f0101ab;
         /**  Preferred corner radius of dialogs. 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
@@ -1416,21 +1126,6 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static int dividerVertical=0x7f0100c7;
-        /**  Attribute for background color of the dots in PagingIndicator. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int dotBgColor=0x7f0101d6;
-        /**  Attributes for the distance between the centers of the arrow circle and the adjacent dot. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int dotToArrowGap=0x7f0101d5;
-        /**  Attributes for the distance between the centers of the adjacent dots. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int dotToDotGap=0x7f0101d4;
         /**  The total size of the drawable 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
@@ -1522,11 +1217,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static int entryValues=0x7f010019;
-        /**  for messages in the error fragment 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int errorMessageStyle=0x7f0101c0;
         /**  The drawable to show in the button for expanding the activities overflow popup.
              <strong>Note:</strong> Clients would like to set this drawable
              as a clue about the action the chosen activity will perform. For
@@ -1537,21 +1227,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static int expandActivityOverflowButtonDrawable=0x7f010078;
-        /**  Defines when the extra region of a card layout is displayed.
-             Depends on infoVisibility, meaning the extra region never displays
-             if the info region is not displayed as well. 
-         <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>always</code></td><td>0</td><td> Always display the extra region. </td></tr>
-<tr><td><code>activated</code></td><td>1</td><td> Display the extra region only when activated. </td></tr>
-<tr><td><code>selected</code></td><td>2</td><td> Display the extra region only when selected. </td></tr>
-</table>
-         */
-        public static int extraVisibility=0x7f0101dd;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -1576,10 +1251,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static int fastScrollVerticalTrackDrawable=0x7f01000c;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int fast_forward=0x7f0101ef;
         /**  Distance from the top of the TextView to the first text baseline. If set, this
              overrides the value set for paddingTop. 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
@@ -1592,51 +1263,12 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static int firstBaselineToTopHeight=0x7f01008e;
-        /**  Allow DPAD key to navigate out at the end of the view, default is false 
-         <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int focusOutEnd=0x7f0101e3;
-        /**  Allow DPAD key to navigate out at the front of the View (where position = 0),
-             default is false  
-         <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int focusOutFront=0x7f0101e2;
-        /**  Allow DPAD key to navigate out of last row, for HorizontalGridView, it's the
-             bottom edge, for VerticalGridView it's the "end" edge.  Default value is true.  
-         <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int focusOutSideEnd=0x7f0101e5;
-        /**  Allow DPAD key to navigate out of first row, for HorizontalGridView, it's the
-             top edge, for VerticalGridView it's the "start" edge.  Default value is true.  
-         <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int focusOutSideStart=0x7f0101e4;
         /**  The reference to the font file to be used. This should be a file in the res/font folder
          and should therefore have an R reference value. E.g. @font/myfont 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static int font=0x7f01021c;
+        public static int font=0x7f010164;
         /**  The attribute for the font family. 
          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
@@ -1654,7 +1286,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static int fontProviderAuthority=0x7f010215;
+        public static int fontProviderAuthority=0x7f01015d;
         /**  The sets of hashes for the certificates the provider should be signed with. This is
         used to verify the identity of the provider, and is only required if the provider is not
         part of the system image. This value may point to one list or a list of lists, where each
@@ -1663,7 +1295,7 @@ containing a value of this type.
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static int fontProviderCerts=0x7f010218;
+        public static int fontProviderCerts=0x7f010160;
         /**  The strategy to be used when fetching font data from a font provider in XML layouts.
         This attribute is ignored when the resource is loaded from code, as it is equivalent to the
         choice of API between {@link
@@ -1689,7 +1321,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
               fontProviderFetchTimeout will be ignored if async loading is specified. </td></tr>
 </table>
          */
-        public static int fontProviderFetchStrategy=0x7f010219;
+        public static int fontProviderFetchStrategy=0x7f010161;
         /**  The length of the timeout during fetching. 
          <p>May be an integer value, such as "<code>100</code>".
 <p>This may also be a reference to a resource (in the form
@@ -1707,7 +1339,7 @@ containing a value of this type.
               timeout and wait until a reply is received from the font provider. </td></tr>
 </table>
          */
-        public static int fontProviderFetchTimeout=0x7f01021a;
+        public static int fontProviderFetchTimeout=0x7f010162;
         /**  The package for the Font Provider to be used for the request. This is used to verify
         the identity of the provider. 
          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
@@ -1717,7 +1349,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static int fontProviderPackage=0x7f010216;
+        public static int fontProviderPackage=0x7f01015e;
         /**  The query to be sent over to the provider. Refer to your font provider's documentation
         on the format of this string. 
          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
@@ -1727,7 +1359,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static int fontProviderQuery=0x7f010217;
+        public static int fontProviderQuery=0x7f01015f;
         /**  The style of the given font file. This will be used when the font is being loaded into
          the font stack and will override any style information in the font's header tables. If
          unspecified, the value in the font's header tables will be used. 
@@ -1741,7 +1373,7 @@ containing a value of this type.
 <tr><td><code>italic</code></td><td>1</td><td></td></tr>
 </table>
          */
-        public static int fontStyle=0x7f01021b;
+        public static int fontStyle=0x7f010163;
         /**  The variation settings to be applied to the font. The string should be in the following
          format: "'tag1' value1, 'tag2' value2, ...". If the default variation settings should be
          used, or the font used does not support variation settings, this attribute needs not be
@@ -1753,7 +1385,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static int fontVariationSettings=0x7f01021e;
+        public static int fontVariationSettings=0x7f010166;
         /**  The weight of the given font file. This will be used when the font is being loaded into
          the font stack and will override any weight information in the font's header tables. Must
          be a positive number, a multiple of 100, and between 100 and 900, inclusive. The most
@@ -1766,7 +1398,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static int fontWeight=0x7f01021d;
+        public static int fontWeight=0x7f010165;
         /**  When used inside of a modern PreferenceActivity, this declares
              a new PreferenceFragment to be shown when the user selects this item. 
          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
@@ -1793,344 +1425,6 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static int goIcon=0x7f01012a;
-        /**  Theme attribute for the style of the breadcrumb in a GuidanceStylist. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_GuidanceBreadcrumbStyle}. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidanceBreadcrumbStyle=0x7f01015d;
-        /**  Theme attribute for the style of the main container in a GuidanceStylist. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_GuidanceContainerStyle}.
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidanceContainerStyle=0x7f01015a;
-        /**  Theme attribute for the style of the description in a GuidanceStylist. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_GuidanceDescriptionStyle}. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidanceDescriptionStyle=0x7f01015c;
-        /**  Deprecated theme attribute, do not use 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidanceEntryAnimation=0x7f01017e;
-        /**  Theme attribute for the style of the icon in a GuidanceStylist. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_GuidanceIconStyle}. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidanceIconStyle=0x7f01015e;
-        /**  Theme attribute for the style of the title in a GuidanceStylist. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_GuidanceTitleStyle}. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidanceTitleStyle=0x7f01015b;
-        /**  Deprecated theme attribute, do not use 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedActionCheckedAnimation=0x7f010182;
-        /**  Deprecated theme attribute, do not use 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedActionContentWidth=0x7f010184;
-        /**  Deprecated theme attribute, do not use 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedActionContentWidthNoIcon=0x7f010185;
-        /**  Theme attribute used for the width weight of actions in comparison to guidance area.  Default is {@link
-         androidx.leanbackback.R.string#lb_guidedactions_width_weight}. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedActionContentWidthWeight=0x7f010171;
-        /**  Theme attribute used for the width weight of actions and button actions in comparison to guidance area.  Default is {@link
-         androidx.leanbackback.R.string#lb_guidedactions_width_weight_two_panels}. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedActionContentWidthWeightTwoPanels=0x7f010172;
-        /**  Theme attribute used in a GuidedActionsPresenter for the max lines of the title text
-             view when the action's isMultilineDescription is set to false. Default is {@link
-         androidx.leanbackback.R.integer#lb_guidedactions_item_description_min_lines}. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedActionDescriptionMinLines=0x7f010176;
-        /**  Theme attribute used in a GuidedActionsPresenter for the alpha value of the chevron
-             decoration when its action is disabled. Default is {@link
-         androidx.leanbackback.R.string#lb_guidedactions_item_disabled_chevron_alpha}. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedActionDisabledChevronAlpha=0x7f010170;
-        /**  Theme attribute used in a GuidedActionsPresenter for the alpha value of the chevron
-             decoration when its action is enabled. Default is {@link
-         androidx.leanbackback.R.dimen#lb_guidedactions_item_enabled_chevron_alpha}. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedActionEnabledChevronAlpha=0x7f01016f;
-        /**  Theme attribute for the style of an action's checkmark in a GuidedActionsPresenter.
-             Default is {@link
-         androidx.leanbackback.R.style#Widget_Leanback_GuidedActionItemCheckmarkStyle}. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedActionItemCheckmarkStyle=0x7f010167;
-        /**  Theme attribute for the style of an action's chevron decoration in a
-             GuidedActionsPresenter. Default is {@link
-         androidx.leanbackback.R.style#Widget_Leanback_GuidedActionItemChevronStyle}. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedActionItemChevronStyle=0x7f01016c;
-        /**  Theme attribute for the style of the container of a single action in a
-             GuidedActionsPresenter. Default is {@link
-         androidx.leanbackback.R.style#Widget_Leanback_GuidedActionItemContainerStyle}. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedActionItemContainerStyle=0x7f010166;
-        /**  Theme attribute for the style of an action's content in a GuidedActionsPresenter.
-             Default is {@link
-         androidx.leanbackback.R.style#Widget_Leanback_GuidedActionItemContentStyle}. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedActionItemContentStyle=0x7f010169;
-        /**  Theme attribute for the style of an action's description in a GuidedActionsPresenter.
-             Default is {@link
-         androidx.leanbackback.R.style#Widget_Leanback_GuidedActionItemDescriptionStyle}. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedActionItemDescriptionStyle=0x7f01016b;
-        /**  Theme attribute for the style of an action's icon in a GuidedActionsPresenter. Default
-             is {@link
-         androidx.leanbackback.R.style#Widget_Leanback_GuidedActionItemIconStyle}. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedActionItemIconStyle=0x7f010168;
-        /**  Theme attribute for the style of an action's title in a GuidedActionsPresenter. Default
-             is {@link
-         androidx.leanbackback.R.style#Widget_Leanback_GuidedActionItemTitleStyle}. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedActionItemTitleStyle=0x7f01016a;
-        /**  Theme attribute for the animation used in a GuidedActionsPresenter when an action
-             is pressed. Default is {@link
-         androidx.leanbackback.R.animator#lb_guidedactions_item_pressed}. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedActionPressedAnimation=0x7f01016d;
-        /**  Theme attribute used in a GuidedActionsPresenter for the max lines of the title text
-             view when the action's isMultilineDescription is set to true. Default is {@link
-         androidx.leanbackback.R.integer#lb_guidedactions_item_title_max_lines}. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedActionTitleMaxLines=0x7f010175;
-        /**  Theme attribute used in a GuidedActionsPresenter for the max lines of the title text
-             view when the action's isMultilineDescription is set to false. Default is {@link
-         androidx.leanbackback.R.integer#lb_guidedactions_item_title_min_lines}. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedActionTitleMinLines=0x7f010174;
-        /**  Deprecated theme attribute, do not use 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedActionUncheckedAnimation=0x7f010183;
-        /**  Theme attribute for the animation used in a GuidedActionsPresenter when an action
-             is unpressed. Default is {@link
-         androidx.leanbackback.R.animator#lb_guidedactions_item_unpressed}. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedActionUnpressedAnimation=0x7f01016e;
-        /**  Theme attribute used in a GuidedActionsPresenter for the vertical padding between
-             action views in the list. Default is {@link
-         androidx.leanbackback.R.dimen#lb_guidedactions_vertical_padding}. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedActionVerticalPadding=0x7f010177;
-        /**  Theme attribute for the background of GuidedActions. Default is
-             {@landroidx.leanbackback.R.color#lb_guidedactions_background}.
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedActionsBackground=0x7f010161;
-        /**  Theme attribute for the dark version background of GuidedActions. Default is
-             {@landroidx.leanbackback.R.color#lb_guidedactions_background_dark}.
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedActionsBackgroundDark=0x7f010162;
-        /**  Deprecated theme attribute, do not use 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedActionsContainerStyle=0x7f010178;
-        /**  Theme attribute for the shadow elevation of GuidedActions. Default is
-             {@landroidx.leanbackback.R.dimen#lb_guidedactions_elevation}.
-         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-         */
-        public static int guidedActionsElevation=0x7f010160;
-        /**  Deprecated theme attribute, do not use 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedActionsEntryAnimation=0x7f01017f;
-        /**  Theme attribute for the style of the list in a GuidedActionsPresenter. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_GuidedActionsListStyle}.
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedActionsListStyle=0x7f010163;
-        /**  Theme attribute for the style of the item selector in a GuidedActionsPresenter. Default is
-             ?android:attr/selectableItemBackground. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedActionsSelectorDrawable=0x7f01015f;
-        /**  Deprecated theme attribute, do not use 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedActionsSelectorHideAnimation=0x7f010181;
-        /**  Deprecated theme attribute, do not use 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedActionsSelectorShowAnimation=0x7f010180;
-        /**  Deprecated theme attribute, do not use 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedActionsSelectorStyle=0x7f010179;
-        /**  Theme attribute for the style of the list in a GuidedActionsPresenter. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_GuidedButtonActionsListStyle}.
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedButtonActionsListStyle=0x7f010165;
-        /**  Theme attribute used for the width weight of button actions in compare to actions 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedButtonActionsWidthWeight=0x7f010173;
-        /**  Theme attribute of background drawable used by GuidedStepFragment. 
-         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-         */
-        public static int guidedStepBackground=0x7f010157;
-        /**  Deprecated theme attribute, do not use 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedStepEntryAnimation=0x7f01017a;
-        /**  Deprecated theme attribute, do not use 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedStepExitAnimation=0x7f01017b;
-        /**  Used to control the height of the fragment. By default this fragment will take
-             up the full height of it's parent. The height of this fragment is governed by
-             this property. Default weight is set to 2.0, so inorder to render the fragment
-             in half screen mode, this attribute should be set to 1.0 
-         <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int guidedStepHeightWeight=0x7f010154;
-        /**  Theme attribute for the animation used when a guided step element is animated in
-             response to the IME appearing. Default is {@link
-         androidx.leanbackback.R.animator#lb_guidedstep_slide_up}. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedStepImeAppearingAnimation=0x7f010158;
-        /**  Theme attribute for the animation used when a guided step element is animated in
-             response to the IME disappearing. Default is {@link
-         androidx.leanbackback.R.animator#lb_guidedstep_slide_down}. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedStepImeDisappearingAnimation=0x7f010159;
-        /**  Y offset to the bottom of the TitleView(font baseline) used to align the
-             first action text on the right. 
-         <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int guidedStepKeyline=0x7f010155;
-        /**  Deprecated theme attribute, do not use 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedStepReentryAnimation=0x7f01017c;
-        /**  Deprecated theme attribute, do not use 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedStepReturnAnimation=0x7f01017d;
-        /**  Theme attribute for the overall theme used in a GuidedStepFragment. The Leanback themes
-             set the default for this, but a custom theme that does not derive from a leanback theme
-             can set this to <code>@style/Theme.Leanback.GuidedStep</code> in order to specify the
-             default GuidedStepFragment styles. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedStepTheme=0x7f010153;
-        /**  @hide
-             Theme attribute used to inspect theme inheritance. 
-         <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int guidedStepThemeFlag=0x7f010156;
-        /**  Theme attribute for the style of the sub actions list in a GuidedActionsPresenter. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_GuidedSubActionsListStyle}.
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int guidedSubActionsListStyle=0x7f010164;
-        /**  header style inside HeadersFragment 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int headerStyle=0x7f01019b;
-        /**  vertical grid style inside HeadersFragment 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int headersVerticalGridStyle=0x7f01019a;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -2150,10 +1444,6 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static int hideOnContentScroll=0x7f01006d;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int high_quality=0x7f0101fa;
         /**  Specifies a drawable to use for the 'home as up' indicator. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -2164,17 +1454,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static int homeLayout=0x7f010068;
-        /**  Deprecated, use android:horizontalSpacing 
-         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int horizontalMargin=0x7f0101e6;
         /**  Specifies the drawable used for the application icon. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -2259,55 +1538,11 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static int imageButtonStyle=0x7f0100d0;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int imageCardViewBadgeStyle=0x7f0101a9;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int imageCardViewContentStyle=0x7f0101a8;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int imageCardViewImageStyle=0x7f0101a6;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int imageCardViewInfoAreaStyle=0x7f0101aa;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int imageCardViewStyle=0x7f0101a5;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int imageCardViewTitleStyle=0x7f0101a7;
         /**  Specifies a style resource to use for an indeterminate progress spinner. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static int indeterminateProgressStyle=0x7f01006a;
-        /**  Deprecated. Use 'imageCardViewInfoAreaStyle' instead. 
-         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-         */
-        public static int infoAreaBackground=0x7f0101eb;
-        /**  Defines when the info region of a card layout is displayed. 
-         <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>always</code></td><td>0</td><td> Always display the info region. </td></tr>
-<tr><td><code>activated</code></td><td>1</td><td> Display the info region only when activated. </td></tr>
-<tr><td><code>selected</code></td><td>2</td><td> Display the info region only when selected. </td></tr>
-</table>
-         */
-        public static int infoVisibility=0x7f0101dc;
         /**  The maximal number of items initially shown in the activity list. 
          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
@@ -2335,15 +1570,6 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static int initialExpandedChildrenCount=0x7f01002c;
-        /**  attr indicating whether time is in 24 hour format (true) or AM/PM format (false). 
-         <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int is24HourFormat=0x7f010207;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -2373,11 +1599,6 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static int itemPadding=0x7f01006c;
-        /**  style for a vertical grid of items 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int itemsVerticalGridStyle=0x7f0101bf;
         /**  The key to store the Preference value. 
          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
@@ -2395,7 +1616,7 @@ containing a value of this type.
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static int keylines=0x7f01020c;
+        public static int keylines=0x7f010154;
         /**  Distance from the bottom of the TextView to the last text baseline. If set, this
              overrides the value set for paddingBottom. 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
@@ -2434,7 +1655,7 @@ containing a value of this type.
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static int layout_anchor=0x7f01020f;
+        public static int layout_anchor=0x7f010157;
         /**  Specifies how an object should position relative to an anchor, on both the X and Y axes,
              within its parent's bounds.  
          <p>Must be one or more (separated by '|') of the following constant values.</p>
@@ -2465,7 +1686,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <tr><td><code>end</code></td><td>0x00800005</td><td> Push object to the end of its container, not changing its size. </td></tr>
 </table>
          */
-        public static int layout_anchorGravity=0x7f010211;
+        public static int layout_anchorGravity=0x7f010159;
         /**  The class name of a Behavior class defining special runtime behavior
              for this child view. 
          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
@@ -2475,7 +1696,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static int layout_behavior=0x7f01020e;
+        public static int layout_behavior=0x7f010156;
         /**  Specifies how this view dodges the inset edges of the CoordinatorLayout. 
          <p>Must be one or more (separated by '|') of the following constant values.</p>
 <table>
@@ -2493,7 +1714,7 @@ containing a value of this type.
 <tr><td><code>all</code></td><td>0x77</td><td> Dodge all the inset edges. </td></tr>
 </table>
          */
-        public static int layout_dodgeInsetEdges=0x7f010213;
+        public static int layout_dodgeInsetEdges=0x7f01015b;
         /**  Specifies how this view insets the CoordinatorLayout and make some other views
              dodge it. 
          <p>Must be one of the following constant values.</p>
@@ -2511,7 +1732,7 @@ containing a value of this type.
 <tr><td><code>end</code></td><td>0x00800005</td><td> Inset the end edge. </td></tr>
 </table>
          */
-        public static int layout_insetEdge=0x7f010212;
+        public static int layout_insetEdge=0x7f01015a;
         /**  The index of a keyline this view should position relative to.
              android:layout_gravity will affect how the view aligns to the
              specified keyline. 
@@ -2522,58 +1743,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static int layout_keyline=0x7f010210;
-        /**  The card layout region defined by this element. At most one of
-             element of each type should be specified as an immediate child of
-             the card layout. 
-         <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>main</code></td><td>0</td><td> The main region of the card. </td></tr>
-<tr><td><code>info</code></td><td>1</td><td> The info region of the card. </td></tr>
-<tr><td><code>extra</code></td><td>2</td><td> The extra region of the card. </td></tr>
-</table>
-         */
-        public static int layout_viewType=0x7f0101e1;
-        /**  Attributes for the radius of the dot. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int lbDotRadius=0x7f0101d2;
-        /**  Defines what components the ImageCardView will use. 
-         <p>Must be one or more (separated by '|') of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>Title</code></td><td>1</td><td></td></tr>
-<tr><td><code>Content</code></td><td>2</td><td></td></tr>
-<tr><td><code>IconOnRight</code></td><td>4</td><td></td></tr>
-<tr><td><code>IconOnLeft</code></td><td>8</td><td></td></tr>
-<tr><td><code>ImageOnly</code></td><td>0</td><td> Only display the main image. </td></tr>
-</table>
-         */
-        public static int lbImageCardViewType=0x7f0101ec;
-        /**  A duplication of Slide attribute slideEdge for KitKat 
-         <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>left</code></td><td>0x03</td><td> Slide to and from the left edge of the Scene. </td></tr>
-<tr><td><code>top</code></td><td>0x30</td><td> Slide to and from the top edge of the Scene. </td></tr>
-<tr><td><code>right</code></td><td>0x05</td><td> Slide to and from the right edge of the Scene. </td></tr>
-<tr><td><code>bottom</code></td><td>0x50</td><td> Slide to and from the bottom edge of the Scene. </td></tr>
-<tr><td><code>start</code></td><td>0x00800003</td><td> Slide to and from the x-axis position at the start of the Scene root. </td></tr>
-<tr><td><code>end</code></td><td>0x00800005</td><td> Slide to and from the x-axis position at the end of the Scene root. </td></tr>
-</table>
-         */
-        public static int lb_slideEdge=0x7f010206;
+        public static int layout_keyline=0x7f010158;
         /**  Explicit height between lines of text. If set, this will override the values set
              for lineSpacingExtra and lineSpacingMultiplier. 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
@@ -2683,15 +1853,6 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static int logoDescription=0x7f01014b;
-        /**  Whether to maintain the same line spacing when text is resized, default is false 
-         <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int maintainLineSpacing=0x7f0101ff;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -2783,24 +1944,6 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static int negativeButtonText=0x7f010016;
-        /**  Defining number of columns 
-         <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int numberOfColumns=0x7f01020a;
-        /**  Defining number of rows 
-         <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int numberOfRows=0x7f0101ea;
         /**  The numeric modifier key. This is the modifier when using a numeric (e.g., 12-key)
             keyboard. The values should be kept in sync with KeyEvent 
          <p>Must be one or more (separated by '|') of the following constant values.</p>
@@ -2818,62 +1961,6 @@ containing a value of this type.
 </table>
          */
         public static int numericModifiers=0x7f010116;
-        /**  Theme attribute for the style of the description text in onboarding screen. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_OnboardingDescriptionStyle}.
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int onboardingDescriptionStyle=0x7f010189;
-        /**  Theme attribute for the style of the header in onboarding screen. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_OnboardingHeaderStyle}.
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int onboardingHeaderStyle=0x7f010187;
-        /**  Theme attribute for the style of the logo in onboarding screen. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_OnboardingLogoStyle}.
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int onboardingLogoStyle=0x7f01018d;
-        /**  Theme attribute for the style of the main icon in onboarding fragment. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_OnboardingMainIconStyle}.
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int onboardingMainIconStyle=0x7f01018e;
-        /**  Theme attribute for the style of the navigator container in onboarding screen. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_OnboardingNavigatorContainerStyle}.
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int onboardingNavigatorContainerStyle=0x7f01018a;
-        /**  Theme attribute for the style of the page indicator in onboarding screen. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_OnboardingPageIndicatorStyle}.
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int onboardingPageIndicatorStyle=0x7f01018b;
-        /**  Theme attribute for the style of the start button in onboarding screen. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_OnboardingStartButtonStyle}.
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int onboardingStartButtonStyle=0x7f01018c;
-        /**  Theme attribute for the overall theme used in the onboarding. The Leanback themes set
-             the default for this, but a custom theme that does not derive from a leanback theme can
-             set this to <code>@style/Theme.Leanback.Onboarding</code> in order to specify the
-             default OnboardingFragment styles. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int onboardingTheme=0x7f010186;
-        /**  Theme attribute for the style of the title text in onboarding screen. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_OnboardingTitleStyle}.
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int onboardingTitleStyle=0x7f010188;
         /**  The order for the Preference (lower values are to be ordered first). If this is not
              specified, the default ordering will be alphabetic. 
          <p>Must be an integer value, such as "<code>100</code>".
@@ -2904,38 +1991,6 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static int overlapAnchor=0x7f010121;
-        /**  Default level of dimming for active views. 
-         <p>Must be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
-The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
-some parent container.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int overlayDimActiveLevel=0x7f0101d0;
-        /**  Default level of dimming for dimmed views. 
-         <p>Must be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
-The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
-some parent container.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int overlayDimDimmedLevel=0x7f0101d1;
-        /**  Default color for dimmed views. 
-         <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int overlayDimMaskColor=0x7f0101cf;
         /**  Bottom padding to use when no buttons are present. 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
@@ -3001,10 +2056,6 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static int panelMenuListWidth=0x7f0100e0;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int pause=0x7f0101ee;
         /**  Whether the Preference stores its value to the shared preferences. 
          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
@@ -3014,135 +2065,6 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static int persistent=0x7f010022;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int picture_in_picture=0x7f0101fc;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int play=0x7f0101ed;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int playbackControlButtonLabelStyle=0x7f0101bd;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int playbackControlsActionIcons=0x7f0101cc;
-        /**  Milliseconds to auto hide playback controls after user interacts with playback controls (i.e.
-             after fragment.tickle() is called).
-             Default value is disabled (0), app can turn it on by setting a positive milliseconds.
-             When enabled, value of playbackControlsAutoHideTickleTimeout usually should be set longer than playbackControlsAutoHideTimeout
-             for user to have enough time to think. 
-         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be an integer value, such as "<code>100</code>".
-         */
-        public static int playbackControlsAutoHideTickleTimeout=0x7f0101ce;
-        /**  Milliseconds to auto hide playback controls when media start playing. 
-         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be an integer value, such as "<code>100</code>".
-         */
-        public static int playbackControlsAutoHideTimeout=0x7f0101cd;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int playbackControlsButtonStyle=0x7f0101bc;
-        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-         */
-        public static int playbackControlsIconHighlightColor=0x7f0101cb;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int playbackControlsTimeStyle=0x7f0101be;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int playbackMediaItemDetailsStyle=0x7f0101b6;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int playbackMediaItemDurationStyle=0x7f0101bb;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int playbackMediaItemNameStyle=0x7f0101ba;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int playbackMediaItemNumberStyle=0x7f0101b9;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int playbackMediaItemNumberViewFlipperLayout=0x7f0101b8;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int playbackMediaItemNumberViewFlipperStyle=0x7f0101b7;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int playbackMediaItemPaddingStart=0x7f0101b1;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int playbackMediaItemRowStyle=0x7f0101b3;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int playbackMediaItemSeparatorStyle=0x7f0101b4;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int playbackMediaListHeaderStyle=0x7f0101b2;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int playbackMediaListHeaderTitleStyle=0x7f0101b5;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int playbackPaddingEnd=0x7f0101b0;
-        /**  for playlist and playback controls styling 
-         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int playbackPaddingStart=0x7f0101af;
-        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-         */
-        public static int playbackProgressPrimaryColor=0x7f0101c9;
-        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-         */
-        public static int playbackProgressSecondaryColor=0x7f0101ca;
         /**  Default PopupMenu style. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -3303,58 +2225,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static int ratingBarStyleSmall=0x7f0100fe;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int repeat=0x7f0101f7;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int repeat_one=0x7f0101f8;
-        /**  Conditions used to trigger text resizing 
-         <p>Must be one or more (separated by '|') of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>maxLines</code></td><td>0x01</td><td> Resize text whenever it lays out into the maximum number of lines </td></tr>
-</table>
-         */
-        public static int resizeTrigger=0x7f0101fd;
-        /**  Adjustment to bottom padding for resized text 
-         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int resizedPaddingAdjustmentBottom=0x7f010201;
-        /**  Adjustment to top padding for resized text 
-         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int resizedPaddingAdjustmentTop=0x7f010200;
-        /**  Text size for resized text 
-         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int resizedTextSize=0x7f0101fe;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -3363,69 +2233,11 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static int reverseLayout=0x7f010008;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int rewind=0x7f0101f0;
         /**  Default style for RingtonePreference. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static int ringtonePreferenceStyle=0x7f01003b;
-        /**  header description style inside a row 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int rowHeaderDescriptionStyle=0x7f0101a0;
-        /**  style for the layout that hosting Header inside a row 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int rowHeaderDockStyle=0x7f0101a1;
-        /**  header style inside a row 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int rowHeaderStyle=0x7f01019f;
-        /**  Defining height of each row of HorizontalGridView 
-         <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-<p>May be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>wrap_content</code></td><td>-2</td><td></td></tr>
-</table>
-         */
-        public static int rowHeight=0x7f0101e9;
-        /**  horizontal grid style inside a row 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int rowHorizontalGridStyle=0x7f01019e;
-        /**  hover card description style 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int rowHoverCardDescriptionStyle=0x7f0101a3;
-        /**  hover card title style 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int rowHoverCardTitleStyle=0x7f0101a2;
-        /**  vertical grid style inside RowsFragment 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int rowsVerticalGridStyle=0x7f01019d;
         /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
@@ -3441,47 +2253,11 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static int searchIcon=0x7f01012b;
-        /**  Defining pulse color of the search affordance 
-         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-         */
-        public static int searchOrbBrightColor=0x7f010205;
-        /**  Defining color of the search affordance 
-         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-         */
-        public static int searchOrbColor=0x7f010204;
-        /**  Defining icon of the search affordance 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int searchOrbIcon=0x7f010202;
-        /**  Defining icon tint color of the search affordance 
-         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-         */
-        public static int searchOrbIconColor=0x7f010203;
-        /**  Style for searchOrb 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int searchOrbViewStyle=0x7f0101c7;
         /**  Style for the search query widget. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static int searchViewStyle=0x7f0100d4;
-        /**  Non selectable header style inside HeadersFragment 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int sectionHeaderStyle=0x7f01019c;
         /** Attribute controlling the amount to increment or decrement the seekbar when the user
         presses the arrow keys
          <p>Must be an integer value, such as "<code>100</code>".
@@ -3523,26 +2299,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static int selectableItemBackgroundBorderless=0x7f0100c5;
-        /**  Defines the delay in milliseconds before the selection animation
-             runs for a card layout. 
-         <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int selectedAnimationDelay=0x7f0101de;
-        /**  Defines the duration in milliseconds of the selection animation for
-             a card layout. 
-         <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int selectedAnimationDuration=0x7f0101df;
         /**  Whether the view of this Preference should be disabled when
              this Preference is disabled. 
          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
@@ -3622,10 +2378,6 @@ containing a value of this type.
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static int shuffle=0x7f0101f9;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
         public static int singleChoiceItemLayout=0x7f01007c;
         /**  Whether to use single line for the preference title text. By default, preference title
              will be constrained to one line, so the default value of this attribute is true. 
@@ -3637,14 +2389,6 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static int singleLineTitle=0x7f010027;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int skip_next=0x7f0101f1;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int skip_previous=0x7f0101f2;
         /** <p>Must be an integer value, such as "<code>100</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -3710,7 +2454,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
          */
-        public static int statusBarBackground=0x7f01020d;
+        public static int statusBarBackground=0x7f010155;
         /**  Drawable for the arrow icon indicating a particular item is a submenu. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -3965,22 +2709,6 @@ containing a value of this type.
 </table>
          */
         public static int thumbTintMode=0x7f010133;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int thumb_down=0x7f0101f6;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int thumb_down_outline=0x7f0101f5;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int thumb_up=0x7f0101f4;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static int thumb_up_outline=0x7f0101f3;
         /**  Drawable displayed at each progress position on a seekbar. 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -4218,7 +2946,7 @@ containing a value of this type.
 </table>
          */
         public static int trackTintMode=0x7f010136;
-        public static int transition_drawable=0x7f010220;
+        public static int transition_drawable=0x7f010168;
         /** <p>Must be an integer value, such as "<code>100</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -4226,7 +2954,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static int transition_duration=0x7f010221;
+        public static int transition_duration=0x7f010169;
         /**  The index of the font in the tcc font file. If the font file referenced is not in the
         tcc format, this attribute needs not be specified. 
          <p>Must be an integer value, such as "<code>100</code>".
@@ -4236,28 +2964,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static int ttcIndex=0x7f01021f;
-        /**  attr indicating whether time fields should be initially set to the current time.
-         By default, it's true i.e. TimePicker initializes fields with the current time. 
-         <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int useCurrentTime=0x7f010208;
-        /**  Deprecated, use android:verticalSpacing 
-         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static int verticalMargin=0x7f0101e7;
+        public static int ttcIndex=0x7f010167;
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -4424,557 +3131,262 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int yesNoPreferenceStyle=0x7f010038;
     }
     public static final class bool {
-        public static int abc_action_bar_embed_tabs=0x7f0f0001;
-        public static int abc_allow_stacked_button_bar=0x7f0f0002;
-        public static int abc_config_actionMenuItemAllCaps=0x7f0f0003;
-        public static int config_materialPreferenceIconSpaceReserved=0x7f0f0000;
+        public static int abc_action_bar_embed_tabs=0x7f0c0001;
+        public static int abc_allow_stacked_button_bar=0x7f0c0002;
+        public static int abc_config_actionMenuItemAllCaps=0x7f0c0003;
+        public static int config_materialPreferenceIconSpaceReserved=0x7f0c0000;
     }
     public static final class color {
-        public static int abc_background_cache_hint_selector_material_dark=0x7f0c008b;
-        public static int abc_background_cache_hint_selector_material_light=0x7f0c008c;
-        public static int abc_btn_colored_borderless_text_material=0x7f0c008d;
-        public static int abc_btn_colored_text_material=0x7f0c008e;
-        public static int abc_color_highlight_material=0x7f0c008f;
-        public static int abc_hint_foreground_material_dark=0x7f0c0090;
-        public static int abc_hint_foreground_material_light=0x7f0c0091;
-        public static int abc_input_method_navigation_guard=0x7f0c000d;
-        public static int abc_primary_text_disable_only_material_dark=0x7f0c0092;
-        public static int abc_primary_text_disable_only_material_light=0x7f0c0093;
-        public static int abc_primary_text_material_dark=0x7f0c0094;
-        public static int abc_primary_text_material_light=0x7f0c0095;
-        public static int abc_search_url_text=0x7f0c0096;
-        public static int abc_search_url_text_normal=0x7f0c000e;
-        public static int abc_search_url_text_pressed=0x7f0c000f;
-        public static int abc_search_url_text_selected=0x7f0c0010;
-        public static int abc_secondary_text_material_dark=0x7f0c0097;
-        public static int abc_secondary_text_material_light=0x7f0c0098;
-        public static int abc_tint_btn_checkable=0x7f0c0099;
-        public static int abc_tint_default=0x7f0c009a;
-        public static int abc_tint_edittext=0x7f0c009b;
-        public static int abc_tint_seek_thumb=0x7f0c009c;
-        public static int abc_tint_spinner=0x7f0c009d;
-        public static int abc_tint_switch_track=0x7f0c009e;
-        public static int accent_material_dark=0x7f0c0011;
-        public static int accent_material_light=0x7f0c0012;
-        public static int active_indicator=0x7f0c0085;
-        public static int background_floating_material_dark=0x7f0c0013;
-        public static int background_floating_material_light=0x7f0c0014;
-        public static int background_material_dark=0x7f0c0015;
-        public static int background_material_light=0x7f0c0016;
-        public static int bg=0x7f0c008a;
-        public static int black=0x7f0c0081;
-        public static int black_transparent=0x7f0c0083;
-        public static int black_transparent_image=0x7f0c0084;
-        public static int bright_foreground_disabled_material_dark=0x7f0c0017;
-        public static int bright_foreground_disabled_material_light=0x7f0c0018;
-        public static int bright_foreground_inverse_material_dark=0x7f0c0019;
-        public static int bright_foreground_inverse_material_light=0x7f0c001a;
-        public static int bright_foreground_material_dark=0x7f0c001b;
-        public static int bright_foreground_material_light=0x7f0c001c;
-        public static int button_material_dark=0x7f0c001d;
-        public static int button_material_light=0x7f0c001e;
-        public static int cardview_dark_background=0x7f0c0009;
-        public static int cardview_light_background=0x7f0c000a;
-        public static int cardview_shadow_end_color=0x7f0c000b;
-        public static int cardview_shadow_start_color=0x7f0c000c;
-        public static int common_google_signin_btn_text_dark=0x7f0c009f;
-        public static int common_google_signin_btn_text_dark_default=0x7f0c0000;
-        public static int common_google_signin_btn_text_dark_disabled=0x7f0c0001;
-        public static int common_google_signin_btn_text_dark_focused=0x7f0c0002;
-        public static int common_google_signin_btn_text_dark_pressed=0x7f0c0003;
-        public static int common_google_signin_btn_text_light=0x7f0c00a0;
-        public static int common_google_signin_btn_text_light_default=0x7f0c0004;
-        public static int common_google_signin_btn_text_light_disabled=0x7f0c0005;
-        public static int common_google_signin_btn_text_light_focused=0x7f0c0006;
-        public static int common_google_signin_btn_text_light_pressed=0x7f0c0007;
-        public static int common_google_signin_btn_tint=0x7f0c00a1;
-        public static int dim_foreground_disabled_material_dark=0x7f0c001f;
-        public static int dim_foreground_disabled_material_light=0x7f0c0020;
-        public static int dim_foreground_material_dark=0x7f0c0021;
-        public static int dim_foreground_material_light=0x7f0c0022;
-        public static int error_color_material_dark=0x7f0c0023;
-        public static int error_color_material_light=0x7f0c0024;
-        public static int foreground_material_dark=0x7f0c0025;
-        public static int foreground_material_light=0x7f0c0026;
-        public static int grey_200=0x7f0c0089;
-        public static int grey_300=0x7f0c0088;
-        public static int grey_600=0x7f0c0087;
-        public static int highlighted_text_material_dark=0x7f0c0027;
-        public static int highlighted_text_material_light=0x7f0c0028;
-        public static int inactive_indicator=0x7f0c0086;
-        public static int lb_action_text_color=0x7f0c0049;
-        public static int lb_background_protection=0x7f0c004a;
-        public static int lb_basic_card_bg_color=0x7f0c004b;
-        public static int lb_basic_card_content_text_color=0x7f0c004c;
-        public static int lb_basic_card_info_bg_color=0x7f0c004d;
-        public static int lb_basic_card_title_text_color=0x7f0c004e;
-        public static int lb_browse_header_color=0x7f0c004f;
-        public static int lb_browse_header_description_color=0x7f0c0050;
-        public static int lb_browse_title_color=0x7f0c0051;
-        public static int lb_control_button_color=0x7f0c0052;
-        public static int lb_control_button_text=0x7f0c0053;
-        public static int lb_default_brand_color=0x7f0c0054;
-        public static int lb_default_brand_color_dark=0x7f0c0055;
-        public static int lb_default_search_color=0x7f0c0056;
-        public static int lb_default_search_icon_color=0x7f0c0057;
-        public static int lb_details_description_body_color=0x7f0c0058;
-        public static int lb_details_description_color=0x7f0c0059;
-        public static int lb_details_overview_bg_color=0x7f0c005a;
-        public static int lb_error_background_color_opaque=0x7f0c005b;
-        public static int lb_error_background_color_translucent=0x7f0c005c;
-        public static int lb_error_message=0x7f0c005d;
-        public static int lb_grey=0x7f0c005e;
-        public static int lb_guidedactions_background=0x7f0c005f;
-        public static int lb_guidedactions_background_dark=0x7f0c0060;
-        public static int lb_guidedactions_item_unselected_text_color=0x7f0c0061;
-        public static int lb_list_item_unselected_text_color=0x7f0c0062;
-        public static int lb_media_background_color=0x7f0c0063;
-        public static int lb_page_indicator_arrow_background=0x7f0c0064;
-        public static int lb_page_indicator_arrow_shadow=0x7f0c0065;
-        public static int lb_page_indicator_dot=0x7f0c0066;
-        public static int lb_playback_background_progress_color=0x7f0c0067;
-        public static int lb_playback_controls_background_dark=0x7f0c0068;
-        public static int lb_playback_controls_background_light=0x7f0c0069;
-        public static int lb_playback_controls_time_text_color=0x7f0c006a;
-        public static int lb_playback_icon_highlight_no_theme=0x7f0c006b;
-        public static int lb_playback_media_row_highlight_color=0x7f0c006c;
-        public static int lb_playback_media_row_separator_highlight_color=0x7f0c006d;
-        public static int lb_playback_now_playing_bar_color=0x7f0c006e;
-        public static int lb_playback_progress_color_no_theme=0x7f0c006f;
-        public static int lb_playback_progress_secondary_color_no_theme=0x7f0c0070;
-        public static int lb_playback_secondary_progress_color=0x7f0c0071;
-        public static int lb_preference_item_category_text_color=0x7f0c0072;
-        public static int lb_search_bar_hint=0x7f0c0073;
-        public static int lb_search_bar_hint_speech_mode=0x7f0c0074;
-        public static int lb_search_bar_text=0x7f0c0075;
-        public static int lb_search_bar_text_speech_mode=0x7f0c0076;
-        public static int lb_search_plate_hint_text_color=0x7f0c0077;
-        public static int lb_speech_orb_not_recording=0x7f0c0078;
-        public static int lb_speech_orb_not_recording_icon=0x7f0c0079;
-        public static int lb_speech_orb_not_recording_pulsed=0x7f0c007a;
-        public static int lb_speech_orb_recording=0x7f0c007b;
-        public static int lb_tv_white=0x7f0c007c;
-        public static int lb_view_dim_mask_color=0x7f0c007d;
-        public static int material_blue_grey_800=0x7f0c0029;
-        public static int material_blue_grey_900=0x7f0c002a;
-        public static int material_blue_grey_950=0x7f0c002b;
-        public static int material_deep_teal_200=0x7f0c002c;
-        public static int material_deep_teal_500=0x7f0c002d;
-        public static int material_grey_100=0x7f0c002e;
-        public static int material_grey_300=0x7f0c002f;
-        public static int material_grey_50=0x7f0c0030;
-        public static int material_grey_600=0x7f0c0031;
-        public static int material_grey_800=0x7f0c0032;
-        public static int material_grey_850=0x7f0c0033;
-        public static int material_grey_900=0x7f0c0034;
-        public static int notification_action_color_filter=0x7f0c007f;
-        public static int notification_icon_bg_color=0x7f0c0080;
-        public static int notification_material_background_media_default_color=0x7f0c007e;
-        public static int preference_fallback_accent_color=0x7f0c0008;
-        public static int primary_dark_material_dark=0x7f0c0035;
-        public static int primary_dark_material_light=0x7f0c0036;
-        public static int primary_material_dark=0x7f0c0037;
-        public static int primary_material_light=0x7f0c0038;
-        public static int primary_text_default_material_dark=0x7f0c0039;
-        public static int primary_text_default_material_light=0x7f0c003a;
-        public static int primary_text_disabled_material_dark=0x7f0c003b;
-        public static int primary_text_disabled_material_light=0x7f0c003c;
-        public static int ripple_material_dark=0x7f0c003d;
-        public static int ripple_material_light=0x7f0c003e;
-        public static int secondary_text_default_material_dark=0x7f0c003f;
-        public static int secondary_text_default_material_light=0x7f0c0040;
-        public static int secondary_text_disabled_material_dark=0x7f0c0041;
-        public static int secondary_text_disabled_material_light=0x7f0c0042;
-        public static int switch_thumb_disabled_material_dark=0x7f0c0043;
-        public static int switch_thumb_disabled_material_light=0x7f0c0044;
-        public static int switch_thumb_material_dark=0x7f0c00a2;
-        public static int switch_thumb_material_light=0x7f0c00a3;
-        public static int switch_thumb_normal_material_dark=0x7f0c0045;
-        public static int switch_thumb_normal_material_light=0x7f0c0046;
-        public static int tooltip_background_dark=0x7f0c0047;
-        public static int tooltip_background_light=0x7f0c0048;
-        public static int white=0x7f0c0082;
+        public static int abc_background_cache_hint_selector_material_dark=0x7f090056;
+        public static int abc_background_cache_hint_selector_material_light=0x7f090057;
+        public static int abc_btn_colored_borderless_text_material=0x7f090058;
+        public static int abc_btn_colored_text_material=0x7f090059;
+        public static int abc_color_highlight_material=0x7f09005a;
+        public static int abc_hint_foreground_material_dark=0x7f09005b;
+        public static int abc_hint_foreground_material_light=0x7f09005c;
+        public static int abc_input_method_navigation_guard=0x7f09000d;
+        public static int abc_primary_text_disable_only_material_dark=0x7f09005d;
+        public static int abc_primary_text_disable_only_material_light=0x7f09005e;
+        public static int abc_primary_text_material_dark=0x7f09005f;
+        public static int abc_primary_text_material_light=0x7f090060;
+        public static int abc_search_url_text=0x7f090061;
+        public static int abc_search_url_text_normal=0x7f09000e;
+        public static int abc_search_url_text_pressed=0x7f09000f;
+        public static int abc_search_url_text_selected=0x7f090010;
+        public static int abc_secondary_text_material_dark=0x7f090062;
+        public static int abc_secondary_text_material_light=0x7f090063;
+        public static int abc_tint_btn_checkable=0x7f090064;
+        public static int abc_tint_default=0x7f090065;
+        public static int abc_tint_edittext=0x7f090066;
+        public static int abc_tint_seek_thumb=0x7f090067;
+        public static int abc_tint_spinner=0x7f090068;
+        public static int abc_tint_switch_track=0x7f090069;
+        public static int accent_material_dark=0x7f090011;
+        public static int accent_material_light=0x7f090012;
+        public static int active_indicator=0x7f090050;
+        public static int background_floating_material_dark=0x7f090013;
+        public static int background_floating_material_light=0x7f090014;
+        public static int background_material_dark=0x7f090015;
+        public static int background_material_light=0x7f090016;
+        public static int bg=0x7f090055;
+        public static int black=0x7f09004c;
+        public static int black_transparent=0x7f09004e;
+        public static int black_transparent_image=0x7f09004f;
+        public static int bright_foreground_disabled_material_dark=0x7f090017;
+        public static int bright_foreground_disabled_material_light=0x7f090018;
+        public static int bright_foreground_inverse_material_dark=0x7f090019;
+        public static int bright_foreground_inverse_material_light=0x7f09001a;
+        public static int bright_foreground_material_dark=0x7f09001b;
+        public static int bright_foreground_material_light=0x7f09001c;
+        public static int button_material_dark=0x7f09001d;
+        public static int button_material_light=0x7f09001e;
+        public static int cardview_dark_background=0x7f090009;
+        public static int cardview_light_background=0x7f09000a;
+        public static int cardview_shadow_end_color=0x7f09000b;
+        public static int cardview_shadow_start_color=0x7f09000c;
+        public static int common_google_signin_btn_text_dark=0x7f09006a;
+        public static int common_google_signin_btn_text_dark_default=0x7f090000;
+        public static int common_google_signin_btn_text_dark_disabled=0x7f090001;
+        public static int common_google_signin_btn_text_dark_focused=0x7f090002;
+        public static int common_google_signin_btn_text_dark_pressed=0x7f090003;
+        public static int common_google_signin_btn_text_light=0x7f09006b;
+        public static int common_google_signin_btn_text_light_default=0x7f090004;
+        public static int common_google_signin_btn_text_light_disabled=0x7f090005;
+        public static int common_google_signin_btn_text_light_focused=0x7f090006;
+        public static int common_google_signin_btn_text_light_pressed=0x7f090007;
+        public static int common_google_signin_btn_tint=0x7f09006c;
+        public static int dim_foreground_disabled_material_dark=0x7f09001f;
+        public static int dim_foreground_disabled_material_light=0x7f090020;
+        public static int dim_foreground_material_dark=0x7f090021;
+        public static int dim_foreground_material_light=0x7f090022;
+        public static int error_color_material_dark=0x7f090023;
+        public static int error_color_material_light=0x7f090024;
+        public static int foreground_material_dark=0x7f090025;
+        public static int foreground_material_light=0x7f090026;
+        public static int grey_200=0x7f090054;
+        public static int grey_300=0x7f090053;
+        public static int grey_600=0x7f090052;
+        public static int highlighted_text_material_dark=0x7f090027;
+        public static int highlighted_text_material_light=0x7f090028;
+        public static int inactive_indicator=0x7f090051;
+        public static int material_blue_grey_800=0x7f090029;
+        public static int material_blue_grey_900=0x7f09002a;
+        public static int material_blue_grey_950=0x7f09002b;
+        public static int material_deep_teal_200=0x7f09002c;
+        public static int material_deep_teal_500=0x7f09002d;
+        public static int material_grey_100=0x7f09002e;
+        public static int material_grey_300=0x7f09002f;
+        public static int material_grey_50=0x7f090030;
+        public static int material_grey_600=0x7f090031;
+        public static int material_grey_800=0x7f090032;
+        public static int material_grey_850=0x7f090033;
+        public static int material_grey_900=0x7f090034;
+        public static int notification_action_color_filter=0x7f09004a;
+        public static int notification_icon_bg_color=0x7f09004b;
+        public static int notification_material_background_media_default_color=0x7f090049;
+        public static int preference_fallback_accent_color=0x7f090008;
+        public static int primary_dark_material_dark=0x7f090035;
+        public static int primary_dark_material_light=0x7f090036;
+        public static int primary_material_dark=0x7f090037;
+        public static int primary_material_light=0x7f090038;
+        public static int primary_text_default_material_dark=0x7f090039;
+        public static int primary_text_default_material_light=0x7f09003a;
+        public static int primary_text_disabled_material_dark=0x7f09003b;
+        public static int primary_text_disabled_material_light=0x7f09003c;
+        public static int ripple_material_dark=0x7f09003d;
+        public static int ripple_material_light=0x7f09003e;
+        public static int secondary_text_default_material_dark=0x7f09003f;
+        public static int secondary_text_default_material_light=0x7f090040;
+        public static int secondary_text_disabled_material_dark=0x7f090041;
+        public static int secondary_text_disabled_material_light=0x7f090042;
+        public static int switch_thumb_disabled_material_dark=0x7f090043;
+        public static int switch_thumb_disabled_material_light=0x7f090044;
+        public static int switch_thumb_material_dark=0x7f09006d;
+        public static int switch_thumb_material_light=0x7f09006e;
+        public static int switch_thumb_normal_material_dark=0x7f090045;
+        public static int switch_thumb_normal_material_light=0x7f090046;
+        public static int tooltip_background_dark=0x7f090047;
+        public static int tooltip_background_light=0x7f090048;
+        public static int white=0x7f09004d;
     }
     public static final class dimen {
-        public static int abc_action_bar_content_inset_material=0x7f0d001a;
-        public static int abc_action_bar_content_inset_with_nav=0x7f0d001b;
-        public static int abc_action_bar_default_height_material=0x7f0d0010;
-        public static int abc_action_bar_default_padding_end_material=0x7f0d001c;
-        public static int abc_action_bar_default_padding_start_material=0x7f0d001d;
-        public static int abc_action_bar_elevation_material=0x7f0d001f;
-        public static int abc_action_bar_icon_vertical_padding_material=0x7f0d0020;
-        public static int abc_action_bar_overflow_padding_end_material=0x7f0d0021;
-        public static int abc_action_bar_overflow_padding_start_material=0x7f0d0022;
-        public static int abc_action_bar_stacked_max_height=0x7f0d0023;
-        public static int abc_action_bar_stacked_tab_max_width=0x7f0d0024;
-        public static int abc_action_bar_subtitle_bottom_margin_material=0x7f0d0025;
-        public static int abc_action_bar_subtitle_top_margin_material=0x7f0d0026;
-        public static int abc_action_button_min_height_material=0x7f0d0027;
-        public static int abc_action_button_min_width_material=0x7f0d0028;
-        public static int abc_action_button_min_width_overflow_material=0x7f0d0029;
-        public static int abc_alert_dialog_button_bar_height=0x7f0d000f;
-        public static int abc_alert_dialog_button_dimen=0x7f0d002a;
-        public static int abc_button_inset_horizontal_material=0x7f0d002b;
-        public static int abc_button_inset_vertical_material=0x7f0d002c;
-        public static int abc_button_padding_horizontal_material=0x7f0d002d;
-        public static int abc_button_padding_vertical_material=0x7f0d002e;
-        public static int abc_cascading_menus_min_smallest_width=0x7f0d002f;
-        public static int abc_config_prefDialogWidth=0x7f0d0013;
-        public static int abc_control_corner_material=0x7f0d0030;
-        public static int abc_control_inset_material=0x7f0d0031;
-        public static int abc_control_padding_material=0x7f0d0032;
-        public static int abc_dialog_corner_radius_material=0x7f0d0033;
-        public static int abc_dialog_fixed_height_major=0x7f0d0014;
-        public static int abc_dialog_fixed_height_minor=0x7f0d0015;
-        public static int abc_dialog_fixed_width_major=0x7f0d0016;
-        public static int abc_dialog_fixed_width_minor=0x7f0d0017;
-        public static int abc_dialog_list_padding_bottom_no_buttons=0x7f0d0034;
-        public static int abc_dialog_list_padding_top_no_title=0x7f0d0035;
-        public static int abc_dialog_min_width_major=0x7f0d0018;
-        public static int abc_dialog_min_width_minor=0x7f0d0019;
-        public static int abc_dialog_padding_material=0x7f0d0036;
-        public static int abc_dialog_padding_top_material=0x7f0d0037;
-        public static int abc_dialog_title_divider_material=0x7f0d0038;
-        public static int abc_disabled_alpha_material_dark=0x7f0d0039;
-        public static int abc_disabled_alpha_material_light=0x7f0d003a;
-        public static int abc_dropdownitem_icon_width=0x7f0d003b;
-        public static int abc_dropdownitem_text_padding_left=0x7f0d003c;
-        public static int abc_dropdownitem_text_padding_right=0x7f0d003d;
-        public static int abc_edit_text_inset_bottom_material=0x7f0d003e;
-        public static int abc_edit_text_inset_horizontal_material=0x7f0d003f;
-        public static int abc_edit_text_inset_top_material=0x7f0d0040;
-        public static int abc_floating_window_z=0x7f0d0041;
-        public static int abc_list_item_padding_horizontal_material=0x7f0d0042;
-        public static int abc_panel_menu_list_width=0x7f0d0043;
-        public static int abc_progress_bar_height_material=0x7f0d0044;
-        public static int abc_search_view_preferred_height=0x7f0d0045;
-        public static int abc_search_view_preferred_width=0x7f0d0046;
-        public static int abc_seekbar_track_background_height_material=0x7f0d0047;
-        public static int abc_seekbar_track_progress_height_material=0x7f0d0048;
-        public static int abc_select_dialog_padding_start_material=0x7f0d0049;
-        public static int abc_switch_padding=0x7f0d001e;
-        public static int abc_text_size_body_1_material=0x7f0d004a;
-        public static int abc_text_size_body_2_material=0x7f0d004b;
-        public static int abc_text_size_button_material=0x7f0d004c;
-        public static int abc_text_size_caption_material=0x7f0d004d;
-        public static int abc_text_size_display_1_material=0x7f0d004e;
-        public static int abc_text_size_display_2_material=0x7f0d004f;
-        public static int abc_text_size_display_3_material=0x7f0d0050;
-        public static int abc_text_size_display_4_material=0x7f0d0051;
-        public static int abc_text_size_headline_material=0x7f0d0052;
-        public static int abc_text_size_large_material=0x7f0d0053;
-        public static int abc_text_size_medium_material=0x7f0d0054;
-        public static int abc_text_size_menu_header_material=0x7f0d0055;
-        public static int abc_text_size_menu_material=0x7f0d0056;
-        public static int abc_text_size_small_material=0x7f0d0057;
-        public static int abc_text_size_subhead_material=0x7f0d0058;
-        public static int abc_text_size_subtitle_material_toolbar=0x7f0d0011;
-        public static int abc_text_size_title_material=0x7f0d0059;
-        public static int abc_text_size_title_material_toolbar=0x7f0d0012;
-        public static int activity_half_margin=0x7f0d0178;
-        public static int activity_margin=0x7f0d0177;
-        public static int cardview_compat_inset_shadow=0x7f0d000c;
-        public static int cardview_default_elevation=0x7f0d000d;
-        public static int cardview_default_radius=0x7f0d000e;
-        public static int compat_button_inset_horizontal_material=0x7f0d0165;
-        public static int compat_button_inset_vertical_material=0x7f0d0166;
-        public static int compat_button_padding_horizontal_material=0x7f0d0167;
-        public static int compat_button_padding_vertical_material=0x7f0d0168;
-        public static int compat_control_corner_material=0x7f0d0169;
-        public static int compat_notification_large_icon_max_height=0x7f0d016a;
-        public static int compat_notification_large_icon_max_width=0x7f0d016b;
-        public static int disabled_alpha_material_dark=0x7f0d005a;
-        public static int disabled_alpha_material_light=0x7f0d005b;
-        public static int fastscroll_default_thickness=0x7f0d0000;
-        public static int fastscroll_margin=0x7f0d0001;
-        public static int fastscroll_minimum_range=0x7f0d0002;
-        public static int highlight_alpha_material_colored=0x7f0d005c;
-        public static int highlight_alpha_material_dark=0x7f0d005d;
-        public static int highlight_alpha_material_light=0x7f0d005e;
-        public static int hint_alpha_material_dark=0x7f0d005f;
-        public static int hint_alpha_material_light=0x7f0d0060;
-        public static int hint_pressed_alpha_material_dark=0x7f0d0061;
-        public static int hint_pressed_alpha_material_light=0x7f0d0062;
-        public static int indicator_size=0x7f0d0179;
-        public static int item_touch_helper_max_drag_scroll_per_frame=0x7f0d0003;
-        public static int item_touch_helper_swipe_escape_max_velocity=0x7f0d0004;
-        public static int item_touch_helper_swipe_escape_velocity=0x7f0d0005;
-        public static int lb_action_1_line_height=0x7f0d006c;
-        public static int lb_action_2_lines_height=0x7f0d006d;
-        public static int lb_action_button_corner_radius=0x7f0d006e;
-        public static int lb_action_icon_margin=0x7f0d006f;
-        public static int lb_action_padding_horizontal=0x7f0d0070;
-        public static int lb_action_text_size=0x7f0d0071;
-        public static int lb_action_with_icon_padding_end=0x7f0d0072;
-        public static int lb_action_with_icon_padding_start=0x7f0d0073;
-        public static int lb_basic_card_content_text_size=0x7f0d0074;
-        public static int lb_basic_card_info_badge_margin=0x7f0d0075;
-        public static int lb_basic_card_info_badge_size=0x7f0d0076;
-        public static int lb_basic_card_info_height=0x7f0d0077;
-        public static int lb_basic_card_info_height_no_content=0x7f0d0078;
-        public static int lb_basic_card_info_padding_bottom=0x7f0d0079;
-        public static int lb_basic_card_info_padding_horizontal=0x7f0d007a;
-        public static int lb_basic_card_info_padding_top=0x7f0d007b;
-        public static int lb_basic_card_info_text_margin=0x7f0d007c;
-        public static int lb_basic_card_main_height=0x7f0d007d;
-        public static int lb_basic_card_main_width=0x7f0d007e;
-        public static int lb_basic_card_title_text_size=0x7f0d007f;
-        public static int lb_browse_expanded_row_no_hovercard_bottom_padding=0x7f0d0080;
-        public static int lb_browse_expanded_selected_row_top_padding=0x7f0d0081;
-        public static int lb_browse_header_description_text_size=0x7f0d0082;
-        public static int lb_browse_header_fading_length=0x7f0d0083;
-        public static int lb_browse_header_height=0x7f0d0084;
-        public static int lb_browse_header_padding_end=0x7f0d0085;
-        public static int lb_browse_header_select_duration=0x7f0d0086;
-        public static int lb_browse_header_select_scale=0x7f0d0087;
-        public static int lb_browse_header_text_size=0x7f0d0088;
-        public static int lb_browse_headers_vertical_spacing=0x7f0d0089;
-        public static int lb_browse_headers_width=0x7f0d008a;
-        public static int lb_browse_headers_z=0x7f0d008b;
-        public static int lb_browse_item_horizontal_spacing=0x7f0d008c;
-        public static int lb_browse_item_vertical_spacing=0x7f0d008d;
-        public static int lb_browse_padding_bottom=0x7f0d008e;
-        public static int lb_browse_padding_end=0x7f0d008f;
-        public static int lb_browse_padding_start=0x7f0d0090;
-        public static int lb_browse_padding_top=0x7f0d0091;
-        public static int lb_browse_row_hovercard_description_font_size=0x7f0d0092;
-        public static int lb_browse_row_hovercard_max_width=0x7f0d0093;
-        public static int lb_browse_row_hovercard_title_font_size=0x7f0d0094;
-        public static int lb_browse_rows_fading_edge=0x7f0d0095;
-        public static int lb_browse_rows_margin_start=0x7f0d0096;
-        public static int lb_browse_rows_margin_top=0x7f0d0097;
-        public static int lb_browse_section_header_text_size=0x7f0d0098;
-        public static int lb_browse_selected_row_top_padding=0x7f0d0099;
-        public static int lb_browse_title_height=0x7f0d009a;
-        public static int lb_browse_title_icon_height=0x7f0d009b;
-        public static int lb_browse_title_icon_max_width=0x7f0d009c;
-        public static int lb_browse_title_text_size=0x7f0d009d;
-        public static int lb_control_button_diameter=0x7f0d009e;
-        public static int lb_control_button_height=0x7f0d009f;
-        public static int lb_control_button_secondary_diameter=0x7f0d00a0;
-        public static int lb_control_button_secondary_height=0x7f0d00a1;
-        public static int lb_control_button_text_size=0x7f0d00a2;
-        public static int lb_control_icon_height=0x7f0d00a3;
-        public static int lb_control_icon_width=0x7f0d00a4;
-        public static int lb_details_cover_drawable_parallax_movement=0x7f0d00a5;
-        public static int lb_details_description_body_line_spacing=0x7f0d00a6;
-        public static int lb_details_description_body_text_size=0x7f0d00a7;
-        public static int lb_details_description_subtitle_text_size=0x7f0d00a8;
-        public static int lb_details_description_title_baseline=0x7f0d00a9;
-        public static int lb_details_description_title_line_spacing=0x7f0d00aa;
-        public static int lb_details_description_title_padding_adjust_bottom=0x7f0d00ab;
-        public static int lb_details_description_title_padding_adjust_top=0x7f0d00ac;
-        public static int lb_details_description_title_resized_text_size=0x7f0d00ad;
-        public static int lb_details_description_title_text_size=0x7f0d00ae;
-        public static int lb_details_description_under_subtitle_baseline_margin=0x7f0d00af;
-        public static int lb_details_description_under_title_baseline_margin=0x7f0d00b0;
-        public static int lb_details_overview_action_items_spacing=0x7f0d00b1;
-        public static int lb_details_overview_action_select_duration=0x7f0d00b2;
-        public static int lb_details_overview_actions_fade_size=0x7f0d00b3;
-        public static int lb_details_overview_actions_height=0x7f0d00b4;
-        public static int lb_details_overview_actions_padding_end=0x7f0d00b5;
-        public static int lb_details_overview_actions_padding_start=0x7f0d00b6;
-        public static int lb_details_overview_description_margin_bottom=0x7f0d00b7;
-        public static int lb_details_overview_description_margin_end=0x7f0d00b8;
-        public static int lb_details_overview_description_margin_start=0x7f0d00b9;
-        public static int lb_details_overview_description_margin_top=0x7f0d00ba;
-        public static int lb_details_overview_height_large=0x7f0d00bb;
-        public static int lb_details_overview_height_small=0x7f0d00bc;
-        public static int lb_details_overview_image_margin_horizontal=0x7f0d00bd;
-        public static int lb_details_overview_image_margin_vertical=0x7f0d00be;
-        public static int lb_details_overview_margin_bottom=0x7f0d00bf;
-        public static int lb_details_overview_margin_end=0x7f0d00c0;
-        public static int lb_details_overview_margin_start=0x7f0d00c1;
-        public static int lb_details_overview_z=0x7f0d00c2;
-        public static int lb_details_rows_align_top=0x7f0d00c3;
-        public static int lb_details_v2_actions_height=0x7f0d00c4;
-        public static int lb_details_v2_align_pos_for_actions=0x7f0d00c5;
-        public static int lb_details_v2_align_pos_for_description=0x7f0d00c6;
-        public static int lb_details_v2_blank_height=0x7f0d00c7;
-        public static int lb_details_v2_card_height=0x7f0d00c8;
-        public static int lb_details_v2_description_margin_end=0x7f0d00c9;
-        public static int lb_details_v2_description_margin_start=0x7f0d00ca;
-        public static int lb_details_v2_description_margin_top=0x7f0d00cb;
-        public static int lb_details_v2_left=0x7f0d00cc;
-        public static int lb_details_v2_logo_margin_start=0x7f0d00cd;
-        public static int lb_details_v2_logo_max_height=0x7f0d00ce;
-        public static int lb_details_v2_logo_max_width=0x7f0d00cf;
-        public static int lb_error_image_max_height=0x7f0d00d0;
-        public static int lb_error_message_max_width=0x7f0d00d1;
-        public static int lb_error_message_text_size=0x7f0d00d2;
-        public static int lb_error_under_image_baseline_margin=0x7f0d00d3;
-        public static int lb_error_under_message_baseline_margin=0x7f0d00d4;
-        public static int lb_guidedactions_elevation=0x7f0d00d5;
-        public static int lb_guidedactions_item_bottom_padding=0x7f0d00d6;
-        public static int lb_guidedactions_item_checkmark_diameter=0x7f0d00d7;
-        public static int lb_guidedactions_item_delimiter_padding=0x7f0d00d8;
-        public static int lb_guidedactions_item_description_font_size=0x7f0d00d9;
-        public static int lb_guidedactions_item_disabled_chevron_alpha=0x7f0d00da;
-        public static int lb_guidedactions_item_disabled_description_text_alpha=0x7f0d00db;
-        public static int lb_guidedactions_item_disabled_text_alpha=0x7f0d00dc;
-        public static int lb_guidedactions_item_enabled_chevron_alpha=0x7f0d00dd;
-        public static int lb_guidedactions_item_end_padding=0x7f0d00de;
-        public static int lb_guidedactions_item_icon_height=0x7f0d00df;
-        public static int lb_guidedactions_item_icon_width=0x7f0d00e0;
-        public static int lb_guidedactions_item_space_between_title_and_description=0x7f0d00e1;
-        public static int lb_guidedactions_item_start_padding=0x7f0d00e2;
-        public static int lb_guidedactions_item_text_width=0x7f0d00e3;
-        public static int lb_guidedactions_item_text_width_no_icon=0x7f0d00e4;
-        public static int lb_guidedactions_item_title_font_size=0x7f0d00e5;
-        public static int lb_guidedactions_item_top_padding=0x7f0d00e6;
-        public static int lb_guidedactions_item_unselected_description_text_alpha=0x7f0d00e7;
-        public static int lb_guidedactions_item_unselected_text_alpha=0x7f0d00e8;
-        public static int lb_guidedactions_list_padding_end=0x7f0d00e9;
-        public static int lb_guidedactions_list_padding_start=0x7f0d00ea;
-        public static int lb_guidedactions_list_vertical_spacing=0x7f0d00eb;
-        public static int lb_guidedactions_section_shadow_width=0x7f0d00ec;
-        public static int lb_guidedactions_sublist_bottom_margin=0x7f0d00ed;
-        public static int lb_guidedactions_sublist_padding_bottom=0x7f0d00ee;
-        public static int lb_guidedactions_sublist_padding_top=0x7f0d00ef;
-        public static int lb_guidedactions_vertical_padding=0x7f0d00f0;
-        public static int lb_guidedactions_width_weight=0x7f0d00f1;
-        public static int lb_guidedactions_width_weight_two_panels=0x7f0d00f2;
-        public static int lb_guidedbuttonactions_width_weight=0x7f0d00f3;
-        public static int lb_guidedstep_height_weight=0x7f0d00f4;
-        public static int lb_guidedstep_height_weight_translucent=0x7f0d00f5;
-        public static int lb_guidedstep_keyline=0x7f0d00f6;
-        public static int lb_guidedstep_slide_ime_distance=0x7f0d00f7;
-        public static int lb_list_row_height=0x7f0d00f8;
-        public static int lb_material_shadow_details_z=0x7f0d00f9;
-        public static int lb_material_shadow_focused_z=0x7f0d00fa;
-        public static int lb_material_shadow_normal_z=0x7f0d00fb;
-        public static int lb_onboarding_content_margin_bottom=0x7f0d00fc;
-        public static int lb_onboarding_content_margin_top=0x7f0d00fd;
-        public static int lb_onboarding_content_width=0x7f0d00fe;
-        public static int lb_onboarding_header_height=0x7f0d00ff;
-        public static int lb_onboarding_header_margin_top=0x7f0d0100;
-        public static int lb_onboarding_navigation_height=0x7f0d0101;
-        public static int lb_onboarding_start_button_height=0x7f0d0102;
-        public static int lb_onboarding_start_button_margin_bottom=0x7f0d0103;
-        public static int lb_onboarding_start_button_translation_offset=0x7f0d006b;
-        public static int lb_page_indicator_arrow_gap=0x7f0d0104;
-        public static int lb_page_indicator_arrow_radius=0x7f0d0105;
-        public static int lb_page_indicator_arrow_shadow_offset=0x7f0d0106;
-        public static int lb_page_indicator_arrow_shadow_radius=0x7f0d0107;
-        public static int lb_page_indicator_dot_gap=0x7f0d0108;
-        public static int lb_page_indicator_dot_radius=0x7f0d0109;
-        public static int lb_playback_controls_card_height=0x7f0d010a;
-        public static int lb_playback_controls_child_margin_bigger=0x7f0d010b;
-        public static int lb_playback_controls_child_margin_biggest=0x7f0d010c;
-        public static int lb_playback_controls_child_margin_default=0x7f0d010d;
-        public static int lb_playback_controls_margin_bottom=0x7f0d010e;
-        public static int lb_playback_controls_margin_end=0x7f0d010f;
-        public static int lb_playback_controls_margin_start=0x7f0d0110;
-        public static int lb_playback_controls_padding_bottom=0x7f0d0111;
-        public static int lb_playback_controls_time_text_size=0x7f0d0112;
-        public static int lb_playback_controls_z=0x7f0d0113;
-        public static int lb_playback_current_time_margin_start=0x7f0d0114;
-        public static int lb_playback_description_margin_end=0x7f0d0115;
-        public static int lb_playback_description_margin_start=0x7f0d0116;
-        public static int lb_playback_description_margin_top=0x7f0d0117;
-        public static int lb_playback_major_fade_translate_y=0x7f0d0118;
-        public static int lb_playback_media_item_radio_icon_size=0x7f0d0119;
-        public static int lb_playback_media_radio_width_with_padding=0x7f0d011a;
-        public static int lb_playback_media_row_details_selector_width=0x7f0d011b;
-        public static int lb_playback_media_row_horizontal_padding=0x7f0d011c;
-        public static int lb_playback_media_row_radio_selector_width=0x7f0d011d;
-        public static int lb_playback_media_row_selector_round_rect_radius=0x7f0d011e;
-        public static int lb_playback_media_row_separator_height=0x7f0d011f;
-        public static int lb_playback_minor_fade_translate_y=0x7f0d0120;
-        public static int lb_playback_now_playing_bar_height=0x7f0d0121;
-        public static int lb_playback_now_playing_bar_left_margin=0x7f0d0122;
-        public static int lb_playback_now_playing_bar_margin=0x7f0d0123;
-        public static int lb_playback_now_playing_bar_top_margin=0x7f0d0124;
-        public static int lb_playback_now_playing_bar_width=0x7f0d0125;
-        public static int lb_playback_now_playing_view_size=0x7f0d0126;
-        public static int lb_playback_other_rows_center_to_bottom=0x7f0d0127;
-        public static int lb_playback_play_icon_size=0x7f0d0128;
-        public static int lb_playback_time_padding_top=0x7f0d0129;
-        public static int lb_playback_total_time_margin_end=0x7f0d012a;
-        public static int lb_playback_transport_control_info_margin_bottom=0x7f0d012b;
-        public static int lb_playback_transport_control_row_padding_bottom=0x7f0d012c;
-        public static int lb_playback_transport_controlbar_margin_start=0x7f0d012d;
-        public static int lb_playback_transport_hero_thumbs_height=0x7f0d012e;
-        public static int lb_playback_transport_hero_thumbs_width=0x7f0d012f;
-        public static int lb_playback_transport_image_height=0x7f0d0130;
-        public static int lb_playback_transport_image_margin_end=0x7f0d0131;
-        public static int lb_playback_transport_progressbar_active_bar_height=0x7f0d0132;
-        public static int lb_playback_transport_progressbar_active_radius=0x7f0d0133;
-        public static int lb_playback_transport_progressbar_bar_height=0x7f0d0134;
-        public static int lb_playback_transport_progressbar_height=0x7f0d0135;
-        public static int lb_playback_transport_thumbs_bottom_margin=0x7f0d0136;
-        public static int lb_playback_transport_thumbs_height=0x7f0d0137;
-        public static int lb_playback_transport_thumbs_margin=0x7f0d0138;
-        public static int lb_playback_transport_thumbs_width=0x7f0d0139;
-        public static int lb_playback_transport_time_margin=0x7f0d013a;
-        public static int lb_playback_transport_time_margin_top=0x7f0d013b;
-        public static int lb_rounded_rect_corner_radius=0x7f0d013c;
-        public static int lb_search_bar_edit_text_margin_start=0x7f0d013d;
-        public static int lb_search_bar_height=0x7f0d013e;
-        public static int lb_search_bar_hint_margin_start=0x7f0d013f;
-        public static int lb_search_bar_icon_height=0x7f0d0140;
-        public static int lb_search_bar_icon_margin_start=0x7f0d0141;
-        public static int lb_search_bar_icon_width=0x7f0d0142;
-        public static int lb_search_bar_inner_margin_bottom=0x7f0d0143;
-        public static int lb_search_bar_inner_margin_top=0x7f0d0144;
-        public static int lb_search_bar_items_height=0x7f0d0145;
-        public static int lb_search_bar_items_layout_margin_top=0x7f0d0146;
-        public static int lb_search_bar_items_margin_start=0x7f0d0147;
-        public static int lb_search_bar_items_width=0x7f0d0148;
-        public static int lb_search_bar_padding_start=0x7f0d0149;
-        public static int lb_search_bar_padding_top=0x7f0d014a;
-        public static int lb_search_bar_speech_orb_margin_start=0x7f0d014b;
-        public static int lb_search_bar_speech_orb_size=0x7f0d014c;
-        public static int lb_search_bar_text_size=0x7f0d014d;
-        public static int lb_search_bar_unfocused_text_size=0x7f0d014e;
-        public static int lb_search_browse_row_padding_start=0x7f0d014f;
-        public static int lb_search_browse_rows_align_top=0x7f0d0150;
-        public static int lb_search_orb_focused_z=0x7f0d0151;
-        public static int lb_search_orb_margin_bottom=0x7f0d0152;
-        public static int lb_search_orb_margin_end=0x7f0d0153;
-        public static int lb_search_orb_margin_start=0x7f0d0154;
-        public static int lb_search_orb_margin_top=0x7f0d0155;
-        public static int lb_search_orb_size=0x7f0d0156;
-        public static int lb_search_orb_unfocused_z=0x7f0d0157;
-        public static int lb_vertical_grid_padding_bottom=0x7f0d0158;
-        public static int notification_action_icon_size=0x7f0d016c;
-        public static int notification_action_text_size=0x7f0d016d;
-        public static int notification_big_circle_margin=0x7f0d016e;
-        public static int notification_content_margin_start=0x7f0d0162;
-        public static int notification_large_icon_height=0x7f0d016f;
-        public static int notification_large_icon_width=0x7f0d0170;
-        public static int notification_main_column_padding_top=0x7f0d0163;
-        public static int notification_media_narrow_margin=0x7f0d0164;
-        public static int notification_right_icon_size=0x7f0d0171;
-        public static int notification_right_side_padding_top=0x7f0d0161;
-        public static int notification_small_icon_background_padding=0x7f0d0172;
-        public static int notification_small_icon_size_as_large=0x7f0d0173;
-        public static int notification_subtext_size=0x7f0d0174;
-        public static int notification_top_pad=0x7f0d0175;
-        public static int notification_top_pad_large_text=0x7f0d0176;
-        public static int picker_column_horizontal_padding=0x7f0d0159;
-        public static int picker_item_height=0x7f0d015a;
-        public static int picker_item_spacing=0x7f0d015b;
-        public static int picker_separator_horizontal_padding=0x7f0d015c;
-        public static int preference_category_padding_start=0x7f0d0006;
-        public static int preference_icon_minWidth=0x7f0d0008;
-        public static int preference_no_icon_padding_start=0x7f0d0007;
-        public static int preference_seekbar_padding_end=0x7f0d0009;
-        public static int preference_seekbar_padding_start=0x7f0d000a;
-        public static int preference_seekbar_value_width=0x7f0d000b;
-        public static int section_image_item=0x7f0d017a;
-        public static int subtitle_corner_radius=0x7f0d015d;
-        public static int subtitle_outline_width=0x7f0d015e;
-        public static int subtitle_shadow_offset=0x7f0d015f;
-        public static int subtitle_shadow_radius=0x7f0d0160;
-        public static int tooltip_corner_radius=0x7f0d0063;
-        public static int tooltip_horizontal_padding=0x7f0d0064;
-        public static int tooltip_margin=0x7f0d0065;
-        public static int tooltip_precise_anchor_extra_offset=0x7f0d0066;
-        public static int tooltip_precise_anchor_threshold=0x7f0d0067;
-        public static int tooltip_vertical_padding=0x7f0d0068;
-        public static int tooltip_y_offset_non_touch=0x7f0d0069;
-        public static int tooltip_y_offset_touch=0x7f0d006a;
+        public static int abc_action_bar_content_inset_material=0x7f0a001a;
+        public static int abc_action_bar_content_inset_with_nav=0x7f0a001b;
+        public static int abc_action_bar_default_height_material=0x7f0a0010;
+        public static int abc_action_bar_default_padding_end_material=0x7f0a001c;
+        public static int abc_action_bar_default_padding_start_material=0x7f0a001d;
+        public static int abc_action_bar_elevation_material=0x7f0a001f;
+        public static int abc_action_bar_icon_vertical_padding_material=0x7f0a0020;
+        public static int abc_action_bar_overflow_padding_end_material=0x7f0a0021;
+        public static int abc_action_bar_overflow_padding_start_material=0x7f0a0022;
+        public static int abc_action_bar_stacked_max_height=0x7f0a0023;
+        public static int abc_action_bar_stacked_tab_max_width=0x7f0a0024;
+        public static int abc_action_bar_subtitle_bottom_margin_material=0x7f0a0025;
+        public static int abc_action_bar_subtitle_top_margin_material=0x7f0a0026;
+        public static int abc_action_button_min_height_material=0x7f0a0027;
+        public static int abc_action_button_min_width_material=0x7f0a0028;
+        public static int abc_action_button_min_width_overflow_material=0x7f0a0029;
+        public static int abc_alert_dialog_button_bar_height=0x7f0a000f;
+        public static int abc_alert_dialog_button_dimen=0x7f0a002a;
+        public static int abc_button_inset_horizontal_material=0x7f0a002b;
+        public static int abc_button_inset_vertical_material=0x7f0a002c;
+        public static int abc_button_padding_horizontal_material=0x7f0a002d;
+        public static int abc_button_padding_vertical_material=0x7f0a002e;
+        public static int abc_cascading_menus_min_smallest_width=0x7f0a002f;
+        public static int abc_config_prefDialogWidth=0x7f0a0013;
+        public static int abc_control_corner_material=0x7f0a0030;
+        public static int abc_control_inset_material=0x7f0a0031;
+        public static int abc_control_padding_material=0x7f0a0032;
+        public static int abc_dialog_corner_radius_material=0x7f0a0033;
+        public static int abc_dialog_fixed_height_major=0x7f0a0014;
+        public static int abc_dialog_fixed_height_minor=0x7f0a0015;
+        public static int abc_dialog_fixed_width_major=0x7f0a0016;
+        public static int abc_dialog_fixed_width_minor=0x7f0a0017;
+        public static int abc_dialog_list_padding_bottom_no_buttons=0x7f0a0034;
+        public static int abc_dialog_list_padding_top_no_title=0x7f0a0035;
+        public static int abc_dialog_min_width_major=0x7f0a0018;
+        public static int abc_dialog_min_width_minor=0x7f0a0019;
+        public static int abc_dialog_padding_material=0x7f0a0036;
+        public static int abc_dialog_padding_top_material=0x7f0a0037;
+        public static int abc_dialog_title_divider_material=0x7f0a0038;
+        public static int abc_disabled_alpha_material_dark=0x7f0a0039;
+        public static int abc_disabled_alpha_material_light=0x7f0a003a;
+        public static int abc_dropdownitem_icon_width=0x7f0a003b;
+        public static int abc_dropdownitem_text_padding_left=0x7f0a003c;
+        public static int abc_dropdownitem_text_padding_right=0x7f0a003d;
+        public static int abc_edit_text_inset_bottom_material=0x7f0a003e;
+        public static int abc_edit_text_inset_horizontal_material=0x7f0a003f;
+        public static int abc_edit_text_inset_top_material=0x7f0a0040;
+        public static int abc_floating_window_z=0x7f0a0041;
+        public static int abc_list_item_padding_horizontal_material=0x7f0a0042;
+        public static int abc_panel_menu_list_width=0x7f0a0043;
+        public static int abc_progress_bar_height_material=0x7f0a0044;
+        public static int abc_search_view_preferred_height=0x7f0a0045;
+        public static int abc_search_view_preferred_width=0x7f0a0046;
+        public static int abc_seekbar_track_background_height_material=0x7f0a0047;
+        public static int abc_seekbar_track_progress_height_material=0x7f0a0048;
+        public static int abc_select_dialog_padding_start_material=0x7f0a0049;
+        public static int abc_switch_padding=0x7f0a001e;
+        public static int abc_text_size_body_1_material=0x7f0a004a;
+        public static int abc_text_size_body_2_material=0x7f0a004b;
+        public static int abc_text_size_button_material=0x7f0a004c;
+        public static int abc_text_size_caption_material=0x7f0a004d;
+        public static int abc_text_size_display_1_material=0x7f0a004e;
+        public static int abc_text_size_display_2_material=0x7f0a004f;
+        public static int abc_text_size_display_3_material=0x7f0a0050;
+        public static int abc_text_size_display_4_material=0x7f0a0051;
+        public static int abc_text_size_headline_material=0x7f0a0052;
+        public static int abc_text_size_large_material=0x7f0a0053;
+        public static int abc_text_size_medium_material=0x7f0a0054;
+        public static int abc_text_size_menu_header_material=0x7f0a0055;
+        public static int abc_text_size_menu_material=0x7f0a0056;
+        public static int abc_text_size_small_material=0x7f0a0057;
+        public static int abc_text_size_subhead_material=0x7f0a0058;
+        public static int abc_text_size_subtitle_material_toolbar=0x7f0a0011;
+        public static int abc_text_size_title_material=0x7f0a0059;
+        public static int abc_text_size_title_material_toolbar=0x7f0a0012;
+        public static int activity_half_margin=0x7f0a0086;
+        public static int activity_margin=0x7f0a0085;
+        public static int cardview_compat_inset_shadow=0x7f0a000c;
+        public static int cardview_default_elevation=0x7f0a000d;
+        public static int cardview_default_radius=0x7f0a000e;
+        public static int compat_button_inset_horizontal_material=0x7f0a0073;
+        public static int compat_button_inset_vertical_material=0x7f0a0074;
+        public static int compat_button_padding_horizontal_material=0x7f0a0075;
+        public static int compat_button_padding_vertical_material=0x7f0a0076;
+        public static int compat_control_corner_material=0x7f0a0077;
+        public static int compat_notification_large_icon_max_height=0x7f0a0078;
+        public static int compat_notification_large_icon_max_width=0x7f0a0079;
+        public static int disabled_alpha_material_dark=0x7f0a005a;
+        public static int disabled_alpha_material_light=0x7f0a005b;
+        public static int fastscroll_default_thickness=0x7f0a0000;
+        public static int fastscroll_margin=0x7f0a0001;
+        public static int fastscroll_minimum_range=0x7f0a0002;
+        public static int highlight_alpha_material_colored=0x7f0a005c;
+        public static int highlight_alpha_material_dark=0x7f0a005d;
+        public static int highlight_alpha_material_light=0x7f0a005e;
+        public static int hint_alpha_material_dark=0x7f0a005f;
+        public static int hint_alpha_material_light=0x7f0a0060;
+        public static int hint_pressed_alpha_material_dark=0x7f0a0061;
+        public static int hint_pressed_alpha_material_light=0x7f0a0062;
+        public static int indicator_size=0x7f0a0087;
+        public static int item_touch_helper_max_drag_scroll_per_frame=0x7f0a0003;
+        public static int item_touch_helper_swipe_escape_max_velocity=0x7f0a0004;
+        public static int item_touch_helper_swipe_escape_velocity=0x7f0a0005;
+        public static int notification_action_icon_size=0x7f0a007a;
+        public static int notification_action_text_size=0x7f0a007b;
+        public static int notification_big_circle_margin=0x7f0a007c;
+        public static int notification_content_margin_start=0x7f0a0070;
+        public static int notification_large_icon_height=0x7f0a007d;
+        public static int notification_large_icon_width=0x7f0a007e;
+        public static int notification_main_column_padding_top=0x7f0a0071;
+        public static int notification_media_narrow_margin=0x7f0a0072;
+        public static int notification_right_icon_size=0x7f0a007f;
+        public static int notification_right_side_padding_top=0x7f0a006f;
+        public static int notification_small_icon_background_padding=0x7f0a0080;
+        public static int notification_small_icon_size_as_large=0x7f0a0081;
+        public static int notification_subtext_size=0x7f0a0082;
+        public static int notification_top_pad=0x7f0a0083;
+        public static int notification_top_pad_large_text=0x7f0a0084;
+        public static int preference_category_padding_start=0x7f0a0006;
+        public static int preference_icon_minWidth=0x7f0a0008;
+        public static int preference_no_icon_padding_start=0x7f0a0007;
+        public static int preference_seekbar_padding_end=0x7f0a0009;
+        public static int preference_seekbar_padding_start=0x7f0a000a;
+        public static int preference_seekbar_value_width=0x7f0a000b;
+        public static int section_image_item=0x7f0a0088;
+        public static int subtitle_corner_radius=0x7f0a006b;
+        public static int subtitle_outline_width=0x7f0a006c;
+        public static int subtitle_shadow_offset=0x7f0a006d;
+        public static int subtitle_shadow_radius=0x7f0a006e;
+        public static int tooltip_corner_radius=0x7f0a0063;
+        public static int tooltip_horizontal_padding=0x7f0a0064;
+        public static int tooltip_margin=0x7f0a0065;
+        public static int tooltip_precise_anchor_extra_offset=0x7f0a0066;
+        public static int tooltip_precise_anchor_threshold=0x7f0a0067;
+        public static int tooltip_vertical_padding=0x7f0a0068;
+        public static int tooltip_y_offset_non_touch=0x7f0a0069;
+        public static int tooltip_y_offset_touch=0x7f0a006a;
     }
     public static final class drawable {
         public static int abc_ab_share_pack_mtrl_alpha=0x7f020000;
@@ -5091,493 +3503,227 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int ic_notif_normalize=0x7f02006f;
         public static int ic_stat_info=0x7f020070;
         public static int ic_stat_summary=0x7f020071;
-        public static int lb_action_bg=0x7f020072;
-        public static int lb_action_bg_focused=0x7f020073;
-        public static int lb_background=0x7f020074;
-        public static int lb_card_foreground=0x7f020075;
-        public static int lb_card_shadow_focused=0x7f020076;
-        public static int lb_card_shadow_normal=0x7f020077;
-        public static int lb_control_button_primary=0x7f020078;
-        public static int lb_control_button_secondary=0x7f020079;
-        public static int lb_headers_right_fading=0x7f02007a;
-        public static int lb_ic_actions_right_arrow=0x7f02007b;
-        public static int lb_ic_cc=0x7f02007c;
-        public static int lb_ic_fast_forward=0x7f02007d;
-        public static int lb_ic_fast_rewind=0x7f02007e;
-        public static int lb_ic_guidedactions_item_chevron=0x7f02007f;
-        public static int lb_ic_hq=0x7f020080;
-        public static int lb_ic_in_app_search=0x7f020081;
-        public static int lb_ic_loop=0x7f020082;
-        public static int lb_ic_loop_one=0x7f020083;
-        public static int lb_ic_more=0x7f020084;
-        public static int lb_ic_nav_arrow=0x7f020085;
-        public static int lb_ic_pause=0x7f020086;
-        public static int lb_ic_pip=0x7f020087;
-        public static int lb_ic_play=0x7f020088;
-        public static int lb_ic_play_fit=0x7f020089;
-        public static int lb_ic_playback_loop=0x7f02008a;
-        public static int lb_ic_replay=0x7f02008b;
-        public static int lb_ic_sad_cloud=0x7f02008c;
-        public static int lb_ic_search_mic=0x7f02008d;
-        public static int lb_ic_search_mic_out=0x7f02008e;
-        public static int lb_ic_shuffle=0x7f02008f;
-        public static int lb_ic_skip_next=0x7f020090;
-        public static int lb_ic_skip_previous=0x7f020091;
-        public static int lb_ic_stop=0x7f020092;
-        public static int lb_ic_thumb_down=0x7f020093;
-        public static int lb_ic_thumb_down_outline=0x7f020094;
-        public static int lb_ic_thumb_up=0x7f020095;
-        public static int lb_ic_thumb_up_outline=0x7f020096;
-        public static int lb_in_app_search_bg=0x7f020097;
-        public static int lb_in_app_search_shadow_focused=0x7f020098;
-        public static int lb_in_app_search_shadow_normal=0x7f020099;
-        public static int lb_onboarding_start_button_background=0x7f02009a;
-        public static int lb_playback_now_playing_bar=0x7f02009b;
-        public static int lb_playback_progress_bar=0x7f02009c;
-        public static int lb_search_orb=0x7f02009d;
-        public static int lb_selectable_item_rounded_rect=0x7f02009e;
-        public static int lb_speech_orb=0x7f02009f;
-        public static int lb_text_dot_one=0x7f0200a0;
-        public static int lb_text_dot_one_small=0x7f0200a1;
-        public static int lb_text_dot_two=0x7f0200a2;
-        public static int lb_text_dot_two_small=0x7f0200a3;
-        public static int new_state=0x7f0200a4;
-        public static int next=0x7f0200a5;
-        public static int notification_action_background=0x7f0200a6;
-        public static int notification_bg=0x7f0200a7;
-        public static int notification_bg_low=0x7f0200a8;
-        public static int notification_bg_low_normal=0x7f0200a9;
-        public static int notification_bg_low_pressed=0x7f0200aa;
-        public static int notification_bg_normal=0x7f0200ab;
-        public static int notification_bg_normal_pressed=0x7f0200ac;
-        public static int notification_icon_background=0x7f0200ad;
-        public static int notification_template_icon_bg=0x7f0200be;
-        public static int notification_template_icon_low_bg=0x7f0200bf;
-        public static int notification_tile_bg=0x7f0200ae;
-        public static int notify_panel_notification_icon_bg=0x7f0200af;
-        public static int onboarding_permissions=0x7f0200b0;
-        public static int onboarding_welcome=0x7f0200b1;
-        public static int original_state=0x7f0200b2;
-        public static int preference_list_divider_material=0x7f0200b3;
-        public static int previous=0x7f0200b4;
-        public static int rectangle_button=0x7f0200b5;
-        public static int rounded_button=0x7f0200b6;
-        public static int seventh_bg=0x7f0200b7;
-        public static int sixth_b=0x7f0200b8;
-        public static int splash=0x7f0200b9;
-        public static int thrid_bg=0x7f0200ba;
-        public static int tooltip_frame_dark=0x7f0200bb;
-        public static int tooltip_frame_light=0x7f0200bc;
-        public static int translate=0x7f0200bd;
-    }
-    public static final class fraction {
-        public static int lb_browse_header_unselect_alpha=0x7f110000;
-        public static int lb_browse_rows_scale=0x7f110001;
-        public static int lb_focus_zoom_factor_large=0x7f110002;
-        public static int lb_focus_zoom_factor_medium=0x7f110003;
-        public static int lb_focus_zoom_factor_small=0x7f110004;
-        public static int lb_focus_zoom_factor_xsmall=0x7f110005;
-        public static int lb_search_bar_speech_orb_max_level_zoom=0x7f110006;
-        public static int lb_search_orb_focused_zoom=0x7f110007;
-        public static int lb_view_active_level=0x7f110008;
-        public static int lb_view_dimmed_level=0x7f110009;
+        public static int new_state=0x7f020072;
+        public static int next=0x7f020073;
+        public static int notification_action_background=0x7f020074;
+        public static int notification_bg=0x7f020075;
+        public static int notification_bg_low=0x7f020076;
+        public static int notification_bg_low_normal=0x7f020077;
+        public static int notification_bg_low_pressed=0x7f020078;
+        public static int notification_bg_normal=0x7f020079;
+        public static int notification_bg_normal_pressed=0x7f02007a;
+        public static int notification_icon_background=0x7f02007b;
+        public static int notification_template_icon_bg=0x7f02008c;
+        public static int notification_template_icon_low_bg=0x7f02008d;
+        public static int notification_tile_bg=0x7f02007c;
+        public static int notify_panel_notification_icon_bg=0x7f02007d;
+        public static int onboarding_permissions=0x7f02007e;
+        public static int onboarding_welcome=0x7f02007f;
+        public static int original_state=0x7f020080;
+        public static int preference_list_divider_material=0x7f020081;
+        public static int previous=0x7f020082;
+        public static int rectangle_button=0x7f020083;
+        public static int rounded_button=0x7f020084;
+        public static int seventh_bg=0x7f020085;
+        public static int sixth_b=0x7f020086;
+        public static int splash=0x7f020087;
+        public static int thrid_bg=0x7f020088;
+        public static int tooltip_frame_dark=0x7f020089;
+        public static int tooltip_frame_light=0x7f02008a;
+        public static int translate=0x7f02008b;
     }
     public static final class id {
-        public static int ALT=0x7f0e0042;
-        public static int CTRL=0x7f0e0043;
-        public static int Content=0x7f0e0058;
-        public static int DataCardView=0x7f0e0142;
-        public static int FUNCTION=0x7f0e0044;
-        public static int IconOnLeft=0x7f0e0059;
-        public static int IconOnRight=0x7f0e005a;
-        public static int ImageOnly=0x7f0e005b;
-        public static int META=0x7f0e0045;
-        public static int SHIFT=0x7f0e0046;
-        public static int SYM=0x7f0e0047;
-        public static int Title=0x7f0e005c;
-        public static int action0=0x7f0e0147;
-        public static int actionIcon=0x7f0e0129;
-        public static int action_bar=0x7f0e0092;
-        public static int action_bar_activity_content=0x7f0e0001;
-        public static int action_bar_container=0x7f0e0091;
-        public static int action_bar_root=0x7f0e008d;
-        public static int action_bar_spinner=0x7f0e0002;
-        public static int action_bar_subtitle=0x7f0e006f;
-        public static int action_bar_title=0x7f0e006e;
-        public static int action_container=0x7f0e0144;
-        public static int action_context_bar=0x7f0e0093;
-        public static int action_divider=0x7f0e014b;
-        public static int action_fragment=0x7f0e00ed;
-        public static int action_fragment_background=0x7f0e00ec;
-        public static int action_fragment_root=0x7f0e00eb;
-        public static int action_image=0x7f0e0145;
-        public static int action_menu_divider=0x7f0e0003;
-        public static int action_menu_presenter=0x7f0e0004;
-        public static int action_mode_bar=0x7f0e008f;
-        public static int action_mode_bar_stub=0x7f0e008e;
-        public static int action_mode_close_button=0x7f0e0070;
-        public static int action_text=0x7f0e0146;
-        public static int actions=0x7f0e0153;
-        public static int activated=0x7f0e0053;
-        public static int activity_chooser_view_content=0x7f0e0071;
-        public static int add=0x7f0e0037;
-        public static int adjust_height=0x7f0e0025;
-        public static int adjust_width=0x7f0e0026;
-        public static int alertTitle=0x7f0e0084;
-        public static int all=0x7f0e0069;
-        public static int always=0x7f0e0048;
-        public static int async=0x7f0e006a;
-        public static int auto=0x7f0e002b;
-        public static int background=0x7f0e0121;
-        public static int background_container=0x7f0e00fe;
-        public static int background_image=0x7f0e00a3;
-        public static int background_image_overlay=0x7f0e00a4;
-        public static int background_imagein=0x7f0e015d;
-        public static int background_imageout=0x7f0e015c;
-        public static int bar1=0x7f0e0118;
-        public static int bar2=0x7f0e0119;
-        public static int bar3=0x7f0e011a;
-        public static int beginning=0x7f0e003f;
-        public static int blocking=0x7f0e006b;
-        public static int bottom=0x7f0e004d;
-        public static int bottom_spacer=0x7f0e0114;
-        public static int browse_container_dock=0x7f0e00b7;
-        public static int browse_dummy=0x7f0e00b5;
-        public static int browse_frame=0x7f0e00b6;
-        public static int browse_grid=0x7f0e0137;
-        public static int browse_grid_dock=0x7f0e0139;
-        public static int browse_headers=0x7f0e00ef;
-        public static int browse_headers_dock=0x7f0e00b9;
-        public static int browse_headers_root=0x7f0e00ee;
-        public static int browse_title_group=0x7f0e00ba;
-        public static int btn_skip=0x7f0e00a7;
-        public static int button=0x7f0e00bc;
-        public static int buttonPanel=0x7f0e0077;
-        public static int button_start=0x7f0e0104;
-        public static int buttons_layout=0x7f0e00a5;
-        public static int cancel_action=0x7f0e0148;
-        public static int cardView=0x7f0e00b0;
-        public static int categoriesRecyclerView=0x7f0e013c;
-        public static int center=0x7f0e0061;
-        public static int center_horizontal=0x7f0e0062;
-        public static int center_vertical=0x7f0e0063;
-        public static int checkbox=0x7f0e008b;
-        public static int chronometer=0x7f0e0150;
-        public static int circle_indicator_view=0x7f0e00a6;
-        public static int clip_horizontal=0x7f0e0064;
-        public static int clip_vertical=0x7f0e0065;
-        public static int collapseActionView=0x7f0e0049;
-        public static int column=0x7f0e0108;
-        public static int container_list=0x7f0e012a;
-        public static int content=0x7f0e0087;
-        public static int contentPanel=0x7f0e007a;
-        public static int content_container=0x7f0e0101;
-        public static int content_fragment=0x7f0e00ea;
-        public static int content_frame=0x7f0e00e9;
-        public static int content_text=0x7f0e00f4;
-        public static int control_bar=0x7f0e00bb;
-        public static int controls_card=0x7f0e010f;
-        public static int controls_card_right_panel=0x7f0e0110;
-        public static int controls_container=0x7f0e010b;
-        public static int controls_dock=0x7f0e0112;
-        public static int current_time=0x7f0e010d;
-        public static int custom=0x7f0e0081;
-        public static int customPanel=0x7f0e0080;
-        public static int cv_cardview=0x7f0e00ac;
-        public static int dark=0x7f0e002c;
-        public static int data=0x7f0e00b2;
-        public static int dataTitle=0x7f0e0143;
-        public static int decor_content_parent=0x7f0e0090;
-        public static int default_activity_button=0x7f0e0074;
-        public static int description=0x7f0e00f8;
-        public static int description_dock=0x7f0e0111;
-        public static int details_background_view=0x7f0e00c3;
-        public static int details_fragment_root=0x7f0e00c4;
-        public static int details_frame=0x7f0e00c6;
-        public static int details_overview=0x7f0e00c7;
-        public static int details_overview_actions=0x7f0e00cb;
-        public static int details_overview_actions_background=0x7f0e00cf;
-        public static int details_overview_description=0x7f0e00ca;
-        public static int details_overview_image=0x7f0e00c8;
-        public static int details_overview_right_panel=0x7f0e00c9;
-        public static int details_root=0x7f0e00ce;
-        public static int details_rows_dock=0x7f0e00c5;
-        public static int disableHome=0x7f0e0031;
-        public static int dummy=0x7f0e00c1;
-        public static int edit_query=0x7f0e0094;
-        public static int end=0x7f0e0040;
-        public static int end_padder=0x7f0e0155;
-        public static int error_frame=0x7f0e00cd;
-        public static int expand_activities_button=0x7f0e0072;
-        public static int expanded_menu=0x7f0e008a;
-        public static int extra=0x7f0e0055;
-        public static int extra_badge=0x7f0e00f3;
-        public static int fade_out_edge=0x7f0e00f0;
-        public static int fill=0x7f0e0066;
-        public static int fill_horizontal=0x7f0e0067;
-        public static int fill_vertical=0x7f0e0068;
-        public static int foreground_container=0x7f0e0105;
-        public static int forever=0x7f0e006c;
-        public static int fragment_container=0x7f0e015b;
-        public static int grid_frame=0x7f0e0138;
-        public static int group_divider=0x7f0e0086;
-        public static int guidance_breadcrumb=0x7f0e00d2;
-        public static int guidance_container=0x7f0e00d0;
-        public static int guidance_description=0x7f0e00d4;
-        public static int guidance_icon=0x7f0e00d1;
-        public static int guidance_title=0x7f0e00d3;
-        public static int guidedactions_activator_item=0x7f0e00dd;
-        public static int guidedactions_content=0x7f0e00d7;
-        public static int guidedactions_content2=0x7f0e00e4;
-        public static int guidedactions_item_checkmark=0x7f0e00de;
-        public static int guidedactions_item_chevron=0x7f0e00e1;
-        public static int guidedactions_item_content=0x7f0e00df;
-        public static int guidedactions_item_description=0x7f0e00e0;
-        public static int guidedactions_item_icon=0x7f0e00db;
-        public static int guidedactions_item_title=0x7f0e00dc;
-        public static int guidedactions_list=0x7f0e00d8;
-        public static int guidedactions_list2=0x7f0e00e5;
-        public static int guidedactions_list_background=0x7f0e00d6;
-        public static int guidedactions_list_background2=0x7f0e00e3;
-        public static int guidedactions_root=0x7f0e00d5;
-        public static int guidedactions_root2=0x7f0e00e2;
-        public static int guidedactions_sub_list=0x7f0e00da;
-        public static int guidedactions_sub_list_background=0x7f0e00d9;
-        public static int guidedstep_background=0x7f0e00e6;
-        public static int guidedstep_background_view_root=0x7f0e00e8;
-        public static int guidedstep_root=0x7f0e00e7;
-        public static int home=0x7f0e0005;
-        public static int homeAsUp=0x7f0e0032;
-        public static int hovercard_panel=0x7f0e00f7;
-        public static int icon=0x7f0e0076;
-        public static int icon_frame=0x7f0e00b3;
-        public static int icon_group=0x7f0e0154;
-        public static int icon_only=0x7f0e0028;
-        public static int ifRoom=0x7f0e004a;
-        public static int image=0x7f0e0073;
-        public static int info=0x7f0e0056;
-        public static int infoOver=0x7f0e004f;
-        public static int infoUnder=0x7f0e0050;
-        public static int infoUnderWithExtra=0x7f0e0051;
-        public static int info_field=0x7f0e00f2;
-        public static int initial=0x7f0e00f9;
-        public static int italic=0x7f0e006d;
-        public static int item_touch_helper_previous_elevation=0x7f0e0000;
-        public static int ivNext=0x7f0e00aa;
-        public static int ivPrev=0x7f0e00a9;
-        public static int iv_image=0x7f0e00ad;
-        public static int label=0x7f0e00bd;
-        public static int lb_action_button=0x7f0e00b4;
-        public static int lb_control_closed_captioning=0x7f0e000a;
-        public static int lb_control_fast_forward=0x7f0e000b;
-        public static int lb_control_fast_rewind=0x7f0e000c;
-        public static int lb_control_high_quality=0x7f0e000d;
-        public static int lb_control_more_actions=0x7f0e000e;
-        public static int lb_control_picture_in_picture=0x7f0e000f;
-        public static int lb_control_play_pause=0x7f0e0010;
-        public static int lb_control_repeat=0x7f0e0011;
-        public static int lb_control_shuffle=0x7f0e0012;
-        public static int lb_control_skip_next=0x7f0e0013;
-        public static int lb_control_skip_previous=0x7f0e0014;
-        public static int lb_control_thumbs_down=0x7f0e0015;
-        public static int lb_control_thumbs_up=0x7f0e0016;
-        public static int lb_details_description_body=0x7f0e00c0;
-        public static int lb_details_description_subtitle=0x7f0e00bf;
-        public static int lb_details_description_title=0x7f0e00be;
-        public static int lb_focus_animator=0x7f0e0017;
-        public static int lb_guidedstep_background=0x7f0e0018;
-        public static int lb_parallax_source=0x7f0e0019;
-        public static int lb_results_frame=0x7f0e0130;
-        public static int lb_row_container_header_dock=0x7f0e011e;
-        public static int lb_search_bar=0x7f0e0131;
-        public static int lb_search_bar_badge=0x7f0e012d;
-        public static int lb_search_bar_items=0x7f0e012c;
-        public static int lb_search_bar_speech_orb=0x7f0e012b;
-        public static int lb_search_frame=0x7f0e012f;
-        public static int lb_search_text_editor=0x7f0e012e;
-        public static int lb_shadow_focused=0x7f0e0134;
-        public static int lb_shadow_impl=0x7f0e001a;
-        public static int lb_shadow_normal=0x7f0e0133;
-        public static int lb_slide_transition_value=0x7f0e001b;
-        public static int left=0x7f0e005e;
-        public static int light=0x7f0e002d;
-        public static int line1=0x7f0e001d;
-        public static int line3=0x7f0e001e;
-        public static int listMode=0x7f0e002e;
-        public static int list_item=0x7f0e0075;
-        public static int logo=0x7f0e0106;
-        public static int main=0x7f0e0057;
-        public static int mainOnly=0x7f0e0052;
-        public static int main_icon=0x7f0e00ff;
-        public static int main_image=0x7f0e00f1;
-        public static int maxLines=0x7f0e005d;
-        public static int mediaItemActionsContainer=0x7f0e0128;
-        public static int mediaItemDetails=0x7f0e0124;
-        public static int mediaItemDuration=0x7f0e0127;
-        public static int mediaItemName=0x7f0e0126;
-        public static int mediaItemNumberViewFlipper=0x7f0e0125;
-        public static int mediaItemRow=0x7f0e0123;
-        public static int mediaListHeader=0x7f0e00fc;
-        public static int mediaRowSelector=0x7f0e0122;
-        public static int mediaRowSeparator=0x7f0e0120;
-        public static int media_actions=0x7f0e014a;
-        public static int message=0x7f0e00a1;
-        public static int middle=0x7f0e0041;
-        public static int more_actions_dock=0x7f0e010c;
-        public static int multiply=0x7f0e0038;
-        public static int navigation_layout=0x7f0e00a8;
-        public static int navigator_container=0x7f0e0102;
-        public static int never=0x7f0e004b;
-        public static int none=0x7f0e0027;
-        public static int normal=0x7f0e002f;
-        public static int notif=0x7f0e013b;
-        public static int notification_background=0x7f0e0152;
-        public static int notification_main_column=0x7f0e014d;
-        public static int notification_main_column_container=0x7f0e014c;
-        public static int onboarding_fragment_root=0x7f0e00fd;
-        public static int page_container=0x7f0e0100;
-        public static int page_indicator=0x7f0e0103;
-        public static int parentPanel=0x7f0e0079;
-        public static int parent_layout=0x7f0e00a2;
-        public static int paused=0x7f0e00fa;
-        public static int permissions=0x7f0e013f;
-        public static int permissionsCardView=0x7f0e013d;
-        public static int permissionsTitle=0x7f0e013e;
-        public static int picker=0x7f0e0107;
-        public static int playback_controls_dock=0x7f0e0117;
-        public static int playback_fragment_background=0x7f0e0116;
-        public static int playback_fragment_root=0x7f0e0115;
-        public static int playback_progress=0x7f0e010a;
-        public static int playing=0x7f0e00fb;
-        public static int progress_circular=0x7f0e0006;
-        public static int progress_horizontal=0x7f0e0007;
-        public static int radio=0x7f0e008c;
-        public static int recycler_view=0x7f0e0157;
-        public static int right=0x7f0e005f;
-        public static int right_icon=0x7f0e0151;
-        public static int right_side=0x7f0e014e;
-        public static int row_content=0x7f0e00f6;
-        public static int row_header=0x7f0e00cc;
-        public static int row_header_description=0x7f0e011f;
-        public static int scale_frame=0x7f0e00b8;
-        public static int screen=0x7f0e0039;
-        public static int scrollIndicatorDown=0x7f0e007f;
-        public static int scrollIndicatorUp=0x7f0e007b;
-        public static int scrollView=0x7f0e007c;
-        public static int search_badge=0x7f0e0096;
-        public static int search_bar=0x7f0e0095;
-        public static int search_button=0x7f0e0097;
-        public static int search_close_btn=0x7f0e009c;
-        public static int search_edit_frame=0x7f0e0098;
-        public static int search_go_btn=0x7f0e009e;
-        public static int search_mag_icon=0x7f0e0099;
-        public static int search_orb=0x7f0e0132;
-        public static int search_plate=0x7f0e009a;
-        public static int search_src_text=0x7f0e009b;
-        public static int search_voice_btn=0x7f0e009f;
-        public static int secondary_controls_dock=0x7f0e0113;
-        public static int seekbar=0x7f0e0158;
-        public static int seekbar_value=0x7f0e0159;
-        public static int select_dialog_listview=0x7f0e00a0;
-        public static int selected=0x7f0e0054;
-        public static int separate_time=0x7f0e011d;
-        public static int separator=0x7f0e0109;
-        public static int settings_item=0x7f0e015e;
-        public static int shortcut=0x7f0e0088;
-        public static int showCustom=0x7f0e0033;
-        public static int showHome=0x7f0e0034;
-        public static int showTitle=0x7f0e0035;
-        public static int spacer=0x7f0e0078;
-        public static int spinner=0x7f0e0156;
-        public static int split_action_bar=0x7f0e0008;
-        public static int src_atop=0x7f0e003a;
-        public static int src_in=0x7f0e003b;
-        public static int src_over=0x7f0e003c;
-        public static int standard=0x7f0e0029;
-        public static int start=0x7f0e0060;
-        public static int status=0x7f0e00b1;
-        public static int statusCardView=0x7f0e0140;
-        public static int statusTitle=0x7f0e0141;
-        public static int status_bar_latest_event_content=0x7f0e0149;
-        public static int submenuarrow=0x7f0e0089;
-        public static int submit_area=0x7f0e009d;
-        public static int switchWidget=0x7f0e015a;
-        public static int tabMode=0x7f0e0030;
-        public static int tag_transition_group=0x7f0e001f;
-        public static int tag_unhandled_key_event_manager=0x7f0e0020;
-        public static int tag_unhandled_key_listeners=0x7f0e0021;
-        public static int text=0x7f0e0022;
-        public static int text2=0x7f0e0023;
-        public static int textSpacerNoButtons=0x7f0e007e;
-        public static int textSpacerNoTitle=0x7f0e007d;
-        public static int thumbs_row=0x7f0e011b;
-        public static int time=0x7f0e014f;
-        public static int title=0x7f0e0024;
-        public static int titleDividerNoCustom=0x7f0e0085;
-        public static int title_badge=0x7f0e0135;
-        public static int title_orb=0x7f0e0136;
-        public static int title_template=0x7f0e0083;
-        public static int title_text=0x7f0e00f5;
-        public static int top=0x7f0e004e;
-        public static int topPanel=0x7f0e0082;
-        public static int total_time=0x7f0e010e;
-        public static int transitionPosition=0x7f0e001c;
-        public static int transport_row=0x7f0e011c;
-        public static int tv_description=0x7f0e00af;
-        public static int tv_title=0x7f0e00ae;
-        public static int uniform=0x7f0e003d;
-        public static int up=0x7f0e0009;
-        public static int useLogo=0x7f0e0036;
-        public static int video_surface=0x7f0e013a;
-        public static int video_surface_container=0x7f0e00c2;
-        public static int vp_pager=0x7f0e00ab;
-        public static int wide=0x7f0e002a;
-        public static int withText=0x7f0e004c;
-        public static int wrap_content=0x7f0e003e;
+        public static int ALT=0x7f0b002f;
+        public static int CTRL=0x7f0b0030;
+        public static int DataCardView=0x7f0b0099;
+        public static int FUNCTION=0x7f0b0031;
+        public static int META=0x7f0b0032;
+        public static int SHIFT=0x7f0b0033;
+        public static int SYM=0x7f0b0034;
+        public static int action0=0x7f0b009e;
+        public static int action_bar=0x7f0b0070;
+        public static int action_bar_activity_content=0x7f0b0001;
+        public static int action_bar_container=0x7f0b006f;
+        public static int action_bar_root=0x7f0b006b;
+        public static int action_bar_spinner=0x7f0b0002;
+        public static int action_bar_subtitle=0x7f0b004d;
+        public static int action_bar_title=0x7f0b004c;
+        public static int action_container=0x7f0b009b;
+        public static int action_context_bar=0x7f0b0071;
+        public static int action_divider=0x7f0b00a2;
+        public static int action_image=0x7f0b009c;
+        public static int action_menu_divider=0x7f0b0003;
+        public static int action_menu_presenter=0x7f0b0004;
+        public static int action_mode_bar=0x7f0b006d;
+        public static int action_mode_bar_stub=0x7f0b006c;
+        public static int action_mode_close_button=0x7f0b004e;
+        public static int action_text=0x7f0b009d;
+        public static int actions=0x7f0b00ab;
+        public static int activity_chooser_view_content=0x7f0b004f;
+        public static int add=0x7f0b0024;
+        public static int adjust_height=0x7f0b0012;
+        public static int adjust_width=0x7f0b0013;
+        public static int alertTitle=0x7f0b0062;
+        public static int all=0x7f0b0047;
+        public static int always=0x7f0b0035;
+        public static int async=0x7f0b0048;
+        public static int auto=0x7f0b0018;
+        public static int background_image=0x7f0b0081;
+        public static int background_image_overlay=0x7f0b0082;
+        public static int beginning=0x7f0b002c;
+        public static int blocking=0x7f0b0049;
+        public static int bottom=0x7f0b003a;
+        public static int btn_skip=0x7f0b0085;
+        public static int buttonPanel=0x7f0b0055;
+        public static int buttons_layout=0x7f0b0083;
+        public static int cancel_action=0x7f0b009f;
+        public static int cardView=0x7f0b008e;
+        public static int categoriesRecyclerView=0x7f0b0093;
+        public static int center=0x7f0b003c;
+        public static int center_horizontal=0x7f0b003d;
+        public static int center_vertical=0x7f0b003e;
+        public static int checkbox=0x7f0b0069;
+        public static int chronometer=0x7f0b00a7;
+        public static int circle_indicator_view=0x7f0b0084;
+        public static int clip_horizontal=0x7f0b003f;
+        public static int clip_vertical=0x7f0b0040;
+        public static int collapseActionView=0x7f0b0036;
+        public static int content=0x7f0b0065;
+        public static int contentPanel=0x7f0b0058;
+        public static int custom=0x7f0b005f;
+        public static int customPanel=0x7f0b005e;
+        public static int cv_cardview=0x7f0b008a;
+        public static int dark=0x7f0b0019;
+        public static int data=0x7f0b0090;
+        public static int dataTitle=0x7f0b009a;
+        public static int decor_content_parent=0x7f0b006e;
+        public static int default_activity_button=0x7f0b0052;
+        public static int disableHome=0x7f0b001e;
+        public static int edit_query=0x7f0b0072;
+        public static int end=0x7f0b002d;
+        public static int end_padder=0x7f0b00ad;
+        public static int expand_activities_button=0x7f0b0050;
+        public static int expanded_menu=0x7f0b0068;
+        public static int fill=0x7f0b0041;
+        public static int fill_horizontal=0x7f0b0042;
+        public static int fill_vertical=0x7f0b0043;
+        public static int forever=0x7f0b004a;
+        public static int fragment_container=0x7f0b00b3;
+        public static int group_divider=0x7f0b0064;
+        public static int home=0x7f0b0005;
+        public static int homeAsUp=0x7f0b001f;
+        public static int icon=0x7f0b0054;
+        public static int icon_frame=0x7f0b0091;
+        public static int icon_group=0x7f0b00ac;
+        public static int icon_only=0x7f0b0015;
+        public static int ifRoom=0x7f0b0037;
+        public static int image=0x7f0b0051;
+        public static int info=0x7f0b00a8;
+        public static int italic=0x7f0b004b;
+        public static int item_touch_helper_previous_elevation=0x7f0b0000;
+        public static int ivNext=0x7f0b0088;
+        public static int ivPrev=0x7f0b0087;
+        public static int iv_image=0x7f0b008b;
+        public static int left=0x7f0b0044;
+        public static int light=0x7f0b001a;
+        public static int line1=0x7f0b000a;
+        public static int line3=0x7f0b000b;
+        public static int listMode=0x7f0b001b;
+        public static int list_item=0x7f0b0053;
+        public static int media_actions=0x7f0b00a1;
+        public static int message=0x7f0b007f;
+        public static int middle=0x7f0b002e;
+        public static int multiply=0x7f0b0025;
+        public static int navigation_layout=0x7f0b0086;
+        public static int never=0x7f0b0038;
+        public static int none=0x7f0b0014;
+        public static int normal=0x7f0b001c;
+        public static int notif=0x7f0b0092;
+        public static int notification_background=0x7f0b00aa;
+        public static int notification_main_column=0x7f0b00a4;
+        public static int notification_main_column_container=0x7f0b00a3;
+        public static int parentPanel=0x7f0b0057;
+        public static int parent_layout=0x7f0b0080;
+        public static int permissions=0x7f0b0096;
+        public static int permissionsCardView=0x7f0b0094;
+        public static int permissionsTitle=0x7f0b0095;
+        public static int progress_circular=0x7f0b0006;
+        public static int progress_horizontal=0x7f0b0007;
+        public static int radio=0x7f0b006a;
+        public static int recycler_view=0x7f0b00af;
+        public static int right=0x7f0b0045;
+        public static int right_icon=0x7f0b00a9;
+        public static int right_side=0x7f0b00a5;
+        public static int screen=0x7f0b0026;
+        public static int scrollIndicatorDown=0x7f0b005d;
+        public static int scrollIndicatorUp=0x7f0b0059;
+        public static int scrollView=0x7f0b005a;
+        public static int search_badge=0x7f0b0074;
+        public static int search_bar=0x7f0b0073;
+        public static int search_button=0x7f0b0075;
+        public static int search_close_btn=0x7f0b007a;
+        public static int search_edit_frame=0x7f0b0076;
+        public static int search_go_btn=0x7f0b007c;
+        public static int search_mag_icon=0x7f0b0077;
+        public static int search_plate=0x7f0b0078;
+        public static int search_src_text=0x7f0b0079;
+        public static int search_voice_btn=0x7f0b007d;
+        public static int seekbar=0x7f0b00b0;
+        public static int seekbar_value=0x7f0b00b1;
+        public static int select_dialog_listview=0x7f0b007e;
+        public static int selected=0x7f0b00b4;
+        public static int settings_item=0x7f0b00b5;
+        public static int shortcut=0x7f0b0066;
+        public static int showCustom=0x7f0b0020;
+        public static int showHome=0x7f0b0021;
+        public static int showTitle=0x7f0b0022;
+        public static int spacer=0x7f0b0056;
+        public static int spinner=0x7f0b00ae;
+        public static int split_action_bar=0x7f0b0008;
+        public static int src_atop=0x7f0b0027;
+        public static int src_in=0x7f0b0028;
+        public static int src_over=0x7f0b0029;
+        public static int standard=0x7f0b0016;
+        public static int start=0x7f0b0046;
+        public static int status=0x7f0b008f;
+        public static int statusCardView=0x7f0b0097;
+        public static int statusTitle=0x7f0b0098;
+        public static int status_bar_latest_event_content=0x7f0b00a0;
+        public static int submenuarrow=0x7f0b0067;
+        public static int submit_area=0x7f0b007b;
+        public static int switchWidget=0x7f0b00b2;
+        public static int tabMode=0x7f0b001d;
+        public static int tag_transition_group=0x7f0b000c;
+        public static int tag_unhandled_key_event_manager=0x7f0b000d;
+        public static int tag_unhandled_key_listeners=0x7f0b000e;
+        public static int text=0x7f0b000f;
+        public static int text2=0x7f0b0010;
+        public static int textSpacerNoButtons=0x7f0b005c;
+        public static int textSpacerNoTitle=0x7f0b005b;
+        public static int time=0x7f0b00a6;
+        public static int title=0x7f0b0011;
+        public static int titleDividerNoCustom=0x7f0b0063;
+        public static int title_template=0x7f0b0061;
+        public static int top=0x7f0b003b;
+        public static int topPanel=0x7f0b0060;
+        public static int tv_description=0x7f0b008d;
+        public static int tv_title=0x7f0b008c;
+        public static int uniform=0x7f0b002a;
+        public static int up=0x7f0b0009;
+        public static int useLogo=0x7f0b0023;
+        public static int vp_pager=0x7f0b0089;
+        public static int wide=0x7f0b0017;
+        public static int withText=0x7f0b0039;
+        public static int wrap_content=0x7f0b002b;
     }
     public static final class integer {
-        public static int abc_config_activityDefaultDur=0x7f0a0001;
-        public static int abc_config_activityShortDur=0x7f0a0002;
-        public static int cancel_button_image_alpha=0x7f0a0003;
-        public static int config_tooltipAnimTime=0x7f0a0004;
-        public static int google_play_services_version=0x7f0a0000;
-        public static int lb_browse_headers_transition_delay=0x7f0a0007;
-        public static int lb_browse_headers_transition_duration=0x7f0a0008;
-        public static int lb_browse_rows_anim_duration=0x7f0a0009;
-        public static int lb_card_activated_animation_duration=0x7f0a000a;
-        public static int lb_card_selected_animation_delay=0x7f0a000b;
-        public static int lb_card_selected_animation_duration=0x7f0a000c;
-        public static int lb_details_description_body_max_lines=0x7f0a000d;
-        public static int lb_details_description_body_min_lines=0x7f0a000e;
-        public static int lb_details_description_subtitle_max_lines=0x7f0a000f;
-        public static int lb_details_description_title_max_lines=0x7f0a0010;
-        public static int lb_error_message_max_lines=0x7f0a0011;
-        public static int lb_guidedactions_item_animation_duration=0x7f0a0012;
-        public static int lb_guidedactions_item_description_min_lines=0x7f0a0013;
-        public static int lb_guidedactions_item_title_max_lines=0x7f0a0014;
-        public static int lb_guidedactions_item_title_min_lines=0x7f0a0015;
-        public static int lb_guidedstep_activity_background_fade_duration_ms=0x7f0a0016;
-        public static int lb_onboarding_header_description_delay=0x7f0a0017;
-        public static int lb_onboarding_header_title_delay=0x7f0a0018;
-        public static int lb_playback_bg_fade_in_ms=0x7f0a0019;
-        public static int lb_playback_bg_fade_out_ms=0x7f0a001a;
-        public static int lb_playback_controls_fade_in_ms=0x7f0a001b;
-        public static int lb_playback_controls_fade_out_ms=0x7f0a001c;
-        public static int lb_playback_controls_show_time_ms=0x7f0a001d;
-        public static int lb_playback_controls_tickle_timeout_ms=0x7f0a001e;
-        public static int lb_playback_description_fade_in_ms=0x7f0a001f;
-        public static int lb_playback_description_fade_out_ms=0x7f0a0020;
-        public static int lb_playback_rows_fade_delay_ms=0x7f0a0021;
-        public static int lb_playback_rows_fade_in_ms=0x7f0a0022;
-        public static int lb_playback_rows_fade_out_ms=0x7f0a0023;
-        public static int lb_search_bar_speech_mode_background_alpha=0x7f0a0024;
-        public static int lb_search_bar_text_mode_background_alpha=0x7f0a0025;
-        public static int lb_search_orb_pulse_duration_ms=0x7f0a0026;
-        public static int lb_search_orb_scale_duration_ms=0x7f0a0027;
-        public static int slideEdgeEnd=0x7f0a0005;
-        public static int slideEdgeStart=0x7f0a0006;
-        public static int status_bar_notification_info_maxnum=0x7f0a0028;
-        public static int zero=0x7f0a0029;
+        public static int abc_config_activityDefaultDur=0x7f070001;
+        public static int abc_config_activityShortDur=0x7f070002;
+        public static int cancel_button_image_alpha=0x7f070003;
+        public static int config_tooltipAnimTime=0x7f070004;
+        public static int google_play_services_version=0x7f070000;
+        public static int status_bar_notification_info_maxnum=0x7f070005;
+        public static int zero=0x7f070006;
     }
     public static final class layout {
         public static int abc_action_bar_title_item=0x7f040000;
@@ -5612,800 +3758,564 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static int boarding_fragment=0x7f04001d;
         public static int category_list_item=0x7f04001e;
         public static int expand_button=0x7f04001f;
-        public static int lb_action_1_line=0x7f040020;
-        public static int lb_action_2_lines=0x7f040021;
-        public static int lb_background_window=0x7f040022;
-        public static int lb_browse_fragment=0x7f040023;
-        public static int lb_browse_title=0x7f040024;
-        public static int lb_control_bar=0x7f040025;
-        public static int lb_control_button_primary=0x7f040026;
-        public static int lb_control_button_secondary=0x7f040027;
-        public static int lb_details_description=0x7f040028;
-        public static int lb_details_fragment=0x7f040029;
-        public static int lb_details_overview=0x7f04002a;
-        public static int lb_divider=0x7f04002b;
-        public static int lb_error_fragment=0x7f04002c;
-        public static int lb_fullwidth_details_overview=0x7f04002d;
-        public static int lb_fullwidth_details_overview_logo=0x7f04002e;
-        public static int lb_guidance=0x7f04002f;
-        public static int lb_guidedactions=0x7f040030;
-        public static int lb_guidedactions_datepicker_item=0x7f040031;
-        public static int lb_guidedactions_item=0x7f040032;
-        public static int lb_guidedbuttonactions=0x7f040033;
-        public static int lb_guidedstep_background=0x7f040034;
-        public static int lb_guidedstep_fragment=0x7f040035;
-        public static int lb_header=0x7f040036;
-        public static int lb_headers_fragment=0x7f040037;
-        public static int lb_image_card_view=0x7f040038;
-        public static int lb_image_card_view_themed_badge_left=0x7f040039;
-        public static int lb_image_card_view_themed_badge_right=0x7f04003a;
-        public static int lb_image_card_view_themed_content=0x7f04003b;
-        public static int lb_image_card_view_themed_title=0x7f04003c;
-        public static int lb_list_row=0x7f04003d;
-        public static int lb_list_row_hovercard=0x7f04003e;
-        public static int lb_media_item_number_view_flipper=0x7f04003f;
-        public static int lb_media_list_header=0x7f040040;
-        public static int lb_onboarding_fragment=0x7f040041;
-        public static int lb_picker=0x7f040042;
-        public static int lb_picker_column=0x7f040043;
-        public static int lb_picker_item=0x7f040044;
-        public static int lb_picker_separator=0x7f040045;
-        public static int lb_playback_controls=0x7f040046;
-        public static int lb_playback_controls_row=0x7f040047;
-        public static int lb_playback_fragment=0x7f040048;
-        public static int lb_playback_now_playing_bars=0x7f040049;
-        public static int lb_playback_transport_controls=0x7f04004a;
-        public static int lb_playback_transport_controls_row=0x7f04004b;
-        public static int lb_row_container=0x7f04004c;
-        public static int lb_row_header=0x7f04004d;
-        public static int lb_row_media_item=0x7f04004e;
-        public static int lb_row_media_item_action=0x7f04004f;
-        public static int lb_rows_fragment=0x7f040050;
-        public static int lb_search_bar=0x7f040051;
-        public static int lb_search_fragment=0x7f040052;
-        public static int lb_search_orb=0x7f040053;
-        public static int lb_section_header=0x7f040054;
-        public static int lb_shadow=0x7f040055;
-        public static int lb_speech_orb=0x7f040056;
-        public static int lb_title_view=0x7f040057;
-        public static int lb_vertical_grid=0x7f040058;
-        public static int lb_vertical_grid_fragment=0x7f040059;
-        public static int lb_video_surface=0x7f04005a;
-        public static int main=0x7f04005b;
-        public static int more_info_activity=0x7f04005c;
-        public static int notification_action=0x7f04005d;
-        public static int notification_action_tombstone=0x7f04005e;
-        public static int notification_media_action=0x7f04005f;
-        public static int notification_media_cancel_action=0x7f040060;
-        public static int notification_template_big_media=0x7f040061;
-        public static int notification_template_big_media_custom=0x7f040062;
-        public static int notification_template_big_media_narrow=0x7f040063;
-        public static int notification_template_big_media_narrow_custom=0x7f040064;
-        public static int notification_template_custom_big=0x7f040065;
-        public static int notification_template_icon_group=0x7f040066;
-        public static int notification_template_lines_media=0x7f040067;
-        public static int notification_template_media=0x7f040068;
-        public static int notification_template_media_custom=0x7f040069;
-        public static int notification_template_part_chronometer=0x7f04006a;
-        public static int notification_template_part_time=0x7f04006b;
-        public static int preference=0x7f04006c;
-        public static int preference_category=0x7f04006d;
-        public static int preference_category_material=0x7f04006e;
-        public static int preference_dialog_edittext=0x7f04006f;
-        public static int preference_dropdown=0x7f040070;
-        public static int preference_dropdown_material=0x7f040071;
-        public static int preference_information=0x7f040072;
-        public static int preference_information_material=0x7f040073;
-        public static int preference_list_fragment=0x7f040074;
-        public static int preference_material=0x7f040075;
-        public static int preference_recyclerview=0x7f040076;
-        public static int preference_widget_checkbox=0x7f040077;
-        public static int preference_widget_seekbar=0x7f040078;
-        public static int preference_widget_seekbar_material=0x7f040079;
-        public static int preference_widget_switch=0x7f04007a;
-        public static int preference_widget_switch_compat=0x7f04007b;
-        public static int select_dialog_item_material=0x7f04007c;
-        public static int select_dialog_multichoice_material=0x7f04007d;
-        public static int select_dialog_singlechoice_material=0x7f04007e;
-        public static int settings_activity=0x7f04007f;
-        public static int support_simple_spinner_dropdown_item=0x7f040080;
-        public static int video_surface_fragment=0x7f040081;
+        public static int main=0x7f040020;
+        public static int more_info_activity=0x7f040021;
+        public static int notification_action=0x7f040022;
+        public static int notification_action_tombstone=0x7f040023;
+        public static int notification_media_action=0x7f040024;
+        public static int notification_media_cancel_action=0x7f040025;
+        public static int notification_template_big_media=0x7f040026;
+        public static int notification_template_big_media_custom=0x7f040027;
+        public static int notification_template_big_media_narrow=0x7f040028;
+        public static int notification_template_big_media_narrow_custom=0x7f040029;
+        public static int notification_template_custom_big=0x7f04002a;
+        public static int notification_template_icon_group=0x7f04002b;
+        public static int notification_template_lines_media=0x7f04002c;
+        public static int notification_template_media=0x7f04002d;
+        public static int notification_template_media_custom=0x7f04002e;
+        public static int notification_template_part_chronometer=0x7f04002f;
+        public static int notification_template_part_time=0x7f040030;
+        public static int preference=0x7f040031;
+        public static int preference_category=0x7f040032;
+        public static int preference_category_material=0x7f040033;
+        public static int preference_dialog_edittext=0x7f040034;
+        public static int preference_dropdown=0x7f040035;
+        public static int preference_dropdown_material=0x7f040036;
+        public static int preference_information=0x7f040037;
+        public static int preference_information_material=0x7f040038;
+        public static int preference_list_fragment=0x7f040039;
+        public static int preference_material=0x7f04003a;
+        public static int preference_recyclerview=0x7f04003b;
+        public static int preference_widget_checkbox=0x7f04003c;
+        public static int preference_widget_seekbar=0x7f04003d;
+        public static int preference_widget_seekbar_material=0x7f04003e;
+        public static int preference_widget_switch=0x7f04003f;
+        public static int preference_widget_switch_compat=0x7f040040;
+        public static int select_dialog_item_material=0x7f040041;
+        public static int select_dialog_multichoice_material=0x7f040042;
+        public static int select_dialog_singlechoice_material=0x7f040043;
+        public static int settings_activity=0x7f040044;
+        public static int support_simple_spinner_dropdown_item=0x7f040045;
     }
     public static final class menu {
-        public static int main_menu=0x7f130000;
+        public static int main_menu=0x7f0f0000;
     }
     public static final class mipmap {
         public static int icon=0x7f030000;
     }
-    public static final class raw {
-        public static int lb_voice_failure=0x7f090000;
-        public static int lb_voice_no_input=0x7f090001;
-        public static int lb_voice_open=0x7f090002;
-        public static int lb_voice_success=0x7f090003;
-    }
     public static final class string {
-        public static int ApplicationName=0x7f0b0067;
-        public static int abc_action_bar_home_description=0x7f0b0016;
-        public static int abc_action_bar_up_description=0x7f0b0017;
-        public static int abc_action_menu_overflow_description=0x7f0b0018;
-        public static int abc_action_mode_done=0x7f0b0019;
-        public static int abc_activity_chooser_view_see_all=0x7f0b001a;
-        public static int abc_activitychooserview_choose_application=0x7f0b001b;
-        public static int abc_capital_off=0x7f0b001c;
-        public static int abc_capital_on=0x7f0b001d;
-        public static int abc_font_family_body_1_material=0x7f0b0032;
-        public static int abc_font_family_body_2_material=0x7f0b0033;
-        public static int abc_font_family_button_material=0x7f0b0034;
-        public static int abc_font_family_caption_material=0x7f0b0035;
-        public static int abc_font_family_display_1_material=0x7f0b0036;
-        public static int abc_font_family_display_2_material=0x7f0b0037;
-        public static int abc_font_family_display_3_material=0x7f0b0038;
-        public static int abc_font_family_display_4_material=0x7f0b0039;
-        public static int abc_font_family_headline_material=0x7f0b003a;
-        public static int abc_font_family_menu_material=0x7f0b003b;
-        public static int abc_font_family_subhead_material=0x7f0b003c;
-        public static int abc_font_family_title_material=0x7f0b003d;
-        public static int abc_menu_alt_shortcut_label=0x7f0b001e;
-        public static int abc_menu_ctrl_shortcut_label=0x7f0b001f;
-        public static int abc_menu_delete_shortcut_label=0x7f0b0020;
-        public static int abc_menu_enter_shortcut_label=0x7f0b0021;
-        public static int abc_menu_function_shortcut_label=0x7f0b0022;
-        public static int abc_menu_meta_shortcut_label=0x7f0b0023;
-        public static int abc_menu_shift_shortcut_label=0x7f0b0024;
-        public static int abc_menu_space_shortcut_label=0x7f0b0025;
-        public static int abc_menu_sym_shortcut_label=0x7f0b0026;
-        public static int abc_prepend_shortcut_label=0x7f0b0027;
-        public static int abc_search_hint=0x7f0b0028;
-        public static int abc_searchview_description_clear=0x7f0b0029;
-        public static int abc_searchview_description_query=0x7f0b002a;
-        public static int abc_searchview_description_search=0x7f0b002b;
-        public static int abc_searchview_description_submit=0x7f0b002c;
-        public static int abc_searchview_description_voice=0x7f0b002d;
-        public static int abc_shareactionprovider_share_with=0x7f0b002e;
-        public static int abc_shareactionprovider_share_with_application=0x7f0b002f;
-        public static int abc_toolbar_collapse_description=0x7f0b0030;
-        public static int category_general_status_normal=0x7f0b0090;
-        public static int category_general_status_questionably=0x7f0b0091;
-        public static int category_general_status_suspicious_activity=0x7f0b0092;
-        public static int category_info_data=0x7f0b008c;
-        public static int category_info_no_data=0x7f0b008d;
-        public static int category_info_no_permissions_required=0x7f0b008e;
-        public static int category_info_permissions=0x7f0b008a;
-        public static int category_info_permissions_denied=0x7f0b008f;
-        public static int category_info_status=0x7f0b008b;
-        public static int category_location=0x7f0b0072;
-        public static int category_location_data=0x7f0b0077;
-        public static int category_location_latitude=0x7f0b0075;
-        public static int category_location_longitude=0x7f0b0076;
-        public static int category_location_notif_big_distance=0x7f0b0078;
-        public static int category_location_status_no_play_services=0x7f0b0079;
-        public static int category_location_tracking_disabled=0x7f0b0074;
-        public static int category_location_tracking_enabled=0x7f0b0073;
-        public static int category_phone=0x7f0b007a;
-        public static int category_phone_notification_suspicious_call_from=0x7f0b007b;
-        public static int category_phone_notification_suspicious_call_to=0x7f0b007c;
-        public static int category_root=0x7f0b0069;
-        public static int category_root_data_binary_path=0x7f0b006c;
-        public static int category_root_status_no_root=0x7f0b006a;
-        public static int category_root_status_root_access=0x7f0b006b;
-        public static int category_screen=0x7f0b006d;
-        public static int category_screen_data_normal=0x7f0b006e;
-        public static int category_screen_data_questionably=0x7f0b006f;
-        public static int category_screen_notif_daily_overflow=0x7f0b0070;
-        public static int category_screen_notif_west_fast_hand=0x7f0b0071;
-        public static int category_sms=0x7f0b007d;
-        public static int category_sms_notification_suspicious_message_from=0x7f0b007e;
-        public static int category_system=0x7f0b007f;
-        public static int category_system_modifications_detected=0x7f0b0081;
-        public static int category_system_no_modifications=0x7f0b0080;
-        public static int category_system_notif_modification_detected=0x7f0b0082;
-        public static int common_google_play_services_enable_button=0x7f0b0001;
-        public static int common_google_play_services_enable_text=0x7f0b0002;
-        public static int common_google_play_services_enable_title=0x7f0b0003;
-        public static int common_google_play_services_install_button=0x7f0b0004;
-        public static int common_google_play_services_install_text=0x7f0b0005;
-        public static int common_google_play_services_install_title=0x7f0b0006;
-        public static int common_google_play_services_notification_channel_name=0x7f0b0007;
-        public static int common_google_play_services_notification_ticker=0x7f0b0008;
-        public static int common_google_play_services_unknown_issue=0x7f0b0000;
-        public static int common_google_play_services_unsupported_text=0x7f0b0009;
-        public static int common_google_play_services_update_button=0x7f0b000a;
-        public static int common_google_play_services_update_text=0x7f0b000b;
-        public static int common_google_play_services_update_title=0x7f0b000c;
-        public static int common_google_play_services_updating_text=0x7f0b000d;
-        public static int common_google_play_services_wear_update_text=0x7f0b000e;
-        public static int common_open_on_phone=0x7f0b000f;
-        public static int common_signin_button_text=0x7f0b0010;
-        public static int common_signin_button_text_long=0x7f0b0011;
-        public static int expand_button_title=0x7f0b0012;
-        public static int lb_control_display_fast_forward_multiplier=0x7f0b003e;
-        public static int lb_control_display_rewind_multiplier=0x7f0b003f;
-        public static int lb_guidedaction_continue_title=0x7f0b0040;
-        public static int lb_guidedaction_finish_title=0x7f0b0041;
-        public static int lb_media_player_error=0x7f0b0042;
-        public static int lb_navigation_menu_contentDescription=0x7f0b0043;
-        public static int lb_onboarding_accessibility_next=0x7f0b0044;
-        public static int lb_onboarding_get_started=0x7f0b0045;
-        public static int lb_playback_controls_closed_captioning_disable=0x7f0b0046;
-        public static int lb_playback_controls_closed_captioning_enable=0x7f0b0047;
-        public static int lb_playback_controls_fast_forward=0x7f0b0048;
-        public static int lb_playback_controls_fast_forward_multiplier=0x7f0b0049;
-        public static int lb_playback_controls_hidden=0x7f0b004a;
-        public static int lb_playback_controls_high_quality_disable=0x7f0b004b;
-        public static int lb_playback_controls_high_quality_enable=0x7f0b004c;
-        public static int lb_playback_controls_more_actions=0x7f0b004d;
-        public static int lb_playback_controls_pause=0x7f0b004e;
-        public static int lb_playback_controls_picture_in_picture=0x7f0b004f;
-        public static int lb_playback_controls_play=0x7f0b0050;
-        public static int lb_playback_controls_repeat_all=0x7f0b0051;
-        public static int lb_playback_controls_repeat_none=0x7f0b0052;
-        public static int lb_playback_controls_repeat_one=0x7f0b0053;
-        public static int lb_playback_controls_rewind=0x7f0b0054;
-        public static int lb_playback_controls_rewind_multiplier=0x7f0b0055;
-        public static int lb_playback_controls_shown=0x7f0b0056;
-        public static int lb_playback_controls_shuffle_disable=0x7f0b0057;
-        public static int lb_playback_controls_shuffle_enable=0x7f0b0058;
-        public static int lb_playback_controls_skip_next=0x7f0b0059;
-        public static int lb_playback_controls_skip_previous=0x7f0b005a;
-        public static int lb_playback_controls_thumb_down=0x7f0b005b;
-        public static int lb_playback_controls_thumb_down_outline=0x7f0b005c;
-        public static int lb_playback_controls_thumb_up=0x7f0b005d;
-        public static int lb_playback_controls_thumb_up_outline=0x7f0b005e;
-        public static int lb_playback_time_separator=0x7f0b005f;
-        public static int lb_search_bar_hint=0x7f0b0060;
-        public static int lb_search_bar_hint_speech=0x7f0b0061;
-        public static int lb_search_bar_hint_with_title=0x7f0b0062;
-        public static int lb_search_bar_hint_with_title_speech=0x7f0b0063;
-        public static int menu_item_settings=0x7f0b0068;
-        public static int notification_button_details=0x7f0b009a;
-        public static int notification_button_normalize=0x7f0b0099;
-        public static int notification_type_warning=0x7f0b009b;
-        public static int notification_type_warning_description=0x7f0b009c;
-        public static int onboarding_button_finish_default=0x7f0b0066;
-        public static int onboarding_finish_title_give_permissions=0x7f0b0098;
-        public static int onboarding_finish_title_start=0x7f0b0097;
-        public static int onboarding_page1_summary=0x7f0b0094;
-        public static int onboarding_page1_title=0x7f0b0093;
-        public static int onboarding_page2_summary=0x7f0b0096;
-        public static int onboarding_page2_title=0x7f0b0095;
-        public static int orb_search_action=0x7f0b0064;
-        public static int search_menu_title=0x7f0b0031;
-        public static int settings_app_info_title=0x7f0b0088;
-        public static int settings_developer_egg=0x7f0b0089;
-        public static int settings_monitor_list_summary=0x7f0b0084;
-        public static int settings_monitor_list_title=0x7f0b0083;
-        public static int settings_unlocks_monitor_type_summary_off=0x7f0b0087;
-        public static int settings_unlocks_monitor_type_summary_on=0x7f0b0086;
-        public static int settings_unlocks_monitor_type_title=0x7f0b0085;
-        public static int status_bar_notification_info_overflow=0x7f0b0065;
-        public static int summary_collapsed_preference_list=0x7f0b0013;
-        public static int v7_preference_off=0x7f0b0014;
-        public static int v7_preference_on=0x7f0b0015;
+        public static int ApplicationName=0x7f080040;
+        public static int abc_action_bar_home_description=0x7f080016;
+        public static int abc_action_bar_up_description=0x7f080017;
+        public static int abc_action_menu_overflow_description=0x7f080018;
+        public static int abc_action_mode_done=0x7f080019;
+        public static int abc_activity_chooser_view_see_all=0x7f08001a;
+        public static int abc_activitychooserview_choose_application=0x7f08001b;
+        public static int abc_capital_off=0x7f08001c;
+        public static int abc_capital_on=0x7f08001d;
+        public static int abc_font_family_body_1_material=0x7f080032;
+        public static int abc_font_family_body_2_material=0x7f080033;
+        public static int abc_font_family_button_material=0x7f080034;
+        public static int abc_font_family_caption_material=0x7f080035;
+        public static int abc_font_family_display_1_material=0x7f080036;
+        public static int abc_font_family_display_2_material=0x7f080037;
+        public static int abc_font_family_display_3_material=0x7f080038;
+        public static int abc_font_family_display_4_material=0x7f080039;
+        public static int abc_font_family_headline_material=0x7f08003a;
+        public static int abc_font_family_menu_material=0x7f08003b;
+        public static int abc_font_family_subhead_material=0x7f08003c;
+        public static int abc_font_family_title_material=0x7f08003d;
+        public static int abc_menu_alt_shortcut_label=0x7f08001e;
+        public static int abc_menu_ctrl_shortcut_label=0x7f08001f;
+        public static int abc_menu_delete_shortcut_label=0x7f080020;
+        public static int abc_menu_enter_shortcut_label=0x7f080021;
+        public static int abc_menu_function_shortcut_label=0x7f080022;
+        public static int abc_menu_meta_shortcut_label=0x7f080023;
+        public static int abc_menu_shift_shortcut_label=0x7f080024;
+        public static int abc_menu_space_shortcut_label=0x7f080025;
+        public static int abc_menu_sym_shortcut_label=0x7f080026;
+        public static int abc_prepend_shortcut_label=0x7f080027;
+        public static int abc_search_hint=0x7f080028;
+        public static int abc_searchview_description_clear=0x7f080029;
+        public static int abc_searchview_description_query=0x7f08002a;
+        public static int abc_searchview_description_search=0x7f08002b;
+        public static int abc_searchview_description_submit=0x7f08002c;
+        public static int abc_searchview_description_voice=0x7f08002d;
+        public static int abc_shareactionprovider_share_with=0x7f08002e;
+        public static int abc_shareactionprovider_share_with_application=0x7f08002f;
+        public static int abc_toolbar_collapse_description=0x7f080030;
+        public static int category_general_status_normal=0x7f080069;
+        public static int category_general_status_questionably=0x7f08006a;
+        public static int category_general_status_suspicious_activity=0x7f08006b;
+        public static int category_info_data=0x7f080065;
+        public static int category_info_no_data=0x7f080066;
+        public static int category_info_no_permissions_required=0x7f080067;
+        public static int category_info_permissions=0x7f080063;
+        public static int category_info_permissions_denied=0x7f080068;
+        public static int category_info_status=0x7f080064;
+        public static int category_location=0x7f08004b;
+        public static int category_location_data=0x7f080050;
+        public static int category_location_latitude=0x7f08004e;
+        public static int category_location_longitude=0x7f08004f;
+        public static int category_location_notif_big_distance=0x7f080051;
+        public static int category_location_status_no_play_services=0x7f080052;
+        public static int category_location_tracking_disabled=0x7f08004d;
+        public static int category_location_tracking_enabled=0x7f08004c;
+        public static int category_phone=0x7f080053;
+        public static int category_phone_notification_suspicious_call_from=0x7f080054;
+        public static int category_phone_notification_suspicious_call_to=0x7f080055;
+        public static int category_root=0x7f080042;
+        public static int category_root_data_binary_path=0x7f080045;
+        public static int category_root_status_no_root=0x7f080043;
+        public static int category_root_status_root_access=0x7f080044;
+        public static int category_screen=0x7f080046;
+        public static int category_screen_data_normal=0x7f080047;
+        public static int category_screen_data_questionably=0x7f080048;
+        public static int category_screen_notif_daily_overflow=0x7f080049;
+        public static int category_screen_notif_west_fast_hand=0x7f08004a;
+        public static int category_sms=0x7f080056;
+        public static int category_sms_notification_suspicious_message_from=0x7f080057;
+        public static int category_system=0x7f080058;
+        public static int category_system_modifications_detected=0x7f08005a;
+        public static int category_system_no_modifications=0x7f080059;
+        public static int category_system_notif_modification_detected=0x7f08005b;
+        public static int common_google_play_services_enable_button=0x7f080001;
+        public static int common_google_play_services_enable_text=0x7f080002;
+        public static int common_google_play_services_enable_title=0x7f080003;
+        public static int common_google_play_services_install_button=0x7f080004;
+        public static int common_google_play_services_install_text=0x7f080005;
+        public static int common_google_play_services_install_title=0x7f080006;
+        public static int common_google_play_services_notification_channel_name=0x7f080007;
+        public static int common_google_play_services_notification_ticker=0x7f080008;
+        public static int common_google_play_services_unknown_issue=0x7f080000;
+        public static int common_google_play_services_unsupported_text=0x7f080009;
+        public static int common_google_play_services_update_button=0x7f08000a;
+        public static int common_google_play_services_update_text=0x7f08000b;
+        public static int common_google_play_services_update_title=0x7f08000c;
+        public static int common_google_play_services_updating_text=0x7f08000d;
+        public static int common_google_play_services_wear_update_text=0x7f08000e;
+        public static int common_open_on_phone=0x7f08000f;
+        public static int common_signin_button_text=0x7f080010;
+        public static int common_signin_button_text_long=0x7f080011;
+        public static int expand_button_title=0x7f080012;
+        public static int menu_item_settings=0x7f080041;
+        public static int notification_button_details=0x7f080073;
+        public static int notification_button_normalize=0x7f080072;
+        public static int notification_type_warning=0x7f080074;
+        public static int notification_type_warning_description=0x7f080075;
+        public static int onboarding_button_finish_default=0x7f08003f;
+        public static int onboarding_finish_title_give_permissions=0x7f080071;
+        public static int onboarding_finish_title_start=0x7f080070;
+        public static int onboarding_page1_summary=0x7f08006d;
+        public static int onboarding_page1_title=0x7f08006c;
+        public static int onboarding_page2_summary=0x7f08006f;
+        public static int onboarding_page2_title=0x7f08006e;
+        public static int search_menu_title=0x7f080031;
+        public static int settings_app_info_title=0x7f080061;
+        public static int settings_developer_egg=0x7f080062;
+        public static int settings_monitor_list_summary=0x7f08005d;
+        public static int settings_monitor_list_title=0x7f08005c;
+        public static int settings_unlocks_monitor_type_summary_off=0x7f080060;
+        public static int settings_unlocks_monitor_type_summary_on=0x7f08005f;
+        public static int settings_unlocks_monitor_type_title=0x7f08005e;
+        public static int status_bar_notification_info_overflow=0x7f08003e;
+        public static int summary_collapsed_preference_list=0x7f080013;
+        public static int v7_preference_off=0x7f080014;
+        public static int v7_preference_on=0x7f080015;
     }
     public static final class style {
-        public static int AlertDialog_AppCompat=0x7f1000ac;
-        public static int AlertDialog_AppCompat_Light=0x7f1000ad;
-        public static int Animation_AppCompat_Dialog=0x7f1000ae;
-        public static int Animation_AppCompat_DropDownUp=0x7f1000af;
-        public static int Animation_AppCompat_Tooltip=0x7f1000b0;
-        public static int Base_AlertDialog_AppCompat=0x7f1000b1;
-        public static int Base_AlertDialog_AppCompat_Light=0x7f1000b2;
-        public static int Base_Animation_AppCompat_Dialog=0x7f1000b3;
-        public static int Base_Animation_AppCompat_DropDownUp=0x7f1000b4;
-        public static int Base_Animation_AppCompat_Tooltip=0x7f1000b5;
-        public static int Base_CardView=0x7f100020;
-        public static int Base_DialogWindowTitle_AppCompat=0x7f1000b6;
-        public static int Base_DialogWindowTitleBackground_AppCompat=0x7f1000b7;
-        public static int Base_TextAppearance_AppCompat=0x7f100040;
-        public static int Base_TextAppearance_AppCompat_Body1=0x7f100041;
-        public static int Base_TextAppearance_AppCompat_Body2=0x7f100042;
-        public static int Base_TextAppearance_AppCompat_Button=0x7f100043;
-        public static int Base_TextAppearance_AppCompat_Caption=0x7f100044;
-        public static int Base_TextAppearance_AppCompat_Display1=0x7f100045;
-        public static int Base_TextAppearance_AppCompat_Display2=0x7f100046;
-        public static int Base_TextAppearance_AppCompat_Display3=0x7f100047;
-        public static int Base_TextAppearance_AppCompat_Display4=0x7f100048;
-        public static int Base_TextAppearance_AppCompat_Headline=0x7f100049;
-        public static int Base_TextAppearance_AppCompat_Inverse=0x7f10004a;
-        public static int Base_TextAppearance_AppCompat_Large=0x7f10004b;
-        public static int Base_TextAppearance_AppCompat_Large_Inverse=0x7f10004c;
-        public static int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large=0x7f10004d;
-        public static int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small=0x7f10004e;
-        public static int Base_TextAppearance_AppCompat_Medium=0x7f10004f;
-        public static int Base_TextAppearance_AppCompat_Medium_Inverse=0x7f100050;
-        public static int Base_TextAppearance_AppCompat_Menu=0x7f100051;
-        public static int Base_TextAppearance_AppCompat_SearchResult=0x7f1000b8;
-        public static int Base_TextAppearance_AppCompat_SearchResult_Subtitle=0x7f100052;
-        public static int Base_TextAppearance_AppCompat_SearchResult_Title=0x7f100053;
-        public static int Base_TextAppearance_AppCompat_Small=0x7f100054;
-        public static int Base_TextAppearance_AppCompat_Small_Inverse=0x7f100055;
-        public static int Base_TextAppearance_AppCompat_Subhead=0x7f100056;
-        public static int Base_TextAppearance_AppCompat_Subhead_Inverse=0x7f1000b9;
-        public static int Base_TextAppearance_AppCompat_Title=0x7f100057;
-        public static int Base_TextAppearance_AppCompat_Title_Inverse=0x7f1000ba;
-        public static int Base_TextAppearance_AppCompat_Tooltip=0x7f1000bb;
-        public static int Base_TextAppearance_AppCompat_Widget_ActionBar_Menu=0x7f10009b;
-        public static int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle=0x7f100058;
-        public static int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse=0x7f100059;
-        public static int Base_TextAppearance_AppCompat_Widget_ActionBar_Title=0x7f10005a;
-        public static int Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse=0x7f10005b;
-        public static int Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle=0x7f10005c;
-        public static int Base_TextAppearance_AppCompat_Widget_ActionMode_Title=0x7f10005d;
-        public static int Base_TextAppearance_AppCompat_Widget_Button=0x7f10005e;
-        public static int Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored=0x7f1000a2;
-        public static int Base_TextAppearance_AppCompat_Widget_Button_Colored=0x7f1000a3;
-        public static int Base_TextAppearance_AppCompat_Widget_Button_Inverse=0x7f10009c;
-        public static int Base_TextAppearance_AppCompat_Widget_DropDownItem=0x7f1000bc;
-        public static int Base_TextAppearance_AppCompat_Widget_PopupMenu_Header=0x7f10005f;
-        public static int Base_TextAppearance_AppCompat_Widget_PopupMenu_Large=0x7f100060;
-        public static int Base_TextAppearance_AppCompat_Widget_PopupMenu_Small=0x7f100061;
-        public static int Base_TextAppearance_AppCompat_Widget_Switch=0x7f100062;
-        public static int Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem=0x7f100063;
-        public static int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item=0x7f1000bd;
-        public static int Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle=0x7f100064;
-        public static int Base_TextAppearance_Widget_AppCompat_Toolbar_Title=0x7f100065;
-        public static int Base_Theme_AppCompat=0x7f100066;
-        public static int Base_Theme_AppCompat_CompactMenu=0x7f1000be;
-        public static int Base_Theme_AppCompat_Dialog=0x7f100067;
-        public static int Base_Theme_AppCompat_Dialog_Alert=0x7f1000bf;
-        public static int Base_Theme_AppCompat_Dialog_FixedSize=0x7f1000c0;
-        public static int Base_Theme_AppCompat_Dialog_MinWidth=0x7f1000c1;
-        public static int Base_Theme_AppCompat_DialogWhenLarge=0x7f100024;
-        public static int Base_Theme_AppCompat_Light=0x7f100068;
-        public static int Base_Theme_AppCompat_Light_DarkActionBar=0x7f1000c2;
-        public static int Base_Theme_AppCompat_Light_Dialog=0x7f100069;
-        public static int Base_Theme_AppCompat_Light_Dialog_Alert=0x7f1000c3;
-        public static int Base_Theme_AppCompat_Light_Dialog_FixedSize=0x7f1000c4;
-        public static int Base_Theme_AppCompat_Light_Dialog_MinWidth=0x7f1000c5;
-        public static int Base_Theme_AppCompat_Light_DialogWhenLarge=0x7f100025;
-        public static int Base_ThemeOverlay_AppCompat=0x7f1000c6;
-        public static int Base_ThemeOverlay_AppCompat_ActionBar=0x7f1000c7;
-        public static int Base_ThemeOverlay_AppCompat_Dark=0x7f1000c8;
-        public static int Base_ThemeOverlay_AppCompat_Dark_ActionBar=0x7f1000c9;
-        public static int Base_ThemeOverlay_AppCompat_Dialog=0x7f10006a;
-        public static int Base_ThemeOverlay_AppCompat_Dialog_Alert=0x7f1000ca;
-        public static int Base_ThemeOverlay_AppCompat_Light=0x7f1000cb;
-        public static int Base_V21_Theme_AppCompat=0x7f10006b;
-        public static int Base_V21_Theme_AppCompat_Dialog=0x7f10006c;
-        public static int Base_V21_Theme_AppCompat_Light=0x7f10006d;
-        public static int Base_V21_Theme_AppCompat_Light_Dialog=0x7f10006e;
-        public static int Base_V21_ThemeOverlay_AppCompat_Dialog=0x7f10006f;
-        public static int Base_V22_Theme_AppCompat=0x7f100099;
-        public static int Base_V22_Theme_AppCompat_Light=0x7f10009a;
-        public static int Base_V23_Theme_AppCompat=0x7f10009d;
-        public static int Base_V23_Theme_AppCompat_Light=0x7f10009e;
-        public static int Base_V26_Theme_AppCompat=0x7f1000a6;
-        public static int Base_V26_Theme_AppCompat_Light=0x7f1000a7;
-        public static int Base_V26_Widget_AppCompat_Toolbar=0x7f1000a8;
-        public static int Base_V28_Theme_AppCompat=0x7f1000aa;
-        public static int Base_V28_Theme_AppCompat_Light=0x7f1000ab;
-        public static int Base_V7_Theme_AppCompat=0x7f1000cc;
-        public static int Base_V7_Theme_AppCompat_Dialog=0x7f1000cd;
-        public static int Base_V7_Theme_AppCompat_Light=0x7f1000ce;
-        public static int Base_V7_Theme_AppCompat_Light_Dialog=0x7f1000cf;
-        public static int Base_V7_ThemeOverlay_AppCompat_Dialog=0x7f1000d0;
-        public static int Base_V7_Widget_AppCompat_AutoCompleteTextView=0x7f1000d1;
-        public static int Base_V7_Widget_AppCompat_EditText=0x7f1000d2;
-        public static int Base_V7_Widget_AppCompat_Toolbar=0x7f1000d3;
-        public static int Base_Widget_AppCompat_ActionBar=0x7f1000d4;
-        public static int Base_Widget_AppCompat_ActionBar_Solid=0x7f1000d5;
-        public static int Base_Widget_AppCompat_ActionBar_TabBar=0x7f1000d6;
-        public static int Base_Widget_AppCompat_ActionBar_TabText=0x7f100070;
-        public static int Base_Widget_AppCompat_ActionBar_TabView=0x7f100071;
-        public static int Base_Widget_AppCompat_ActionButton=0x7f100072;
-        public static int Base_Widget_AppCompat_ActionButton_CloseMode=0x7f100073;
-        public static int Base_Widget_AppCompat_ActionButton_Overflow=0x7f100074;
-        public static int Base_Widget_AppCompat_ActionMode=0x7f1000d7;
-        public static int Base_Widget_AppCompat_ActivityChooserView=0x7f1000d8;
-        public static int Base_Widget_AppCompat_AutoCompleteTextView=0x7f100075;
-        public static int Base_Widget_AppCompat_Button=0x7f100076;
-        public static int Base_Widget_AppCompat_Button_Borderless=0x7f100077;
-        public static int Base_Widget_AppCompat_Button_Borderless_Colored=0x7f100078;
-        public static int Base_Widget_AppCompat_Button_ButtonBar_AlertDialog=0x7f1000d9;
-        public static int Base_Widget_AppCompat_Button_Colored=0x7f10009f;
-        public static int Base_Widget_AppCompat_Button_Small=0x7f100079;
-        public static int Base_Widget_AppCompat_ButtonBar=0x7f10007a;
-        public static int Base_Widget_AppCompat_ButtonBar_AlertDialog=0x7f1000da;
-        public static int Base_Widget_AppCompat_CompoundButton_CheckBox=0x7f10007b;
-        public static int Base_Widget_AppCompat_CompoundButton_RadioButton=0x7f10007c;
-        public static int Base_Widget_AppCompat_CompoundButton_Switch=0x7f1000db;
-        public static int Base_Widget_AppCompat_DrawerArrowToggle=0x7f100023;
-        public static int Base_Widget_AppCompat_DrawerArrowToggle_Common=0x7f1000dc;
-        public static int Base_Widget_AppCompat_DropDownItem_Spinner=0x7f10007d;
-        public static int Base_Widget_AppCompat_EditText=0x7f10007e;
-        public static int Base_Widget_AppCompat_ImageButton=0x7f10007f;
-        public static int Base_Widget_AppCompat_Light_ActionBar=0x7f1000dd;
-        public static int Base_Widget_AppCompat_Light_ActionBar_Solid=0x7f1000de;
-        public static int Base_Widget_AppCompat_Light_ActionBar_TabBar=0x7f1000df;
-        public static int Base_Widget_AppCompat_Light_ActionBar_TabText=0x7f100080;
-        public static int Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse=0x7f100081;
-        public static int Base_Widget_AppCompat_Light_ActionBar_TabView=0x7f100082;
-        public static int Base_Widget_AppCompat_Light_PopupMenu=0x7f100083;
-        public static int Base_Widget_AppCompat_Light_PopupMenu_Overflow=0x7f100084;
-        public static int Base_Widget_AppCompat_ListMenuView=0x7f1000e0;
-        public static int Base_Widget_AppCompat_ListPopupWindow=0x7f100085;
-        public static int Base_Widget_AppCompat_ListView=0x7f100086;
-        public static int Base_Widget_AppCompat_ListView_DropDown=0x7f100087;
-        public static int Base_Widget_AppCompat_ListView_Menu=0x7f100088;
-        public static int Base_Widget_AppCompat_PopupMenu=0x7f100089;
-        public static int Base_Widget_AppCompat_PopupMenu_Overflow=0x7f10008a;
-        public static int Base_Widget_AppCompat_PopupWindow=0x7f1000e1;
-        public static int Base_Widget_AppCompat_ProgressBar=0x7f10008b;
-        public static int Base_Widget_AppCompat_ProgressBar_Horizontal=0x7f10008c;
-        public static int Base_Widget_AppCompat_RatingBar=0x7f10008d;
-        public static int Base_Widget_AppCompat_RatingBar_Indicator=0x7f1000a0;
-        public static int Base_Widget_AppCompat_RatingBar_Small=0x7f1000a1;
-        public static int Base_Widget_AppCompat_SearchView=0x7f1000e2;
-        public static int Base_Widget_AppCompat_SearchView_ActionBar=0x7f1000e3;
-        public static int Base_Widget_AppCompat_SeekBar=0x7f10008e;
-        public static int Base_Widget_AppCompat_SeekBar_Discrete=0x7f1000e4;
-        public static int Base_Widget_AppCompat_Spinner=0x7f10008f;
-        public static int Base_Widget_AppCompat_Spinner_Underlined=0x7f100026;
-        public static int Base_Widget_AppCompat_TextView_SpinnerItem=0x7f100090;
-        public static int Base_Widget_AppCompat_Toolbar=0x7f1000a9;
-        public static int Base_Widget_AppCompat_Toolbar_Button_Navigation=0x7f100091;
-        public static int CardView=0x7f10001f;
-        public static int CardView_Dark=0x7f100021;
-        public static int CardView_Light=0x7f100022;
-        public static int MainTheme=0x7f1001f1;
-        public static int Platform_AppCompat=0x7f100092;
-        public static int Platform_AppCompat_Light=0x7f100093;
-        public static int Platform_ThemeOverlay_AppCompat=0x7f100094;
-        public static int Platform_ThemeOverlay_AppCompat_Dark=0x7f100095;
-        public static int Platform_ThemeOverlay_AppCompat_Light=0x7f100096;
-        public static int Platform_V21_AppCompat=0x7f100097;
-        public static int Platform_V21_AppCompat_Light=0x7f100098;
-        public static int Platform_V25_AppCompat=0x7f1000a4;
-        public static int Platform_V25_AppCompat_Light=0x7f1000a5;
-        public static int Platform_Widget_AppCompat_Spinner=0x7f1000e5;
-        public static int Preference=0x7f100003;
-        public static int Preference_Category=0x7f100004;
-        public static int Preference_Category_Material=0x7f100005;
-        public static int Preference_CheckBoxPreference=0x7f100006;
-        public static int Preference_CheckBoxPreference_Material=0x7f100007;
-        public static int Preference_DialogPreference=0x7f100008;
-        public static int Preference_DialogPreference_EditTextPreference=0x7f100009;
-        public static int Preference_DialogPreference_EditTextPreference_Material=0x7f10000a;
-        public static int Preference_DialogPreference_Material=0x7f10000b;
-        public static int Preference_DropDown=0x7f10000c;
-        public static int Preference_DropDown_Material=0x7f10000d;
-        public static int Preference_Information=0x7f10000e;
-        public static int Preference_Information_Material=0x7f10000f;
-        public static int Preference_Material=0x7f100010;
-        public static int Preference_PreferenceScreen=0x7f100011;
-        public static int Preference_PreferenceScreen_Material=0x7f100012;
-        public static int Preference_SeekBarPreference=0x7f100013;
-        public static int Preference_SeekBarPreference_Material=0x7f100014;
-        public static int Preference_SwitchPreference=0x7f100015;
-        public static int Preference_SwitchPreference_Material=0x7f100016;
-        public static int Preference_SwitchPreferenceCompat=0x7f100017;
-        public static int Preference_SwitchPreferenceCompat_Material=0x7f100018;
-        public static int PreferenceFragment=0x7f100000;
-        public static int PreferenceFragment_Material=0x7f100019;
-        public static int PreferenceFragmentList=0x7f100001;
-        public static int PreferenceFragmentList_Material=0x7f100002;
-        public static int PreferenceThemeOverlay=0x7f10001a;
-        public static int PreferenceThemeOverlay_v14=0x7f10001b;
-        public static int PreferenceThemeOverlay_v14_Material=0x7f10001c;
-        public static int Preference_TextAppearanceMaterialBody2=0x7f10001d;
-        public static int Preference_TextAppearanceMaterialSubhead=0x7f10001e;
-        public static int RtlOverlay_DialogWindowTitle_AppCompat=0x7f10002f;
-        public static int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem=0x7f100030;
-        public static int RtlOverlay_Widget_AppCompat_DialogTitle_Icon=0x7f100031;
-        public static int RtlOverlay_Widget_AppCompat_PopupMenuItem=0x7f100032;
-        public static int RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup=0x7f100033;
-        public static int RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut=0x7f100034;
-        public static int RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow=0x7f100035;
-        public static int RtlOverlay_Widget_AppCompat_PopupMenuItem_Text=0x7f100036;
-        public static int RtlOverlay_Widget_AppCompat_PopupMenuItem_Title=0x7f100037;
-        public static int RtlOverlay_Widget_AppCompat_Search_DropDown=0x7f100038;
-        public static int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1=0x7f100039;
-        public static int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2=0x7f10003a;
-        public static int RtlOverlay_Widget_AppCompat_Search_DropDown_Query=0x7f10003b;
-        public static int RtlOverlay_Widget_AppCompat_Search_DropDown_Text=0x7f10003c;
-        public static int RtlOverlay_Widget_AppCompat_SearchView_MagIcon=0x7f10003d;
-        public static int RtlUnderlay_Widget_AppCompat_ActionButton=0x7f10003e;
-        public static int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow=0x7f10003f;
-        public static int StartTheme=0x7f1001f2;
-        public static int TextAppearance_AppCompat=0x7f1000e6;
-        public static int TextAppearance_AppCompat_Body1=0x7f1000e7;
-        public static int TextAppearance_AppCompat_Body2=0x7f1000e8;
-        public static int TextAppearance_AppCompat_Button=0x7f1000e9;
-        public static int TextAppearance_AppCompat_Caption=0x7f1000ea;
-        public static int TextAppearance_AppCompat_Display1=0x7f1000eb;
-        public static int TextAppearance_AppCompat_Display2=0x7f1000ec;
-        public static int TextAppearance_AppCompat_Display3=0x7f1000ed;
-        public static int TextAppearance_AppCompat_Display4=0x7f1000ee;
-        public static int TextAppearance_AppCompat_Headline=0x7f1000ef;
-        public static int TextAppearance_AppCompat_Inverse=0x7f1000f0;
-        public static int TextAppearance_AppCompat_Large=0x7f1000f1;
-        public static int TextAppearance_AppCompat_Large_Inverse=0x7f1000f2;
-        public static int TextAppearance_AppCompat_Light_SearchResult_Subtitle=0x7f1000f3;
-        public static int TextAppearance_AppCompat_Light_SearchResult_Title=0x7f1000f4;
-        public static int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large=0x7f1000f5;
-        public static int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small=0x7f1000f6;
-        public static int TextAppearance_AppCompat_Medium=0x7f1000f7;
-        public static int TextAppearance_AppCompat_Medium_Inverse=0x7f1000f8;
-        public static int TextAppearance_AppCompat_Menu=0x7f1000f9;
-        public static int TextAppearance_AppCompat_SearchResult_Subtitle=0x7f1000fa;
-        public static int TextAppearance_AppCompat_SearchResult_Title=0x7f1000fb;
-        public static int TextAppearance_AppCompat_Small=0x7f1000fc;
-        public static int TextAppearance_AppCompat_Small_Inverse=0x7f1000fd;
-        public static int TextAppearance_AppCompat_Subhead=0x7f1000fe;
-        public static int TextAppearance_AppCompat_Subhead_Inverse=0x7f1000ff;
-        public static int TextAppearance_AppCompat_Title=0x7f100100;
-        public static int TextAppearance_AppCompat_Title_Inverse=0x7f100101;
-        public static int TextAppearance_AppCompat_Tooltip=0x7f10002e;
-        public static int TextAppearance_AppCompat_Widget_ActionBar_Menu=0x7f100102;
-        public static int TextAppearance_AppCompat_Widget_ActionBar_Subtitle=0x7f100103;
-        public static int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse=0x7f100104;
-        public static int TextAppearance_AppCompat_Widget_ActionBar_Title=0x7f100105;
-        public static int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse=0x7f100106;
-        public static int TextAppearance_AppCompat_Widget_ActionMode_Subtitle=0x7f100107;
-        public static int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse=0x7f100108;
-        public static int TextAppearance_AppCompat_Widget_ActionMode_Title=0x7f100109;
-        public static int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse=0x7f10010a;
-        public static int TextAppearance_AppCompat_Widget_Button=0x7f10010b;
-        public static int TextAppearance_AppCompat_Widget_Button_Borderless_Colored=0x7f10010c;
-        public static int TextAppearance_AppCompat_Widget_Button_Colored=0x7f10010d;
-        public static int TextAppearance_AppCompat_Widget_Button_Inverse=0x7f10010e;
-        public static int TextAppearance_AppCompat_Widget_DropDownItem=0x7f10010f;
-        public static int TextAppearance_AppCompat_Widget_PopupMenu_Header=0x7f100110;
-        public static int TextAppearance_AppCompat_Widget_PopupMenu_Large=0x7f100111;
-        public static int TextAppearance_AppCompat_Widget_PopupMenu_Small=0x7f100112;
-        public static int TextAppearance_AppCompat_Widget_Switch=0x7f100113;
-        public static int TextAppearance_AppCompat_Widget_TextView_SpinnerItem=0x7f100114;
-        public static int TextAppearance_Compat_Notification=0x7f1001ea;
-        public static int TextAppearance_Compat_Notification_Info=0x7f1001eb;
-        public static int TextAppearance_Compat_Notification_Info_Media=0x7f1001e4;
-        public static int TextAppearance_Compat_Notification_Line2=0x7f1001f0;
-        public static int TextAppearance_Compat_Notification_Line2_Media=0x7f1001e8;
-        public static int TextAppearance_Compat_Notification_Media=0x7f1001e5;
-        public static int TextAppearance_Compat_Notification_Time=0x7f1001ec;
-        public static int TextAppearance_Compat_Notification_Time_Media=0x7f1001e6;
-        public static int TextAppearance_Compat_Notification_Title=0x7f1001ed;
-        public static int TextAppearance_Compat_Notification_Title_Media=0x7f1001e7;
-        public static int TextAppearance_Leanback=0x7f100180;
-        public static int TextAppearance_Leanback_DetailsActionButton=0x7f100181;
-        public static int TextAppearance_Leanback_DetailsDescriptionBody=0x7f100182;
-        public static int TextAppearance_Leanback_DetailsDescriptionSubtitle=0x7f100183;
-        public static int TextAppearance_Leanback_DetailsDescriptionTitle=0x7f100184;
-        public static int TextAppearance_Leanback_ErrorMessage=0x7f100185;
-        public static int TextAppearance_Leanback_Header=0x7f100186;
-        public static int TextAppearance_Leanback_Header_Section=0x7f100187;
-        public static int TextAppearance_Leanback_ImageCardView=0x7f100188;
-        public static int TextAppearance_Leanback_ImageCardView_Content=0x7f100189;
-        public static int TextAppearance_Leanback_ImageCardView_Title=0x7f10018a;
-        public static int TextAppearance_Leanback_PlaybackControlLabel=0x7f10018b;
-        public static int TextAppearance_Leanback_PlaybackControlsTime=0x7f10018c;
-        public static int TextAppearance_Leanback_PlaybackMediaItemDuration=0x7f10018d;
-        public static int TextAppearance_Leanback_PlaybackMediaItemName=0x7f10018e;
-        public static int TextAppearance_Leanback_PlaybackMediaItemNumber=0x7f10018f;
-        public static int TextAppearance_Leanback_PlaybackMediaListHeaderTitle=0x7f100190;
-        public static int TextAppearance_Leanback_Row_Header=0x7f100191;
-        public static int TextAppearance_Leanback_Row_Header_Description=0x7f100192;
-        public static int TextAppearance_Leanback_Row_HoverCardDescription=0x7f100193;
-        public static int TextAppearance_Leanback_Row_HoverCardTitle=0x7f100194;
-        public static int TextAppearance_Leanback_SearchTextEdit=0x7f100195;
-        public static int TextAppearance_Leanback_Title=0x7f100196;
-        public static int TextAppearance_LeanbackBase=0x7f100176;
-        public static int TextAppearance_Widget_AppCompat_ExpandedMenu_Item=0x7f100115;
-        public static int TextAppearance_Widget_AppCompat_Toolbar_Subtitle=0x7f100116;
-        public static int TextAppearance_Widget_AppCompat_Toolbar_Title=0x7f100117;
-        public static int Theme_AppCompat=0x7f100118;
-        public static int Theme_AppCompat_CompactMenu=0x7f100119;
-        public static int Theme_AppCompat_DayNight=0x7f100027;
-        public static int Theme_AppCompat_DayNight_DarkActionBar=0x7f100028;
-        public static int Theme_AppCompat_DayNight_Dialog=0x7f100029;
-        public static int Theme_AppCompat_DayNight_Dialog_Alert=0x7f10002a;
-        public static int Theme_AppCompat_DayNight_Dialog_MinWidth=0x7f10002b;
-        public static int Theme_AppCompat_DayNight_DialogWhenLarge=0x7f10002c;
-        public static int Theme_AppCompat_DayNight_NoActionBar=0x7f10002d;
-        public static int Theme_AppCompat_Dialog=0x7f10011a;
-        public static int Theme_AppCompat_Dialog_Alert=0x7f10011b;
-        public static int Theme_AppCompat_Dialog_MinWidth=0x7f10011c;
-        public static int Theme_AppCompat_DialogWhenLarge=0x7f10011d;
-        public static int Theme_AppCompat_Light=0x7f10011e;
-        public static int Theme_AppCompat_Light_DarkActionBar=0x7f10011f;
-        public static int Theme_AppCompat_Light_Dialog=0x7f100120;
-        public static int Theme_AppCompat_Light_Dialog_Alert=0x7f100121;
-        public static int Theme_AppCompat_Light_Dialog_MinWidth=0x7f100122;
-        public static int Theme_AppCompat_Light_DialogWhenLarge=0x7f100123;
-        public static int Theme_AppCompat_Light_NoActionBar=0x7f100124;
-        public static int Theme_AppCompat_NoActionBar=0x7f100125;
-        public static int Theme_Leanback=0x7f100197;
-        public static int Theme_Leanback_Browse=0x7f100177;
-        public static int Theme_Leanback_Details=0x7f100178;
-        public static int Theme_Leanback_Details_NoSharedElementTransition=0x7f100179;
-        public static int Theme_Leanback_GuidedStep=0x7f100198;
-        public static int Theme_Leanback_GuidedStep_Half=0x7f100199;
-        public static int Theme_Leanback_GuidedStep_HalfBase=0x7f10017a;
-        public static int Theme_Leanback_GuidedStepBase=0x7f10017b;
-        public static int Theme_Leanback_Onboarding=0x7f10019a;
-        public static int Theme_Leanback_VerticalGrid=0x7f10017c;
-        public static int Theme_LeanbackBase=0x7f100175;
-        public static int ThemeOverlay_AppCompat=0x7f100126;
-        public static int ThemeOverlay_AppCompat_ActionBar=0x7f100127;
-        public static int ThemeOverlay_AppCompat_Dark=0x7f100128;
-        public static int ThemeOverlay_AppCompat_Dark_ActionBar=0x7f100129;
-        public static int ThemeOverlay_AppCompat_Dialog=0x7f10012a;
-        public static int ThemeOverlay_AppCompat_Dialog_Alert=0x7f10012b;
-        public static int ThemeOverlay_AppCompat_Light=0x7f10012c;
-        public static int Widget_AppCompat_ActionBar=0x7f10012d;
-        public static int Widget_AppCompat_ActionBar_Solid=0x7f10012e;
-        public static int Widget_AppCompat_ActionBar_TabBar=0x7f10012f;
-        public static int Widget_AppCompat_ActionBar_TabText=0x7f100130;
-        public static int Widget_AppCompat_ActionBar_TabView=0x7f100131;
-        public static int Widget_AppCompat_ActionButton=0x7f100132;
-        public static int Widget_AppCompat_ActionButton_CloseMode=0x7f100133;
-        public static int Widget_AppCompat_ActionButton_Overflow=0x7f100134;
-        public static int Widget_AppCompat_ActionMode=0x7f100135;
-        public static int Widget_AppCompat_ActivityChooserView=0x7f100136;
-        public static int Widget_AppCompat_AutoCompleteTextView=0x7f100137;
-        public static int Widget_AppCompat_Button=0x7f100138;
-        public static int Widget_AppCompat_Button_Borderless=0x7f100139;
-        public static int Widget_AppCompat_Button_Borderless_Colored=0x7f10013a;
-        public static int Widget_AppCompat_Button_ButtonBar_AlertDialog=0x7f10013b;
-        public static int Widget_AppCompat_Button_Colored=0x7f10013c;
-        public static int Widget_AppCompat_Button_Small=0x7f10013d;
-        public static int Widget_AppCompat_ButtonBar=0x7f10013e;
-        public static int Widget_AppCompat_ButtonBar_AlertDialog=0x7f10013f;
-        public static int Widget_AppCompat_CompoundButton_CheckBox=0x7f100140;
-        public static int Widget_AppCompat_CompoundButton_RadioButton=0x7f100141;
-        public static int Widget_AppCompat_CompoundButton_Switch=0x7f100142;
-        public static int Widget_AppCompat_DrawerArrowToggle=0x7f100143;
-        public static int Widget_AppCompat_DropDownItem_Spinner=0x7f100144;
-        public static int Widget_AppCompat_EditText=0x7f100145;
-        public static int Widget_AppCompat_ImageButton=0x7f100146;
-        public static int Widget_AppCompat_Light_ActionBar=0x7f100147;
-        public static int Widget_AppCompat_Light_ActionBar_Solid=0x7f100148;
-        public static int Widget_AppCompat_Light_ActionBar_Solid_Inverse=0x7f100149;
-        public static int Widget_AppCompat_Light_ActionBar_TabBar=0x7f10014a;
-        public static int Widget_AppCompat_Light_ActionBar_TabBar_Inverse=0x7f10014b;
-        public static int Widget_AppCompat_Light_ActionBar_TabText=0x7f10014c;
-        public static int Widget_AppCompat_Light_ActionBar_TabText_Inverse=0x7f10014d;
-        public static int Widget_AppCompat_Light_ActionBar_TabView=0x7f10014e;
-        public static int Widget_AppCompat_Light_ActionBar_TabView_Inverse=0x7f10014f;
-        public static int Widget_AppCompat_Light_ActionButton=0x7f100150;
-        public static int Widget_AppCompat_Light_ActionButton_CloseMode=0x7f100151;
-        public static int Widget_AppCompat_Light_ActionButton_Overflow=0x7f100152;
-        public static int Widget_AppCompat_Light_ActionMode_Inverse=0x7f100153;
-        public static int Widget_AppCompat_Light_ActivityChooserView=0x7f100154;
-        public static int Widget_AppCompat_Light_AutoCompleteTextView=0x7f100155;
-        public static int Widget_AppCompat_Light_DropDownItem_Spinner=0x7f100156;
-        public static int Widget_AppCompat_Light_ListPopupWindow=0x7f100157;
-        public static int Widget_AppCompat_Light_ListView_DropDown=0x7f100158;
-        public static int Widget_AppCompat_Light_PopupMenu=0x7f100159;
-        public static int Widget_AppCompat_Light_PopupMenu_Overflow=0x7f10015a;
-        public static int Widget_AppCompat_Light_SearchView=0x7f10015b;
-        public static int Widget_AppCompat_Light_Spinner_DropDown_ActionBar=0x7f10015c;
-        public static int Widget_AppCompat_ListMenuView=0x7f10015d;
-        public static int Widget_AppCompat_ListPopupWindow=0x7f10015e;
-        public static int Widget_AppCompat_ListView=0x7f10015f;
-        public static int Widget_AppCompat_ListView_DropDown=0x7f100160;
-        public static int Widget_AppCompat_ListView_Menu=0x7f100161;
-        public static int Widget_AppCompat_PopupMenu=0x7f100162;
-        public static int Widget_AppCompat_PopupMenu_Overflow=0x7f100163;
-        public static int Widget_AppCompat_PopupWindow=0x7f100164;
-        public static int Widget_AppCompat_ProgressBar=0x7f100165;
-        public static int Widget_AppCompat_ProgressBar_Horizontal=0x7f100166;
-        public static int Widget_AppCompat_RatingBar=0x7f100167;
-        public static int Widget_AppCompat_RatingBar_Indicator=0x7f100168;
-        public static int Widget_AppCompat_RatingBar_Small=0x7f100169;
-        public static int Widget_AppCompat_SearchView=0x7f10016a;
-        public static int Widget_AppCompat_SearchView_ActionBar=0x7f10016b;
-        public static int Widget_AppCompat_SeekBar=0x7f10016c;
-        public static int Widget_AppCompat_SeekBar_Discrete=0x7f10016d;
-        public static int Widget_AppCompat_Spinner=0x7f10016e;
-        public static int Widget_AppCompat_Spinner_DropDown=0x7f10016f;
-        public static int Widget_AppCompat_Spinner_DropDown_ActionBar=0x7f100170;
-        public static int Widget_AppCompat_Spinner_Underlined=0x7f100171;
-        public static int Widget_AppCompat_TextView_SpinnerItem=0x7f100172;
-        public static int Widget_AppCompat_Toolbar=0x7f100173;
-        public static int Widget_AppCompat_Toolbar_Button_Navigation=0x7f100174;
-        public static int Widget_Compat_NotificationActionContainer=0x7f1001ee;
-        public static int Widget_Compat_NotificationActionText=0x7f1001ef;
-        public static int Widget_Leanback=0x7f10019b;
-        public static int Widget_Leanback_BaseCardViewStyle=0x7f10019c;
-        public static int Widget_Leanback_DetailsActionButtonStyle=0x7f10019d;
-        public static int Widget_Leanback_DetailsActionButtonStyleBase=0x7f10017d;
-        public static int Widget_Leanback_DetailsDescriptionBodyStyle=0x7f10019e;
-        public static int Widget_Leanback_DetailsDescriptionSubtitleStyle=0x7f10019f;
-        public static int Widget_Leanback_DetailsDescriptionTitleStyle=0x7f1001a0;
-        public static int Widget_Leanback_ErrorMessageStyle=0x7f1001a1;
-        public static int Widget_Leanback_GridItems=0x7f1001a2;
-        public static int Widget_Leanback_GridItems_VerticalGridView=0x7f1001a3;
-        public static int Widget_Leanback_GuidanceBreadcrumbStyle=0x7f1001a4;
-        public static int Widget_Leanback_GuidanceContainerStyle=0x7f1001a5;
-        public static int Widget_Leanback_GuidanceDescriptionStyle=0x7f1001a6;
-        public static int Widget_Leanback_GuidanceIconStyle=0x7f1001a7;
-        public static int Widget_Leanback_GuidanceTitleStyle=0x7f1001a8;
-        public static int Widget_Leanback_GuidedActionItemCheckmarkStyle=0x7f1001a9;
-        public static int Widget_Leanback_GuidedActionItemChevronStyle=0x7f1001aa;
-        public static int Widget_Leanback_GuidedActionItemContainerStyle=0x7f1001ab;
-        public static int Widget_Leanback_GuidedActionItemContentStyle=0x7f1001ac;
-        public static int Widget_Leanback_GuidedActionItemDescriptionStyle=0x7f1001ad;
-        public static int Widget_Leanback_GuidedActionItemIconStyle=0x7f1001ae;
-        public static int Widget_Leanback_GuidedActionItemTitleStyle=0x7f1001af;
-        public static int Widget_Leanback_GuidedActionsContainerStyle=0x7f1001b0;
-        public static int Widget_Leanback_GuidedActionsListStyle=0x7f1001b1;
-        public static int Widget_Leanback_GuidedActionsSelectorStyle=0x7f1001b2;
-        public static int Widget_Leanback_GuidedButtonActionsListStyle=0x7f1001b3;
-        public static int Widget_Leanback_GuidedSubActionsListStyle=0x7f1001b4;
-        public static int Widget_Leanback_Header=0x7f1001b5;
-        public static int Widget_Leanback_Header_Section=0x7f1001b6;
-        public static int Widget_Leanback_Headers=0x7f1001b7;
-        public static int Widget_Leanback_Headers_VerticalGridView=0x7f1001b8;
-        public static int Widget_Leanback_ImageCardView=0x7f1001b9;
-        public static int Widget_Leanback_ImageCardView_BadgeStyle=0x7f1001ba;
-        public static int Widget_Leanback_ImageCardView_ContentStyle=0x7f1001bb;
-        public static int Widget_Leanback_ImageCardView_ImageStyle=0x7f1001bc;
-        public static int Widget_Leanback_ImageCardView_InfoAreaStyle=0x7f1001bd;
-        public static int Widget_Leanback_ImageCardView_TitleStyle=0x7f1001be;
-        public static int Widget_Leanback_ImageCardViewStyle=0x7f1001bf;
-        public static int Widget_Leanback_OnboardingDescriptionStyle=0x7f1001c0;
-        public static int Widget_Leanback_OnboardingHeaderStyle=0x7f1001c1;
-        public static int Widget_Leanback_OnboardingLogoStyle=0x7f1001c2;
-        public static int Widget_Leanback_OnboardingMainIconStyle=0x7f1001c3;
-        public static int Widget_Leanback_OnboardingNavigatorContainerStyle=0x7f1001c4;
-        public static int Widget_Leanback_OnboardingPageIndicatorStyle=0x7f1001c5;
-        public static int Widget_Leanback_OnboardingStartButtonStyle=0x7f1001c6;
-        public static int Widget_Leanback_OnboardingStartButtonStyleBase=0x7f10017e;
-        public static int Widget_Leanback_OnboardingTitleStyle=0x7f1001c7;
-        public static int Widget_Leanback_PlaybackControlLabelStyle=0x7f1001c8;
-        public static int Widget_Leanback_PlaybackControlsActionIconsStyle=0x7f1001c9;
-        public static int Widget_Leanback_PlaybackControlsButtonStyle=0x7f1001ca;
-        public static int Widget_Leanback_PlaybackControlsTimeStyle=0x7f1001cb;
-        public static int Widget_Leanback_PlaybackMediaItemDetailsStyle=0x7f1001cc;
-        public static int Widget_Leanback_PlaybackMediaItemDurationStyle=0x7f1001cd;
-        public static int Widget_Leanback_PlaybackMediaItemNameStyle=0x7f1001ce;
-        public static int Widget_Leanback_PlaybackMediaItemNumberStyle=0x7f1001cf;
-        public static int Widget_Leanback_PlaybackMediaItemNumberViewFlipperStyle=0x7f1001d0;
-        public static int Widget_Leanback_PlaybackMediaItemRowStyle=0x7f1001d1;
-        public static int Widget_Leanback_PlaybackMediaItemSeparatorStyle=0x7f1001d2;
-        public static int Widget_Leanback_PlaybackMediaListHeaderStyle=0x7f1001d3;
-        public static int Widget_Leanback_PlaybackMediaListHeaderTitleStyle=0x7f1001d4;
-        public static int Widget_Leanback_PlaybackRow=0x7f1001d5;
-        public static int Widget_Leanback_Row=0x7f1001d6;
-        public static int Widget_Leanback_Row_Header=0x7f1001d7;
-        public static int Widget_Leanback_Row_Header_Description=0x7f1001d8;
-        public static int Widget_Leanback_Row_HeaderDock=0x7f1001d9;
-        public static int Widget_Leanback_Row_HorizontalGridView=0x7f1001da;
-        public static int Widget_Leanback_Row_HoverCardDescription=0x7f1001db;
-        public static int Widget_Leanback_Row_HoverCardTitle=0x7f1001dc;
-        public static int Widget_Leanback_Rows=0x7f1001dd;
-        public static int Widget_Leanback_Rows_VerticalGridView=0x7f1001de;
-        public static int Widget_Leanback_SearchOrbViewStyle=0x7f1001df;
-        public static int Widget_Leanback_Title=0x7f1001e0;
-        public static int Widget_Leanback_Title_Icon=0x7f1001e1;
-        public static int Widget_Leanback_Title_Text=0x7f1001e2;
-        public static int Widget_Leanback_TitleView=0x7f1001e3;
-        public static int Widget_LeanbackBase=0x7f10017f;
-        public static int Widget_Support_CoordinatorLayout=0x7f1001e9;
-    }
-    public static final class transition {
-        public static int lb_browse_enter_transition=0x7f070000;
-        public static int lb_browse_entrance_transition=0x7f070001;
-        public static int lb_browse_headers_in=0x7f070002;
-        public static int lb_browse_headers_out=0x7f070003;
-        public static int lb_browse_return_transition=0x7f070004;
-        public static int lb_details_enter_transition=0x7f070005;
-        public static int lb_details_return_transition=0x7f070006;
-        public static int lb_enter_transition=0x7f070007;
-        public static int lb_guidedstep_activity_enter=0x7f070008;
-        public static int lb_guidedstep_activity_enter_bottom=0x7f070009;
-        public static int lb_return_transition=0x7f07000a;
-        public static int lb_shared_element_enter_transition=0x7f07000b;
-        public static int lb_shared_element_return_transition=0x7f07000c;
-        public static int lb_title_in=0x7f07000d;
-        public static int lb_title_out=0x7f07000e;
-        public static int lb_vertical_grid_enter_transition=0x7f07000f;
-        public static int lb_vertical_grid_entrance_transition=0x7f070010;
-        public static int lb_vertical_grid_return_transition=0x7f070011;
+        public static int AlertDialog_AppCompat=0x7f0d00ac;
+        public static int AlertDialog_AppCompat_Light=0x7f0d00ad;
+        public static int Animation_AppCompat_Dialog=0x7f0d00ae;
+        public static int Animation_AppCompat_DropDownUp=0x7f0d00af;
+        public static int Animation_AppCompat_Tooltip=0x7f0d00b0;
+        public static int Base_AlertDialog_AppCompat=0x7f0d00b1;
+        public static int Base_AlertDialog_AppCompat_Light=0x7f0d00b2;
+        public static int Base_Animation_AppCompat_Dialog=0x7f0d00b3;
+        public static int Base_Animation_AppCompat_DropDownUp=0x7f0d00b4;
+        public static int Base_Animation_AppCompat_Tooltip=0x7f0d00b5;
+        public static int Base_CardView=0x7f0d0020;
+        public static int Base_DialogWindowTitle_AppCompat=0x7f0d00b6;
+        public static int Base_DialogWindowTitleBackground_AppCompat=0x7f0d00b7;
+        public static int Base_TextAppearance_AppCompat=0x7f0d0040;
+        public static int Base_TextAppearance_AppCompat_Body1=0x7f0d0041;
+        public static int Base_TextAppearance_AppCompat_Body2=0x7f0d0042;
+        public static int Base_TextAppearance_AppCompat_Button=0x7f0d0043;
+        public static int Base_TextAppearance_AppCompat_Caption=0x7f0d0044;
+        public static int Base_TextAppearance_AppCompat_Display1=0x7f0d0045;
+        public static int Base_TextAppearance_AppCompat_Display2=0x7f0d0046;
+        public static int Base_TextAppearance_AppCompat_Display3=0x7f0d0047;
+        public static int Base_TextAppearance_AppCompat_Display4=0x7f0d0048;
+        public static int Base_TextAppearance_AppCompat_Headline=0x7f0d0049;
+        public static int Base_TextAppearance_AppCompat_Inverse=0x7f0d004a;
+        public static int Base_TextAppearance_AppCompat_Large=0x7f0d004b;
+        public static int Base_TextAppearance_AppCompat_Large_Inverse=0x7f0d004c;
+        public static int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large=0x7f0d004d;
+        public static int Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small=0x7f0d004e;
+        public static int Base_TextAppearance_AppCompat_Medium=0x7f0d004f;
+        public static int Base_TextAppearance_AppCompat_Medium_Inverse=0x7f0d0050;
+        public static int Base_TextAppearance_AppCompat_Menu=0x7f0d0051;
+        public static int Base_TextAppearance_AppCompat_SearchResult=0x7f0d00b8;
+        public static int Base_TextAppearance_AppCompat_SearchResult_Subtitle=0x7f0d0052;
+        public static int Base_TextAppearance_AppCompat_SearchResult_Title=0x7f0d0053;
+        public static int Base_TextAppearance_AppCompat_Small=0x7f0d0054;
+        public static int Base_TextAppearance_AppCompat_Small_Inverse=0x7f0d0055;
+        public static int Base_TextAppearance_AppCompat_Subhead=0x7f0d0056;
+        public static int Base_TextAppearance_AppCompat_Subhead_Inverse=0x7f0d00b9;
+        public static int Base_TextAppearance_AppCompat_Title=0x7f0d0057;
+        public static int Base_TextAppearance_AppCompat_Title_Inverse=0x7f0d00ba;
+        public static int Base_TextAppearance_AppCompat_Tooltip=0x7f0d00bb;
+        public static int Base_TextAppearance_AppCompat_Widget_ActionBar_Menu=0x7f0d009b;
+        public static int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle=0x7f0d0058;
+        public static int Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse=0x7f0d0059;
+        public static int Base_TextAppearance_AppCompat_Widget_ActionBar_Title=0x7f0d005a;
+        public static int Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse=0x7f0d005b;
+        public static int Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle=0x7f0d005c;
+        public static int Base_TextAppearance_AppCompat_Widget_ActionMode_Title=0x7f0d005d;
+        public static int Base_TextAppearance_AppCompat_Widget_Button=0x7f0d005e;
+        public static int Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored=0x7f0d00a2;
+        public static int Base_TextAppearance_AppCompat_Widget_Button_Colored=0x7f0d00a3;
+        public static int Base_TextAppearance_AppCompat_Widget_Button_Inverse=0x7f0d009c;
+        public static int Base_TextAppearance_AppCompat_Widget_DropDownItem=0x7f0d00bc;
+        public static int Base_TextAppearance_AppCompat_Widget_PopupMenu_Header=0x7f0d005f;
+        public static int Base_TextAppearance_AppCompat_Widget_PopupMenu_Large=0x7f0d0060;
+        public static int Base_TextAppearance_AppCompat_Widget_PopupMenu_Small=0x7f0d0061;
+        public static int Base_TextAppearance_AppCompat_Widget_Switch=0x7f0d0062;
+        public static int Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem=0x7f0d0063;
+        public static int Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item=0x7f0d00bd;
+        public static int Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle=0x7f0d0064;
+        public static int Base_TextAppearance_Widget_AppCompat_Toolbar_Title=0x7f0d0065;
+        public static int Base_Theme_AppCompat=0x7f0d0066;
+        public static int Base_Theme_AppCompat_CompactMenu=0x7f0d00be;
+        public static int Base_Theme_AppCompat_Dialog=0x7f0d0067;
+        public static int Base_Theme_AppCompat_Dialog_Alert=0x7f0d00bf;
+        public static int Base_Theme_AppCompat_Dialog_FixedSize=0x7f0d00c0;
+        public static int Base_Theme_AppCompat_Dialog_MinWidth=0x7f0d00c1;
+        public static int Base_Theme_AppCompat_DialogWhenLarge=0x7f0d0024;
+        public static int Base_Theme_AppCompat_Light=0x7f0d0068;
+        public static int Base_Theme_AppCompat_Light_DarkActionBar=0x7f0d00c2;
+        public static int Base_Theme_AppCompat_Light_Dialog=0x7f0d0069;
+        public static int Base_Theme_AppCompat_Light_Dialog_Alert=0x7f0d00c3;
+        public static int Base_Theme_AppCompat_Light_Dialog_FixedSize=0x7f0d00c4;
+        public static int Base_Theme_AppCompat_Light_Dialog_MinWidth=0x7f0d00c5;
+        public static int Base_Theme_AppCompat_Light_DialogWhenLarge=0x7f0d0025;
+        public static int Base_ThemeOverlay_AppCompat=0x7f0d00c6;
+        public static int Base_ThemeOverlay_AppCompat_ActionBar=0x7f0d00c7;
+        public static int Base_ThemeOverlay_AppCompat_Dark=0x7f0d00c8;
+        public static int Base_ThemeOverlay_AppCompat_Dark_ActionBar=0x7f0d00c9;
+        public static int Base_ThemeOverlay_AppCompat_Dialog=0x7f0d006a;
+        public static int Base_ThemeOverlay_AppCompat_Dialog_Alert=0x7f0d00ca;
+        public static int Base_ThemeOverlay_AppCompat_Light=0x7f0d00cb;
+        public static int Base_V21_Theme_AppCompat=0x7f0d006b;
+        public static int Base_V21_Theme_AppCompat_Dialog=0x7f0d006c;
+        public static int Base_V21_Theme_AppCompat_Light=0x7f0d006d;
+        public static int Base_V21_Theme_AppCompat_Light_Dialog=0x7f0d006e;
+        public static int Base_V21_ThemeOverlay_AppCompat_Dialog=0x7f0d006f;
+        public static int Base_V22_Theme_AppCompat=0x7f0d0099;
+        public static int Base_V22_Theme_AppCompat_Light=0x7f0d009a;
+        public static int Base_V23_Theme_AppCompat=0x7f0d009d;
+        public static int Base_V23_Theme_AppCompat_Light=0x7f0d009e;
+        public static int Base_V26_Theme_AppCompat=0x7f0d00a6;
+        public static int Base_V26_Theme_AppCompat_Light=0x7f0d00a7;
+        public static int Base_V26_Widget_AppCompat_Toolbar=0x7f0d00a8;
+        public static int Base_V28_Theme_AppCompat=0x7f0d00aa;
+        public static int Base_V28_Theme_AppCompat_Light=0x7f0d00ab;
+        public static int Base_V7_Theme_AppCompat=0x7f0d00cc;
+        public static int Base_V7_Theme_AppCompat_Dialog=0x7f0d00cd;
+        public static int Base_V7_Theme_AppCompat_Light=0x7f0d00ce;
+        public static int Base_V7_Theme_AppCompat_Light_Dialog=0x7f0d00cf;
+        public static int Base_V7_ThemeOverlay_AppCompat_Dialog=0x7f0d00d0;
+        public static int Base_V7_Widget_AppCompat_AutoCompleteTextView=0x7f0d00d1;
+        public static int Base_V7_Widget_AppCompat_EditText=0x7f0d00d2;
+        public static int Base_V7_Widget_AppCompat_Toolbar=0x7f0d00d3;
+        public static int Base_Widget_AppCompat_ActionBar=0x7f0d00d4;
+        public static int Base_Widget_AppCompat_ActionBar_Solid=0x7f0d00d5;
+        public static int Base_Widget_AppCompat_ActionBar_TabBar=0x7f0d00d6;
+        public static int Base_Widget_AppCompat_ActionBar_TabText=0x7f0d0070;
+        public static int Base_Widget_AppCompat_ActionBar_TabView=0x7f0d0071;
+        public static int Base_Widget_AppCompat_ActionButton=0x7f0d0072;
+        public static int Base_Widget_AppCompat_ActionButton_CloseMode=0x7f0d0073;
+        public static int Base_Widget_AppCompat_ActionButton_Overflow=0x7f0d0074;
+        public static int Base_Widget_AppCompat_ActionMode=0x7f0d00d7;
+        public static int Base_Widget_AppCompat_ActivityChooserView=0x7f0d00d8;
+        public static int Base_Widget_AppCompat_AutoCompleteTextView=0x7f0d0075;
+        public static int Base_Widget_AppCompat_Button=0x7f0d0076;
+        public static int Base_Widget_AppCompat_Button_Borderless=0x7f0d0077;
+        public static int Base_Widget_AppCompat_Button_Borderless_Colored=0x7f0d0078;
+        public static int Base_Widget_AppCompat_Button_ButtonBar_AlertDialog=0x7f0d00d9;
+        public static int Base_Widget_AppCompat_Button_Colored=0x7f0d009f;
+        public static int Base_Widget_AppCompat_Button_Small=0x7f0d0079;
+        public static int Base_Widget_AppCompat_ButtonBar=0x7f0d007a;
+        public static int Base_Widget_AppCompat_ButtonBar_AlertDialog=0x7f0d00da;
+        public static int Base_Widget_AppCompat_CompoundButton_CheckBox=0x7f0d007b;
+        public static int Base_Widget_AppCompat_CompoundButton_RadioButton=0x7f0d007c;
+        public static int Base_Widget_AppCompat_CompoundButton_Switch=0x7f0d00db;
+        public static int Base_Widget_AppCompat_DrawerArrowToggle=0x7f0d0023;
+        public static int Base_Widget_AppCompat_DrawerArrowToggle_Common=0x7f0d00dc;
+        public static int Base_Widget_AppCompat_DropDownItem_Spinner=0x7f0d007d;
+        public static int Base_Widget_AppCompat_EditText=0x7f0d007e;
+        public static int Base_Widget_AppCompat_ImageButton=0x7f0d007f;
+        public static int Base_Widget_AppCompat_Light_ActionBar=0x7f0d00dd;
+        public static int Base_Widget_AppCompat_Light_ActionBar_Solid=0x7f0d00de;
+        public static int Base_Widget_AppCompat_Light_ActionBar_TabBar=0x7f0d00df;
+        public static int Base_Widget_AppCompat_Light_ActionBar_TabText=0x7f0d0080;
+        public static int Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse=0x7f0d0081;
+        public static int Base_Widget_AppCompat_Light_ActionBar_TabView=0x7f0d0082;
+        public static int Base_Widget_AppCompat_Light_PopupMenu=0x7f0d0083;
+        public static int Base_Widget_AppCompat_Light_PopupMenu_Overflow=0x7f0d0084;
+        public static int Base_Widget_AppCompat_ListMenuView=0x7f0d00e0;
+        public static int Base_Widget_AppCompat_ListPopupWindow=0x7f0d0085;
+        public static int Base_Widget_AppCompat_ListView=0x7f0d0086;
+        public static int Base_Widget_AppCompat_ListView_DropDown=0x7f0d0087;
+        public static int Base_Widget_AppCompat_ListView_Menu=0x7f0d0088;
+        public static int Base_Widget_AppCompat_PopupMenu=0x7f0d0089;
+        public static int Base_Widget_AppCompat_PopupMenu_Overflow=0x7f0d008a;
+        public static int Base_Widget_AppCompat_PopupWindow=0x7f0d00e1;
+        public static int Base_Widget_AppCompat_ProgressBar=0x7f0d008b;
+        public static int Base_Widget_AppCompat_ProgressBar_Horizontal=0x7f0d008c;
+        public static int Base_Widget_AppCompat_RatingBar=0x7f0d008d;
+        public static int Base_Widget_AppCompat_RatingBar_Indicator=0x7f0d00a0;
+        public static int Base_Widget_AppCompat_RatingBar_Small=0x7f0d00a1;
+        public static int Base_Widget_AppCompat_SearchView=0x7f0d00e2;
+        public static int Base_Widget_AppCompat_SearchView_ActionBar=0x7f0d00e3;
+        public static int Base_Widget_AppCompat_SeekBar=0x7f0d008e;
+        public static int Base_Widget_AppCompat_SeekBar_Discrete=0x7f0d00e4;
+        public static int Base_Widget_AppCompat_Spinner=0x7f0d008f;
+        public static int Base_Widget_AppCompat_Spinner_Underlined=0x7f0d0026;
+        public static int Base_Widget_AppCompat_TextView_SpinnerItem=0x7f0d0090;
+        public static int Base_Widget_AppCompat_Toolbar=0x7f0d00a9;
+        public static int Base_Widget_AppCompat_Toolbar_Button_Navigation=0x7f0d0091;
+        public static int CardView=0x7f0d001f;
+        public static int CardView_Dark=0x7f0d0021;
+        public static int CardView_Light=0x7f0d0022;
+        public static int MainTheme=0x7f0d0182;
+        public static int Platform_AppCompat=0x7f0d0092;
+        public static int Platform_AppCompat_Light=0x7f0d0093;
+        public static int Platform_ThemeOverlay_AppCompat=0x7f0d0094;
+        public static int Platform_ThemeOverlay_AppCompat_Dark=0x7f0d0095;
+        public static int Platform_ThemeOverlay_AppCompat_Light=0x7f0d0096;
+        public static int Platform_V21_AppCompat=0x7f0d0097;
+        public static int Platform_V21_AppCompat_Light=0x7f0d0098;
+        public static int Platform_V25_AppCompat=0x7f0d00a4;
+        public static int Platform_V25_AppCompat_Light=0x7f0d00a5;
+        public static int Platform_Widget_AppCompat_Spinner=0x7f0d00e5;
+        public static int Preference=0x7f0d0003;
+        public static int Preference_Category=0x7f0d0004;
+        public static int Preference_Category_Material=0x7f0d0005;
+        public static int Preference_CheckBoxPreference=0x7f0d0006;
+        public static int Preference_CheckBoxPreference_Material=0x7f0d0007;
+        public static int Preference_DialogPreference=0x7f0d0008;
+        public static int Preference_DialogPreference_EditTextPreference=0x7f0d0009;
+        public static int Preference_DialogPreference_EditTextPreference_Material=0x7f0d000a;
+        public static int Preference_DialogPreference_Material=0x7f0d000b;
+        public static int Preference_DropDown=0x7f0d000c;
+        public static int Preference_DropDown_Material=0x7f0d000d;
+        public static int Preference_Information=0x7f0d000e;
+        public static int Preference_Information_Material=0x7f0d000f;
+        public static int Preference_Material=0x7f0d0010;
+        public static int Preference_PreferenceScreen=0x7f0d0011;
+        public static int Preference_PreferenceScreen_Material=0x7f0d0012;
+        public static int Preference_SeekBarPreference=0x7f0d0013;
+        public static int Preference_SeekBarPreference_Material=0x7f0d0014;
+        public static int Preference_SwitchPreference=0x7f0d0015;
+        public static int Preference_SwitchPreference_Material=0x7f0d0016;
+        public static int Preference_SwitchPreferenceCompat=0x7f0d0017;
+        public static int Preference_SwitchPreferenceCompat_Material=0x7f0d0018;
+        public static int PreferenceFragment=0x7f0d0000;
+        public static int PreferenceFragment_Material=0x7f0d0019;
+        public static int PreferenceFragmentList=0x7f0d0001;
+        public static int PreferenceFragmentList_Material=0x7f0d0002;
+        public static int PreferenceThemeOverlay=0x7f0d001a;
+        public static int PreferenceThemeOverlay_v14=0x7f0d001b;
+        public static int PreferenceThemeOverlay_v14_Material=0x7f0d001c;
+        public static int Preference_TextAppearanceMaterialBody2=0x7f0d001d;
+        public static int Preference_TextAppearanceMaterialSubhead=0x7f0d001e;
+        public static int RtlOverlay_DialogWindowTitle_AppCompat=0x7f0d002f;
+        public static int RtlOverlay_Widget_AppCompat_ActionBar_TitleItem=0x7f0d0030;
+        public static int RtlOverlay_Widget_AppCompat_DialogTitle_Icon=0x7f0d0031;
+        public static int RtlOverlay_Widget_AppCompat_PopupMenuItem=0x7f0d0032;
+        public static int RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup=0x7f0d0033;
+        public static int RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut=0x7f0d0034;
+        public static int RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow=0x7f0d0035;
+        public static int RtlOverlay_Widget_AppCompat_PopupMenuItem_Text=0x7f0d0036;
+        public static int RtlOverlay_Widget_AppCompat_PopupMenuItem_Title=0x7f0d0037;
+        public static int RtlOverlay_Widget_AppCompat_Search_DropDown=0x7f0d0038;
+        public static int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1=0x7f0d0039;
+        public static int RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2=0x7f0d003a;
+        public static int RtlOverlay_Widget_AppCompat_Search_DropDown_Query=0x7f0d003b;
+        public static int RtlOverlay_Widget_AppCompat_Search_DropDown_Text=0x7f0d003c;
+        public static int RtlOverlay_Widget_AppCompat_SearchView_MagIcon=0x7f0d003d;
+        public static int RtlUnderlay_Widget_AppCompat_ActionButton=0x7f0d003e;
+        public static int RtlUnderlay_Widget_AppCompat_ActionButton_Overflow=0x7f0d003f;
+        public static int StartTheme=0x7f0d0183;
+        public static int TextAppearance_AppCompat=0x7f0d00e6;
+        public static int TextAppearance_AppCompat_Body1=0x7f0d00e7;
+        public static int TextAppearance_AppCompat_Body2=0x7f0d00e8;
+        public static int TextAppearance_AppCompat_Button=0x7f0d00e9;
+        public static int TextAppearance_AppCompat_Caption=0x7f0d00ea;
+        public static int TextAppearance_AppCompat_Display1=0x7f0d00eb;
+        public static int TextAppearance_AppCompat_Display2=0x7f0d00ec;
+        public static int TextAppearance_AppCompat_Display3=0x7f0d00ed;
+        public static int TextAppearance_AppCompat_Display4=0x7f0d00ee;
+        public static int TextAppearance_AppCompat_Headline=0x7f0d00ef;
+        public static int TextAppearance_AppCompat_Inverse=0x7f0d00f0;
+        public static int TextAppearance_AppCompat_Large=0x7f0d00f1;
+        public static int TextAppearance_AppCompat_Large_Inverse=0x7f0d00f2;
+        public static int TextAppearance_AppCompat_Light_SearchResult_Subtitle=0x7f0d00f3;
+        public static int TextAppearance_AppCompat_Light_SearchResult_Title=0x7f0d00f4;
+        public static int TextAppearance_AppCompat_Light_Widget_PopupMenu_Large=0x7f0d00f5;
+        public static int TextAppearance_AppCompat_Light_Widget_PopupMenu_Small=0x7f0d00f6;
+        public static int TextAppearance_AppCompat_Medium=0x7f0d00f7;
+        public static int TextAppearance_AppCompat_Medium_Inverse=0x7f0d00f8;
+        public static int TextAppearance_AppCompat_Menu=0x7f0d00f9;
+        public static int TextAppearance_AppCompat_SearchResult_Subtitle=0x7f0d00fa;
+        public static int TextAppearance_AppCompat_SearchResult_Title=0x7f0d00fb;
+        public static int TextAppearance_AppCompat_Small=0x7f0d00fc;
+        public static int TextAppearance_AppCompat_Small_Inverse=0x7f0d00fd;
+        public static int TextAppearance_AppCompat_Subhead=0x7f0d00fe;
+        public static int TextAppearance_AppCompat_Subhead_Inverse=0x7f0d00ff;
+        public static int TextAppearance_AppCompat_Title=0x7f0d0100;
+        public static int TextAppearance_AppCompat_Title_Inverse=0x7f0d0101;
+        public static int TextAppearance_AppCompat_Tooltip=0x7f0d002e;
+        public static int TextAppearance_AppCompat_Widget_ActionBar_Menu=0x7f0d0102;
+        public static int TextAppearance_AppCompat_Widget_ActionBar_Subtitle=0x7f0d0103;
+        public static int TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse=0x7f0d0104;
+        public static int TextAppearance_AppCompat_Widget_ActionBar_Title=0x7f0d0105;
+        public static int TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse=0x7f0d0106;
+        public static int TextAppearance_AppCompat_Widget_ActionMode_Subtitle=0x7f0d0107;
+        public static int TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse=0x7f0d0108;
+        public static int TextAppearance_AppCompat_Widget_ActionMode_Title=0x7f0d0109;
+        public static int TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse=0x7f0d010a;
+        public static int TextAppearance_AppCompat_Widget_Button=0x7f0d010b;
+        public static int TextAppearance_AppCompat_Widget_Button_Borderless_Colored=0x7f0d010c;
+        public static int TextAppearance_AppCompat_Widget_Button_Colored=0x7f0d010d;
+        public static int TextAppearance_AppCompat_Widget_Button_Inverse=0x7f0d010e;
+        public static int TextAppearance_AppCompat_Widget_DropDownItem=0x7f0d010f;
+        public static int TextAppearance_AppCompat_Widget_PopupMenu_Header=0x7f0d0110;
+        public static int TextAppearance_AppCompat_Widget_PopupMenu_Large=0x7f0d0111;
+        public static int TextAppearance_AppCompat_Widget_PopupMenu_Small=0x7f0d0112;
+        public static int TextAppearance_AppCompat_Widget_Switch=0x7f0d0113;
+        public static int TextAppearance_AppCompat_Widget_TextView_SpinnerItem=0x7f0d0114;
+        public static int TextAppearance_Compat_Notification=0x7f0d017b;
+        public static int TextAppearance_Compat_Notification_Info=0x7f0d017c;
+        public static int TextAppearance_Compat_Notification_Info_Media=0x7f0d0175;
+        public static int TextAppearance_Compat_Notification_Line2=0x7f0d0181;
+        public static int TextAppearance_Compat_Notification_Line2_Media=0x7f0d0179;
+        public static int TextAppearance_Compat_Notification_Media=0x7f0d0176;
+        public static int TextAppearance_Compat_Notification_Time=0x7f0d017d;
+        public static int TextAppearance_Compat_Notification_Time_Media=0x7f0d0177;
+        public static int TextAppearance_Compat_Notification_Title=0x7f0d017e;
+        public static int TextAppearance_Compat_Notification_Title_Media=0x7f0d0178;
+        public static int TextAppearance_Widget_AppCompat_ExpandedMenu_Item=0x7f0d0115;
+        public static int TextAppearance_Widget_AppCompat_Toolbar_Subtitle=0x7f0d0116;
+        public static int TextAppearance_Widget_AppCompat_Toolbar_Title=0x7f0d0117;
+        public static int Theme_AppCompat=0x7f0d0118;
+        public static int Theme_AppCompat_CompactMenu=0x7f0d0119;
+        public static int Theme_AppCompat_DayNight=0x7f0d0027;
+        public static int Theme_AppCompat_DayNight_DarkActionBar=0x7f0d0028;
+        public static int Theme_AppCompat_DayNight_Dialog=0x7f0d0029;
+        public static int Theme_AppCompat_DayNight_Dialog_Alert=0x7f0d002a;
+        public static int Theme_AppCompat_DayNight_Dialog_MinWidth=0x7f0d002b;
+        public static int Theme_AppCompat_DayNight_DialogWhenLarge=0x7f0d002c;
+        public static int Theme_AppCompat_DayNight_NoActionBar=0x7f0d002d;
+        public static int Theme_AppCompat_Dialog=0x7f0d011a;
+        public static int Theme_AppCompat_Dialog_Alert=0x7f0d011b;
+        public static int Theme_AppCompat_Dialog_MinWidth=0x7f0d011c;
+        public static int Theme_AppCompat_DialogWhenLarge=0x7f0d011d;
+        public static int Theme_AppCompat_Light=0x7f0d011e;
+        public static int Theme_AppCompat_Light_DarkActionBar=0x7f0d011f;
+        public static int Theme_AppCompat_Light_Dialog=0x7f0d0120;
+        public static int Theme_AppCompat_Light_Dialog_Alert=0x7f0d0121;
+        public static int Theme_AppCompat_Light_Dialog_MinWidth=0x7f0d0122;
+        public static int Theme_AppCompat_Light_DialogWhenLarge=0x7f0d0123;
+        public static int Theme_AppCompat_Light_NoActionBar=0x7f0d0124;
+        public static int Theme_AppCompat_NoActionBar=0x7f0d0125;
+        public static int ThemeOverlay_AppCompat=0x7f0d0126;
+        public static int ThemeOverlay_AppCompat_ActionBar=0x7f0d0127;
+        public static int ThemeOverlay_AppCompat_Dark=0x7f0d0128;
+        public static int ThemeOverlay_AppCompat_Dark_ActionBar=0x7f0d0129;
+        public static int ThemeOverlay_AppCompat_Dialog=0x7f0d012a;
+        public static int ThemeOverlay_AppCompat_Dialog_Alert=0x7f0d012b;
+        public static int ThemeOverlay_AppCompat_Light=0x7f0d012c;
+        public static int Widget_AppCompat_ActionBar=0x7f0d012d;
+        public static int Widget_AppCompat_ActionBar_Solid=0x7f0d012e;
+        public static int Widget_AppCompat_ActionBar_TabBar=0x7f0d012f;
+        public static int Widget_AppCompat_ActionBar_TabText=0x7f0d0130;
+        public static int Widget_AppCompat_ActionBar_TabView=0x7f0d0131;
+        public static int Widget_AppCompat_ActionButton=0x7f0d0132;
+        public static int Widget_AppCompat_ActionButton_CloseMode=0x7f0d0133;
+        public static int Widget_AppCompat_ActionButton_Overflow=0x7f0d0134;
+        public static int Widget_AppCompat_ActionMode=0x7f0d0135;
+        public static int Widget_AppCompat_ActivityChooserView=0x7f0d0136;
+        public static int Widget_AppCompat_AutoCompleteTextView=0x7f0d0137;
+        public static int Widget_AppCompat_Button=0x7f0d0138;
+        public static int Widget_AppCompat_Button_Borderless=0x7f0d0139;
+        public static int Widget_AppCompat_Button_Borderless_Colored=0x7f0d013a;
+        public static int Widget_AppCompat_Button_ButtonBar_AlertDialog=0x7f0d013b;
+        public static int Widget_AppCompat_Button_Colored=0x7f0d013c;
+        public static int Widget_AppCompat_Button_Small=0x7f0d013d;
+        public static int Widget_AppCompat_ButtonBar=0x7f0d013e;
+        public static int Widget_AppCompat_ButtonBar_AlertDialog=0x7f0d013f;
+        public static int Widget_AppCompat_CompoundButton_CheckBox=0x7f0d0140;
+        public static int Widget_AppCompat_CompoundButton_RadioButton=0x7f0d0141;
+        public static int Widget_AppCompat_CompoundButton_Switch=0x7f0d0142;
+        public static int Widget_AppCompat_DrawerArrowToggle=0x7f0d0143;
+        public static int Widget_AppCompat_DropDownItem_Spinner=0x7f0d0144;
+        public static int Widget_AppCompat_EditText=0x7f0d0145;
+        public static int Widget_AppCompat_ImageButton=0x7f0d0146;
+        public static int Widget_AppCompat_Light_ActionBar=0x7f0d0147;
+        public static int Widget_AppCompat_Light_ActionBar_Solid=0x7f0d0148;
+        public static int Widget_AppCompat_Light_ActionBar_Solid_Inverse=0x7f0d0149;
+        public static int Widget_AppCompat_Light_ActionBar_TabBar=0x7f0d014a;
+        public static int Widget_AppCompat_Light_ActionBar_TabBar_Inverse=0x7f0d014b;
+        public static int Widget_AppCompat_Light_ActionBar_TabText=0x7f0d014c;
+        public static int Widget_AppCompat_Light_ActionBar_TabText_Inverse=0x7f0d014d;
+        public static int Widget_AppCompat_Light_ActionBar_TabView=0x7f0d014e;
+        public static int Widget_AppCompat_Light_ActionBar_TabView_Inverse=0x7f0d014f;
+        public static int Widget_AppCompat_Light_ActionButton=0x7f0d0150;
+        public static int Widget_AppCompat_Light_ActionButton_CloseMode=0x7f0d0151;
+        public static int Widget_AppCompat_Light_ActionButton_Overflow=0x7f0d0152;
+        public static int Widget_AppCompat_Light_ActionMode_Inverse=0x7f0d0153;
+        public static int Widget_AppCompat_Light_ActivityChooserView=0x7f0d0154;
+        public static int Widget_AppCompat_Light_AutoCompleteTextView=0x7f0d0155;
+        public static int Widget_AppCompat_Light_DropDownItem_Spinner=0x7f0d0156;
+        public static int Widget_AppCompat_Light_ListPopupWindow=0x7f0d0157;
+        public static int Widget_AppCompat_Light_ListView_DropDown=0x7f0d0158;
+        public static int Widget_AppCompat_Light_PopupMenu=0x7f0d0159;
+        public static int Widget_AppCompat_Light_PopupMenu_Overflow=0x7f0d015a;
+        public static int Widget_AppCompat_Light_SearchView=0x7f0d015b;
+        public static int Widget_AppCompat_Light_Spinner_DropDown_ActionBar=0x7f0d015c;
+        public static int Widget_AppCompat_ListMenuView=0x7f0d015d;
+        public static int Widget_AppCompat_ListPopupWindow=0x7f0d015e;
+        public static int Widget_AppCompat_ListView=0x7f0d015f;
+        public static int Widget_AppCompat_ListView_DropDown=0x7f0d0160;
+        public static int Widget_AppCompat_ListView_Menu=0x7f0d0161;
+        public static int Widget_AppCompat_PopupMenu=0x7f0d0162;
+        public static int Widget_AppCompat_PopupMenu_Overflow=0x7f0d0163;
+        public static int Widget_AppCompat_PopupWindow=0x7f0d0164;
+        public static int Widget_AppCompat_ProgressBar=0x7f0d0165;
+        public static int Widget_AppCompat_ProgressBar_Horizontal=0x7f0d0166;
+        public static int Widget_AppCompat_RatingBar=0x7f0d0167;
+        public static int Widget_AppCompat_RatingBar_Indicator=0x7f0d0168;
+        public static int Widget_AppCompat_RatingBar_Small=0x7f0d0169;
+        public static int Widget_AppCompat_SearchView=0x7f0d016a;
+        public static int Widget_AppCompat_SearchView_ActionBar=0x7f0d016b;
+        public static int Widget_AppCompat_SeekBar=0x7f0d016c;
+        public static int Widget_AppCompat_SeekBar_Discrete=0x7f0d016d;
+        public static int Widget_AppCompat_Spinner=0x7f0d016e;
+        public static int Widget_AppCompat_Spinner_DropDown=0x7f0d016f;
+        public static int Widget_AppCompat_Spinner_DropDown_ActionBar=0x7f0d0170;
+        public static int Widget_AppCompat_Spinner_Underlined=0x7f0d0171;
+        public static int Widget_AppCompat_TextView_SpinnerItem=0x7f0d0172;
+        public static int Widget_AppCompat_Toolbar=0x7f0d0173;
+        public static int Widget_AppCompat_Toolbar_Button_Navigation=0x7f0d0174;
+        public static int Widget_Compat_NotificationActionContainer=0x7f0d017f;
+        public static int Widget_Compat_NotificationActionText=0x7f0d0180;
+        public static int Widget_Support_CoordinatorLayout=0x7f0d017a;
     }
     public static final class xml {
-        public static int dev_options=0x7f080000;
-        public static int settings=0x7f080001;
+        public static int dev_options=0x7f060000;
+        public static int settings=0x7f060001;
     }
     public static final class styleable {
         /** Attributes that can be used with a ActionBar.
@@ -10274,7 +8184,7 @@ containing a value of this type.
            @see #ColorStateListItem_android_color
          */
         public static final int[] ColorStateListItem = {
-            0x010101a5, 0x0101031f, 0x7f010214
+            0x010101a5, 0x0101031f, 0x7f01015c
         };
         /**
           <p>
@@ -10389,7 +8299,7 @@ containing a value of this type.
            @see #CoordinatorLayout_statusBarBackground
          */
         public static final int[] CoordinatorLayout = {
-            0x7f01020c, 0x7f01020d
+            0x7f010154, 0x7f010155
         };
         /**
           <p>
@@ -10447,8 +8357,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
            @see #CoordinatorLayout_Layout_layout_keyline
          */
         public static final int[] CoordinatorLayout_Layout = {
-            0x010100b3, 0x7f01020e, 0x7f01020f, 0x7f010210,
-            0x7f010211, 0x7f010212, 0x7f010213
+            0x010100b3, 0x7f010156, 0x7f010157, 0x7f010158,
+            0x7f010159, 0x7f01015a, 0x7f01015b
         };
         /**
           <p>This symbol is the offset where the {@link android.R.attr#layout_gravity}
@@ -10945,8 +8855,8 @@ containing a value of this type.
            @see #FontFamily_fontProviderQuery
          */
         public static final int[] FontFamily = {
-            0x7f010215, 0x7f010216, 0x7f010217, 0x7f010218,
-            0x7f010219, 0x7f01021a
+            0x7f01015d, 0x7f01015e, 0x7f01015f, 0x7f010160,
+            0x7f010161, 0x7f010162
         };
         /**
           <p>
@@ -11102,8 +9012,8 @@ containing a value of this type.
          */
         public static final int[] FontFamilyFont = {
             0x01010532, 0x01010533, 0x0101053f, 0x0101056f,
-            0x01010570, 0x7f01021b, 0x7f01021c, 0x7f01021d,
-            0x7f01021e, 0x7f01021f
+            0x01010570, 0x7f010163, 0x7f010164, 0x7f010165,
+            0x7f010166, 0x7f010167
         };
         /**
           <p>This symbol is the offset where the {@link android.R.attr#font}
@@ -11417,1998 +9327,6 @@ containing a value of this type.
           @attr name android:offset
         */
         public static int GradientColorItem_android_offset = 1;
-        /** Attributes that can be used with a LeanbackGuidedStepTheme.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidanceBreadcrumbStyle android.arch.lifecycle:guidanceBreadcrumbStyle}</code></td><td> Theme attribute for the style of the breadcrumb in a GuidanceStylist.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidanceContainerStyle android.arch.lifecycle:guidanceContainerStyle}</code></td><td> Theme attribute for the style of the main container in a GuidanceStylist.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidanceDescriptionStyle android.arch.lifecycle:guidanceDescriptionStyle}</code></td><td> Theme attribute for the style of the description in a GuidanceStylist.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidanceEntryAnimation android.arch.lifecycle:guidanceEntryAnimation}</code></td><td> Deprecated theme attribute, do not use </td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidanceIconStyle android.arch.lifecycle:guidanceIconStyle}</code></td><td> Theme attribute for the style of the icon in a GuidanceStylist.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidanceTitleStyle android.arch.lifecycle:guidanceTitleStyle}</code></td><td> Theme attribute for the style of the title in a GuidanceStylist.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionCheckedAnimation android.arch.lifecycle:guidedActionCheckedAnimation}</code></td><td> Deprecated theme attribute, do not use </td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionContentWidth android.arch.lifecycle:guidedActionContentWidth}</code></td><td> Deprecated theme attribute, do not use </td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionContentWidthNoIcon android.arch.lifecycle:guidedActionContentWidthNoIcon}</code></td><td> Deprecated theme attribute, do not use </td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionContentWidthWeight android.arch.lifecycle:guidedActionContentWidthWeight}</code></td><td> Theme attribute used for the width weight of actions in comparison to guidance area.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionContentWidthWeightTwoPanels android.arch.lifecycle:guidedActionContentWidthWeightTwoPanels}</code></td><td> Theme attribute used for the width weight of actions and button actions in comparison to guidance area.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionDescriptionMinLines android.arch.lifecycle:guidedActionDescriptionMinLines}</code></td><td> Theme attribute used in a GuidedActionsPresenter for the max lines of the title text
-             view when the action's isMultilineDescription is set to false.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionDisabledChevronAlpha android.arch.lifecycle:guidedActionDisabledChevronAlpha}</code></td><td> Theme attribute used in a GuidedActionsPresenter for the alpha value of the chevron
-             decoration when its action is disabled.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionEnabledChevronAlpha android.arch.lifecycle:guidedActionEnabledChevronAlpha}</code></td><td> Theme attribute used in a GuidedActionsPresenter for the alpha value of the chevron
-             decoration when its action is enabled.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionItemCheckmarkStyle android.arch.lifecycle:guidedActionItemCheckmarkStyle}</code></td><td> Theme attribute for the style of an action's checkmark in a GuidedActionsPresenter.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionItemChevronStyle android.arch.lifecycle:guidedActionItemChevronStyle}</code></td><td> Theme attribute for the style of an action's chevron decoration in a
-             GuidedActionsPresenter.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionItemContainerStyle android.arch.lifecycle:guidedActionItemContainerStyle}</code></td><td> Theme attribute for the style of the container of a single action in a
-             GuidedActionsPresenter.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionItemContentStyle android.arch.lifecycle:guidedActionItemContentStyle}</code></td><td> Theme attribute for the style of an action's content in a GuidedActionsPresenter.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionItemDescriptionStyle android.arch.lifecycle:guidedActionItemDescriptionStyle}</code></td><td> Theme attribute for the style of an action's description in a GuidedActionsPresenter.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionItemIconStyle android.arch.lifecycle:guidedActionItemIconStyle}</code></td><td> Theme attribute for the style of an action's icon in a GuidedActionsPresenter.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionItemTitleStyle android.arch.lifecycle:guidedActionItemTitleStyle}</code></td><td> Theme attribute for the style of an action's title in a GuidedActionsPresenter.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionPressedAnimation android.arch.lifecycle:guidedActionPressedAnimation}</code></td><td> Theme attribute for the animation used in a GuidedActionsPresenter when an action
-             is pressed.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionTitleMaxLines android.arch.lifecycle:guidedActionTitleMaxLines}</code></td><td> Theme attribute used in a GuidedActionsPresenter for the max lines of the title text
-             view when the action's isMultilineDescription is set to true.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionTitleMinLines android.arch.lifecycle:guidedActionTitleMinLines}</code></td><td> Theme attribute used in a GuidedActionsPresenter for the max lines of the title text
-             view when the action's isMultilineDescription is set to false.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionUncheckedAnimation android.arch.lifecycle:guidedActionUncheckedAnimation}</code></td><td> Deprecated theme attribute, do not use </td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionUnpressedAnimation android.arch.lifecycle:guidedActionUnpressedAnimation}</code></td><td> Theme attribute for the animation used in a GuidedActionsPresenter when an action
-             is unpressed.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionVerticalPadding android.arch.lifecycle:guidedActionVerticalPadding}</code></td><td> Theme attribute used in a GuidedActionsPresenter for the vertical padding between
-             action views in the list.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionsBackground android.arch.lifecycle:guidedActionsBackground}</code></td><td> Theme attribute for the background of GuidedActions.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionsBackgroundDark android.arch.lifecycle:guidedActionsBackgroundDark}</code></td><td> Theme attribute for the dark version background of GuidedActions.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionsContainerStyle android.arch.lifecycle:guidedActionsContainerStyle}</code></td><td> Deprecated theme attribute, do not use </td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionsElevation android.arch.lifecycle:guidedActionsElevation}</code></td><td> Theme attribute for the shadow elevation of GuidedActions.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionsEntryAnimation android.arch.lifecycle:guidedActionsEntryAnimation}</code></td><td> Deprecated theme attribute, do not use </td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionsListStyle android.arch.lifecycle:guidedActionsListStyle}</code></td><td> Theme attribute for the style of the list in a GuidedActionsPresenter.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionsSelectorDrawable android.arch.lifecycle:guidedActionsSelectorDrawable}</code></td><td> Theme attribute for the style of the item selector in a GuidedActionsPresenter.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionsSelectorHideAnimation android.arch.lifecycle:guidedActionsSelectorHideAnimation}</code></td><td> Deprecated theme attribute, do not use </td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionsSelectorShowAnimation android.arch.lifecycle:guidedActionsSelectorShowAnimation}</code></td><td> Deprecated theme attribute, do not use </td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedActionsSelectorStyle android.arch.lifecycle:guidedActionsSelectorStyle}</code></td><td> Deprecated theme attribute, do not use </td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedButtonActionsListStyle android.arch.lifecycle:guidedButtonActionsListStyle}</code></td><td> Theme attribute for the style of the list in a GuidedActionsPresenter.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedButtonActionsWidthWeight android.arch.lifecycle:guidedButtonActionsWidthWeight}</code></td><td> Theme attribute used for the width weight of button actions in compare to actions </td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedStepBackground android.arch.lifecycle:guidedStepBackground}</code></td><td> Theme attribute of background drawable used by GuidedStepFragment.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedStepEntryAnimation android.arch.lifecycle:guidedStepEntryAnimation}</code></td><td> Deprecated theme attribute, do not use </td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedStepExitAnimation android.arch.lifecycle:guidedStepExitAnimation}</code></td><td> Deprecated theme attribute, do not use </td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedStepHeightWeight android.arch.lifecycle:guidedStepHeightWeight}</code></td><td> Used to control the height of the fragment.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedStepImeAppearingAnimation android.arch.lifecycle:guidedStepImeAppearingAnimation}</code></td><td> Theme attribute for the animation used when a guided step element is animated in
-             response to the IME appearing.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedStepImeDisappearingAnimation android.arch.lifecycle:guidedStepImeDisappearingAnimation}</code></td><td> Theme attribute for the animation used when a guided step element is animated in
-             response to the IME disappearing.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedStepKeyline android.arch.lifecycle:guidedStepKeyline}</code></td><td> Y offset to the bottom of the TitleView(font baseline) used to align the
-             first action text on the right.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedStepReentryAnimation android.arch.lifecycle:guidedStepReentryAnimation}</code></td><td> Deprecated theme attribute, do not use </td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedStepReturnAnimation android.arch.lifecycle:guidedStepReturnAnimation}</code></td><td> Deprecated theme attribute, do not use </td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedStepTheme android.arch.lifecycle:guidedStepTheme}</code></td><td> Theme attribute for the overall theme used in a GuidedStepFragment.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedStepThemeFlag android.arch.lifecycle:guidedStepThemeFlag}</code></td><td> @hide
-             Theme attribute used to inspect theme inheritance.</td></tr>
-           <tr><td><code>{@link #LeanbackGuidedStepTheme_guidedSubActionsListStyle android.arch.lifecycle:guidedSubActionsListStyle}</code></td><td> Theme attribute for the style of the sub actions list in a GuidedActionsPresenter.</td></tr>
-           </table>
-           @see #LeanbackGuidedStepTheme_guidanceBreadcrumbStyle
-           @see #LeanbackGuidedStepTheme_guidanceContainerStyle
-           @see #LeanbackGuidedStepTheme_guidanceDescriptionStyle
-           @see #LeanbackGuidedStepTheme_guidanceEntryAnimation
-           @see #LeanbackGuidedStepTheme_guidanceIconStyle
-           @see #LeanbackGuidedStepTheme_guidanceTitleStyle
-           @see #LeanbackGuidedStepTheme_guidedActionCheckedAnimation
-           @see #LeanbackGuidedStepTheme_guidedActionContentWidth
-           @see #LeanbackGuidedStepTheme_guidedActionContentWidthNoIcon
-           @see #LeanbackGuidedStepTheme_guidedActionContentWidthWeight
-           @see #LeanbackGuidedStepTheme_guidedActionContentWidthWeightTwoPanels
-           @see #LeanbackGuidedStepTheme_guidedActionDescriptionMinLines
-           @see #LeanbackGuidedStepTheme_guidedActionDisabledChevronAlpha
-           @see #LeanbackGuidedStepTheme_guidedActionEnabledChevronAlpha
-           @see #LeanbackGuidedStepTheme_guidedActionItemCheckmarkStyle
-           @see #LeanbackGuidedStepTheme_guidedActionItemChevronStyle
-           @see #LeanbackGuidedStepTheme_guidedActionItemContainerStyle
-           @see #LeanbackGuidedStepTheme_guidedActionItemContentStyle
-           @see #LeanbackGuidedStepTheme_guidedActionItemDescriptionStyle
-           @see #LeanbackGuidedStepTheme_guidedActionItemIconStyle
-           @see #LeanbackGuidedStepTheme_guidedActionItemTitleStyle
-           @see #LeanbackGuidedStepTheme_guidedActionPressedAnimation
-           @see #LeanbackGuidedStepTheme_guidedActionTitleMaxLines
-           @see #LeanbackGuidedStepTheme_guidedActionTitleMinLines
-           @see #LeanbackGuidedStepTheme_guidedActionUncheckedAnimation
-           @see #LeanbackGuidedStepTheme_guidedActionUnpressedAnimation
-           @see #LeanbackGuidedStepTheme_guidedActionVerticalPadding
-           @see #LeanbackGuidedStepTheme_guidedActionsBackground
-           @see #LeanbackGuidedStepTheme_guidedActionsBackgroundDark
-           @see #LeanbackGuidedStepTheme_guidedActionsContainerStyle
-           @see #LeanbackGuidedStepTheme_guidedActionsElevation
-           @see #LeanbackGuidedStepTheme_guidedActionsEntryAnimation
-           @see #LeanbackGuidedStepTheme_guidedActionsListStyle
-           @see #LeanbackGuidedStepTheme_guidedActionsSelectorDrawable
-           @see #LeanbackGuidedStepTheme_guidedActionsSelectorHideAnimation
-           @see #LeanbackGuidedStepTheme_guidedActionsSelectorShowAnimation
-           @see #LeanbackGuidedStepTheme_guidedActionsSelectorStyle
-           @see #LeanbackGuidedStepTheme_guidedButtonActionsListStyle
-           @see #LeanbackGuidedStepTheme_guidedButtonActionsWidthWeight
-           @see #LeanbackGuidedStepTheme_guidedStepBackground
-           @see #LeanbackGuidedStepTheme_guidedStepEntryAnimation
-           @see #LeanbackGuidedStepTheme_guidedStepExitAnimation
-           @see #LeanbackGuidedStepTheme_guidedStepHeightWeight
-           @see #LeanbackGuidedStepTheme_guidedStepImeAppearingAnimation
-           @see #LeanbackGuidedStepTheme_guidedStepImeDisappearingAnimation
-           @see #LeanbackGuidedStepTheme_guidedStepKeyline
-           @see #LeanbackGuidedStepTheme_guidedStepReentryAnimation
-           @see #LeanbackGuidedStepTheme_guidedStepReturnAnimation
-           @see #LeanbackGuidedStepTheme_guidedStepTheme
-           @see #LeanbackGuidedStepTheme_guidedStepThemeFlag
-           @see #LeanbackGuidedStepTheme_guidedSubActionsListStyle
-         */
-        public static final int[] LeanbackGuidedStepTheme = {
-            0x7f010153, 0x7f010154, 0x7f010155, 0x7f010156,
-            0x7f010157, 0x7f010158, 0x7f010159, 0x7f01015a,
-            0x7f01015b, 0x7f01015c, 0x7f01015d, 0x7f01015e,
-            0x7f01015f, 0x7f010160, 0x7f010161, 0x7f010162,
-            0x7f010163, 0x7f010164, 0x7f010165, 0x7f010166,
-            0x7f010167, 0x7f010168, 0x7f010169, 0x7f01016a,
-            0x7f01016b, 0x7f01016c, 0x7f01016d, 0x7f01016e,
-            0x7f01016f, 0x7f010170, 0x7f010171, 0x7f010172,
-            0x7f010173, 0x7f010174, 0x7f010175, 0x7f010176,
-            0x7f010177, 0x7f010178, 0x7f010179, 0x7f01017a,
-            0x7f01017b, 0x7f01017c, 0x7f01017d, 0x7f01017e,
-            0x7f01017f, 0x7f010180, 0x7f010181, 0x7f010182,
-            0x7f010183, 0x7f010184, 0x7f010185
-        };
-        /**
-          <p>
-          @attr description
-           Theme attribute for the style of the breadcrumb in a GuidanceStylist. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_GuidanceBreadcrumbStyle}. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidanceBreadcrumbStyle
-        */
-        public static int LeanbackGuidedStepTheme_guidanceBreadcrumbStyle = 10;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the style of the main container in a GuidanceStylist. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_GuidanceContainerStyle}.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidanceContainerStyle
-        */
-        public static int LeanbackGuidedStepTheme_guidanceContainerStyle = 7;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the style of the description in a GuidanceStylist. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_GuidanceDescriptionStyle}. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidanceDescriptionStyle
-        */
-        public static int LeanbackGuidedStepTheme_guidanceDescriptionStyle = 9;
-        /**
-          <p>
-          @attr description
-           Deprecated theme attribute, do not use 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidanceEntryAnimation
-        */
-        public static int LeanbackGuidedStepTheme_guidanceEntryAnimation = 43;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the style of the icon in a GuidanceStylist. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_GuidanceIconStyle}. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidanceIconStyle
-        */
-        public static int LeanbackGuidedStepTheme_guidanceIconStyle = 11;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the style of the title in a GuidanceStylist. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_GuidanceTitleStyle}. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidanceTitleStyle
-        */
-        public static int LeanbackGuidedStepTheme_guidanceTitleStyle = 8;
-        /**
-          <p>
-          @attr description
-           Deprecated theme attribute, do not use 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionCheckedAnimation
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionCheckedAnimation = 47;
-        /**
-          <p>
-          @attr description
-           Deprecated theme attribute, do not use 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionContentWidth
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionContentWidth = 49;
-        /**
-          <p>
-          @attr description
-           Deprecated theme attribute, do not use 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionContentWidthNoIcon
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionContentWidthNoIcon = 50;
-        /**
-          <p>
-          @attr description
-           Theme attribute used for the width weight of actions in comparison to guidance area.  Default is {@link
-         androidx.leanbackback.R.string#lb_guidedactions_width_weight}. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionContentWidthWeight
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionContentWidthWeight = 30;
-        /**
-          <p>
-          @attr description
-           Theme attribute used for the width weight of actions and button actions in comparison to guidance area.  Default is {@link
-         androidx.leanbackback.R.string#lb_guidedactions_width_weight_two_panels}. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionContentWidthWeightTwoPanels
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionContentWidthWeightTwoPanels = 31;
-        /**
-          <p>
-          @attr description
-           Theme attribute used in a GuidedActionsPresenter for the max lines of the title text
-             view when the action's isMultilineDescription is set to false. Default is {@link
-         androidx.leanbackback.R.integer#lb_guidedactions_item_description_min_lines}. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionDescriptionMinLines
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionDescriptionMinLines = 35;
-        /**
-          <p>
-          @attr description
-           Theme attribute used in a GuidedActionsPresenter for the alpha value of the chevron
-             decoration when its action is disabled. Default is {@link
-         androidx.leanbackback.R.string#lb_guidedactions_item_disabled_chevron_alpha}. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionDisabledChevronAlpha
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionDisabledChevronAlpha = 29;
-        /**
-          <p>
-          @attr description
-           Theme attribute used in a GuidedActionsPresenter for the alpha value of the chevron
-             decoration when its action is enabled. Default is {@link
-         androidx.leanbackback.R.dimen#lb_guidedactions_item_enabled_chevron_alpha}. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionEnabledChevronAlpha
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionEnabledChevronAlpha = 28;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the style of an action's checkmark in a GuidedActionsPresenter.
-             Default is {@link
-         androidx.leanbackback.R.style#Widget_Leanback_GuidedActionItemCheckmarkStyle}. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionItemCheckmarkStyle
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionItemCheckmarkStyle = 20;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the style of an action's chevron decoration in a
-             GuidedActionsPresenter. Default is {@link
-         androidx.leanbackback.R.style#Widget_Leanback_GuidedActionItemChevronStyle}. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionItemChevronStyle
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionItemChevronStyle = 25;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the style of the container of a single action in a
-             GuidedActionsPresenter. Default is {@link
-         androidx.leanbackback.R.style#Widget_Leanback_GuidedActionItemContainerStyle}. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionItemContainerStyle
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionItemContainerStyle = 19;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the style of an action's content in a GuidedActionsPresenter.
-             Default is {@link
-         androidx.leanbackback.R.style#Widget_Leanback_GuidedActionItemContentStyle}. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionItemContentStyle
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionItemContentStyle = 22;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the style of an action's description in a GuidedActionsPresenter.
-             Default is {@link
-         androidx.leanbackback.R.style#Widget_Leanback_GuidedActionItemDescriptionStyle}. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionItemDescriptionStyle
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionItemDescriptionStyle = 24;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the style of an action's icon in a GuidedActionsPresenter. Default
-             is {@link
-         androidx.leanbackback.R.style#Widget_Leanback_GuidedActionItemIconStyle}. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionItemIconStyle
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionItemIconStyle = 21;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the style of an action's title in a GuidedActionsPresenter. Default
-             is {@link
-         androidx.leanbackback.R.style#Widget_Leanback_GuidedActionItemTitleStyle}. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionItemTitleStyle
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionItemTitleStyle = 23;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the animation used in a GuidedActionsPresenter when an action
-             is pressed. Default is {@link
-         androidx.leanbackback.R.animator#lb_guidedactions_item_pressed}. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionPressedAnimation
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionPressedAnimation = 26;
-        /**
-          <p>
-          @attr description
-           Theme attribute used in a GuidedActionsPresenter for the max lines of the title text
-             view when the action's isMultilineDescription is set to true. Default is {@link
-         androidx.leanbackback.R.integer#lb_guidedactions_item_title_max_lines}. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionTitleMaxLines
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionTitleMaxLines = 34;
-        /**
-          <p>
-          @attr description
-           Theme attribute used in a GuidedActionsPresenter for the max lines of the title text
-             view when the action's isMultilineDescription is set to false. Default is {@link
-         androidx.leanbackback.R.integer#lb_guidedactions_item_title_min_lines}. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionTitleMinLines
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionTitleMinLines = 33;
-        /**
-          <p>
-          @attr description
-           Deprecated theme attribute, do not use 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionUncheckedAnimation
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionUncheckedAnimation = 48;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the animation used in a GuidedActionsPresenter when an action
-             is unpressed. Default is {@link
-         androidx.leanbackback.R.animator#lb_guidedactions_item_unpressed}. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionUnpressedAnimation
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionUnpressedAnimation = 27;
-        /**
-          <p>
-          @attr description
-           Theme attribute used in a GuidedActionsPresenter for the vertical padding between
-             action views in the list. Default is {@link
-         androidx.leanbackback.R.dimen#lb_guidedactions_vertical_padding}. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionVerticalPadding
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionVerticalPadding = 36;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the background of GuidedActions. Default is
-             {@landroidx.leanbackback.R.color#lb_guidedactions_background}.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionsBackground
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionsBackground = 14;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the dark version background of GuidedActions. Default is
-             {@landroidx.leanbackback.R.color#lb_guidedactions_background_dark}.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionsBackgroundDark
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionsBackgroundDark = 15;
-        /**
-          <p>
-          @attr description
-           Deprecated theme attribute, do not use 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionsContainerStyle
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionsContainerStyle = 37;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the shadow elevation of GuidedActions. Default is
-             {@landroidx.leanbackback.R.dimen#lb_guidedactions_elevation}.
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionsElevation
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionsElevation = 13;
-        /**
-          <p>
-          @attr description
-           Deprecated theme attribute, do not use 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionsEntryAnimation
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionsEntryAnimation = 44;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the style of the list in a GuidedActionsPresenter. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_GuidedActionsListStyle}.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionsListStyle
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionsListStyle = 16;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the style of the item selector in a GuidedActionsPresenter. Default is
-             ?android:attr/selectableItemBackground. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionsSelectorDrawable
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionsSelectorDrawable = 12;
-        /**
-          <p>
-          @attr description
-           Deprecated theme attribute, do not use 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionsSelectorHideAnimation
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionsSelectorHideAnimation = 46;
-        /**
-          <p>
-          @attr description
-           Deprecated theme attribute, do not use 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionsSelectorShowAnimation
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionsSelectorShowAnimation = 45;
-        /**
-          <p>
-          @attr description
-           Deprecated theme attribute, do not use 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedActionsSelectorStyle
-        */
-        public static int LeanbackGuidedStepTheme_guidedActionsSelectorStyle = 38;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the style of the list in a GuidedActionsPresenter. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_GuidedButtonActionsListStyle}.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedButtonActionsListStyle
-        */
-        public static int LeanbackGuidedStepTheme_guidedButtonActionsListStyle = 18;
-        /**
-          <p>
-          @attr description
-           Theme attribute used for the width weight of button actions in compare to actions 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedButtonActionsWidthWeight
-        */
-        public static int LeanbackGuidedStepTheme_guidedButtonActionsWidthWeight = 32;
-        /**
-          <p>
-          @attr description
-           Theme attribute of background drawable used by GuidedStepFragment. 
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedStepBackground
-        */
-        public static int LeanbackGuidedStepTheme_guidedStepBackground = 4;
-        /**
-          <p>
-          @attr description
-           Deprecated theme attribute, do not use 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedStepEntryAnimation
-        */
-        public static int LeanbackGuidedStepTheme_guidedStepEntryAnimation = 39;
-        /**
-          <p>
-          @attr description
-           Deprecated theme attribute, do not use 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedStepExitAnimation
-        */
-        public static int LeanbackGuidedStepTheme_guidedStepExitAnimation = 40;
-        /**
-          <p>
-          @attr description
-           Used to control the height of the fragment. By default this fragment will take
-             up the full height of it's parent. The height of this fragment is governed by
-             this property. Default weight is set to 2.0, so inorder to render the fragment
-             in half screen mode, this attribute should be set to 1.0 
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedStepHeightWeight
-        */
-        public static int LeanbackGuidedStepTheme_guidedStepHeightWeight = 1;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the animation used when a guided step element is animated in
-             response to the IME appearing. Default is {@link
-         androidx.leanbackback.R.animator#lb_guidedstep_slide_up}. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedStepImeAppearingAnimation
-        */
-        public static int LeanbackGuidedStepTheme_guidedStepImeAppearingAnimation = 5;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the animation used when a guided step element is animated in
-             response to the IME disappearing. Default is {@link
-         androidx.leanbackback.R.animator#lb_guidedstep_slide_down}. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedStepImeDisappearingAnimation
-        */
-        public static int LeanbackGuidedStepTheme_guidedStepImeDisappearingAnimation = 6;
-        /**
-          <p>
-          @attr description
-           Y offset to the bottom of the TitleView(font baseline) used to align the
-             first action text on the right. 
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedStepKeyline
-        */
-        public static int LeanbackGuidedStepTheme_guidedStepKeyline = 2;
-        /**
-          <p>
-          @attr description
-           Deprecated theme attribute, do not use 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedStepReentryAnimation
-        */
-        public static int LeanbackGuidedStepTheme_guidedStepReentryAnimation = 41;
-        /**
-          <p>
-          @attr description
-           Deprecated theme attribute, do not use 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedStepReturnAnimation
-        */
-        public static int LeanbackGuidedStepTheme_guidedStepReturnAnimation = 42;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the overall theme used in a GuidedStepFragment. The Leanback themes
-             set the default for this, but a custom theme that does not derive from a leanback theme
-             can set this to <code>@style/Theme.Leanback.GuidedStep</code> in order to specify the
-             default GuidedStepFragment styles. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedStepTheme
-        */
-        public static int LeanbackGuidedStepTheme_guidedStepTheme = 0;
-        /**
-          <p>
-          @attr description
-           @hide
-             Theme attribute used to inspect theme inheritance. 
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedStepThemeFlag
-        */
-        public static int LeanbackGuidedStepTheme_guidedStepThemeFlag = 3;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the style of the sub actions list in a GuidedActionsPresenter. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_GuidedSubActionsListStyle}.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:guidedSubActionsListStyle
-        */
-        public static int LeanbackGuidedStepTheme_guidedSubActionsListStyle = 17;
-        /** Attributes that can be used with a LeanbackOnboardingTheme.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #LeanbackOnboardingTheme_onboardingDescriptionStyle android.arch.lifecycle:onboardingDescriptionStyle}</code></td><td> Theme attribute for the style of the description text in onboarding screen.</td></tr>
-           <tr><td><code>{@link #LeanbackOnboardingTheme_onboardingHeaderStyle android.arch.lifecycle:onboardingHeaderStyle}</code></td><td> Theme attribute for the style of the header in onboarding screen.</td></tr>
-           <tr><td><code>{@link #LeanbackOnboardingTheme_onboardingLogoStyle android.arch.lifecycle:onboardingLogoStyle}</code></td><td> Theme attribute for the style of the logo in onboarding screen.</td></tr>
-           <tr><td><code>{@link #LeanbackOnboardingTheme_onboardingMainIconStyle android.arch.lifecycle:onboardingMainIconStyle}</code></td><td> Theme attribute for the style of the main icon in onboarding fragment.</td></tr>
-           <tr><td><code>{@link #LeanbackOnboardingTheme_onboardingNavigatorContainerStyle android.arch.lifecycle:onboardingNavigatorContainerStyle}</code></td><td> Theme attribute for the style of the navigator container in onboarding screen.</td></tr>
-           <tr><td><code>{@link #LeanbackOnboardingTheme_onboardingPageIndicatorStyle android.arch.lifecycle:onboardingPageIndicatorStyle}</code></td><td> Theme attribute for the style of the page indicator in onboarding screen.</td></tr>
-           <tr><td><code>{@link #LeanbackOnboardingTheme_onboardingStartButtonStyle android.arch.lifecycle:onboardingStartButtonStyle}</code></td><td> Theme attribute for the style of the start button in onboarding screen.</td></tr>
-           <tr><td><code>{@link #LeanbackOnboardingTheme_onboardingTheme android.arch.lifecycle:onboardingTheme}</code></td><td> Theme attribute for the overall theme used in the onboarding.</td></tr>
-           <tr><td><code>{@link #LeanbackOnboardingTheme_onboardingTitleStyle android.arch.lifecycle:onboardingTitleStyle}</code></td><td> Theme attribute for the style of the title text in onboarding screen.</td></tr>
-           </table>
-           @see #LeanbackOnboardingTheme_onboardingDescriptionStyle
-           @see #LeanbackOnboardingTheme_onboardingHeaderStyle
-           @see #LeanbackOnboardingTheme_onboardingLogoStyle
-           @see #LeanbackOnboardingTheme_onboardingMainIconStyle
-           @see #LeanbackOnboardingTheme_onboardingNavigatorContainerStyle
-           @see #LeanbackOnboardingTheme_onboardingPageIndicatorStyle
-           @see #LeanbackOnboardingTheme_onboardingStartButtonStyle
-           @see #LeanbackOnboardingTheme_onboardingTheme
-           @see #LeanbackOnboardingTheme_onboardingTitleStyle
-         */
-        public static final int[] LeanbackOnboardingTheme = {
-            0x7f010186, 0x7f010187, 0x7f010188, 0x7f010189,
-            0x7f01018a, 0x7f01018b, 0x7f01018c, 0x7f01018d,
-            0x7f01018e
-        };
-        /**
-          <p>
-          @attr description
-           Theme attribute for the style of the description text in onboarding screen. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_OnboardingDescriptionStyle}.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:onboardingDescriptionStyle
-        */
-        public static int LeanbackOnboardingTheme_onboardingDescriptionStyle = 3;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the style of the header in onboarding screen. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_OnboardingHeaderStyle}.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:onboardingHeaderStyle
-        */
-        public static int LeanbackOnboardingTheme_onboardingHeaderStyle = 1;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the style of the logo in onboarding screen. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_OnboardingLogoStyle}.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:onboardingLogoStyle
-        */
-        public static int LeanbackOnboardingTheme_onboardingLogoStyle = 7;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the style of the main icon in onboarding fragment. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_OnboardingMainIconStyle}.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:onboardingMainIconStyle
-        */
-        public static int LeanbackOnboardingTheme_onboardingMainIconStyle = 8;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the style of the navigator container in onboarding screen. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_OnboardingNavigatorContainerStyle}.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:onboardingNavigatorContainerStyle
-        */
-        public static int LeanbackOnboardingTheme_onboardingNavigatorContainerStyle = 4;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the style of the page indicator in onboarding screen. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_OnboardingPageIndicatorStyle}.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:onboardingPageIndicatorStyle
-        */
-        public static int LeanbackOnboardingTheme_onboardingPageIndicatorStyle = 5;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the style of the start button in onboarding screen. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_OnboardingStartButtonStyle}.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:onboardingStartButtonStyle
-        */
-        public static int LeanbackOnboardingTheme_onboardingStartButtonStyle = 6;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the overall theme used in the onboarding. The Leanback themes set
-             the default for this, but a custom theme that does not derive from a leanback theme can
-             set this to <code>@style/Theme.Leanback.Onboarding</code> in order to specify the
-             default OnboardingFragment styles. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:onboardingTheme
-        */
-        public static int LeanbackOnboardingTheme_onboardingTheme = 0;
-        /**
-          <p>
-          @attr description
-           Theme attribute for the style of the title text in onboarding screen. Default is
-             {@landroidx.leanbackback.R.style#Widget_Leanback_OnboardingTitleStyle}.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:onboardingTitleStyle
-        */
-        public static int LeanbackOnboardingTheme_onboardingTitleStyle = 2;
-        /** Attributes that can be used with a LeanbackTheme.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #LeanbackTheme_baseCardViewStyle android.arch.lifecycle:baseCardViewStyle}</code></td><td> CardView styles </td></tr>
-           <tr><td><code>{@link #LeanbackTheme_browsePaddingBottom android.arch.lifecycle:browsePaddingBottom}</code></td><td> bottom padding of BrowseFragment </td></tr>
-           <tr><td><code>{@link #LeanbackTheme_browsePaddingEnd android.arch.lifecycle:browsePaddingEnd}</code></td><td> end padding of BrowseFragment, RowsFragment, DetailsFragment </td></tr>
-           <tr><td><code>{@link #LeanbackTheme_browsePaddingStart android.arch.lifecycle:browsePaddingStart}</code></td><td> start padding of BrowseFragment, RowsFragment, DetailsFragment </td></tr>
-           <tr><td><code>{@link #LeanbackTheme_browsePaddingTop android.arch.lifecycle:browsePaddingTop}</code></td><td> top padding of BrowseFragment </td></tr>
-           <tr><td><code>{@link #LeanbackTheme_browseRowsFadingEdgeLength android.arch.lifecycle:browseRowsFadingEdgeLength}</code></td><td> fading edge length of start of browse row when HeadersFragment is visible </td></tr>
-           <tr><td><code>{@link #LeanbackTheme_browseRowsMarginStart android.arch.lifecycle:browseRowsMarginStart}</code></td><td> start margin of RowsFragment inside BrowseFragment when HeadersFragment is visible </td></tr>
-           <tr><td><code>{@link #LeanbackTheme_browseRowsMarginTop android.arch.lifecycle:browseRowsMarginTop}</code></td><td> top margin of RowsFragment inside BrowseFragment when BrowseFragment title is visible </td></tr>
-           <tr><td><code>{@link #LeanbackTheme_browseTitleIconStyle android.arch.lifecycle:browseTitleIconStyle}</code></td><td> fragment title icon style </td></tr>
-           <tr><td><code>{@link #LeanbackTheme_browseTitleTextStyle android.arch.lifecycle:browseTitleTextStyle}</code></td><td> fragment title text style </td></tr>
-           <tr><td><code>{@link #LeanbackTheme_browseTitleViewLayout android.arch.lifecycle:browseTitleViewLayout}</code></td><td> customize title view layout file, it must have title view with id browse_title_group </td></tr>
-           <tr><td><code>{@link #LeanbackTheme_browseTitleViewStyle android.arch.lifecycle:browseTitleViewStyle}</code></td><td> fragment title view style </td></tr>
-           <tr><td><code>{@link #LeanbackTheme_defaultBrandColor android.arch.lifecycle:defaultBrandColor}</code></td><td> Default brand color used for the background of certain leanback visual elements
-             such as the headers fragment.</td></tr>
-           <tr><td><code>{@link #LeanbackTheme_defaultBrandColorDark android.arch.lifecycle:defaultBrandColorDark}</code></td><td> Default dark brand color used for the background of certain leanback visual elements
-             such as the actions background.</td></tr>
-           <tr><td><code>{@link #LeanbackTheme_defaultSearchBrightColor android.arch.lifecycle:defaultSearchBrightColor}</code></td><td> Default color that search orb pulses to.</td></tr>
-           <tr><td><code>{@link #LeanbackTheme_defaultSearchColor android.arch.lifecycle:defaultSearchColor}</code></td><td> Default background color for Search Icon </td></tr>
-           <tr><td><code>{@link #LeanbackTheme_defaultSearchIcon android.arch.lifecycle:defaultSearchIcon}</code></td><td></td></tr>
-           <tr><td><code>{@link #LeanbackTheme_defaultSearchIconColor android.arch.lifecycle:defaultSearchIconColor}</code></td><td> Default icon color for Search Icon </td></tr>
-           <tr><td><code>{@link #LeanbackTheme_defaultSectionHeaderColor android.arch.lifecycle:defaultSectionHeaderColor}</code></td><td> Default color for SectionHeader, by default same as defaultSearchColor </td></tr>
-           <tr><td><code>{@link #LeanbackTheme_detailsActionButtonStyle android.arch.lifecycle:detailsActionButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #LeanbackTheme_detailsDescriptionBodyStyle android.arch.lifecycle:detailsDescriptionBodyStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #LeanbackTheme_detailsDescriptionSubtitleStyle android.arch.lifecycle:detailsDescriptionSubtitleStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #LeanbackTheme_detailsDescriptionTitleStyle android.arch.lifecycle:detailsDescriptionTitleStyle}</code></td><td> for details overviews </td></tr>
-           <tr><td><code>{@link #LeanbackTheme_errorMessageStyle android.arch.lifecycle:errorMessageStyle}</code></td><td> for messages in the error fragment </td></tr>
-           <tr><td><code>{@link #LeanbackTheme_headerStyle android.arch.lifecycle:headerStyle}</code></td><td> header style inside HeadersFragment </td></tr>
-           <tr><td><code>{@link #LeanbackTheme_headersVerticalGridStyle android.arch.lifecycle:headersVerticalGridStyle}</code></td><td> vertical grid style inside HeadersFragment </td></tr>
-           <tr><td><code>{@link #LeanbackTheme_imageCardViewBadgeStyle android.arch.lifecycle:imageCardViewBadgeStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #LeanbackTheme_imageCardViewContentStyle android.arch.lifecycle:imageCardViewContentStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #LeanbackTheme_imageCardViewImageStyle android.arch.lifecycle:imageCardViewImageStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #LeanbackTheme_imageCardViewInfoAreaStyle android.arch.lifecycle:imageCardViewInfoAreaStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #LeanbackTheme_imageCardViewStyle android.arch.lifecycle:imageCardViewStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #LeanbackTheme_imageCardViewTitleStyle android.arch.lifecycle:imageCardViewTitleStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #LeanbackTheme_itemsVerticalGridStyle android.arch.lifecycle:itemsVerticalGridStyle}</code></td><td> style for a vertical grid of items </td></tr>
-           <tr><td><code>{@link #LeanbackTheme_overlayDimActiveLevel android.arch.lifecycle:overlayDimActiveLevel}</code></td><td> Default level of dimming for active views.</td></tr>
-           <tr><td><code>{@link #LeanbackTheme_overlayDimDimmedLevel android.arch.lifecycle:overlayDimDimmedLevel}</code></td><td> Default level of dimming for dimmed views.</td></tr>
-           <tr><td><code>{@link #LeanbackTheme_overlayDimMaskColor android.arch.lifecycle:overlayDimMaskColor}</code></td><td> Default color for dimmed views.</td></tr>
-           <tr><td><code>{@link #LeanbackTheme_playbackControlButtonLabelStyle android.arch.lifecycle:playbackControlButtonLabelStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #LeanbackTheme_playbackControlsActionIcons android.arch.lifecycle:playbackControlsActionIcons}</code></td><td></td></tr>
-           <tr><td><code>{@link #LeanbackTheme_playbackControlsAutoHideTickleTimeout android.arch.lifecycle:playbackControlsAutoHideTickleTimeout}</code></td><td> Milliseconds to auto hide playback controls after user interacts with playback controls (i.</td></tr>
-           <tr><td><code>{@link #LeanbackTheme_playbackControlsAutoHideTimeout android.arch.lifecycle:playbackControlsAutoHideTimeout}</code></td><td> Milliseconds to auto hide playback controls when media start playing.</td></tr>
-           <tr><td><code>{@link #LeanbackTheme_playbackControlsButtonStyle android.arch.lifecycle:playbackControlsButtonStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #LeanbackTheme_playbackControlsIconHighlightColor android.arch.lifecycle:playbackControlsIconHighlightColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #LeanbackTheme_playbackControlsTimeStyle android.arch.lifecycle:playbackControlsTimeStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #LeanbackTheme_playbackMediaItemDetailsStyle android.arch.lifecycle:playbackMediaItemDetailsStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #LeanbackTheme_playbackMediaItemDurationStyle android.arch.lifecycle:playbackMediaItemDurationStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #LeanbackTheme_playbackMediaItemNameStyle android.arch.lifecycle:playbackMediaItemNameStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #LeanbackTheme_playbackMediaItemNumberStyle android.arch.lifecycle:playbackMediaItemNumberStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #LeanbackTheme_playbackMediaItemNumberViewFlipperLayout android.arch.lifecycle:playbackMediaItemNumberViewFlipperLayout}</code></td><td></td></tr>
-           <tr><td><code>{@link #LeanbackTheme_playbackMediaItemNumberViewFlipperStyle android.arch.lifecycle:playbackMediaItemNumberViewFlipperStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #LeanbackTheme_playbackMediaItemPaddingStart android.arch.lifecycle:playbackMediaItemPaddingStart}</code></td><td></td></tr>
-           <tr><td><code>{@link #LeanbackTheme_playbackMediaItemRowStyle android.arch.lifecycle:playbackMediaItemRowStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #LeanbackTheme_playbackMediaItemSeparatorStyle android.arch.lifecycle:playbackMediaItemSeparatorStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #LeanbackTheme_playbackMediaListHeaderStyle android.arch.lifecycle:playbackMediaListHeaderStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #LeanbackTheme_playbackMediaListHeaderTitleStyle android.arch.lifecycle:playbackMediaListHeaderTitleStyle}</code></td><td></td></tr>
-           <tr><td><code>{@link #LeanbackTheme_playbackPaddingEnd android.arch.lifecycle:playbackPaddingEnd}</code></td><td></td></tr>
-           <tr><td><code>{@link #LeanbackTheme_playbackPaddingStart android.arch.lifecycle:playbackPaddingStart}</code></td><td> for playlist and playback controls styling </td></tr>
-           <tr><td><code>{@link #LeanbackTheme_playbackProgressPrimaryColor android.arch.lifecycle:playbackProgressPrimaryColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #LeanbackTheme_playbackProgressSecondaryColor android.arch.lifecycle:playbackProgressSecondaryColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #LeanbackTheme_rowHeaderDescriptionStyle android.arch.lifecycle:rowHeaderDescriptionStyle}</code></td><td> header description style inside a row </td></tr>
-           <tr><td><code>{@link #LeanbackTheme_rowHeaderDockStyle android.arch.lifecycle:rowHeaderDockStyle}</code></td><td> style for the layout that hosting Header inside a row </td></tr>
-           <tr><td><code>{@link #LeanbackTheme_rowHeaderStyle android.arch.lifecycle:rowHeaderStyle}</code></td><td> header style inside a row </td></tr>
-           <tr><td><code>{@link #LeanbackTheme_rowHorizontalGridStyle android.arch.lifecycle:rowHorizontalGridStyle}</code></td><td> horizontal grid style inside a row </td></tr>
-           <tr><td><code>{@link #LeanbackTheme_rowHoverCardDescriptionStyle android.arch.lifecycle:rowHoverCardDescriptionStyle}</code></td><td> hover card description style </td></tr>
-           <tr><td><code>{@link #LeanbackTheme_rowHoverCardTitleStyle android.arch.lifecycle:rowHoverCardTitleStyle}</code></td><td> hover card title style </td></tr>
-           <tr><td><code>{@link #LeanbackTheme_rowsVerticalGridStyle android.arch.lifecycle:rowsVerticalGridStyle}</code></td><td> vertical grid style inside RowsFragment </td></tr>
-           <tr><td><code>{@link #LeanbackTheme_searchOrbViewStyle android.arch.lifecycle:searchOrbViewStyle}</code></td><td> Style for searchOrb </td></tr>
-           <tr><td><code>{@link #LeanbackTheme_sectionHeaderStyle android.arch.lifecycle:sectionHeaderStyle}</code></td><td> Non selectable header style inside HeadersFragment </td></tr>
-           </table>
-           @see #LeanbackTheme_baseCardViewStyle
-           @see #LeanbackTheme_browsePaddingBottom
-           @see #LeanbackTheme_browsePaddingEnd
-           @see #LeanbackTheme_browsePaddingStart
-           @see #LeanbackTheme_browsePaddingTop
-           @see #LeanbackTheme_browseRowsFadingEdgeLength
-           @see #LeanbackTheme_browseRowsMarginStart
-           @see #LeanbackTheme_browseRowsMarginTop
-           @see #LeanbackTheme_browseTitleIconStyle
-           @see #LeanbackTheme_browseTitleTextStyle
-           @see #LeanbackTheme_browseTitleViewLayout
-           @see #LeanbackTheme_browseTitleViewStyle
-           @see #LeanbackTheme_defaultBrandColor
-           @see #LeanbackTheme_defaultBrandColorDark
-           @see #LeanbackTheme_defaultSearchBrightColor
-           @see #LeanbackTheme_defaultSearchColor
-           @see #LeanbackTheme_defaultSearchIcon
-           @see #LeanbackTheme_defaultSearchIconColor
-           @see #LeanbackTheme_defaultSectionHeaderColor
-           @see #LeanbackTheme_detailsActionButtonStyle
-           @see #LeanbackTheme_detailsDescriptionBodyStyle
-           @see #LeanbackTheme_detailsDescriptionSubtitleStyle
-           @see #LeanbackTheme_detailsDescriptionTitleStyle
-           @see #LeanbackTheme_errorMessageStyle
-           @see #LeanbackTheme_headerStyle
-           @see #LeanbackTheme_headersVerticalGridStyle
-           @see #LeanbackTheme_imageCardViewBadgeStyle
-           @see #LeanbackTheme_imageCardViewContentStyle
-           @see #LeanbackTheme_imageCardViewImageStyle
-           @see #LeanbackTheme_imageCardViewInfoAreaStyle
-           @see #LeanbackTheme_imageCardViewStyle
-           @see #LeanbackTheme_imageCardViewTitleStyle
-           @see #LeanbackTheme_itemsVerticalGridStyle
-           @see #LeanbackTheme_overlayDimActiveLevel
-           @see #LeanbackTheme_overlayDimDimmedLevel
-           @see #LeanbackTheme_overlayDimMaskColor
-           @see #LeanbackTheme_playbackControlButtonLabelStyle
-           @see #LeanbackTheme_playbackControlsActionIcons
-           @see #LeanbackTheme_playbackControlsAutoHideTickleTimeout
-           @see #LeanbackTheme_playbackControlsAutoHideTimeout
-           @see #LeanbackTheme_playbackControlsButtonStyle
-           @see #LeanbackTheme_playbackControlsIconHighlightColor
-           @see #LeanbackTheme_playbackControlsTimeStyle
-           @see #LeanbackTheme_playbackMediaItemDetailsStyle
-           @see #LeanbackTheme_playbackMediaItemDurationStyle
-           @see #LeanbackTheme_playbackMediaItemNameStyle
-           @see #LeanbackTheme_playbackMediaItemNumberStyle
-           @see #LeanbackTheme_playbackMediaItemNumberViewFlipperLayout
-           @see #LeanbackTheme_playbackMediaItemNumberViewFlipperStyle
-           @see #LeanbackTheme_playbackMediaItemPaddingStart
-           @see #LeanbackTheme_playbackMediaItemRowStyle
-           @see #LeanbackTheme_playbackMediaItemSeparatorStyle
-           @see #LeanbackTheme_playbackMediaListHeaderStyle
-           @see #LeanbackTheme_playbackMediaListHeaderTitleStyle
-           @see #LeanbackTheme_playbackPaddingEnd
-           @see #LeanbackTheme_playbackPaddingStart
-           @see #LeanbackTheme_playbackProgressPrimaryColor
-           @see #LeanbackTheme_playbackProgressSecondaryColor
-           @see #LeanbackTheme_rowHeaderDescriptionStyle
-           @see #LeanbackTheme_rowHeaderDockStyle
-           @see #LeanbackTheme_rowHeaderStyle
-           @see #LeanbackTheme_rowHorizontalGridStyle
-           @see #LeanbackTheme_rowHoverCardDescriptionStyle
-           @see #LeanbackTheme_rowHoverCardTitleStyle
-           @see #LeanbackTheme_rowsVerticalGridStyle
-           @see #LeanbackTheme_searchOrbViewStyle
-           @see #LeanbackTheme_sectionHeaderStyle
-         */
-        public static final int[] LeanbackTheme = {
-            0x7f01018f, 0x7f010190, 0x7f010191, 0x7f010192,
-            0x7f010193, 0x7f010194, 0x7f010195, 0x7f010196,
-            0x7f010197, 0x7f010198, 0x7f010199, 0x7f01019a,
-            0x7f01019b, 0x7f01019c, 0x7f01019d, 0x7f01019e,
-            0x7f01019f, 0x7f0101a0, 0x7f0101a1, 0x7f0101a2,
-            0x7f0101a3, 0x7f0101a4, 0x7f0101a5, 0x7f0101a6,
-            0x7f0101a7, 0x7f0101a8, 0x7f0101a9, 0x7f0101aa,
-            0x7f0101ab, 0x7f0101ac, 0x7f0101ad, 0x7f0101ae,
-            0x7f0101af, 0x7f0101b0, 0x7f0101b1, 0x7f0101b2,
-            0x7f0101b3, 0x7f0101b4, 0x7f0101b5, 0x7f0101b6,
-            0x7f0101b7, 0x7f0101b8, 0x7f0101b9, 0x7f0101ba,
-            0x7f0101bb, 0x7f0101bc, 0x7f0101bd, 0x7f0101be,
-            0x7f0101bf, 0x7f0101c0, 0x7f0101c1, 0x7f0101c2,
-            0x7f0101c3, 0x7f0101c4, 0x7f0101c5, 0x7f0101c6,
-            0x7f0101c7, 0x7f0101c8, 0x7f0101c9, 0x7f0101ca,
-            0x7f0101cb, 0x7f0101cc, 0x7f0101cd, 0x7f0101ce,
-            0x7f0101cf, 0x7f0101d0, 0x7f0101d1
-        };
-        /**
-          <p>
-          @attr description
-           CardView styles 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:baseCardViewStyle
-        */
-        public static int LeanbackTheme_baseCardViewStyle = 21;
-        /**
-          <p>
-          @attr description
-           bottom padding of BrowseFragment 
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:browsePaddingBottom
-        */
-        public static int LeanbackTheme_browsePaddingBottom = 3;
-        /**
-          <p>
-          @attr description
-           end padding of BrowseFragment, RowsFragment, DetailsFragment 
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:browsePaddingEnd
-        */
-        public static int LeanbackTheme_browsePaddingEnd = 1;
-        /**
-          <p>
-          @attr description
-           start padding of BrowseFragment, RowsFragment, DetailsFragment 
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:browsePaddingStart
-        */
-        public static int LeanbackTheme_browsePaddingStart = 0;
-        /**
-          <p>
-          @attr description
-           top padding of BrowseFragment 
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:browsePaddingTop
-        */
-        public static int LeanbackTheme_browsePaddingTop = 2;
-        /**
-          <p>
-          @attr description
-           fading edge length of start of browse row when HeadersFragment is visible 
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:browseRowsFadingEdgeLength
-        */
-        public static int LeanbackTheme_browseRowsFadingEdgeLength = 6;
-        /**
-          <p>
-          @attr description
-           start margin of RowsFragment inside BrowseFragment when HeadersFragment is visible 
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:browseRowsMarginStart
-        */
-        public static int LeanbackTheme_browseRowsMarginStart = 4;
-        /**
-          <p>
-          @attr description
-           top margin of RowsFragment inside BrowseFragment when BrowseFragment title is visible 
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:browseRowsMarginTop
-        */
-        public static int LeanbackTheme_browseRowsMarginTop = 5;
-        /**
-          <p>
-          @attr description
-           fragment title icon style 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:browseTitleIconStyle
-        */
-        public static int LeanbackTheme_browseTitleIconStyle = 8;
-        /**
-          <p>
-          @attr description
-           fragment title text style 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:browseTitleTextStyle
-        */
-        public static int LeanbackTheme_browseTitleTextStyle = 7;
-        /**
-          <p>
-          @attr description
-           customize title view layout file, it must have title view with id browse_title_group 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:browseTitleViewLayout
-        */
-        public static int LeanbackTheme_browseTitleViewLayout = 10;
-        /**
-          <p>
-          @attr description
-           fragment title view style 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:browseTitleViewStyle
-        */
-        public static int LeanbackTheme_browseTitleViewStyle = 9;
-        /**
-          <p>
-          @attr description
-           Default brand color used for the background of certain leanback visual elements
-             such as the headers fragment. If your app runs on:
-             a) SDK 21+: set colorPrimary, used by the leanback launcher and elsewhere, and defaultBrandColor will inherit it.
-             b) SDK < 21: set the brand color explicitly via defaultBrandColor, or programatically.
-         
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:defaultBrandColor
-        */
-        public static int LeanbackTheme_defaultBrandColor = 50;
-        /**
-          <p>
-          @attr description
-           Default dark brand color used for the background of certain leanback visual elements
-             such as the actions background. If your app runs on:
-             a) SDK 21+: set colorPrimaryDark, used by the leanback launcher and elsewhere, and defaultBrandColorDark will inherit it.
-             b) SDK < 21: set the brand color explicitly via defaultBrandColorDark, or programatically.
-         
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:defaultBrandColorDark
-        */
-        public static int LeanbackTheme_defaultBrandColorDark = 51;
-        /**
-          <p>
-          @attr description
-           Default color that search orb pulses to.  If not set, this color is determined programatically based on the defaultSearchColor 
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:defaultSearchBrightColor
-        */
-        public static int LeanbackTheme_defaultSearchBrightColor = 54;
-        /**
-          <p>
-          @attr description
-           Default background color for Search Icon 
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:defaultSearchColor
-        */
-        public static int LeanbackTheme_defaultSearchColor = 52;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#defaultSearchIcon}
-          attribute's value can be found in the {@link #LeanbackTheme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:defaultSearchIcon
-        */
-        public static int LeanbackTheme_defaultSearchIcon = 57;
-        /**
-          <p>
-          @attr description
-           Default icon color for Search Icon 
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:defaultSearchIconColor
-        */
-        public static int LeanbackTheme_defaultSearchIconColor = 53;
-        /**
-          <p>
-          @attr description
-           Default color for SectionHeader, by default same as defaultSearchColor 
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:defaultSectionHeaderColor
-        */
-        public static int LeanbackTheme_defaultSectionHeaderColor = 55;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#detailsActionButtonStyle}
-          attribute's value can be found in the {@link #LeanbackTheme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:detailsActionButtonStyle
-        */
-        public static int LeanbackTheme_detailsActionButtonStyle = 31;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#detailsDescriptionBodyStyle}
-          attribute's value can be found in the {@link #LeanbackTheme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:detailsDescriptionBodyStyle
-        */
-        public static int LeanbackTheme_detailsDescriptionBodyStyle = 30;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#detailsDescriptionSubtitleStyle}
-          attribute's value can be found in the {@link #LeanbackTheme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:detailsDescriptionSubtitleStyle
-        */
-        public static int LeanbackTheme_detailsDescriptionSubtitleStyle = 29;
-        /**
-          <p>
-          @attr description
-           for details overviews 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:detailsDescriptionTitleStyle
-        */
-        public static int LeanbackTheme_detailsDescriptionTitleStyle = 28;
-        /**
-          <p>
-          @attr description
-           for messages in the error fragment 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:errorMessageStyle
-        */
-        public static int LeanbackTheme_errorMessageStyle = 49;
-        /**
-          <p>
-          @attr description
-           header style inside HeadersFragment 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:headerStyle
-        */
-        public static int LeanbackTheme_headerStyle = 12;
-        /**
-          <p>
-          @attr description
-           vertical grid style inside HeadersFragment 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:headersVerticalGridStyle
-        */
-        public static int LeanbackTheme_headersVerticalGridStyle = 11;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#imageCardViewBadgeStyle}
-          attribute's value can be found in the {@link #LeanbackTheme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:imageCardViewBadgeStyle
-        */
-        public static int LeanbackTheme_imageCardViewBadgeStyle = 26;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#imageCardViewContentStyle}
-          attribute's value can be found in the {@link #LeanbackTheme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:imageCardViewContentStyle
-        */
-        public static int LeanbackTheme_imageCardViewContentStyle = 25;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#imageCardViewImageStyle}
-          attribute's value can be found in the {@link #LeanbackTheme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:imageCardViewImageStyle
-        */
-        public static int LeanbackTheme_imageCardViewImageStyle = 23;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#imageCardViewInfoAreaStyle}
-          attribute's value can be found in the {@link #LeanbackTheme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:imageCardViewInfoAreaStyle
-        */
-        public static int LeanbackTheme_imageCardViewInfoAreaStyle = 27;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#imageCardViewStyle}
-          attribute's value can be found in the {@link #LeanbackTheme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:imageCardViewStyle
-        */
-        public static int LeanbackTheme_imageCardViewStyle = 22;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#imageCardViewTitleStyle}
-          attribute's value can be found in the {@link #LeanbackTheme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:imageCardViewTitleStyle
-        */
-        public static int LeanbackTheme_imageCardViewTitleStyle = 24;
-        /**
-          <p>
-          @attr description
-           style for a vertical grid of items 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:itemsVerticalGridStyle
-        */
-        public static int LeanbackTheme_itemsVerticalGridStyle = 48;
-        /**
-          <p>
-          @attr description
-           Default level of dimming for active views. 
-
-
-          <p>Must be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
-The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
-some parent container.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:overlayDimActiveLevel
-        */
-        public static int LeanbackTheme_overlayDimActiveLevel = 65;
-        /**
-          <p>
-          @attr description
-           Default level of dimming for dimmed views. 
-
-
-          <p>Must be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
-The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
-some parent container.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:overlayDimDimmedLevel
-        */
-        public static int LeanbackTheme_overlayDimDimmedLevel = 66;
-        /**
-          <p>
-          @attr description
-           Default color for dimmed views. 
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:overlayDimMaskColor
-        */
-        public static int LeanbackTheme_overlayDimMaskColor = 64;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#playbackControlButtonLabelStyle}
-          attribute's value can be found in the {@link #LeanbackTheme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:playbackControlButtonLabelStyle
-        */
-        public static int LeanbackTheme_playbackControlButtonLabelStyle = 46;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#playbackControlsActionIcons}
-          attribute's value can be found in the {@link #LeanbackTheme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:playbackControlsActionIcons
-        */
-        public static int LeanbackTheme_playbackControlsActionIcons = 61;
-        /**
-          <p>
-          @attr description
-           Milliseconds to auto hide playback controls after user interacts with playback controls (i.e.
-             after fragment.tickle() is called).
-             Default value is disabled (0), app can turn it on by setting a positive milliseconds.
-             When enabled, value of playbackControlsAutoHideTickleTimeout usually should be set longer than playbackControlsAutoHideTimeout
-             for user to have enough time to think. 
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be an integer value, such as "<code>100</code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:playbackControlsAutoHideTickleTimeout
-        */
-        public static int LeanbackTheme_playbackControlsAutoHideTickleTimeout = 63;
-        /**
-          <p>
-          @attr description
-           Milliseconds to auto hide playback controls when media start playing. 
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be an integer value, such as "<code>100</code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:playbackControlsAutoHideTimeout
-        */
-        public static int LeanbackTheme_playbackControlsAutoHideTimeout = 62;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#playbackControlsButtonStyle}
-          attribute's value can be found in the {@link #LeanbackTheme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:playbackControlsButtonStyle
-        */
-        public static int LeanbackTheme_playbackControlsButtonStyle = 45;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#playbackControlsIconHighlightColor}
-          attribute's value can be found in the {@link #LeanbackTheme} array.
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name android.arch.lifecycle:playbackControlsIconHighlightColor
-        */
-        public static int LeanbackTheme_playbackControlsIconHighlightColor = 60;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#playbackControlsTimeStyle}
-          attribute's value can be found in the {@link #LeanbackTheme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:playbackControlsTimeStyle
-        */
-        public static int LeanbackTheme_playbackControlsTimeStyle = 47;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#playbackMediaItemDetailsStyle}
-          attribute's value can be found in the {@link #LeanbackTheme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:playbackMediaItemDetailsStyle
-        */
-        public static int LeanbackTheme_playbackMediaItemDetailsStyle = 39;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#playbackMediaItemDurationStyle}
-          attribute's value can be found in the {@link #LeanbackTheme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:playbackMediaItemDurationStyle
-        */
-        public static int LeanbackTheme_playbackMediaItemDurationStyle = 44;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#playbackMediaItemNameStyle}
-          attribute's value can be found in the {@link #LeanbackTheme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:playbackMediaItemNameStyle
-        */
-        public static int LeanbackTheme_playbackMediaItemNameStyle = 43;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#playbackMediaItemNumberStyle}
-          attribute's value can be found in the {@link #LeanbackTheme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:playbackMediaItemNumberStyle
-        */
-        public static int LeanbackTheme_playbackMediaItemNumberStyle = 42;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#playbackMediaItemNumberViewFlipperLayout}
-          attribute's value can be found in the {@link #LeanbackTheme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:playbackMediaItemNumberViewFlipperLayout
-        */
-        public static int LeanbackTheme_playbackMediaItemNumberViewFlipperLayout = 41;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#playbackMediaItemNumberViewFlipperStyle}
-          attribute's value can be found in the {@link #LeanbackTheme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:playbackMediaItemNumberViewFlipperStyle
-        */
-        public static int LeanbackTheme_playbackMediaItemNumberViewFlipperStyle = 40;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#playbackMediaItemPaddingStart}
-          attribute's value can be found in the {@link #LeanbackTheme} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name android.arch.lifecycle:playbackMediaItemPaddingStart
-        */
-        public static int LeanbackTheme_playbackMediaItemPaddingStart = 34;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#playbackMediaItemRowStyle}
-          attribute's value can be found in the {@link #LeanbackTheme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:playbackMediaItemRowStyle
-        */
-        public static int LeanbackTheme_playbackMediaItemRowStyle = 36;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#playbackMediaItemSeparatorStyle}
-          attribute's value can be found in the {@link #LeanbackTheme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:playbackMediaItemSeparatorStyle
-        */
-        public static int LeanbackTheme_playbackMediaItemSeparatorStyle = 37;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#playbackMediaListHeaderStyle}
-          attribute's value can be found in the {@link #LeanbackTheme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:playbackMediaListHeaderStyle
-        */
-        public static int LeanbackTheme_playbackMediaListHeaderStyle = 35;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#playbackMediaListHeaderTitleStyle}
-          attribute's value can be found in the {@link #LeanbackTheme} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:playbackMediaListHeaderTitleStyle
-        */
-        public static int LeanbackTheme_playbackMediaListHeaderTitleStyle = 38;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#playbackPaddingEnd}
-          attribute's value can be found in the {@link #LeanbackTheme} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name android.arch.lifecycle:playbackPaddingEnd
-        */
-        public static int LeanbackTheme_playbackPaddingEnd = 33;
-        /**
-          <p>
-          @attr description
-           for playlist and playback controls styling 
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:playbackPaddingStart
-        */
-        public static int LeanbackTheme_playbackPaddingStart = 32;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#playbackProgressPrimaryColor}
-          attribute's value can be found in the {@link #LeanbackTheme} array.
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name android.arch.lifecycle:playbackProgressPrimaryColor
-        */
-        public static int LeanbackTheme_playbackProgressPrimaryColor = 58;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#playbackProgressSecondaryColor}
-          attribute's value can be found in the {@link #LeanbackTheme} array.
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          @attr name android.arch.lifecycle:playbackProgressSecondaryColor
-        */
-        public static int LeanbackTheme_playbackProgressSecondaryColor = 59;
-        /**
-          <p>
-          @attr description
-           header description style inside a row 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:rowHeaderDescriptionStyle
-        */
-        public static int LeanbackTheme_rowHeaderDescriptionStyle = 17;
-        /**
-          <p>
-          @attr description
-           style for the layout that hosting Header inside a row 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:rowHeaderDockStyle
-        */
-        public static int LeanbackTheme_rowHeaderDockStyle = 18;
-        /**
-          <p>
-          @attr description
-           header style inside a row 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:rowHeaderStyle
-        */
-        public static int LeanbackTheme_rowHeaderStyle = 16;
-        /**
-          <p>
-          @attr description
-           horizontal grid style inside a row 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:rowHorizontalGridStyle
-        */
-        public static int LeanbackTheme_rowHorizontalGridStyle = 15;
-        /**
-          <p>
-          @attr description
-           hover card description style 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:rowHoverCardDescriptionStyle
-        */
-        public static int LeanbackTheme_rowHoverCardDescriptionStyle = 20;
-        /**
-          <p>
-          @attr description
-           hover card title style 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:rowHoverCardTitleStyle
-        */
-        public static int LeanbackTheme_rowHoverCardTitleStyle = 19;
-        /**
-          <p>
-          @attr description
-           vertical grid style inside RowsFragment 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:rowsVerticalGridStyle
-        */
-        public static int LeanbackTheme_rowsVerticalGridStyle = 14;
-        /**
-          <p>
-          @attr description
-           Style for searchOrb 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:searchOrbViewStyle
-        */
-        public static int LeanbackTheme_searchOrbViewStyle = 56;
-        /**
-          <p>
-          @attr description
-           Non selectable header style inside HeadersFragment 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:sectionHeaderStyle
-        */
-        public static int LeanbackTheme_sectionHeaderStyle = 13;
         /** Attributes that can be used with a LinearLayoutCompat.
            <p>Includes the following attributes:</p>
            <table>
@@ -14422,116 +10340,6 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           @attr name android.arch.lifecycle:entryValues
         */
         public static int MultiSelectListPreference_entryValues = 3;
-        /** Attributes that can be used with a PagingIndicator.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #PagingIndicator_arrowBgColor android.arch.lifecycle:arrowBgColor}</code></td><td> Attribute for background color of the arrow in PagingIndicator.</td></tr>
-           <tr><td><code>{@link #PagingIndicator_arrowColor android.arch.lifecycle:arrowColor}</code></td><td> Attribute for the arrow color in PagingIndicator.</td></tr>
-           <tr><td><code>{@link #PagingIndicator_arrowRadius android.arch.lifecycle:arrowRadius}</code></td><td> Attributes for the radius of the arrow.</td></tr>
-           <tr><td><code>{@link #PagingIndicator_dotBgColor android.arch.lifecycle:dotBgColor}</code></td><td> Attribute for background color of the dots in PagingIndicator.</td></tr>
-           <tr><td><code>{@link #PagingIndicator_dotToArrowGap android.arch.lifecycle:dotToArrowGap}</code></td><td> Attributes for the distance between the centers of the arrow circle and the adjacent dot.</td></tr>
-           <tr><td><code>{@link #PagingIndicator_dotToDotGap android.arch.lifecycle:dotToDotGap}</code></td><td> Attributes for the distance between the centers of the adjacent dots.</td></tr>
-           <tr><td><code>{@link #PagingIndicator_lbDotRadius android.arch.lifecycle:lbDotRadius}</code></td><td> Attributes for the radius of the dot.</td></tr>
-           </table>
-           @see #PagingIndicator_arrowBgColor
-           @see #PagingIndicator_arrowColor
-           @see #PagingIndicator_arrowRadius
-           @see #PagingIndicator_dotBgColor
-           @see #PagingIndicator_dotToArrowGap
-           @see #PagingIndicator_dotToDotGap
-           @see #PagingIndicator_lbDotRadius
-         */
-        public static final int[] PagingIndicator = {
-            0x7f0101d2, 0x7f0101d3, 0x7f0101d4, 0x7f0101d5,
-            0x7f0101d6, 0x7f0101d7, 0x7f0101d8
-        };
-        /**
-          <p>
-          @attr description
-           Attribute for background color of the arrow in PagingIndicator. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:arrowBgColor
-        */
-        public static int PagingIndicator_arrowBgColor = 6;
-        /**
-          <p>
-          @attr description
-           Attribute for the arrow color in PagingIndicator. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:arrowColor
-        */
-        public static int PagingIndicator_arrowColor = 5;
-        /**
-          <p>
-          @attr description
-           Attributes for the radius of the arrow. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:arrowRadius
-        */
-        public static int PagingIndicator_arrowRadius = 1;
-        /**
-          <p>
-          @attr description
-           Attribute for background color of the dots in PagingIndicator. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:dotBgColor
-        */
-        public static int PagingIndicator_dotBgColor = 4;
-        /**
-          <p>
-          @attr description
-           Attributes for the distance between the centers of the arrow circle and the adjacent dot. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:dotToArrowGap
-        */
-        public static int PagingIndicator_dotToArrowGap = 3;
-        /**
-          <p>
-          @attr description
-           Attributes for the distance between the centers of the adjacent dots. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:dotToDotGap
-        */
-        public static int PagingIndicator_dotToDotGap = 2;
-        /**
-          <p>
-          @attr description
-           Attributes for the radius of the dot. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:lbDotRadius
-        */
-        public static int PagingIndicator_lbDotRadius = 0;
         /** Attributes that can be used with a PopupWindow.
            <p>Includes the following attributes:</p>
            <table>
@@ -18009,7 +13817,7 @@ containing a value of this type.
            @see #gradient_transition_duration
          */
         public static final int[] gradient = {
-            0x7f010220, 0x7f010221
+            0x7f010168, 0x7f010169
         };
         /**
           <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#transition_drawable}
@@ -18031,1091 +13839,5 @@ containing a value of this type.
           @attr name android.arch.lifecycle:transition_duration
         */
         public static int gradient_transition_duration = 1;
-        /** Attributes that can be used with a lbBaseCardView.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #lbBaseCardView_activatedAnimationDuration android.arch.lifecycle:activatedAnimationDuration}</code></td><td> Defines the duration in milliseconds of the activated animation for
-             a card layout.</td></tr>
-           <tr><td><code>{@link #lbBaseCardView_cardBackground android.arch.lifecycle:cardBackground}</code></td><td> Defines the background of card </td></tr>
-           <tr><td><code>{@link #lbBaseCardView_cardForeground android.arch.lifecycle:cardForeground}</code></td><td> Defines the background of card </td></tr>
-           <tr><td><code>{@link #lbBaseCardView_cardType android.arch.lifecycle:cardType}</code></td><td> Defines the type of the card layout </td></tr>
-           <tr><td><code>{@link #lbBaseCardView_extraVisibility android.arch.lifecycle:extraVisibility}</code></td><td> Defines when the extra region of a card layout is displayed.</td></tr>
-           <tr><td><code>{@link #lbBaseCardView_infoVisibility android.arch.lifecycle:infoVisibility}</code></td><td> Defines when the info region of a card layout is displayed.</td></tr>
-           <tr><td><code>{@link #lbBaseCardView_selectedAnimationDelay android.arch.lifecycle:selectedAnimationDelay}</code></td><td> Defines the delay in milliseconds before the selection animation
-             runs for a card layout.</td></tr>
-           <tr><td><code>{@link #lbBaseCardView_selectedAnimationDuration android.arch.lifecycle:selectedAnimationDuration}</code></td><td> Defines the duration in milliseconds of the selection animation for
-             a card layout.</td></tr>
-           </table>
-           @see #lbBaseCardView_activatedAnimationDuration
-           @see #lbBaseCardView_cardBackground
-           @see #lbBaseCardView_cardForeground
-           @see #lbBaseCardView_cardType
-           @see #lbBaseCardView_extraVisibility
-           @see #lbBaseCardView_infoVisibility
-           @see #lbBaseCardView_selectedAnimationDelay
-           @see #lbBaseCardView_selectedAnimationDuration
-         */
-        public static final int[] lbBaseCardView = {
-            0x7f0101d9, 0x7f0101da, 0x7f0101db, 0x7f0101dc,
-            0x7f0101dd, 0x7f0101de, 0x7f0101df, 0x7f0101e0
-        };
-        /**
-          <p>
-          @attr description
-           Defines the duration in milliseconds of the activated animation for
-             a card layout. 
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:activatedAnimationDuration
-        */
-        public static int lbBaseCardView_activatedAnimationDuration = 7;
-        /**
-          <p>
-          @attr description
-           Defines the background of card 
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:cardBackground
-        */
-        public static int lbBaseCardView_cardBackground = 1;
-        /**
-          <p>
-          @attr description
-           Defines the background of card 
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:cardForeground
-        */
-        public static int lbBaseCardView_cardForeground = 0;
-        /**
-          <p>
-          @attr description
-           Defines the type of the card layout 
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>mainOnly</code></td><td>0</td><td> A simple card layout with a single layout region. </td></tr>
-<tr><td><code>infoOver</code></td><td>1</td><td> A card layout with two layout regions: a main area which is
-                 always visible, and an info region that appears over the lower
-                 area of the main region. </td></tr>
-<tr><td><code>infoUnder</code></td><td>2</td><td> A card layout with two layout regions: a main area which is
-                 always visible, and an info region that appears below the main
-                 region. </td></tr>
-<tr><td><code>infoUnderWithExtra</code></td><td>3</td><td> A card layout with three layout regions: a main area which is
-                 always visible, an info region that appears below the main
-                 region, and an extra region that appears below the info region
-                 after a small delay. </td></tr>
-</table>
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:cardType
-        */
-        public static int lbBaseCardView_cardType = 2;
-        /**
-          <p>
-          @attr description
-           Defines when the extra region of a card layout is displayed.
-             Depends on infoVisibility, meaning the extra region never displays
-             if the info region is not displayed as well. 
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>always</code></td><td>0</td><td> Always display the extra region. </td></tr>
-<tr><td><code>activated</code></td><td>1</td><td> Display the extra region only when activated. </td></tr>
-<tr><td><code>selected</code></td><td>2</td><td> Display the extra region only when selected. </td></tr>
-</table>
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:extraVisibility
-        */
-        public static int lbBaseCardView_extraVisibility = 4;
-        /**
-          <p>
-          @attr description
-           Defines when the info region of a card layout is displayed. 
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>always</code></td><td>0</td><td> Always display the info region. </td></tr>
-<tr><td><code>activated</code></td><td>1</td><td> Display the info region only when activated. </td></tr>
-<tr><td><code>selected</code></td><td>2</td><td> Display the info region only when selected. </td></tr>
-</table>
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:infoVisibility
-        */
-        public static int lbBaseCardView_infoVisibility = 3;
-        /**
-          <p>
-          @attr description
-           Defines the delay in milliseconds before the selection animation
-             runs for a card layout. 
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:selectedAnimationDelay
-        */
-        public static int lbBaseCardView_selectedAnimationDelay = 5;
-        /**
-          <p>
-          @attr description
-           Defines the duration in milliseconds of the selection animation for
-             a card layout. 
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:selectedAnimationDuration
-        */
-        public static int lbBaseCardView_selectedAnimationDuration = 6;
-        /** Attributes that can be used with a lbBaseCardView_Layout.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #lbBaseCardView_Layout_layout_viewType android.arch.lifecycle:layout_viewType}</code></td><td> The card layout region defined by this element.</td></tr>
-           </table>
-           @see #lbBaseCardView_Layout_layout_viewType
-         */
-        public static final int[] lbBaseCardView_Layout = {
-            0x7f0101e1
-        };
-        /**
-          <p>
-          @attr description
-           The card layout region defined by this element. At most one of
-             element of each type should be specified as an immediate child of
-             the card layout. 
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>main</code></td><td>0</td><td> The main region of the card. </td></tr>
-<tr><td><code>info</code></td><td>1</td><td> The info region of the card. </td></tr>
-<tr><td><code>extra</code></td><td>2</td><td> The extra region of the card. </td></tr>
-</table>
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:layout_viewType
-        */
-        public static int lbBaseCardView_Layout_layout_viewType = 0;
-        /** Attributes that can be used with a lbBaseGridView.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #lbBaseGridView_android_gravity android:gravity}</code></td><td> Defining gravity of child view </td></tr>
-           <tr><td><code>{@link #lbBaseGridView_android_horizontalSpacing android:horizontalSpacing}</code></td><td> Defining space between two items horizontally </td></tr>
-           <tr><td><code>{@link #lbBaseGridView_android_verticalSpacing android:verticalSpacing}</code></td><td> Defining space between two items vertically </td></tr>
-           <tr><td><code>{@link #lbBaseGridView_focusOutEnd android.arch.lifecycle:focusOutEnd}</code></td><td> Allow DPAD key to navigate out at the end of the view, default is false </td></tr>
-           <tr><td><code>{@link #lbBaseGridView_focusOutFront android.arch.lifecycle:focusOutFront}</code></td><td> Allow DPAD key to navigate out at the front of the View (where position = 0),
-             default is false  </td></tr>
-           <tr><td><code>{@link #lbBaseGridView_focusOutSideEnd android.arch.lifecycle:focusOutSideEnd}</code></td><td> Allow DPAD key to navigate out of last row, for HorizontalGridView, it's the
-             bottom edge, for VerticalGridView it's the "end" edge.</td></tr>
-           <tr><td><code>{@link #lbBaseGridView_focusOutSideStart android.arch.lifecycle:focusOutSideStart}</code></td><td> Allow DPAD key to navigate out of first row, for HorizontalGridView, it's the
-             top edge, for VerticalGridView it's the "start" edge.</td></tr>
-           <tr><td><code>{@link #lbBaseGridView_horizontalMargin android.arch.lifecycle:horizontalMargin}</code></td><td> Deprecated, use android:horizontalSpacing </td></tr>
-           <tr><td><code>{@link #lbBaseGridView_verticalMargin android.arch.lifecycle:verticalMargin}</code></td><td> Deprecated, use android:verticalSpacing </td></tr>
-           </table>
-           @see #lbBaseGridView_android_gravity
-           @see #lbBaseGridView_android_horizontalSpacing
-           @see #lbBaseGridView_android_verticalSpacing
-           @see #lbBaseGridView_focusOutEnd
-           @see #lbBaseGridView_focusOutFront
-           @see #lbBaseGridView_focusOutSideEnd
-           @see #lbBaseGridView_focusOutSideStart
-           @see #lbBaseGridView_horizontalMargin
-           @see #lbBaseGridView_verticalMargin
-         */
-        public static final int[] lbBaseGridView = {
-            0x010100af, 0x01010114, 0x01010115, 0x7f0101e2,
-            0x7f0101e3, 0x7f0101e4, 0x7f0101e5, 0x7f0101e6,
-            0x7f0101e7
-        };
-        /**
-          <p>
-          @attr description
-           Defining gravity of child view 
-          <p>This corresponds to the global attribute
-          resource symbol {@link android.R.attr#gravity}.
-          @attr name android:gravity
-        */
-        public static int lbBaseGridView_android_gravity = 0;
-        /**
-          <p>
-          @attr description
-           Defining space between two items horizontally 
-          <p>This corresponds to the global attribute
-          resource symbol {@link android.R.attr#horizontalSpacing}.
-          @attr name android:horizontalSpacing
-        */
-        public static int lbBaseGridView_android_horizontalSpacing = 1;
-        /**
-          <p>
-          @attr description
-           Defining space between two items vertically 
-          <p>This corresponds to the global attribute
-          resource symbol {@link android.R.attr#verticalSpacing}.
-          @attr name android:verticalSpacing
-        */
-        public static int lbBaseGridView_android_verticalSpacing = 2;
-        /**
-          <p>
-          @attr description
-           Allow DPAD key to navigate out at the end of the view, default is false 
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:focusOutEnd
-        */
-        public static int lbBaseGridView_focusOutEnd = 4;
-        /**
-          <p>
-          @attr description
-           Allow DPAD key to navigate out at the front of the View (where position = 0),
-             default is false  
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:focusOutFront
-        */
-        public static int lbBaseGridView_focusOutFront = 3;
-        /**
-          <p>
-          @attr description
-           Allow DPAD key to navigate out of last row, for HorizontalGridView, it's the
-             bottom edge, for VerticalGridView it's the "end" edge.  Default value is true.  
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:focusOutSideEnd
-        */
-        public static int lbBaseGridView_focusOutSideEnd = 6;
-        /**
-          <p>
-          @attr description
-           Allow DPAD key to navigate out of first row, for HorizontalGridView, it's the
-             top edge, for VerticalGridView it's the "start" edge.  Default value is true.  
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:focusOutSideStart
-        */
-        public static int lbBaseGridView_focusOutSideStart = 5;
-        /**
-          <p>
-          @attr description
-           Deprecated, use android:horizontalSpacing 
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:horizontalMargin
-        */
-        public static int lbBaseGridView_horizontalMargin = 7;
-        /**
-          <p>
-          @attr description
-           Deprecated, use android:verticalSpacing 
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:verticalMargin
-        */
-        public static int lbBaseGridView_verticalMargin = 8;
-        /** Attributes that can be used with a lbDatePicker.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #lbDatePicker_android_maxDate android:maxDate}</code></td><td></td></tr>
-           <tr><td><code>{@link #lbDatePicker_android_minDate android:minDate}</code></td><td></td></tr>
-           <tr><td><code>{@link #lbDatePicker_datePickerFormat android.arch.lifecycle:datePickerFormat}</code></td><td> e.</td></tr>
-           </table>
-           @see #lbDatePicker_android_maxDate
-           @see #lbDatePicker_android_minDate
-           @see #lbDatePicker_datePickerFormat
-         */
-        public static final int[] lbDatePicker = {
-            0x0101033f, 0x01010340, 0x7f0101e8
-        };
-        /**
-          <p>This symbol is the offset where the {@link android.R.attr#maxDate}
-          attribute's value can be found in the {@link #lbDatePicker} array.
-          @attr name android:maxDate
-        */
-        public static int lbDatePicker_android_maxDate = 1;
-        /**
-          <p>This symbol is the offset where the {@link android.R.attr#minDate}
-          attribute's value can be found in the {@link #lbDatePicker} array.
-          @attr name android:minDate
-        */
-        public static int lbDatePicker_android_minDate = 0;
-        /**
-          <p>
-          @attr description
-           e.g. "MDY", "MY" 
-
-
-          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:datePickerFormat
-        */
-        public static int lbDatePicker_datePickerFormat = 2;
-        /** Attributes that can be used with a lbHorizontalGridView.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #lbHorizontalGridView_numberOfRows android.arch.lifecycle:numberOfRows}</code></td><td> Defining number of rows </td></tr>
-           <tr><td><code>{@link #lbHorizontalGridView_rowHeight android.arch.lifecycle:rowHeight}</code></td><td> Defining height of each row of HorizontalGridView </td></tr>
-           </table>
-           @see #lbHorizontalGridView_numberOfRows
-           @see #lbHorizontalGridView_rowHeight
-         */
-        public static final int[] lbHorizontalGridView = {
-            0x7f0101e9, 0x7f0101ea
-        };
-        /**
-          <p>
-          @attr description
-           Defining number of rows 
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:numberOfRows
-        */
-        public static int lbHorizontalGridView_numberOfRows = 1;
-        /**
-          <p>
-          @attr description
-           Defining height of each row of HorizontalGridView 
-
-
-          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-<p>May be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>wrap_content</code></td><td>-2</td><td></td></tr>
-</table>
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:rowHeight
-        */
-        public static int lbHorizontalGridView_rowHeight = 0;
-        /** Attributes that can be used with a lbImageCardView.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #lbImageCardView_infoAreaBackground android.arch.lifecycle:infoAreaBackground}</code></td><td> Deprecated.</td></tr>
-           <tr><td><code>{@link #lbImageCardView_lbImageCardViewType android.arch.lifecycle:lbImageCardViewType}</code></td><td> Defines what components the ImageCardView will use.</td></tr>
-           </table>
-           @see #lbImageCardView_infoAreaBackground
-           @see #lbImageCardView_lbImageCardViewType
-         */
-        public static final int[] lbImageCardView = {
-            0x7f0101eb, 0x7f0101ec
-        };
-        /**
-          <p>
-          @attr description
-           Deprecated. Use 'imageCardViewInfoAreaStyle' instead. 
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:infoAreaBackground
-        */
-        public static int lbImageCardView_infoAreaBackground = 0;
-        /**
-          <p>
-          @attr description
-           Defines what components the ImageCardView will use. 
-
-
-          <p>Must be one or more (separated by '|') of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>Title</code></td><td>1</td><td></td></tr>
-<tr><td><code>Content</code></td><td>2</td><td></td></tr>
-<tr><td><code>IconOnRight</code></td><td>4</td><td></td></tr>
-<tr><td><code>IconOnLeft</code></td><td>8</td><td></td></tr>
-<tr><td><code>ImageOnly</code></td><td>0</td><td> Only display the main image. </td></tr>
-</table>
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:lbImageCardViewType
-        */
-        public static int lbImageCardView_lbImageCardViewType = 1;
-        /** Attributes that can be used with a lbPlaybackControlsActionIcons.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #lbPlaybackControlsActionIcons_closed_captioning android.arch.lifecycle:closed_captioning}</code></td><td></td></tr>
-           <tr><td><code>{@link #lbPlaybackControlsActionIcons_fast_forward android.arch.lifecycle:fast_forward}</code></td><td></td></tr>
-           <tr><td><code>{@link #lbPlaybackControlsActionIcons_high_quality android.arch.lifecycle:high_quality}</code></td><td></td></tr>
-           <tr><td><code>{@link #lbPlaybackControlsActionIcons_pause android.arch.lifecycle:pause}</code></td><td></td></tr>
-           <tr><td><code>{@link #lbPlaybackControlsActionIcons_picture_in_picture android.arch.lifecycle:picture_in_picture}</code></td><td></td></tr>
-           <tr><td><code>{@link #lbPlaybackControlsActionIcons_play android.arch.lifecycle:play}</code></td><td></td></tr>
-           <tr><td><code>{@link #lbPlaybackControlsActionIcons_repeat android.arch.lifecycle:repeat}</code></td><td></td></tr>
-           <tr><td><code>{@link #lbPlaybackControlsActionIcons_repeat_one android.arch.lifecycle:repeat_one}</code></td><td></td></tr>
-           <tr><td><code>{@link #lbPlaybackControlsActionIcons_rewind android.arch.lifecycle:rewind}</code></td><td></td></tr>
-           <tr><td><code>{@link #lbPlaybackControlsActionIcons_shuffle android.arch.lifecycle:shuffle}</code></td><td></td></tr>
-           <tr><td><code>{@link #lbPlaybackControlsActionIcons_skip_next android.arch.lifecycle:skip_next}</code></td><td></td></tr>
-           <tr><td><code>{@link #lbPlaybackControlsActionIcons_skip_previous android.arch.lifecycle:skip_previous}</code></td><td></td></tr>
-           <tr><td><code>{@link #lbPlaybackControlsActionIcons_thumb_down android.arch.lifecycle:thumb_down}</code></td><td></td></tr>
-           <tr><td><code>{@link #lbPlaybackControlsActionIcons_thumb_down_outline android.arch.lifecycle:thumb_down_outline}</code></td><td></td></tr>
-           <tr><td><code>{@link #lbPlaybackControlsActionIcons_thumb_up android.arch.lifecycle:thumb_up}</code></td><td></td></tr>
-           <tr><td><code>{@link #lbPlaybackControlsActionIcons_thumb_up_outline android.arch.lifecycle:thumb_up_outline}</code></td><td></td></tr>
-           </table>
-           @see #lbPlaybackControlsActionIcons_closed_captioning
-           @see #lbPlaybackControlsActionIcons_fast_forward
-           @see #lbPlaybackControlsActionIcons_high_quality
-           @see #lbPlaybackControlsActionIcons_pause
-           @see #lbPlaybackControlsActionIcons_picture_in_picture
-           @see #lbPlaybackControlsActionIcons_play
-           @see #lbPlaybackControlsActionIcons_repeat
-           @see #lbPlaybackControlsActionIcons_repeat_one
-           @see #lbPlaybackControlsActionIcons_rewind
-           @see #lbPlaybackControlsActionIcons_shuffle
-           @see #lbPlaybackControlsActionIcons_skip_next
-           @see #lbPlaybackControlsActionIcons_skip_previous
-           @see #lbPlaybackControlsActionIcons_thumb_down
-           @see #lbPlaybackControlsActionIcons_thumb_down_outline
-           @see #lbPlaybackControlsActionIcons_thumb_up
-           @see #lbPlaybackControlsActionIcons_thumb_up_outline
-         */
-        public static final int[] lbPlaybackControlsActionIcons = {
-            0x7f0101ed, 0x7f0101ee, 0x7f0101ef, 0x7f0101f0,
-            0x7f0101f1, 0x7f0101f2, 0x7f0101f3, 0x7f0101f4,
-            0x7f0101f5, 0x7f0101f6, 0x7f0101f7, 0x7f0101f8,
-            0x7f0101f9, 0x7f0101fa, 0x7f0101fb, 0x7f0101fc
-        };
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#closed_captioning}
-          attribute's value can be found in the {@link #lbPlaybackControlsActionIcons} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:closed_captioning
-        */
-        public static int lbPlaybackControlsActionIcons_closed_captioning = 14;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#fast_forward}
-          attribute's value can be found in the {@link #lbPlaybackControlsActionIcons} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:fast_forward
-        */
-        public static int lbPlaybackControlsActionIcons_fast_forward = 2;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#high_quality}
-          attribute's value can be found in the {@link #lbPlaybackControlsActionIcons} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:high_quality
-        */
-        public static int lbPlaybackControlsActionIcons_high_quality = 13;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#pause}
-          attribute's value can be found in the {@link #lbPlaybackControlsActionIcons} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:pause
-        */
-        public static int lbPlaybackControlsActionIcons_pause = 1;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#picture_in_picture}
-          attribute's value can be found in the {@link #lbPlaybackControlsActionIcons} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:picture_in_picture
-        */
-        public static int lbPlaybackControlsActionIcons_picture_in_picture = 15;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#play}
-          attribute's value can be found in the {@link #lbPlaybackControlsActionIcons} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:play
-        */
-        public static int lbPlaybackControlsActionIcons_play = 0;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#repeat}
-          attribute's value can be found in the {@link #lbPlaybackControlsActionIcons} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:repeat
-        */
-        public static int lbPlaybackControlsActionIcons_repeat = 10;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#repeat_one}
-          attribute's value can be found in the {@link #lbPlaybackControlsActionIcons} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:repeat_one
-        */
-        public static int lbPlaybackControlsActionIcons_repeat_one = 11;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#rewind}
-          attribute's value can be found in the {@link #lbPlaybackControlsActionIcons} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:rewind
-        */
-        public static int lbPlaybackControlsActionIcons_rewind = 3;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#shuffle}
-          attribute's value can be found in the {@link #lbPlaybackControlsActionIcons} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:shuffle
-        */
-        public static int lbPlaybackControlsActionIcons_shuffle = 12;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#skip_next}
-          attribute's value can be found in the {@link #lbPlaybackControlsActionIcons} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:skip_next
-        */
-        public static int lbPlaybackControlsActionIcons_skip_next = 4;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#skip_previous}
-          attribute's value can be found in the {@link #lbPlaybackControlsActionIcons} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:skip_previous
-        */
-        public static int lbPlaybackControlsActionIcons_skip_previous = 5;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#thumb_down}
-          attribute's value can be found in the {@link #lbPlaybackControlsActionIcons} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:thumb_down
-        */
-        public static int lbPlaybackControlsActionIcons_thumb_down = 9;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#thumb_down_outline}
-          attribute's value can be found in the {@link #lbPlaybackControlsActionIcons} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:thumb_down_outline
-        */
-        public static int lbPlaybackControlsActionIcons_thumb_down_outline = 8;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#thumb_up}
-          attribute's value can be found in the {@link #lbPlaybackControlsActionIcons} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:thumb_up
-        */
-        public static int lbPlaybackControlsActionIcons_thumb_up = 7;
-        /**
-          <p>This symbol is the offset where the {@link android.arch.lifecycle.R.attr#thumb_up_outline}
-          attribute's value can be found in the {@link #lbPlaybackControlsActionIcons} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name android.arch.lifecycle:thumb_up_outline
-        */
-        public static int lbPlaybackControlsActionIcons_thumb_up_outline = 6;
-        /** Attributes that can be used with a lbResizingTextView.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #lbResizingTextView_maintainLineSpacing android.arch.lifecycle:maintainLineSpacing}</code></td><td> Whether to maintain the same line spacing when text is resized, default is false </td></tr>
-           <tr><td><code>{@link #lbResizingTextView_resizeTrigger android.arch.lifecycle:resizeTrigger}</code></td><td> Conditions used to trigger text resizing </td></tr>
-           <tr><td><code>{@link #lbResizingTextView_resizedPaddingAdjustmentBottom android.arch.lifecycle:resizedPaddingAdjustmentBottom}</code></td><td> Adjustment to bottom padding for resized text </td></tr>
-           <tr><td><code>{@link #lbResizingTextView_resizedPaddingAdjustmentTop android.arch.lifecycle:resizedPaddingAdjustmentTop}</code></td><td> Adjustment to top padding for resized text </td></tr>
-           <tr><td><code>{@link #lbResizingTextView_resizedTextSize android.arch.lifecycle:resizedTextSize}</code></td><td> Text size for resized text </td></tr>
-           </table>
-           @see #lbResizingTextView_maintainLineSpacing
-           @see #lbResizingTextView_resizeTrigger
-           @see #lbResizingTextView_resizedPaddingAdjustmentBottom
-           @see #lbResizingTextView_resizedPaddingAdjustmentTop
-           @see #lbResizingTextView_resizedTextSize
-         */
-        public static final int[] lbResizingTextView = {
-            0x7f0101fd, 0x7f0101fe, 0x7f0101ff, 0x7f010200,
-            0x7f010201
-        };
-        /**
-          <p>
-          @attr description
-           Whether to maintain the same line spacing when text is resized, default is false 
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:maintainLineSpacing
-        */
-        public static int lbResizingTextView_maintainLineSpacing = 2;
-        /**
-          <p>
-          @attr description
-           Conditions used to trigger text resizing 
-
-
-          <p>Must be one or more (separated by '|') of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>maxLines</code></td><td>0x01</td><td> Resize text whenever it lays out into the maximum number of lines </td></tr>
-</table>
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:resizeTrigger
-        */
-        public static int lbResizingTextView_resizeTrigger = 0;
-        /**
-          <p>
-          @attr description
-           Adjustment to bottom padding for resized text 
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:resizedPaddingAdjustmentBottom
-        */
-        public static int lbResizingTextView_resizedPaddingAdjustmentBottom = 4;
-        /**
-          <p>
-          @attr description
-           Adjustment to top padding for resized text 
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:resizedPaddingAdjustmentTop
-        */
-        public static int lbResizingTextView_resizedPaddingAdjustmentTop = 3;
-        /**
-          <p>
-          @attr description
-           Text size for resized text 
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:resizedTextSize
-        */
-        public static int lbResizingTextView_resizedTextSize = 1;
-        /** Attributes that can be used with a lbSearchOrbView.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #lbSearchOrbView_searchOrbBrightColor android.arch.lifecycle:searchOrbBrightColor}</code></td><td> Defining pulse color of the search affordance </td></tr>
-           <tr><td><code>{@link #lbSearchOrbView_searchOrbColor android.arch.lifecycle:searchOrbColor}</code></td><td> Defining color of the search affordance </td></tr>
-           <tr><td><code>{@link #lbSearchOrbView_searchOrbIcon android.arch.lifecycle:searchOrbIcon}</code></td><td> Defining icon of the search affordance </td></tr>
-           <tr><td><code>{@link #lbSearchOrbView_searchOrbIconColor android.arch.lifecycle:searchOrbIconColor}</code></td><td> Defining icon tint color of the search affordance </td></tr>
-           </table>
-           @see #lbSearchOrbView_searchOrbBrightColor
-           @see #lbSearchOrbView_searchOrbColor
-           @see #lbSearchOrbView_searchOrbIcon
-           @see #lbSearchOrbView_searchOrbIconColor
-         */
-        public static final int[] lbSearchOrbView = {
-            0x7f010202, 0x7f010203, 0x7f010204, 0x7f010205
-        };
-        /**
-          <p>
-          @attr description
-           Defining pulse color of the search affordance 
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:searchOrbBrightColor
-        */
-        public static int lbSearchOrbView_searchOrbBrightColor = 3;
-        /**
-          <p>
-          @attr description
-           Defining color of the search affordance 
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:searchOrbColor
-        */
-        public static int lbSearchOrbView_searchOrbColor = 2;
-        /**
-          <p>
-          @attr description
-           Defining icon of the search affordance 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:searchOrbIcon
-        */
-        public static int lbSearchOrbView_searchOrbIcon = 0;
-        /**
-          <p>
-          @attr description
-           Defining icon tint color of the search affordance 
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:searchOrbIconColor
-        */
-        public static int lbSearchOrbView_searchOrbIconColor = 1;
-        /** Attributes that can be used with a lbSlide.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #lbSlide_android_duration android:duration}</code></td><td></td></tr>
-           <tr><td><code>{@link #lbSlide_android_interpolator android:interpolator}</code></td><td></td></tr>
-           <tr><td><code>{@link #lbSlide_android_startDelay android:startDelay}</code></td><td></td></tr>
-           <tr><td><code>{@link #lbSlide_lb_slideEdge android.arch.lifecycle:lb_slideEdge}</code></td><td> A duplication of Slide attribute slideEdge for KitKat </td></tr>
-           </table>
-           @see #lbSlide_android_duration
-           @see #lbSlide_android_interpolator
-           @see #lbSlide_android_startDelay
-           @see #lbSlide_lb_slideEdge
-         */
-        public static final int[] lbSlide = {
-            0x01010141, 0x01010198, 0x010103e2, 0x7f010206
-        };
-        /**
-          <p>This symbol is the offset where the {@link android.R.attr#duration}
-          attribute's value can be found in the {@link #lbSlide} array.
-          @attr name android:duration
-        */
-        public static int lbSlide_android_duration = 1;
-        /**
-          <p>This symbol is the offset where the {@link android.R.attr#interpolator}
-          attribute's value can be found in the {@link #lbSlide} array.
-          @attr name android:interpolator
-        */
-        public static int lbSlide_android_interpolator = 0;
-        /**
-          <p>This symbol is the offset where the {@link android.R.attr#startDelay}
-          attribute's value can be found in the {@link #lbSlide} array.
-          @attr name android:startDelay
-        */
-        public static int lbSlide_android_startDelay = 2;
-        /**
-          <p>
-          @attr description
-           A duplication of Slide attribute slideEdge for KitKat 
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>left</code></td><td>0x03</td><td> Slide to and from the left edge of the Scene. </td></tr>
-<tr><td><code>top</code></td><td>0x30</td><td> Slide to and from the top edge of the Scene. </td></tr>
-<tr><td><code>right</code></td><td>0x05</td><td> Slide to and from the right edge of the Scene. </td></tr>
-<tr><td><code>bottom</code></td><td>0x50</td><td> Slide to and from the bottom edge of the Scene. </td></tr>
-<tr><td><code>start</code></td><td>0x00800003</td><td> Slide to and from the x-axis position at the start of the Scene root. </td></tr>
-<tr><td><code>end</code></td><td>0x00800005</td><td> Slide to and from the x-axis position at the end of the Scene root. </td></tr>
-</table>
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:lb_slideEdge
-        */
-        public static int lbSlide_lb_slideEdge = 3;
-        /** Attributes that can be used with a lbTimePicker.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #lbTimePicker_is24HourFormat android.arch.lifecycle:is24HourFormat}</code></td><td> attr indicating whether time is in 24 hour format (true) or AM/PM format (false).</td></tr>
-           <tr><td><code>{@link #lbTimePicker_useCurrentTime android.arch.lifecycle:useCurrentTime}</code></td><td> attr indicating whether time fields should be initially set to the current time.</td></tr>
-           </table>
-           @see #lbTimePicker_is24HourFormat
-           @see #lbTimePicker_useCurrentTime
-         */
-        public static final int[] lbTimePicker = {
-            0x7f010207, 0x7f010208
-        };
-        /**
-          <p>
-          @attr description
-           attr indicating whether time is in 24 hour format (true) or AM/PM format (false). 
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:is24HourFormat
-        */
-        public static int lbTimePicker_is24HourFormat = 0;
-        /**
-          <p>
-          @attr description
-           attr indicating whether time fields should be initially set to the current time.
-         By default, it's true i.e. TimePicker initializes fields with the current time. 
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:useCurrentTime
-        */
-        public static int lbTimePicker_useCurrentTime = 1;
-        /** Attributes that can be used with a lbVerticalGridView.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #lbVerticalGridView_columnWidth android.arch.lifecycle:columnWidth}</code></td><td> Defining width of each column of VerticalGridView </td></tr>
-           <tr><td><code>{@link #lbVerticalGridView_numberOfColumns android.arch.lifecycle:numberOfColumns}</code></td><td> Defining number of columns </td></tr>
-           </table>
-           @see #lbVerticalGridView_columnWidth
-           @see #lbVerticalGridView_numberOfColumns
-         */
-        public static final int[] lbVerticalGridView = {
-            0x7f010209, 0x7f01020a
-        };
-        /**
-          <p>
-          @attr description
-           Defining width of each column of VerticalGridView 
-
-
-          <p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-<p>May be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>wrap_content</code></td><td>-2</td><td></td></tr>
-</table>
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:columnWidth
-        */
-        public static int lbVerticalGridView_columnWidth = 0;
-        /**
-          <p>
-          @attr description
-           Defining number of columns 
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name android.arch.lifecycle:numberOfColumns
-        */
-        public static int lbVerticalGridView_numberOfColumns = 1;
     };
 }
