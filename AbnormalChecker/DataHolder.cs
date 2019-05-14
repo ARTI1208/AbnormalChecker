@@ -116,7 +116,6 @@ namespace AbnormalChecker
 		{
 			private readonly CategoryUpdater dataUpdater;
 			public string Data;
-
 			public string DataFilePath;
 			private CheckStatus level = CheckStatus.Normal;
 
@@ -156,8 +155,9 @@ namespace AbnormalChecker
 					if (requiredPermissions != null && requiredPermissions.Any(s =>
 						    ContextCompat.CheckSelfPermission(_mContext, s) == Permission.Denied))
 					{
+						
 						level = CheckStatus.PermissionsRequired;
-						Status = _mContext.GetString(Resource.String.category_info_permissions_denied);
+						status = _mContext.GetString(Resource.String.category_info_permissions_denied);
 					}
 					else
 					{
@@ -173,14 +173,14 @@ namespace AbnormalChecker
 				{
 					if (value.Any(s => ContextCompat.CheckSelfPermission(_mContext, s) == Permission.Denied))
 					{
-						Level = CheckStatus.PermissionsRequired;
-						Status = _mContext.GetString(Resource.String.category_info_permissions_denied);
+						level = CheckStatus.PermissionsRequired;
+						status = _mContext.GetString(Resource.String.category_info_permissions_denied);
 					}
-					else
+					else if (level == CheckStatus.PermissionsRequired)
 					{
-						Level = CheckStatus.Normal;
+						level = CheckStatus.Normal;						
 					}
-
+					
 					requiredPermissions = value;
 				}
 			}
@@ -223,7 +223,6 @@ namespace AbnormalChecker
 				Manifest.Permission.AccessCoarseLocation
 			};
 			data.DataFilePath = LocationUtils.LocationCoordinatesFile;
-
 			if (GoogleApiAvailability.Instance.IsGooglePlayServicesAvailable(_mContext) != ConnectionResult.Success)
 			{
 				data.Status =
@@ -259,7 +258,7 @@ namespace AbnormalChecker
 				if (!locationEnabled) data.Data = null;
 				LocationUtils.SetLocationTrackingEnabled(locationEnabled);
 			}
-
+			
 			data.Status = status;
 			return data;
 		}
@@ -288,15 +287,17 @@ namespace AbnormalChecker
 				{
 					var text = reader.ReadToEnd();
 
-					if (text.Length > 0)
+					try
 					{
 						data.Data = text.Split("\n").Last(s => s.Length > 0);
 						data.Status = _mContext.GetString(Resource.String.category_system_modifications_detected);
+						
 						data.Level = CheckStatus.Dangerous;
 					}
-					else
+					catch (Exception)
 					{
 						data.Data = null;
+						data.DataFilePath = null;
 						data.Status = _mContext.GetString(Resource.String.category_system_no_modifications);
 						data.Level = CheckStatus.Normal;
 					}
@@ -357,15 +358,16 @@ namespace AbnormalChecker
 				{
 					var text = reader.ReadToEnd();
 
-					if (text.Length > 0)
+					try
 					{
 						data.Data = text.Split("\n").Last(s => s.Length > 0);
 						data.Status = _mContext.GetString(Resource.String.category_general_status_suspicious_activity);
 						data.Level = CheckStatus.Dangerous;
 					}
-					else
+					catch (Exception)
 					{
 						data.Data = null;
+						data.DataFilePath = null;
 						data.Status = _mContext.GetString(Resource.String.category_general_status_normal);
 						data.Level = CheckStatus.Normal;
 					}
@@ -398,15 +400,16 @@ namespace AbnormalChecker
 				{
 					var text = reader.ReadToEnd();
 
-					if (text.Length > 0)
+					try
 					{
 						data.Data = text.Split("\n").Last(s => s.Length > 0);
 						data.Status = _mContext.GetString(Resource.String.category_general_status_suspicious_activity);
 						data.Level = CheckStatus.Dangerous;
 					}
-					else
+					catch (Exception)
 					{
 						data.Data = null;
+						data.DataFilePath = null;
 						data.Status = _mContext.GetString(Resource.String.category_general_status_normal);
 						data.Level = CheckStatus.Normal;
 					}
@@ -433,6 +436,20 @@ namespace AbnormalChecker
 			{
 				writer.WriteLine($"{path}____{ev}");
 			}
+
+			string[] text;
+			using (var reader = new StreamReader(_mContext.OpenFileInput(SystemModListenerService.LogFile)))
+			{
+				text = reader.ReadToEnd().Split("\n");
+			}
+
+			using (var writer =
+				new StreamWriter(_mContext.OpenFileOutput(SystemModListenerService.LogFile, FileCreationMode.Private)))
+			{
+				foreach (var line in text)
+					if (line.Length > 0 && line != "\r" && !line.Contains($"{ev}") && !line.Contains($"{path}"))
+						writer.WriteLine(line);
+			}
 		}
 
 		public static void NormalizeScreenData(Intent intent)
@@ -441,10 +458,11 @@ namespace AbnormalChecker
 			{
 				var val = intent.GetIntExtra(key, -1);
 				if (val != -1 && key != NotificationSender.ExtraNotificationId)
-				{
 					_mPreferences.Edit().PutInt(key, val).Apply();
-				}
 			}
+
+			ScreenUnlockReceiver.IsNormal = true;
+//			CategoriesDictionary[ScreenCategory].Level = CheckStatus.Normal;
 		}
 
 		[SuppressMessage("ReSharper", "CompareOfFloatsByEqualityOperator")]
@@ -482,6 +500,20 @@ namespace AbnormalChecker
 			{
 				writer.WriteLine($"{code}");
 			}
+
+			string[] text;
+			using (var reader = new StreamReader(_mContext.OpenFileInput(PhoneUtils.SuspiciousCallsFile)))
+			{
+				text = reader.ReadToEnd().Split("\n");
+			}
+
+			using (var writer =
+				new StreamWriter(_mContext.OpenFileOutput(PhoneUtils.SuspiciousCallsFile, FileCreationMode.Private)))
+			{
+				foreach (var line in text)
+					if (line.Length > 0 && line != "\r" && !line.Contains($"+{code}"))
+						writer.WriteLine(line);
+			}
 		}
 
 		public static void NormalizeSmsData(Intent intent)
@@ -493,6 +525,20 @@ namespace AbnormalChecker
 			using (var writer = new StreamWriter(_mContext.OpenFileOutput(path, FileCreationMode.Append)))
 			{
 				writer.WriteLine($"{code}");
+			}
+
+			string[] text;
+			using (var reader = new StreamReader(_mContext.OpenFileInput(PhoneUtils.SuspiciousSmsFile)))
+			{
+				text = reader.ReadToEnd().Split("\n");
+			}
+
+			using (var writer =
+				new StreamWriter(_mContext.OpenFileOutput(PhoneUtils.SuspiciousSmsFile, FileCreationMode.Private)))
+			{
+				foreach (var line in text)
+					if (line.Length > 0 && line != "\r" && !line.Contains($"+{code}"))
+						writer.WriteLine(line);
 			}
 		}
 

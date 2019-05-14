@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using AbnormalChecker.Activities;
 using Android.Content;
 using Android.Graphics;
 using Android.Support.V7.Widget;
@@ -32,6 +33,23 @@ namespace AbnormalChecker.OtherUI
 
 		public override int ItemCount => list.Count;
 
+		public static void Refresh(string category)
+		{
+
+			if (MainActivity.Adapter != null)
+			{
+				int pos = MainActivity.Adapter.categories.FindIndex(s => s == category);
+				if (pos < 0)
+				{
+					return;
+				}
+
+				Log.Debug("CateUpdater", "upd");
+				MainActivity.Adapter.Refresh(pos);
+			}
+			
+		}
+		
 		public void Refresh(int position = -1)
 		{
 			DataHolder.Refresh();
@@ -50,6 +68,7 @@ namespace AbnormalChecker.OtherUI
 			}
 			else
 			{
+				Log.Debug("CateUpdater", "upd2");
 				NotifyItemChanged(position);	
 			}
 		}
@@ -58,6 +77,7 @@ namespace AbnormalChecker.OtherUI
 		{
 			var myHolder = (ViewHolder) holder;
 			var dataSet = list[position];
+//			var dataSet = DataHolder.CategoriesDictionary[categories[position]];
 			myHolder.TitleTextView.Text = dataSet.Title;
 			myHolder.StatusTextView.Text = dataSet.Status;
 			
@@ -71,6 +91,11 @@ namespace AbnormalChecker.OtherUI
 				myHolder.DataTextView.Visibility = ViewStates.Gone;
 			}
 
+			if (categories[position] == DataHolder.ScreenCategory)
+			{
+				Log.Debug("ScreenBindAb",dataSet.Data ?? "null");
+			}
+			
 			switch (dataSet.Level)
 			{
 				case DataHolder.CheckStatus.Warning:
@@ -86,14 +111,20 @@ namespace AbnormalChecker.OtherUI
 					myHolder.Card.SetCardBackgroundColor(Color.ParseColor("#ffffff"));
 					break;
 			}
+			
 			myHolder.Card.SetOnClickListener(new CategoryClickListener(mContext, categories[position], dataSet));
 		}
 		
 		public override void OnViewRecycled(Object holder)
 		{
-			if (holder is ViewHolder viewHolder) viewHolder.Card.SetOnClickListener(null);
+			if (holder is ViewHolder viewHolder)
+			{
+				viewHolder.Card.SetOnClickListener(null);
+			}
 			base.OnViewRecycled(holder);
 		}
+		
+		
 
 		public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
 		{

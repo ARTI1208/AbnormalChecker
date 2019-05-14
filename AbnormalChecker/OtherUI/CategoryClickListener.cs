@@ -1,5 +1,6 @@
 using AbnormalChecker.Activities;
 using Android.Content;
+using Android.Util;
 using Android.Views;
 
 namespace AbnormalChecker.OtherUI
@@ -20,6 +21,7 @@ namespace AbnormalChecker.OtherUI
 
 		public void OnClick(View v)
 		{
+			Log.Debug(nameof(CategoriesAdapter), "click click listener");
 			if (dataSet.Level == DataHolder.CheckStatus.PermissionsRequired)
 			{
 				MainActivity.GrantPermissions(dataSet.RequiredPermissions);

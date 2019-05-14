@@ -1,3 +1,4 @@
+using AbnormalChecker.Activities;
 using AbnormalChecker.Services;
 using Android.App;
 using Android.Content;
@@ -40,7 +41,7 @@ namespace AbnormalChecker.BroadcastReceivers
                     DataHolder.NormalizeSmsData(intent);
                     break;
             }
-            
+            MainActivity.Adapter?.Refresh();
         }
     }
 }

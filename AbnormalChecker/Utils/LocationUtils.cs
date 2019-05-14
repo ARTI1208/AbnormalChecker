@@ -52,8 +52,8 @@ namespace AbnormalChecker.Utils
 			if (enabled)
 			{
 				var request = new LocationRequest();
-				request.SetInterval(5000);
-				request.SetFastestInterval(5000);
+				request.SetInterval(20 * 1_000);
+				request.SetFastestInterval(10 * 1_000);
 				request.SetPriority(LocationRequest.PriorityHighAccuracy);
 
 				//Probably not needed
@@ -73,7 +73,15 @@ namespace AbnormalChecker.Utils
 				_fusedLocationProviderClient.RemoveLocationUpdates(_locationPendingIntent);
 				_locationPendingIntent = null;
 			}
-			MainActivity.Adapter?.NotifyDataSetChanged();
+
+			if (MainActivity.Adapter != null)
+			{
+				int pos = MainActivity.Adapter.categories.FindIndex(s => s == DataHolder.LocationCategory);
+				MainActivity.Adapter.NotifyItemChanged(pos);	
+			}
+			
+			
+//			MainActivity.Adapter?.NotifyDataSetChanged();
 		}
 
 		public static async void GetLastLocationFromDevice()
@@ -148,6 +156,7 @@ namespace AbnormalChecker.Utils
 					sender.Send(NotificationType.WarningNotification, distance);
 					PreviousLocation = location;
 					DataHolder.CategoriesDictionary[DataHolder.LocationCategory].Level = DataHolder.CheckStatus.Dangerous;
+					
 				}
 			}
 			else
@@ -166,7 +175,11 @@ namespace AbnormalChecker.Utils
 				}
 
 			DataHolder.CategoriesDictionary[DataHolder.LocationCategory].Data = FormatLocation(mContext, location);
-			MainActivity.Adapter?.Refresh();
+			if (MainActivity.Adapter != null)
+			{
+				int pos = MainActivity.Adapter.categories.FindIndex(s => s == DataHolder.LocationCategory);
+				MainActivity.Adapter.Refresh(pos);	
+			}
 		}
 	}
 }

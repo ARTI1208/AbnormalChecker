@@ -3,6 +3,7 @@ using System.IO;
 using Android.App;
 using Android.OS;
 using Android.Support.V7.App;
+using Android.Util;
 using Android.Widget;
 using File = Java.IO.File;
 
@@ -76,6 +77,7 @@ namespace AbnormalChecker.Activities
 			}
 			else if (new File(FilesDir, mCategoryData.DataFilePath).Exists())
 			{
+				Log.Debug(nameof(CategoryInfoActivity), "File exists");
 				using (var reader = new StreamReader(OpenFileInput(mCategoryData.DataFilePath)))
 				{
 					data.Text = reader.ReadToEnd();

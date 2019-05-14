@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using AbnormalChecker.Activities;
 using AbnormalChecker.Extensions;
+using AbnormalChecker.OtherUI;
 using AbnormalChecker.Utils;
 using Android.App;
 using Android.Content;
@@ -257,6 +258,7 @@ namespace AbnormalChecker.BroadcastReceivers
 
 			_unlockMillis.Add(now.Time);
 
+			Log.Debug(nameof(ScreenUnlockReceiver), "ok");
 			string notificationText;
 
 			switch (mode)
@@ -267,7 +269,8 @@ namespace AbnormalChecker.BroadcastReceivers
 							UnlockedTimes, NormalCount);
 					notificationSender.PutNormalizeExtra(ScreenUtils.UnlocksNewNormalCount,
 						(int) (UnlockedTimes * 1.2));
-					MainActivity.Adapter?.Refresh();
+//					MainActivity.Adapter?.Refresh();
+					CategoriesAdapter.Refresh(DataHolder.ScreenCategory);
 					break;
 				case 2:
 					int tmpInterval = (int) (.9 * _abnormalUnlockInterval);
@@ -284,14 +287,13 @@ namespace AbnormalChecker.BroadcastReceivers
 							_unlockMillis.Count,
 							TimeUnit.Milliseconds.ToSeconds(_unlockMillis.Last() - _unlockMillis.First()));
 
-//					notificationText = $"Detected {_unlockMillis.Count} unlocks in last " +
-//					                   $@"{TimeUnit.Milliseconds.ToSeconds(
-//						                   _unlockMillis.Last() - _unlockMillis.First())} seconds";
 					notificationSender.PutNormalizeExtra(AbnormalUnlocksTimeInterval, tmpInterval);
-					MainActivity.Adapter?.Refresh();
+//					MainActivity.Adapter?.Refresh();
+					CategoriesAdapter.Refresh(DataHolder.ScreenCategory);
 					break;
 				default:
-					MainActivity.Adapter?.Refresh();
+//					MainActivity.Adapter?.Refresh();
+					CategoriesAdapter.Refresh(DataHolder.ScreenCategory);
 					return;
 			}
 
