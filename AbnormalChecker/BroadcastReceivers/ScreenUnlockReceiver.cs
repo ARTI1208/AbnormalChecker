@@ -30,7 +30,7 @@ namespace AbnormalChecker.BroadcastReceivers
 
 		private static ISharedPreferences _mPreferences;
 
-		private readonly string AbnormalUnlocksTimeInterval = "unlocks_time_interval";
+		private const string AbnormalUnlocksTimeInterval = "unlocks_time_interval";
 
 		#region UnlockSpeed
 
@@ -40,7 +40,7 @@ namespace AbnormalChecker.BroadcastReceivers
 
 		private static int _abnormalUnlockInterval = 10;
 
-		private static List<long> _unlockMillis;
+		public static List<long> _unlockMillis;
 
 		private static int _todayNormalSpeedValue;
 
@@ -50,7 +50,16 @@ namespace AbnormalChecker.BroadcastReceivers
 
 		private static int _lastDayUnlocked = -1;
 
-		public static bool IsNormal = true;
+		public enum ScreenStatus
+		{
+			OK,
+			Many,
+			Speed
+		}
+
+		public static ScreenStatus Status = ScreenStatus.OK;
+		
+//		public static bool IsNormal = true;
 
 		public static int NormalCount { get; private set; } = -1;
 
@@ -67,11 +76,12 @@ namespace AbnormalChecker.BroadcastReceivers
 		{
 			NormalCount = -1;
 			UnlockedTimes = 0;
-			IsNormal = true;
+//			IsNormal = true;
+			Status = ScreenStatus.OK;
 			_lastDayUnlocked = -1;
 		}
 
-		private int GetNormalUnlocksCount(ISharedPreferences preferences)
+		private static int GetNormalUnlocksCount(ISharedPreferences preferences)
 		{
 			if (GetMonitoringDayCount() == 7 &&
 			    preferences.Contains($"{ScreenUtils.UnlocksDayNumber}{_lastDayUnlocked}"))
@@ -102,11 +112,7 @@ namespace AbnormalChecker.BroadcastReceivers
 
 		public override void OnReceive(Context context, Intent intent)
 		{
-			Log.Debug("AAction", intent.Action);
-			if (intent.Action != Intent.ActionScreenOn)
-			{
-				return;
-			}
+			Log.Debug(nameof(ScreenUnlockReceiver), intent.Action);
 
 			NotificationSender notificationSender = new NotificationSender(context, DataHolder.ScreenLocksCategory);
 			if (_mPreferences == null)
@@ -199,18 +205,21 @@ namespace AbnormalChecker.BroadcastReceivers
 			if (UnlockedTimes > GetNormalUnlocksCount(_mPreferences) * 1.1)
 			{
 				mode = 1;
-				IsNormal = false;
+//				IsNormal = false;
 			}
-			else
-			{
-				IsNormal = true;
-			}
+//			else
+//			{
+//				Status = ScreenStatus.OK;
+////				IsNormal = true;
+//			}
 
 			_abnormalUnlockInterval = _mPreferences.GetInt(AbnormalUnlocksTimeInterval, _abnormalUnlockInterval);
 
 			if (_unlockMillis.Count > _todayNormalSpeedValue)
 			{
-				if (TimeUnit.Milliseconds.ToSeconds(now.Time - _unlockMillis[0]) <= _abnormalUnlockInterval)
+				long s = TimeUnit.Milliseconds.ToSeconds(now.Time - _unlockMillis[0]);
+				
+				if (s <= _abnormalUnlockInterval && s > 0)
 				{
 					mode = 2;
 					using (StreamWriter writer = new StreamWriter(
@@ -228,17 +237,19 @@ namespace AbnormalChecker.BroadcastReceivers
 				else
 				{
 					List<long> tmpList = new List<long>();
+					long sec;
 					foreach (var time in _unlockMillis)
 					{
-						if (TimeUnit.Milliseconds.ToSeconds(now.Time - time) <= _abnormalUnlockInterval)
+						sec = TimeUnit.Milliseconds.ToSeconds(now.Time - time);
+						if (sec <= _abnormalUnlockInterval && sec > 0)
 						{
 							tmpList.Add(time);
 						}
 					}
 
 					_unlockMillis = tmpList;
-					if (_unlockMillis.Count > _todayNormalSpeedValue &&
-					    TimeUnit.Milliseconds.ToSeconds(now.Time - _unlockMillis[0]) <= _abnormalUnlockInterval)
+					sec = TimeUnit.Milliseconds.ToSeconds(now.Time - _unlockMillis[0]);
+					if (_unlockMillis.Count > _todayNormalSpeedValue && sec <= _abnormalUnlockInterval && sec > 0)
 					{
 						mode = 2;
 						using (StreamWriter writer = new StreamWriter(
@@ -252,23 +263,26 @@ namespace AbnormalChecker.BroadcastReceivers
 
 							writer.WriteLine("-----End2-----");
 						}
+						
+						
 					}
 				}
 			}
 
 			_unlockMillis.Add(now.Time);
-
-			Log.Debug(nameof(ScreenUnlockReceiver), "ok");
+			
 			string notificationText;
 
 			switch (mode)
 			{
 				case 1:
+					Status = ScreenStatus.Many;
 					notificationText =
 						string.Format(context.GetString(Resource.String.category_screen_notif_daily_overflow),
 							UnlockedTimes, NormalCount);
 					notificationSender.PutNormalizeExtra(ScreenUtils.UnlocksNewNormalCount,
 						(int) (UnlockedTimes * 1.2));
+
 //					MainActivity.Adapter?.Refresh();
 					CategoriesAdapter.Refresh(DataHolder.ScreenCategory);
 					break;
@@ -282,6 +296,7 @@ namespace AbnormalChecker.BroadcastReceivers
 						}
 					}
 
+					Status = ScreenStatus.Speed;
 					notificationText =
 						string.Format(context.GetString(Resource.String.category_screen_notif_west_fast_hand),
 							_unlockMillis.Count,
@@ -292,11 +307,17 @@ namespace AbnormalChecker.BroadcastReceivers
 					CategoriesAdapter.Refresh(DataHolder.ScreenCategory);
 					break;
 				default:
+					Status = ScreenStatus.OK;
 //					MainActivity.Adapter?.Refresh();
 					CategoriesAdapter.Refresh(DataHolder.ScreenCategory);
 					return;
 			}
 
+			using (var writer =
+				new StreamWriter(context.OpenFileOutput(AlarmReceiver.CurrentSummaryFile, FileCreationMode.Append)))
+			{
+				writer.WriteLine(notificationText);
+			}
 			notificationSender.Send(NotificationType.WarningNotification, notificationText);
 		}
 
@@ -315,6 +336,39 @@ namespace AbnormalChecker.BroadcastReceivers
 				_unlockReceiver.UnregisterFromRuntime();
 				_unlockReceiver.Dispose();
 				_unlockReceiver = null;
+			}
+		}
+
+		public static void UpdateStatus()
+		{
+			Status = ScreenStatus.OK;
+			_abnormalUnlockInterval = _mPreferences.GetInt(AbnormalUnlocksTimeInterval, _abnormalUnlockInterval);
+
+			if (_unlockMillis.Count > _todayNormalSpeedValue)
+			{
+				List<long> tmpList = new List<long>();
+				Date now = new Date();
+				foreach (var time in _unlockMillis)
+				{
+					long s = TimeUnit.Milliseconds.ToSeconds(now.Time - time);
+					
+					if (s <= _abnormalUnlockInterval && s > 0)
+					{
+						tmpList.Add(time);
+					}
+				}
+
+				_unlockMillis = tmpList;
+				if (_unlockMillis.Count > _todayNormalSpeedValue &&
+				    TimeUnit.Milliseconds.ToSeconds(_unlockMillis.Last() - _unlockMillis[0]) <= _abnormalUnlockInterval)
+				{
+					Status = ScreenStatus.Speed;
+				}
+
+			}
+			if (UnlockedTimes > GetNormalUnlocksCount(_mPreferences) * 1.1)
+			{
+				Status = ScreenStatus.Many;
 			}
 		}
 	}

@@ -17,6 +17,7 @@ using Android.OS;
 using Android.Preferences;
 using Android.Support.V4.Content;
 using Android.Util;
+using Java.Util.Concurrent;
 using File = Java.IO.File;
 
 namespace AbnormalChecker
@@ -155,7 +156,6 @@ namespace AbnormalChecker
 					if (requiredPermissions != null && requiredPermissions.Any(s =>
 						    ContextCompat.CheckSelfPermission(_mContext, s) == Permission.Denied))
 					{
-						
 						level = CheckStatus.PermissionsRequired;
 						status = _mContext.GetString(Resource.String.category_info_permissions_denied);
 					}
@@ -178,9 +178,9 @@ namespace AbnormalChecker
 					}
 					else if (level == CheckStatus.PermissionsRequired)
 					{
-						level = CheckStatus.Normal;						
+						level = CheckStatus.Normal;
 					}
-					
+
 					requiredPermissions = value;
 				}
 			}
@@ -227,7 +227,6 @@ namespace AbnormalChecker
 			{
 				data.Status =
 					_mContext.GetString(Resource.String.category_location_status_no_play_services);
-//				MainActivity.Adapter?.Refresh();
 				return data;
 			}
 
@@ -258,7 +257,7 @@ namespace AbnormalChecker
 				if (!locationEnabled) data.Data = null;
 				LocationUtils.SetLocationTrackingEnabled(locationEnabled);
 			}
-			
+
 			data.Status = status;
 			return data;
 		}
@@ -291,7 +290,7 @@ namespace AbnormalChecker
 					{
 						data.Data = text.Split("\n").Last(s => s.Length > 0);
 						data.Status = _mContext.GetString(Resource.String.category_system_modifications_detected);
-						
+
 						data.Level = CheckStatus.Dangerous;
 					}
 					catch (Exception)
@@ -321,23 +320,30 @@ namespace AbnormalChecker
 				    ScreenUtils.UnlocksToday, 0)))
 				ScreenUnlockReceiver.UnlockedTimes = tmpUnlocks;
 
-			if (ScreenUnlockReceiver.IsNormal)
-			{
-				data.Status = _mContext.GetString(Resource.String.category_general_status_normal);
-				data.Level = CheckStatus.Normal;
-				data.Data = string.Format(_mContext.GetString(Resource.String.category_screen_data_normal),
-					ScreenUnlockReceiver.UnlockedTimes);
-			}
-			else
-			{
-				data.Status = _mContext.GetString(Resource.String.category_general_status_questionably);
-				data.Level = CheckStatus.Warning;
-				data.Data = string.Format(_mContext.GetString(Resource.String.category_screen_data_questionably),
-					ScreenUnlockReceiver.UnlockedTimes, ScreenUnlockReceiver.NormalCount);
-//				data.Data = $"{ScreenUnlockReceiver.UnlockedTimes} unlocks this day, " +
-//				            $"normal value {ScreenUnlockReceiver.NormalCount}";
-			}
 
+			switch (ScreenUnlockReceiver.Status)
+			{
+				case ScreenUnlockReceiver.ScreenStatus.OK:
+					data.Status = _mContext.GetString(Resource.String.category_general_status_normal);
+					data.Level = CheckStatus.Normal;
+					data.Data = string.Format(_mContext.GetString(Resource.String.category_screen_data_normal),
+						ScreenUnlockReceiver.UnlockedTimes);
+					break;
+				case ScreenUnlockReceiver.ScreenStatus.Many:
+					data.Status = _mContext.GetString(Resource.String.category_general_status_questionably);
+					data.Level = CheckStatus.Warning;
+					data.Data = string.Format(_mContext.GetString(Resource.String.category_screen_data_questionably),
+						ScreenUnlockReceiver.UnlockedTimes, ScreenUnlockReceiver.NormalCount);
+					break;
+				case ScreenUnlockReceiver.ScreenStatus.Speed:
+					data.Status = _mContext.GetString(Resource.String.category_general_status_questionably);
+					data.Level = CheckStatus.Warning;
+					data.Data = string.Format(_mContext.GetString(Resource.String.category_screen_notif_west_fast_hand),
+						ScreenUnlockReceiver._unlockMillis.Count,
+						TimeUnit.Milliseconds.ToSeconds(ScreenUnlockReceiver._unlockMillis.Last() -
+						                                ScreenUnlockReceiver._unlockMillis.First()));
+					break;
+			}
 			return data;
 		}
 
@@ -460,9 +466,7 @@ namespace AbnormalChecker
 				if (val != -1 && key != NotificationSender.ExtraNotificationId)
 					_mPreferences.Edit().PutInt(key, val).Apply();
 			}
-
-			ScreenUnlockReceiver.IsNormal = true;
-//			CategoriesDictionary[ScreenCategory].Level = CheckStatus.Normal;
+			ScreenUnlockReceiver.UpdateStatus();
 		}
 
 		[SuppressMessage("ReSharper", "CompareOfFloatsByEqualityOperator")]

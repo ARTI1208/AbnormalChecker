@@ -1,11 +1,10 @@
-using System.Collections.Generic;
 using AbnormalChecker.Services;
 using AbnormalChecker.Utils;
 using Android.App;
 using Android.Content;
 using Android.Locations;
-using Android.Preferences;
 using Android.Util;
+using Java.Util;
 
 namespace AbnormalChecker.BroadcastReceivers
 {
@@ -21,6 +20,8 @@ namespace AbnormalChecker.BroadcastReceivers
 		private static bool _isStarted;
 
 		public const string ActionAbnormalMonitoring = "ru.art2000.action.ABNORMAL_MONITORING";
+
+		
 
 		public override void OnReceive(Context context, Intent intent)
 		{
@@ -46,12 +47,19 @@ namespace AbnormalChecker.BroadcastReceivers
 			filter.AddAction(LocationManager.ModeChangedAction);
 			context.ApplicationContext.RegisterReceiver(new LocationModeChangeReceiver(), filter);
 			
-			if (intent.Action == ActionAbnormalMonitoring)
-			{
-				SystemModListenerService.SetSystemMonitoringStatus(context,
-					enable: DataHolder.IsSelectedCategory(DataHolder.SystemCategory));	
-			}
+			SystemModListenerService.SetSystemMonitoringStatus(context,
+				enable: DataHolder.IsSelectedCategory(DataHolder.SystemCategory));	
 			
+//			if (intent.Action == ActionAbnormalMonitoring)
+//			{
+//				SystemModListenerService.SetSystemMonitoringStatus(context,
+//					enable: DataHolder.IsSelectedCategory(DataHolder.SystemCategory));	
+//			}
+
+			
+			
+			AlarmReceiver.RegisterReceiver(context);
+
 			LocationUtils.SetLocationTrackingEnabled(DataHolder.IsSelectedCategory(DataHolder.LocationCategory));
 
 			_isStarted = true;

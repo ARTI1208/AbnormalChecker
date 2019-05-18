@@ -16,6 +16,23 @@
 		android:summaryOn="@string/settings_unlocks_monitor_type_summary_on"
 		android:defaultValue="true"
 		app:iconSpaceReserved="false" />
+
+	<SwitchPreference
+		android:key="summary_type"
+		android:title="@string/settings_preference_summary"
+		android:summaryOff="@string/settings_unlocks_monitor_type_summary_off"
+		android:summaryOn="@string/settings_unlocks_monitor_type_summary_on"
+		android:defaultValue="false"
+		app:iconSpaceReserved="false" />
+	
+	<Preference
+		android:title="@string/settings_preference_export"
+		android:key="export_settings"
+		app:iconSpaceReserved="false" />
+	<Preference
+		android:title="@string/settings_preference_import"
+		android:key="import_settings"
+		app:iconSpaceReserved="false" />
 	<Preference
 		android:title="@string/settings_app_info_title"
 		android:key="app_info"

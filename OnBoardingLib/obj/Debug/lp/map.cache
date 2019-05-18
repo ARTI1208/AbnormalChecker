@@ -1,4 +1,3 @@
-AbnormalChecker
 System.Runtime
 Xamarin.Android.Arch.Lifecycle.Common
 Xamarin.Android.Arch.Lifecycle.ViewModel
@@ -11,11 +10,3 @@ Xamarin.Android.Support.v4
 Xamarin.Android.Support.v7.AppCompat
 Xamarin.Android.Support.v7.CardView
 Xamarin.Android.Support.ViewPager
-Xamarin.GooglePlayServices.Location
-PhoneNumbers
-Xamarin.Android.Support.v7.RecyclerView
-Xamarin.Android.Support.v7.Preference
-Xamarin.GooglePlayServices.Tasks
-Xamarin.GooglePlayServices.Base
-Xamarin.GooglePlayServices.Basement
-netstandard

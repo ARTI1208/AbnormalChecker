@@ -22,8 +22,8 @@ namespace AbnormalChecker
 
 		private readonly string mCategory;
 		private readonly Context mContext;
-		private Intent normalizeIntent;
 		private readonly NotificationManager notificationManager;
+		private Intent normalizeIntent;
 
 		public NotificationSender(Context context, string category)
 		{
@@ -73,7 +73,7 @@ namespace AbnormalChecker
 
 		public void Send(NotificationType notificationType, string text)
 		{
-			var categoryTitle = DataHolder.CategoriesDictionary[mCategory].Title;
+			var categoryTitle = "DummyCategoryTitle";
 			var title = "DummyTitle";
 			var description = "BaseDescription";
 			var builder = new NotificationCompat.Builder(mContext, title);
@@ -82,14 +82,15 @@ namespace AbnormalChecker
 			switch (notificationType)
 			{
 				case NotificationType.WarningNotification:
+					categoryTitle = DataHolder.CategoriesDictionary[mCategory].Title;
 					title = string.Format(mContext.GetString(Resource.String.notification_type_warning), categoryTitle);
 					description =
 						string.Format(mContext.GetString(Resource.String.notification_type_warning_description),
 							categoryTitle);
 					break;
 				case NotificationType.SummaryNotification:
-					title = "Daily Summary";
-					description = "This channel is used to send daily summaries";
+					title = "Summary";
+					description = "This channel is used to send summaries";
 					break;
 				case NotificationType.InfoNotification:
 					title = categoryTitle + " Info";
@@ -99,40 +100,57 @@ namespace AbnormalChecker
 					break;
 			}
 
-			var intent = new Intent(mContext, typeof(CategoryInfoActivity));
-			intent.PutExtra(ExtraNotificationId, mCategory.GetHashCode());
-			intent.PutExtra(ExtraNotificationCategory, mCategory);
-			var pendingIntent = PendingIntent.GetActivity(mContext,
-				(int) notificationType, intent, PendingIntentFlags.CancelCurrent);
-
 			builder.SetContentTitle(title)
 				.SetContentText(text)
 				.SetChannelId(mCategory)
 				.SetDefaults(NotificationCompat.DefaultSound)
-				.SetContentIntent(pendingIntent)
 				.SetAutoCancel(true);
+
+			Intent intent;
+			PendingIntent pendingIntent;
 
 			switch (notificationType)
 			{
 				case NotificationType.WarningNotification:
-					builder.SetSmallIcon(Android.Resource.Drawable.StatSysWarning);
+					intent = new Intent(mContext, typeof(CategoryInfoActivity));
+					intent.PutExtra(ExtraNotificationId, mCategory.GetHashCode());
+					intent.PutExtra(ExtraNotificationCategory, mCategory);
+					pendingIntent = PendingIntent.GetActivity(mContext,
+						(int) notificationType, intent, PendingIntentFlags.CancelCurrent);
 					var makeNormal = new NotificationCompat.Action(Resource.Drawable.ic_notif_normalize,
 						mContext.GetString(Resource.String.notification_button_normalize),
 						IntentToNormalize(CreateNormalizeIntent()));
 					var viewDetails = new NotificationCompat.Action(Resource.Drawable.ic_notif_details,
 						mContext.GetString(Resource.String.notification_button_details), pendingIntent);
-					builder.AddAction(makeNormal).AddAction(viewDetails);
+
+					builder
+						.SetSmallIcon(Android.Resource.Drawable.StatSysWarning)
+						.SetContentIntent(pendingIntent)
+						.AddAction(makeNormal)
+						.AddAction(viewDetails);
 					break;
 				case NotificationType.InfoNotification:
 					builder.SetSmallIcon(Resource.Drawable.ic_stat_info);
 					break;
 				case NotificationType.SummaryNotification:
-					builder.SetSmallIcon(Resource.Drawable.ic_stat_summary);
+					intent = new Intent(mContext, typeof(CategoryInfoActivity));
+					intent.PutExtra(ExtraNotificationId, mCategory.GetHashCode());
+					intent.PutExtra(ExtraNotificationCategory, mCategory);
+					intent.PutExtra(AlarmReceiver.ExtraSummaryText, text);
+
+					var exportSummary = new NotificationCompat.Action(Resource.Drawable.ic_notif_export,
+						mContext.GetString(Resource.String.notification_button_export),
+						IntentToNormalize(CreateNormalizeIntent()));
+
+					builder
+						.SetSmallIcon(Resource.Drawable.ic_stat_summary)
+						.AddAction(exportSummary);
 					break;
 				default:
 					builder.SetSmallIcon(Resource.Mipmap.Icon);
 					break;
 			}
+
 			if (Build.VERSION.SdkInt >= BuildVersionCodes.O)
 			{
 				var channel = new NotificationChannel(mCategory, title, importance)
@@ -144,7 +162,8 @@ namespace AbnormalChecker
 				channel.EnableVibration(true);
 				notificationManager.CreateNotificationChannel(channel);
 			}
-			Notification bigNotification = new NotificationCompat.BigTextStyle(builder)
+
+			var bigNotification = new NotificationCompat.BigTextStyle(builder)
 				.BigText(text).Build();
 			notificationManager.Notify(mCategory.GetHashCode(), bigNotification);
 		}

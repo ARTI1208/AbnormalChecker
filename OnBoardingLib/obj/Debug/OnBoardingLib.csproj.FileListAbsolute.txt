@@ -2,7 +2,6 @@ D:\Coding\C#\AbnormalChecker\OnBoardingLib\bin\Debug\OnBoardingLib.dll
 D:\Coding\C#\AbnormalChecker\OnBoardingLib\bin\Debug\OnBoardingLib.pdb
 D:\Coding\C#\AbnormalChecker\OnBoardingLib\bin\Debug\OnBoardingLib.OnBoardingLib.apk
 D:\Coding\C#\AbnormalChecker\OnBoardingLib\bin\Debug\OnBoardingLib.OnBoardingLib-Signed.apk
-D:\Coding\C#\AbnormalChecker\OnBoardingLib\bin\Debug\AbnormalChecker.dll
 D:\Coding\C#\AbnormalChecker\OnBoardingLib\bin\Debug\Xamarin.Android.Arch.Lifecycle.Common.dll
 D:\Coding\C#\AbnormalChecker\OnBoardingLib\bin\Debug\Xamarin.Android.Arch.Lifecycle.ViewModel.dll
 D:\Coding\C#\AbnormalChecker\OnBoardingLib\bin\Debug\Xamarin.Android.Support.Annotations.dll
@@ -14,16 +13,6 @@ D:\Coding\C#\AbnormalChecker\OnBoardingLib\bin\Debug\Xamarin.Android.Support.v4.
 D:\Coding\C#\AbnormalChecker\OnBoardingLib\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
 D:\Coding\C#\AbnormalChecker\OnBoardingLib\bin\Debug\Xamarin.Android.Support.v7.CardView.dll
 D:\Coding\C#\AbnormalChecker\OnBoardingLib\bin\Debug\Xamarin.Android.Support.ViewPager.dll
-D:\Coding\C#\AbnormalChecker\OnBoardingLib\bin\Debug\Xamarin.GooglePlayServices.Location.dll
-D:\Coding\C#\AbnormalChecker\OnBoardingLib\bin\Debug\PhoneNumbers.dll
-D:\Coding\C#\AbnormalChecker\OnBoardingLib\bin\Debug\Xamarin.Android.Support.v7.RecyclerView.dll
-D:\Coding\C#\AbnormalChecker\OnBoardingLib\bin\Debug\Xamarin.Android.Support.v7.Preference.dll
-D:\Coding\C#\AbnormalChecker\OnBoardingLib\bin\Debug\Xamarin.GooglePlayServices.Tasks.dll
-D:\Coding\C#\AbnormalChecker\OnBoardingLib\bin\Debug\Xamarin.Android.Support.CustomView.dll
-D:\Coding\C#\AbnormalChecker\OnBoardingLib\bin\Debug\Xamarin.GooglePlayServices.Base.dll
-D:\Coding\C#\AbnormalChecker\OnBoardingLib\bin\Debug\Xamarin.GooglePlayServices.Basement.dll
-D:\Coding\C#\AbnormalChecker\OnBoardingLib\bin\Debug\AbnormalChecker.pdb
-D:\Coding\C#\AbnormalChecker\OnBoardingLib\bin\Debug\AbnormalChecker.dll.mdb
 D:\Coding\C#\AbnormalChecker\OnBoardingLib\obj\Debug\MonoAndroid,Version=v9.0.AssemblyAttributes.cs
 D:\Coding\C#\AbnormalChecker\OnBoardingLib\obj\Debug\build.props
 D:\Coding\C#\AbnormalChecker\OnBoardingLib\obj\Debug\adb.props

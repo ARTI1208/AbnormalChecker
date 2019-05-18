@@ -6,6 +6,27 @@
                 android:layout_height="match_parent"
                 android:background="@color/bg"
                 tools:context=".OnBoardingActivity">
+    
+    <RelativeLayout
+        android:id="@+id/extra_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        >
+
+        <TextView android:id="@+id/settings_button"
+            android:text="Settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true" />
+        
+        <TextView android:id="@+id/skip_button"
+            android:text="Skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true" />
+        
+    </RelativeLayout>
 
     <ImageView
             android:id="@+id/background_image"

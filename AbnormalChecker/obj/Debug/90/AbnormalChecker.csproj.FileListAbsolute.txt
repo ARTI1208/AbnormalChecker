@@ -299,9 +299,7 @@ D:\Coding\C#\AbnormalChecker\AbnormalChecker\obj\Debug\90\stamp\_CopyIntermediat
 D:\Coding\C#\AbnormalChecker\AbnormalChecker\obj\Debug\90\stamp\_CopyMdbFiles.stamp
 D:\Coding\C#\AbnormalChecker\AbnormalChecker\obj\Debug\90\stamp\_CopyPdbFiles.stamp
 D:\Coding\C#\AbnormalChecker\AbnormalChecker\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
-D:\Coding\C#\AbnormalChecker\AbnormalChecker\bin\Debug\RestSharp.dll
-D:\Coding\C#\AbnormalChecker\AbnormalChecker\bin\Debug\Xamarin.Android.Support.v17.Leanback.dll
-D:\Coding\C#\AbnormalChecker\AbnormalChecker\bin\Debug\Xamarin.Google.LibPhoneNumber.dll
+D:\Coding\C#\AbnormalChecker\AbnormalChecker\obj\Debug\90\res\drawable-v21\ic_notif_export.xml
 D:\Coding\C#\AbnormalChecker\AbnormalChecker\obj\Debug\90\android\assets\machine.config
 D:\Coding\C#\AbnormalChecker\AbnormalChecker\obj\Debug\90\stamp\_CompileToDalvik.stamp
 D:\Coding\C#\AbnormalChecker\AbnormalChecker\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp

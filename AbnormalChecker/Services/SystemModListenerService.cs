@@ -1,9 +1,11 @@
 using System;
 using System.IO;
 using AbnormalChecker.Activities;
+using AbnormalChecker.BroadcastReceivers;
 using AbnormalChecker.Extensions;
 using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.Icu.Text;
 using Android.OS;
 using Android.Util;
@@ -33,13 +35,29 @@ namespace AbnormalChecker.Services
 
 		public static readonly string ExtraFileEvent = "file_event";
 
+		private const string ExtraIsForeground = "is_foreground";
+
 		public static void SetSystemMonitoringStatus(Context context, bool enable)
 		{
 			if (enable && _instanceIntent == null)
 			{
 				_instanceIntent = new Intent(context, typeof(SystemModListenerService));
-//				context.StartForegroundService(_instanceIntent);
-				context.StartService(_instanceIntent);
+				try
+				{
+					context.StartService(_instanceIntent);
+				}
+				catch (Exception)
+				{
+					try
+					{
+						_instanceIntent.PutExtra(ExtraIsForeground, true);
+						context.StartForegroundService(_instanceIntent);
+					}
+					catch (Exception)
+					{
+						Log.Error(nameof(SystemModListenerService), "Error starting service");
+					}
+				}
 			}
 			else if (_instanceIntent != null)
 			{
@@ -50,6 +68,36 @@ namespace AbnormalChecker.Services
 
 		public override void OnCreate()
 		{
+			if (_instanceIntent == null)
+			{
+				return;
+			}
+			
+			if (_instanceIntent.GetBooleanExtra(ExtraIsForeground, false))
+			{
+				int id = new Date().GetHashCode();
+				Notification.Builder builder = new Notification.Builder(this, DataHolder.SystemCategory);
+				builder.SetContentTitle("System monitoring Service")
+					.SetContentText("Monitoring...")
+					.SetChannelId(DataHolder.SystemCategory)
+					.SetOngoing(true)
+					.SetSmallIcon(Resource.Drawable.ic_notif_details);
+				
+				if (Build.VERSION.SdkInt >= BuildVersionCodes.O)
+				{
+					var description =
+						string.Format(GetString(Resource.String.notification_type_warning_description),
+							DataHolder.CategoriesDictionary[DataHolder.SystemCategory].Title);
+					var channel = new NotificationChannel(DataHolder.SystemCategory, "System modification Monitor", NotificationImportance.Min)
+					{
+						Description = description,
+						LightColor = Color.Red
+					};
+					NotificationManager.FromContext(this).CreateNotificationChannel(channel);
+				}
+				
+				StartForeground(id, builder.Build());
+			}
 			File system = new File("/system");
 			NotificationSender sender = new NotificationSender(this, DataHolder.SystemCategory);
 			
@@ -74,7 +122,7 @@ namespace AbnormalChecker.Services
 				{
 					using (StreamReader reader = new StreamReader(OpenFileInput(ExcludedFiles)))
 					{
-						if (!reader.ReadToEnd().Contains(path))
+						if (!reader.ReadToEnd().Contains(path + "____"))
 						{
 							WriteAndSend(sender, path, events);
 						}
@@ -94,10 +142,15 @@ namespace AbnormalChecker.Services
 		private void WriteAndSend(NotificationSender sender, string path, FileObserverEvents events)
 		{
 			string message = string.Format(GetString(Resource.String.category_system_notif_modification_detected), events, path);
-			
+			string fullMessage = $"{new Date().GetFormattedDateTime()} : {message}";
 			using (StreamWriter writer = new StreamWriter(OpenFileOutput(LogFile, FileCreationMode.Append)))
 			{
-				writer.WriteLine($"{new Date().GetFormattedDateTime()} : {message}");
+				writer.WriteLine(fullMessage);
+			}
+			
+			using (StreamWriter writer = new StreamWriter(OpenFileOutput(AlarmReceiver.CurrentSummaryFile, FileCreationMode.Append)))
+			{
+				writer.WriteLine(fullMessage);
 			}
 
 			sender.PutNormalizeExtra(ExtraFilePath, path);
@@ -107,7 +160,7 @@ namespace AbnormalChecker.Services
 
 		public override StartCommandResult OnStartCommand(Intent intent, StartCommandFlags flags, int startId)
 		{
-			_mFileObserver.StartWatching();
+			_mFileObserver?.StartWatching();
 			return base.OnStartCommand(intent, flags, startId);
 		}
 

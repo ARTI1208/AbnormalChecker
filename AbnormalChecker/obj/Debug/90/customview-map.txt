@@ -63,6 +63,7 @@ path;obj\Debug\90\res\drawable-anydpi\ic_launcher_foreground.xml
 path;obj\Debug\90\res\drawable-anydpi\ic_stat_info.xml
 path;obj\Debug\90\res\drawable-anydpi\ic_stat_summary.xml
 path;obj\Debug\90\res\drawable-v21\ic_notif_details.xml
+path;obj\Debug\90\res\drawable-v21\ic_notif_export.xml
 path;obj\Debug\90\res\drawable-v21\ic_notif_normalize.xml
 Preference;obj\Debug\90\res\xml\dev_options.xml
 Preference;obj\Debug\90\res\xml\settings.xml
@@ -101,6 +102,7 @@ string;obj\Debug\90\res\values\strings.xml
 string;obj\Debug\90\res\values-ru\strings.xml
 string-array;obj\Debug\90\res\values\arrays.xml
 style;obj\Debug\90\res\values\styles.xml
+SwitchPreference;obj\Debug\90\res\xml\settings.xml
 SwitchPreferenceCompat;obj\Debug\90\res\xml\settings.xml
 TextView;D:\Coding\C#\AbnormalChecker\AbnormalChecker\obj\Debug\90\lp\0\jl\res\layout\boarding_activity.xml
 TextView;D:\Coding\C#\AbnormalChecker\AbnormalChecker\obj\Debug\90\lp\0\jl\res\layout\boarding_fragment.xml
@@ -111,6 +113,7 @@ vector;obj\Debug\90\res\drawable-anydpi\ic_launcher_foreground.xml
 vector;obj\Debug\90\res\drawable-anydpi\ic_stat_info.xml
 vector;obj\Debug\90\res\drawable-anydpi\ic_stat_summary.xml
 vector;obj\Debug\90\res\drawable-v21\ic_notif_details.xml
+vector;obj\Debug\90\res\drawable-v21\ic_notif_export.xml
 vector;obj\Debug\90\res\drawable-v21\ic_notif_normalize.xml
 View;D:\Coding\C#\AbnormalChecker\AbnormalChecker\obj\Debug\90\lp\0\jl\res\layout\boarding_activity.xml
 View;D:\Coding\C#\AbnormalChecker\AbnormalChecker\obj\Debug\90\lp\0\jl\res\layout-v21\boarding_activity.xml

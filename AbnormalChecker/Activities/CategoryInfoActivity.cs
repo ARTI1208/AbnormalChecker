@@ -77,7 +77,6 @@ namespace AbnormalChecker.Activities
 			}
 			else if (new File(FilesDir, mCategoryData.DataFilePath).Exists())
 			{
-				Log.Debug(nameof(CategoryInfoActivity), "File exists");
 				using (var reader = new StreamReader(OpenFileInput(mCategoryData.DataFilePath)))
 				{
 					data.Text = reader.ReadToEnd();

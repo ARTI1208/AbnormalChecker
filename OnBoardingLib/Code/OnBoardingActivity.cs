@@ -21,9 +21,13 @@ namespace OnBoardingLib.Code
 		private ImageView backgroundImage;
 		private View backgroundImageOverlay;
 		private List<OnBoardingCard> boardingCards;
-		private TextView btnSkip;
+		private TextView btnFinish;
 		private FrameLayout buttonsLayout;
+		private FrameLayout extraLayout;
 
+		private TextView btnSkip;
+		private TextView btnSettings;
+		
 		private CircleIndicatorView circleIndicatorView;
 		private List<int> colorList;
 		private ImageView ivNext, ivPrev;
@@ -46,6 +50,17 @@ namespace OnBoardingLib.Code
 			else if (i == Resource.Id.ivPrev && !isInFirstPage)
 				vpOnBoardingPager.CurrentItem--;
 			else if (i == Resource.Id.ivNext && !isInLastPage) vpOnBoardingPager.CurrentItem++;
+
+			if (i == btnSkip.Id)
+			{
+				OnSkipButtonClicked();
+			}
+			
+			if (i == btnSettings.Id)
+			{
+				OnSettingsButtonClicked();
+			}
+			
 		}
 
 		public void OnPageScrolled(int position, float positionOffset, int positionOffsetPixels)
@@ -96,22 +111,34 @@ namespace OnBoardingLib.Code
 
 			parentLayout = FindViewById<RelativeLayout>(Resource.Id.parent_layout);
 			circleIndicatorView = FindViewById<CircleIndicatorView>(Resource.Id.circle_indicator_view);
-			btnSkip = FindViewById<TextView>(Resource.Id.btn_skip);
+			btnFinish = FindViewById<TextView>(Resource.Id.btn_skip);
+			
+			btnSkip = FindViewById<TextView>(Resource.Id.skip_button);
+			btnSettings = FindViewById<TextView>(Resource.Id.settings_button);
+
+			btnSettings.PaintFlags |= PaintFlags.UnderlineText;
+			btnSkip.PaintFlags |= PaintFlags.UnderlineText;
+			
 			navigationControls = FindViewById<FrameLayout>(Resource.Id.navigation_layout);
 			buttonsLayout = FindViewById<FrameLayout>(Resource.Id.buttons_layout);
+			
+			extraLayout = FindViewById<FrameLayout>(Resource.Id.extra_layout);
+			
 			ivNext = FindViewById<ImageView>(Resource.Id.ivNext);
 			ivPrev = FindViewById<ImageView>(Resource.Id.ivPrev);
 			backgroundImage = FindViewById<ImageView>(Resource.Id.background_image);
 			backgroundImageOverlay = FindViewById<View>(Resource.Id.background_image_overlay);
 			vpOnBoardingPager = FindViewById<ViewPager>(Resource.Id.vp_pager);
 			vpOnBoardingPager.AddOnPageChangeListener(this);
+			btnFinish.SetOnClickListener(this);
+			
 			btnSkip.SetOnClickListener(this);
+			btnSettings.SetOnClickListener(this);
+			
 			ivPrev.SetOnClickListener(this);
 			ivNext.SetOnClickListener(this);
 
 			SetStatusBackgroundColor();
-//        hideFinish(false);
-//        fadeOut(ivPrev, false);
 		}
 
 		protected void SetOnBoardPages(List<OnBoardingCard> pages)
@@ -144,7 +171,8 @@ namespace OnBoardingLib.Code
 					                       SystemUiFlags.LayoutHideNavigation);
 				Window.SetStatusBarColor(new Color(ContextCompat.GetColor(this, Resource.Color.black_transparent)));
 				Window.SetNavigationBarColor(new Color(ContextCompat.GetColor(this, Resource.Color.black_transparent)));
-				ViewCompat.SetOnApplyWindowInsetsListener(buttonsLayout, new InsetsListener());
+				ViewCompat.SetOnApplyWindowInsetsListener(buttonsLayout, new InsetsListener(InsetsListener.InsetSide.Bottom));
+				ViewCompat.SetOnApplyWindowInsetsListener(extraLayout, new InsetsListener(InsetsListener.InsetSide.Top));
 			}
 		}
 
@@ -156,7 +184,7 @@ namespace OnBoardingLib.Code
 			if (v.Visibility != ViewStates.Gone)
 			{
 				Animation fadeOut = new AlphaAnimation(1, 0);
-				fadeOut.Interpolator = new AccelerateInterpolator(); //and this
+				fadeOut.Interpolator = new AccelerateInterpolator();
 				fadeOut.Duration = duration;
 				fadeOut.SetAnimationListener(new FadeView(v));
 				v.StartAnimation(fadeOut);
@@ -184,8 +212,8 @@ namespace OnBoardingLib.Code
 
 		private void ShowFinish()
 		{
-			btnSkip.Visibility = ViewStates.Visible;
-			btnSkip.Animate().TranslationY(0 - DpToPixels(5, this)).SetInterpolator(new DecelerateInterpolator())
+			btnFinish.Visibility = ViewStates.Visible;
+			btnFinish.Animate().TranslationY(0 - DpToPixels(5, this)).SetInterpolator(new DecelerateInterpolator())
 				.SetDuration(500).Start();
 		}
 
@@ -194,9 +222,9 @@ namespace OnBoardingLib.Code
 			long duration = 0;
 			if (delay) duration = 250;
 
-			btnSkip.Animate().TranslationY(btnSkip.Bottom + DpToPixels(100, this))
+			btnFinish.Animate().TranslationY(btnFinish.Bottom + DpToPixels(100, this))
 				.SetInterpolator(new AccelerateInterpolator()).SetDuration(duration)
-				.SetListener(new FadeView(btnSkip, true)).Start();
+				.SetListener(new FadeView(btnFinish, true)).Start();
 		}
 
 		private void HideActionBar()
@@ -205,6 +233,16 @@ namespace OnBoardingLib.Code
 		}
 
 		protected abstract void OnFinishButtonPressed();
+
+		protected virtual void OnSettingsButtonClicked()
+		{
+			Finish();
+		}
+		
+		protected virtual void OnSkipButtonClicked()
+		{
+			Finish();
+		}
 
 		protected void ShowNavigationControls(bool navigation)
 		{
@@ -259,34 +297,67 @@ namespace OnBoardingLib.Code
 
 		protected void SetFinishButtonDrawableStyle(Drawable res)
 		{
-			btnSkip.Background = res;
+			btnFinish.Background = res;
 		}
 
 		protected void SetFinishButtonTitle(string title)
 		{
-			btnSkip.Text = title;
+			btnFinish.Text = title;
 		}
 
 		protected void SetFinishButtonTitle([StringRes] int titleResId)
+		{
+			btnFinish.SetText(titleResId);
+		}
+		
+		protected void SetSettingsButtonTitle([StringRes] int titleResId)
+		{
+			btnSettings.SetText(titleResId);
+		}
+		
+		protected void SetSkipButtonTitle([StringRes] int titleResId)
 		{
 			btnSkip.SetText(titleResId);
 		}
 
 		public void SetFont(Typeface typeface)
 		{
-			btnSkip.Typeface = typeface;
+			btnFinish.Typeface = typeface;
 			textTypeface = typeface;
 		}
 	}
 
 	internal class InsetsListener : Object, IOnApplyWindowInsetsListener
 	{
+		internal enum InsetSide
+		{
+			Top, Bottom
+		}
+
+		private InsetSide Side;
+		
+		public InsetsListener(InsetSide side)
+		{
+			Side = side;
+		}
+
 		public WindowInsetsCompat OnApplyWindowInsets(View v, WindowInsetsCompat insets)
 		{
 			if (v.LayoutParameters is ViewGroup.MarginLayoutParams layoutParams)
 			{
-				layoutParams.BottomMargin = insets.SystemWindowInsetBottom;
-				v.LayoutParameters = layoutParams;
+				switch (Side)
+				{
+					case InsetSide.Top:
+						layoutParams.TopMargin = insets.SystemWindowInsetTop;
+						v.LayoutParameters = layoutParams;
+						break;
+					case InsetSide.Bottom:
+						layoutParams.BottomMargin = insets.SystemWindowInsetBottom;
+						v.LayoutParameters = layoutParams;
+						break;
+				}
+				
+				
 			}
 			return insets.ConsumeSystemWindowInsets();
 		}

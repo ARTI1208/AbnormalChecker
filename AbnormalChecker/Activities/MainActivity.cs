@@ -12,7 +12,6 @@ using Android.Graphics.Drawables;
 using Android.OS;
 using Android.Preferences;
 using Android.Support.V4.App;
-using Android.Support.V4.Content;
 using Android.Support.V7.App;
 using Android.Support.V7.Widget;
 using Android.Util;
@@ -20,6 +19,7 @@ using Android.Views;
 using Android.Widget;
 using Java.Util;
 using Java.Util.Concurrent;
+using File = Java.IO.File;
 
 namespace AbnormalChecker.Activities
 {
@@ -68,7 +68,6 @@ namespace AbnormalChecker.Activities
 			if (requestCode == PermissionRequestCode)
 			{
 				SetAdapter();
-				Toast.MakeText(this, "Result", ToastLength.Short).Show();
 			}
 		}
 
@@ -151,6 +150,7 @@ namespace AbnormalChecker.Activities
 			b.Visibility = ViewStates.Gone;
 			b.Click += delegate
 			{
+
 				Adapter?.Refresh();
 			};
 		}
@@ -213,8 +213,10 @@ namespace AbnormalChecker.Activities
 			if (requestCode == OnBoardingRequestCode)
 			{
 				mPreferences.Edit().PutBoolean(KeyFirstRun, false).Apply();
-//				RequestPermissions(DataHolder.GetAllRequiredPermissions(this), PermissionRequestCode);
-				ActivityCompat.RequestPermissions(this, DataHolder.GetAllRequiredPermissions(this), PermissionRequestCode);
+				if (resultCode != Result.Canceled)
+				{
+					ActivityCompat.RequestPermissions(this, DataHolder.GetAllRequiredPermissions(this), PermissionRequestCode);	
+				}
 				SetAdapter();
 			}
 		}

@@ -21,7 +21,6 @@ namespace AbnormalChecker.OtherUI
 
 		public void OnClick(View v)
 		{
-			Log.Debug(nameof(CategoriesAdapter), "click click listener");
 			if (dataSet.Level == DataHolder.CheckStatus.PermissionsRequired)
 			{
 				MainActivity.GrantPermissions(dataSet.RequiredPermissions);

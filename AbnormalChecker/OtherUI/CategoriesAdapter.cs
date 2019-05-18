@@ -43,8 +43,7 @@ namespace AbnormalChecker.OtherUI
 				{
 					return;
 				}
-
-				Log.Debug("CateUpdater", "upd");
+				
 				MainActivity.Adapter.Refresh(pos);
 			}
 			
@@ -68,7 +67,6 @@ namespace AbnormalChecker.OtherUI
 			}
 			else
 			{
-				Log.Debug("CateUpdater", "upd2");
 				NotifyItemChanged(position);	
 			}
 		}
@@ -77,7 +75,6 @@ namespace AbnormalChecker.OtherUI
 		{
 			var myHolder = (ViewHolder) holder;
 			var dataSet = list[position];
-//			var dataSet = DataHolder.CategoriesDictionary[categories[position]];
 			myHolder.TitleTextView.Text = dataSet.Title;
 			myHolder.StatusTextView.Text = dataSet.Status;
 			
@@ -91,11 +88,6 @@ namespace AbnormalChecker.OtherUI
 				myHolder.DataTextView.Visibility = ViewStates.Gone;
 			}
 
-			if (categories[position] == DataHolder.ScreenCategory)
-			{
-				Log.Debug("ScreenBindAb",dataSet.Data ?? "null");
-			}
-			
 			switch (dataSet.Level)
 			{
 				case DataHolder.CheckStatus.Warning:

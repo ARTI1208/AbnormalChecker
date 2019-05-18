@@ -1,11 +1,8 @@
-AbnormalChecker.OtherUI.CircleIndicatorView;obj\Debug\res\layout\boarding_activity.xml
-AbnormalChecker.OtherUI.CircleIndicatorView;obj\Debug\res\layout-v21\boarding_activity.xml
 android.support.v4.view.ViewPager;obj\Debug\res\layout\boarding_activity.xml
 android.support.v4.view.ViewPager;obj\Debug\res\layout-v21\boarding_activity.xml
 android.support.v7.widget.CardView;obj\Debug\res\layout\boarding_fragment.xml
 animation-list;obj\Debug\res\drawable\translate.xml
 attr;obj\Debug\res\values\attrs.xml
-CircleIndicatorView;obj\Debug\res\layout-v21\boarding_activity.xml
 color;obj\Debug\res\values\colors.xml
 corners;obj\Debug\res\drawable\fifth_bg.xml
 corners;obj\Debug\res\drawable\forth_bg.xml

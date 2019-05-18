@@ -15,14 +15,14 @@ namespace AbnormalChecker.BroadcastReceivers
 {
 	public class SmsReceiver : BroadcastReceiver
 	{
-		private static SmsReceiver _smsReceiver;
 		private const string Tag = nameof(SmsReceiver);
+		private static SmsReceiver _smsReceiver;
 
 		public static void SetSmsReceiverStatus(Context context, bool enable)
 		{
 			if (enable && _smsReceiver == null)
 			{
-				IntentFilter screenStateFilter = new IntentFilter();
+				var screenStateFilter = new IntentFilter();
 				screenStateFilter.AddAction(Telephony.Sms.Intents.SmsReceivedAction);
 				_smsReceiver = new SmsReceiver();
 				context.ApplicationContext.RegisterReceiver(_smsReceiver, screenStateFilter);
@@ -38,33 +38,30 @@ namespace AbnormalChecker.BroadcastReceivers
 
 		public override void OnReceive(Context context, Intent intent)
 		{
-			foreach (SmsMessage message in Telephony.Sms.Intents.GetMessagesFromIntent(intent))
+			foreach (var message in Telephony.Sms.Intents.GetMessagesFromIntent(intent))
 			{
-				if (message == null)
-				{
-					continue;
-				}
+				if (message == null) continue;
 
-				string phoneNumber = message.DisplayOriginatingAddress;
+				var phoneNumber = message.DisplayOriginatingAddress;
 
-				TelephonyManager telephonyManager = TelephonyManager.FromContext(context);
+				var telephonyManager = TelephonyManager.FromContext(context);
 				if (phoneNumber == null)
 				{
 					Log.Error(Tag, "Can't proceed incoming sms, caller phone number is null!");
 					return;
 				}
 
-				string myPhoneNumber = new string(telephonyManager.Line1Number.Where(char.IsDigit).ToArray());
+				var myPhoneNumber = new string(telephonyManager.Line1Number.Where(char.IsDigit).ToArray());
 				if (myPhoneNumber.Length == 0)
 				{
 					Log.Error(Tag, "Can't proceed incoming sms, your phone number is null!");
 					return;
 				}
 
-				PhoneNumberUtil phoneNumberUtils = PhoneNumberUtil.GetInstance();
-				PhoneNumber callerPhoneNumber =
+				var phoneNumberUtils = PhoneNumberUtil.GetInstance();
+				var callerPhoneNumber =
 					phoneNumberUtils.Parse(phoneNumber, context.Resources.Configuration.Locale.Country);
-				PhoneNumber thisPhoneNumber =
+				var thisPhoneNumber =
 					phoneNumberUtils.Parse(myPhoneNumber, context.Resources.Configuration.Locale.Country);
 				if (callerPhoneNumber.CountryCode == thisPhoneNumber.CountryCode)
 				{
@@ -77,33 +74,37 @@ namespace AbnormalChecker.BroadcastReceivers
 				if (new File(context.FilesDir, PhoneUtils.ExcludedInCountryCodesFile).Exists())
 				{
 					string text;
-					using (StreamReader reader =
+					using (var reader =
 						new StreamReader(context.OpenFileInput(PhoneUtils.ExcludedInCountryCodesFile)))
 					{
 						text = reader.ReadToEnd();
 					}
 
 					foreach (var line in text.Split())
-					{
 						if (int.TryParse(line, out var lineCode) && callerPhoneNumber.CountryCode == lineCode)
 						{
 							Log.Debug(Tag, $"Found {lineCode} in excluded incoming country codes");
 							return;
 						}
-					}
 				}
 
-				string warningMessage = string.Format(
+				var warningMessage = string.Format(
 					context.GetString(Resource.String.category_sms_notification_suspicious_message_from),
 					callerPhoneNumber.GetInternationalNumber());
-				
-				using (StreamWriter writer =
+
+				using (var writer =
 					new StreamWriter(context.OpenFileOutput(PhoneUtils.SuspiciousSmsFile, FileCreationMode.Append)))
 				{
 					writer.WriteLine(warningMessage);
 				}
 
-				NotificationSender sender = new NotificationSender(context, DataHolder.SmsCategory);
+				using (var writer =
+					new StreamWriter(context.OpenFileOutput(AlarmReceiver.CurrentSummaryFile, FileCreationMode.Append)))
+				{
+					writer.WriteLine(warningMessage);
+				}
+
+				var sender = new NotificationSender(context, DataHolder.SmsCategory);
 				sender.PutNormalizeExtra(PhoneUtils.CountryCodeKey, callerPhoneNumber.CountryCode);
 				sender.PutNormalizeExtra(PhoneUtils.IsOutgoingKey, false);
 				sender.Send(NotificationType.WarningNotification, warningMessage);

@@ -24,6 +24,13 @@ public class InsetsListener
 			mono.android.TypeManager.Activate ("OnBoardingLib.Code.InsetsListener, OnBoardingLib", "", this, new java.lang.Object[] {  });
 	}
 
+	public InsetsListener (int p0)
+	{
+		super ();
+		if (getClass () == InsetsListener.class)
+			mono.android.TypeManager.Activate ("OnBoardingLib.Code.InsetsListener, OnBoardingLib", "OnBoardingLib.Code.InsetsListener+InsetSide, OnBoardingLib", this, new java.lang.Object[] { p0 });
+	}
+
 
 	public android.support.v4.view.WindowInsetsCompat onApplyWindowInsets (android.view.View p0, android.support.v4.view.WindowInsetsCompat p1)
 	{

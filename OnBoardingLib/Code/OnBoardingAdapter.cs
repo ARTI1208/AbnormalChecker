@@ -24,8 +24,6 @@ namespace OnBoardingLib.Code
 			mBaseElevation = baseElevation;
 
 			foreach (var t in pages) AddCardFragment(t);
-
-			//setTypeface(typeface);
 		}
 
 		public override int Count => pages.Count;
@@ -54,7 +52,6 @@ namespace OnBoardingLib.Code
 
 		public override Fragment GetItem(int position)
 		{
-			//return OnBoardingFragment.newInstance(pages.get(position));
 			return mFragments[position];
 		}
 

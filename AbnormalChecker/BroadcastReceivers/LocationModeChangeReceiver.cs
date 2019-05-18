@@ -9,7 +9,6 @@ namespace AbnormalChecker.BroadcastReceivers
 	{
 		public override void OnReceive(Context context, Intent intent)
 		{
-			Log.Debug(nameof(LocationModeChangeReceiver), "upd");
 			LocationUtils.SetLocationTrackingEnabled(DataHolder.IsSelectedCategory(DataHolder.LocationCategory));
 			MainActivity.Adapter?.Refresh();
 		}

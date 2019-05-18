@@ -21,7 +21,6 @@ namespace AbnormalChecker.Utils
 		public const string LocationCoordinatesFile = "saved_coordinates.txt";
 		public const string LocationLatitude = "location_latitude";
 		public const string LocationLongitude = "location_longitude";
-		public const string LocationCoordinatesPattern = @"Latitude = [0-9\.]\,+ Longitude = [0-9\.]+";
 
 		private static FusedLocationProviderClient _fusedLocationProviderClient;
 		private static PendingIntent _locationPendingIntent;
@@ -79,9 +78,6 @@ namespace AbnormalChecker.Utils
 				int pos = MainActivity.Adapter.categories.FindIndex(s => s == DataHolder.LocationCategory);
 				MainActivity.Adapter.NotifyItemChanged(pos);	
 			}
-			
-			
-//			MainActivity.Adapter?.NotifyDataSetChanged();
 		}
 
 		public static async void GetLastLocationFromDevice()
@@ -154,6 +150,11 @@ namespace AbnormalChecker.Utils
 							res[0] / 1000);
 
 					sender.Send(NotificationType.WarningNotification, distance);
+					using (StreamWriter writer = new StreamWriter(mContext.OpenFileOutput(AlarmReceiver.CurrentSummaryFile, FileCreationMode.Append)))
+					{
+						writer.WriteLine(distance);
+					}
+					
 					PreviousLocation = location;
 					DataHolder.CategoriesDictionary[DataHolder.LocationCategory].Level = DataHolder.CheckStatus.Dangerous;
 					
