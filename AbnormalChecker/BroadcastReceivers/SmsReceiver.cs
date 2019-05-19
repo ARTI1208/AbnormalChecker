@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Linq;
 using AbnormalChecker.Activities;
@@ -59,8 +60,18 @@ namespace AbnormalChecker.BroadcastReceivers
 				}
 
 				var phoneNumberUtils = PhoneNumberUtil.GetInstance();
-				var callerPhoneNumber =
-					phoneNumberUtils.Parse(phoneNumber, context.Resources.Configuration.Locale.Country);
+				PhoneNumber callerPhoneNumber;
+				try
+				{
+					callerPhoneNumber =
+						phoneNumberUtils.Parse(phoneNumber, context.Resources.Configuration.Locale.Country);
+				}
+				catch (Exception e)
+				{
+					Log.Error(nameof(SmsReceiver), e.Message);
+					return;
+				}
+				
 				var thisPhoneNumber =
 					phoneNumberUtils.Parse(myPhoneNumber, context.Resources.Configuration.Locale.Country);
 				if (callerPhoneNumber.CountryCode == thisPhoneNumber.CountryCode)

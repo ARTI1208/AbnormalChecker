@@ -1,5 +1,3 @@
-using AbnormalChecker.Extensions;
-using Android.Util;
 using Java.Util;
 
 namespace AbnormalChecker.Utils

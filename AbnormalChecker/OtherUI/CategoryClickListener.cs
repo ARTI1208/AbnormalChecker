@@ -1,16 +1,14 @@
 using AbnormalChecker.Activities;
 using Android.Content;
-using Android.Util;
 using Android.Views;
 
 namespace AbnormalChecker.OtherUI
 {
 	public class CategoryClickListener : Java.Lang.Object, View.IOnClickListener
 	{
-
-		private string mCategory;
-		private Context mContext;
-		private DataHolder.CategoryData dataSet;
+		private readonly string mCategory;
+		private readonly Context mContext;
+		private readonly DataHolder.CategoryData dataSet;
 		
 		public CategoryClickListener(Context context, string category, DataHolder.CategoryData data)
 		{

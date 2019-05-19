@@ -4,12 +4,11 @@ using System.IO;
 using Android.Util;
 using Java.IO;
 using Java.Util.Zip;
-using Console = System.Console;
 using File = Java.IO.File;
 
 namespace AbnormalChecker.Utils
 {
-	public class OtherUtils
+	public static class OtherUtils
 	{
 		private static void DirToZip(File dir, ZipOutputStream outputStream)
 		{
@@ -87,23 +86,23 @@ namespace AbnormalChecker.Utils
 		public static bool UnpackZipArchive(string zipPath, File pathToExtract)
 		{
 			var buffer = 2048;
-			FileStream inputStream;
-			ZipInputStream zis;
+			FileStream inputStream = null;
+			ZipInputStream zis = null;
+			ZipFile zipFile = null;
+			int k = 0;
 			try
 			{
-				string filename;
+				zipFile = new ZipFile(zipPath);
 				inputStream = new FileStream(zipPath, FileMode.Open);
 				zis = new ZipInputStream(new BufferedStream(inputStream));
 				ZipEntry ze;
 				var data = new byte[buffer];
-				int count;
 
 				while ((ze = zis.NextEntry) != null)
 				{
-					filename = ze.Name;
-
-					// Need to create directories if not exists, or
-					// it will generate an Exception...
+					k++;
+					var filename = ze.Name;
+					
 					if (ze.IsDirectory)
 					{
 						var fmd = new File(pathToExtract, filename);
@@ -115,23 +114,37 @@ namespace AbnormalChecker.Utils
 
 					Log.Debug(nameof(UnpackZipArchive), current.AbsolutePath);
 
-					var fout = new FileOutputStream(current);
-
-					while ((count = zis.Read(data)) != -1) fout.Write(data, 0, count);
-
-					fout.Close();
-					zis.CloseEntry();
+					FileOutputStream fout = null;
+					try
+					{
+						 fout = new FileOutputStream(current);
+						 int count;
+						 while ((count = zis.Read(data)) != -1) fout.Write(data, 0, count);
+					}
+					catch (Exception)
+					{
+						return false;
+					}
+					finally
+					{
+						fout?.Close();
+						zis.CloseEntry();	
+					}
 				}
-
-				zis.Close();
 			}
 			catch (Exception e)
 			{
 				Log.Error(nameof(UnpackZipArchive), e.Message);
 				return false;
 			}
-
-			return true;
+			finally
+			{
+				inputStream?.Close();
+				zis?.Close();
+				zipFile?.Close();
+			}
+			
+			return k > 0;
 		}
 	}
 }

@@ -7,14 +7,6 @@ namespace AbnormalChecker.Extensions
 {
 	public static class StringExtensions
 	{
-		public static string AfterString(this string text, string after)
-		{
-			if (!text.Contains(after))
-			{
-				return string.Empty;
-			}
-			return text.Substring(text.IndexOf(after) + after.Length);
-		}
 
 		public static int AfterIndex(this string text, string after)
 		{

@@ -11,8 +11,7 @@ namespace OnBoardingLib.Code
 		private float mLastOffset;
 		private bool mScalingEnabled;
 		private readonly ViewPager mViewPager;
-
-
+		
 		public ViewScroller(ViewPager viewPager, ICardAdapter adapter)
 		{
 			mViewPager = viewPager;

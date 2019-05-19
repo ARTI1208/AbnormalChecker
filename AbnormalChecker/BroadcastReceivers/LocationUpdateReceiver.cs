@@ -1,10 +1,5 @@
-using AbnormalChecker.Activities;
 using AbnormalChecker.Utils;
-using Android.App;
 using Android.Content;
-using Android.Locations;
-using Android.Util;
-using ILocationListener = Android.Gms.Location.ILocationListener;
 
 namespace AbnormalChecker.BroadcastReceivers
 {

@@ -19,7 +19,6 @@ using Android.Views;
 using Android.Widget;
 using Java.Util;
 using Java.Util.Concurrent;
-using File = Java.IO.File;
 
 namespace AbnormalChecker.Activities
 {

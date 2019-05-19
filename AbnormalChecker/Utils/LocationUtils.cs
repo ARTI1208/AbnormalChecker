@@ -28,7 +28,7 @@ namespace AbnormalChecker.Utils
 
 		private static Context mContext;
 
-		public static Location PreviousLocation;
+		private static Location PreviousLocation;
 
 		public static void Init(Context context)
 		{
@@ -36,7 +36,7 @@ namespace AbnormalChecker.Utils
 			_fusedLocationProviderClient = LocationServices.GetFusedLocationProviderClient(context);
 		}
 
-		public static string FormatLocation(Context context, Location location)
+		private static string FormatLocation(Context context, Location location)
 		{
 			if (location == null)
 				return "";

@@ -25,7 +25,7 @@ namespace AbnormalChecker.Activities
 	)]
 	public class SettingsActivity : AppCompatActivity
 	{
-		public enum SettingsCategory
+		private enum SettingsCategory
 		{
 			Main,
 			Developer
@@ -113,8 +113,7 @@ namespace AbnormalChecker.Activities
 				var exportPreference = FindPreference("export_settings");
 				exportPreference.PreferenceClick += (sender, args) =>
 				{
-					var paths = new List<File>();
-					paths.Add(new File(SettingsDir, SettingsFileName));
+					var paths = new List<File> {new File(SettingsDir, SettingsFileName)};
 					foreach (var file in Activity.FilesDir.ListFiles())
 						if (file.IsFile)
 							paths.Add(file);

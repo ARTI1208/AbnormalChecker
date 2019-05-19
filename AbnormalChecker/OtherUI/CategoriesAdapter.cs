@@ -3,7 +3,6 @@ using AbnormalChecker.Activities;
 using Android.Content;
 using Android.Graphics;
 using Android.Support.V7.Widget;
-using Android.Util;
 using Android.Views;
 using Android.Widget;
 using Java.Lang;

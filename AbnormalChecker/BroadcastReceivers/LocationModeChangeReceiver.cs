@@ -1,7 +1,6 @@
 using AbnormalChecker.Activities;
 using AbnormalChecker.Utils;
 using Android.Content;
-using Android.Util;
 
 namespace AbnormalChecker.BroadcastReceivers
 {

@@ -107,7 +107,6 @@ namespace AbnormalChecker
 				.SetAutoCancel(true);
 
 			Intent intent;
-			PendingIntent pendingIntent;
 
 			switch (notificationType)
 			{
@@ -115,7 +114,7 @@ namespace AbnormalChecker
 					intent = new Intent(mContext, typeof(CategoryInfoActivity));
 					intent.PutExtra(ExtraNotificationId, mCategory.GetHashCode());
 					intent.PutExtra(ExtraNotificationCategory, mCategory);
-					pendingIntent = PendingIntent.GetActivity(mContext,
+					var pendingIntent = PendingIntent.GetActivity(mContext,
 						(int) notificationType, intent, PendingIntentFlags.CancelCurrent);
 					var makeNormal = new NotificationCompat.Action(Resource.Drawable.ic_notif_normalize,
 						mContext.GetString(Resource.String.notification_button_normalize),

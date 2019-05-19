@@ -16,8 +16,6 @@ namespace AbnormalChecker.Activities
 	public class WelcomeActivity : OnBoardingActivity
 	{
 		
-		
-		
 		protected override void OnFinishButtonPressed()
 		{
 			SetResult(Result.Ok);

@@ -5,8 +5,6 @@ using Android.App;
 using Android.Content;
 using Android.Preferences;
 using Android.Util;
-using Android.Widget;
-using Java.IO;
 using Java.Util;
 using Environment = Android.OS.Environment;
 using File = Java.IO.File;
@@ -16,13 +14,13 @@ namespace AbnormalChecker.BroadcastReceivers
 	[BroadcastReceiver]
 	public class AlarmReceiver : BroadcastReceiver
 	{
-		public static PendingIntent AlarmPendingIntent;
+		private static PendingIntent AlarmPendingIntent;
 
 		public const string CurrentSummaryFile = "current_summary.txt";
 
-		public const string SentSummaryFile = "sent_summary.txt";
+		private const string SentSummaryFile = "sent_summary.txt";
 
-		public const string SavedSummaryFile = "summary_{0}.txt";
+		private const string SavedSummaryFile = "summary_{0}.txt";
 
 		public const string SummaryCategory = "summary";
 		
@@ -81,9 +79,9 @@ namespace AbnormalChecker.BroadcastReceivers
 			
 			if (currentSummary.Exists())
 			{
-				string text;
 				try
 				{
+					string text;
 					using (StreamReader reader = new StreamReader(context.OpenFileInput(CurrentSummaryFile)))
 					{
 						text = reader.ReadToEnd();
