@@ -1,1 +1,0 @@
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android"><Preference android:title="Clear files" android:key="clear_files" app:iconSpaceReserved="false" /><Preference android:title="@string/settings_developer_egg" app:iconSpaceReserved="false" /></PreferenceScreen>
