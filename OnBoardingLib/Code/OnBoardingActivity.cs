@@ -7,6 +7,7 @@ using Android.Support.Annotation;
 using Android.Support.V4.Content;
 using Android.Support.V4.View;
 using Android.Support.V7.App;
+using Android.Util;
 using Android.Views;
 using Android.Views.Animations;
 using Android.Widget;
@@ -334,7 +335,7 @@ namespace OnBoardingLib.Code
 			Top, Bottom
 		}
 
-		private InsetSide Side;
+		private readonly InsetSide Side;
 		
 		public InsetsListener(InsetSide side)
 		{
@@ -343,23 +344,26 @@ namespace OnBoardingLib.Code
 
 		public WindowInsetsCompat OnApplyWindowInsets(View v, WindowInsetsCompat insets)
 		{
+			Log.Debug(nameof(OnBoardingActivity), "0");
 			if (v.LayoutParameters is ViewGroup.MarginLayoutParams layoutParams)
 			{
+				Log.Debug(nameof(OnBoardingActivity), "1");
 				switch (Side)
 				{
 					case InsetSide.Top:
+						Log.Debug(nameof(OnBoardingActivity), "2");
 						layoutParams.TopMargin = insets.SystemWindowInsetTop;
 						v.LayoutParameters = layoutParams;
 						break;
 					case InsetSide.Bottom:
+						Log.Debug(nameof(OnBoardingActivity), "3");
 						layoutParams.BottomMargin = insets.SystemWindowInsetBottom;
 						v.LayoutParameters = layoutParams;
+						Log.Debug(nameof(OnBoardingActivity), layoutParams.BottomMargin.ToString());
 						break;
 				}
-				
-				
 			}
-			return insets.ConsumeSystemWindowInsets();
+			return insets;
 		}
 	}
 }
